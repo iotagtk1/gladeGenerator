@@ -8,8 +8,8 @@ Add a signal and a name to the control, and an event handler will be generated a
 
 #### How to use
 1. Design a form in the Grade Designer.
-1. Fill in the ID and name for the control. Fill in the name on the top Window control. Fill in the controls that need to be exported as well.
-1. If you want to add an event, fill in the signal in the control. The name can be appropriate.
+1. Fill in the ID and name for the control. Fill in the name on the top Window control. Fill in the controls you need to export as well.
+1. Fill in the signal to the control if you want to add an event. The name can be appropriate.
 1. Run the gladeGenerator.
 1. The event handler file will be automatically generated in the same project
 
