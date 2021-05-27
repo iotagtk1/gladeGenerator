@@ -16,7 +16,7 @@ Add a signal and a name to the control, and an event handler will be generated a
 #### Run from a terminal
 
 ```
-$ gladeGenerator -projectName projectPath -projectDir namespace name
+$ gladeGenerator -projectName namespace name -projectDir projectPath
 ```
 
 Browse all Glade files under the project path
