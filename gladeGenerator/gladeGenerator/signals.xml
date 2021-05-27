@@ -1,0 +1,3344 @@
+<signals>
+  <signal eventName="Activate" callerClass="GtkButton">
+    <prototype>on_{$ID}_Activate</prototype>
+    <method>Activate</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="Clicked" callerClass="GtkButton">
+    <prototype>on_{$ID}_Clicked</prototype>
+    <method>Clicked</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="Enter" callerClass="GtkButton">
+    <prototype>on_{$ID}_Enter</prototype>
+    <method>Enter</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="Leave" callerClass="GtkButton">
+    <prototype>on_{$ID}_Leave</prototype>
+    <method>Leave</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="Pressed" callerClass="GtkButton">
+    <prototype>on_{$ID}_Pressed</prototype>
+    <method>Pressed</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="Released" callerClass="GtkButton">
+    <prototype>on_{$ID}_Released</prototype>
+    <method>Released</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="Finished" callerClass="GtkTimeline">
+    <prototype>on_{$ID}_Finished</prototype>
+    <method>Finished</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="Frame" callerClass="GtkTimeline">
+    <prototype>on_{$ID}_Frame</prototype>
+    <method>Frame</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.FrameArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="Paused" callerClass="GtkTimeline">
+    <prototype>on_{$ID}_Paused</prototype>
+    <method>Paused</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="Started" callerClass="GtkTimeline">
+    <prototype>on_{$ID}_Started</prototype>
+    <method>Started</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="Changed" callerClass="GtkIconTheme">
+    <prototype>on_{$ID}_Changed</prototype>
+    <method>Changed</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="DeletedText" callerClass="GtkEntryBuffer">
+    <prototype>on_{$ID}_DeletedText</prototype>
+    <method>DeletedText</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.DeletedTextArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="InsertedText" callerClass="GtkEntryBuffer">
+    <prototype>on_{$ID}_InsertedText</prototype>
+    <method>InsertedText</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.InsertedTextArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="AddEditable" callerClass="GtkCellArea">
+    <prototype>on_{$ID}_AddEditable</prototype>
+    <method>AddEditable</method><![CDATA[
+    ]]>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.AddEditableArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="ApplyAttributes" callerClass="GtkCellArea">
+    <prototype>on_{$ID}_ApplyAttributes</prototype>
+    <method>ApplyAttributes</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.AttributesAppliedArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="FocusChanged" callerClass="GtkCellArea">
+    <prototype>on_{$ID}_FocusChanged</prototype>
+    <method>FocusChanged</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.FocusChangedArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="RemoveEditable" callerClass="GtkCellArea">
+    <prototype>on_{$ID}_RemoveEditable</prototype>
+    <method>RemoveEditable</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.RemoveEditableArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="SortColumnChanged" callerClass="GtkTreeSortableAdapter">
+    <prototype>on_{$ID}_SortColumnChanged</prototype>
+    <method>SortColumnChanged</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="Changed" callerClass="GtkTreeSelection">
+    <prototype>on_{$ID}_Changed</prototype>
+    <method>Changed</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="ActivateDefault" callerClass="GtkWindow">
+    <prototype>on_{$ID}_ActivateDefault</prototype>
+    <method>ActivateDefault</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="ActivateFocus" callerClass="GtkWindow">
+    <prototype>on_{$ID}_ActivateFocus</prototype>
+    <method>ActivateFocus</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="KeysChanged" callerClass="GtkWindow">
+    <prototype>on_{$ID}_KeysChanged</prototype>
+    <method>KeysChanged</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="SetFocus" callerClass="GtkWindow">
+    <prototype>on_{$ID}_SetFocus</prototype>
+    <method>SetFocus</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.SetFocusArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="Popdown" callerClass="GtkScaleButton">
+    <prototype>on_{$ID}_Popdown</prototype>
+    <method>Popdown</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="Popup" callerClass="GtkScaleButton">
+    <prototype>on_{$ID}_Popup</prototype>
+    <method>Popup</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="ValueChanged" callerClass="GtkScaleButton">
+    <prototype>on_{$ID}_ValueChanged</prototype>
+    <method>ValueChanged</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.ValueChangedArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="Changed" callerClass="GtkAdjustment">
+    <prototype>on_{$ID}_Changed</prototype>
+    <method>Changed</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="ValueChanged" callerClass="GtkAdjustment">
+    <prototype>on_{$ID}_ValueChanged</prototype>
+    <method>ValueChanged</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="ChangeCurrentPage" callerClass="GtkNotebook">
+    <prototype>on_{$ID}_ChangeCurrentPage</prototype>
+    <method>ChangeCurrentPage</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.ChangeCurrentPageArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="CreateWindow" callerClass="GtkNotebook">
+    <prototype>on_{$ID}_CreateWindow</prototype>
+    <method>CreateWindow</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.CreateWindowArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="FocusTab" callerClass="GtkNotebook">
+    <prototype>on_{$ID}_FocusTab</prototype>
+    <method>FocusTab</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.FocusTabArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="MoveFocusOut" callerClass="GtkNotebook">
+    <prototype>on_{$ID}_MoveFocusOut</prototype>
+    <method>MoveFocusOut</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.MoveFocusOutArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="PageAdded" callerClass="GtkNotebook">
+    <prototype>on_{$ID}_PageAdded</prototype>
+    <method>PageAdded</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.PageAddedArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="PageRemoved" callerClass="GtkNotebook">
+    <prototype>on_{$ID}_PageRemoved</prototype>
+    <method>PageRemoved</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.PageRemovedArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="PageReordered" callerClass="GtkNotebook">
+    <prototype>on_{$ID}_PageReordered</prototype>
+    <method>PageReordered</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.PageReorderedArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="ReorderTab" callerClass="GtkNotebook">
+    <prototype>on_{$ID}_ReorderTab</prototype>
+    <method>ReorderTab</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.ReorderTabArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="SelectPage" callerClass="GtkNotebook">
+    <prototype>on_{$ID}_SelectPage</prototype>
+    <method>SelectPage</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.SelectPageArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="SwitchPage" callerClass="GtkNotebook">
+    <prototype>on_{$ID}_SwitchPage</prototype>
+    <method>SwitchPage</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.SwitchPageArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="Activate" callerClass="GtkMenuItem">
+    <prototype>on_{$ID}_Activate</prototype>
+    <method>Activate</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="ActivateItem" callerClass="GtkMenuItem">
+    <prototype>on_{$ID}_ActivateItem</prototype>
+    <method>ActivateItem</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="Deselect" callerClass="GtkMenuItem">
+    <prototype>on_{$ID}_Deselect</prototype>
+    <method>Deselect</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="Select" callerClass="GtkMenuItem">
+    <prototype>on_{$ID}_Select</prototype>
+    <method>Select</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="ToggleSizeAllocate" callerClass="GtkMenuItem">
+    <prototype>on_{$ID}_ToggleSizeAllocate</prototype>
+    <method>ToggleSizeAllocate</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.ToggleSizeAllocatedArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="ToggleSizeRequest" callerClass="GtkMenuItem">
+    <prototype>on_{$ID}_ToggleSizeRequest</prototype>
+    <method>ToggleSizeRequest</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.ToggleSizeRequestedArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="ConnectProxy" callerClass="GtkActionGroup">
+    <prototype>on_{$ID}_ConnectProxy</prototype>
+    <method>ConnectProxy</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.ConnectProxyArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="DisconnectProxy" callerClass="GtkActionGroup">
+    <prototype>on_{$ID}_DisconnectProxy</prototype>
+    <method>DisconnectProxy</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.DisconnectProxyArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="PostActivate" callerClass="GtkActionGroup">
+    <prototype>on_{$ID}_PostActivate</prototype>
+    <method>PostActivate</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.PostActivateArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="PreActivate" callerClass="GtkActionGroup">
+    <prototype>on_{$ID}_PreActivate</prototype>
+    <method>PreActivate</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.PreActivateArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="Activate" callerClass="GtkStatusIcon">
+    <prototype>on_{$ID}_Activate</prototype>
+    <method>Activate</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="Button_Press_Event" callerClass="GtkStatusIcon">
+    <prototype>on_{$ID}_Button_Press_Event</prototype>
+    <method>Button_Press_Event</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.ButtonPressEventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="Button_Release_Event" callerClass="GtkStatusIcon">
+    <prototype>on_{$ID}_Button_Release_Event</prototype>
+    <method>Button_Release_Event</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.ButtonReleaseEventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="PopupMenu" callerClass="GtkStatusIcon">
+    <prototype>on_{$ID}_PopupMenu</prototype>
+    <method>PopupMenu</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.PopupMenuArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="Query_Tooltip" callerClass="GtkStatusIcon">
+    <prototype>on_{$ID}_Query_Tooltip</prototype>
+    <method>Query_Tooltip</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.QueryTooltipArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="Scroll_Event" callerClass="GtkStatusIcon">
+    <prototype>on_{$ID}_Scroll_Event</prototype>
+    <method>Scroll_Event</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.ScrollEventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="SizeChanged" callerClass="GtkStatusIcon">
+    <prototype>on_{$ID}_SizeChanged</prototype>
+    <method>SizeChanged</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.SizeChangedArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="ShowMenu" callerClass="GtkMenuToolButton">
+    <prototype>on_{$ID}_ShowMenu</prototype>
+    <method>ShowMenu</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="Changed" callerClass="GtkEditableAdapter">
+    <prototype>on_{$ID}_Changed</prototype>
+    <method>Changed</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="DeleteText" callerClass="GtkEditableAdapter">
+    <prototype>on_{$ID}_DeleteText</prototype>
+    <method>DeleteText</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.TextDeletedArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="InsertText" callerClass="GtkEditableAdapter">
+    <prototype>on_{$ID}_InsertText</prototype>
+    <method>InsertText</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.TextInsertedArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="CreateMenuProxy" callerClass="GtkToolItem">
+    <prototype>on_{$ID}_CreateMenuProxy</prototype>
+    <method>CreateMenuProxy</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.CreateMenuProxyArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="ToolbarReconfigured" callerClass="GtkToolItem">
+    <prototype>on_{$ID}_ToolbarReconfigured</prototype>
+    <method>ToolbarReconfigured</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="Toggled" callerClass="GtkToggleAction">
+    <prototype>on_{$ID}_Toggled</prototype>
+    <method>Toggled</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="ActionActivated" callerClass="GtkEntryCompletion">
+    <prototype>on_{$ID}_ActionActivated</prototype>
+    <method>ActionActivated</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.ActionActivatedArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="CursorOnMatch" callerClass="GtkEntryCompletion">
+    <prototype>on_{$ID}_CursorOnMatch</prototype>
+    <method>CursorOnMatch</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.CursorOnMatchArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="MatchSelected" callerClass="GtkEntryCompletion">
+    <prototype>on_{$ID}_MatchSelected</prototype>
+    <method>MatchSelected</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.MatchSelectedArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="InsertPrefix" callerClass="GtkEntryCompletion">
+    <prototype>on_{$ID}_InsertPrefix</prototype>
+    <method>InsertPrefix</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.PrefixInsertedArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="ActivateCurrentLink" callerClass="GtkLabel">
+    <prototype>on_{$ID}_ActivateCurrentLink</prototype>
+    <method>ActivateCurrentLink</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="ActivateLink" callerClass="GtkLabel">
+    <prototype>on_{$ID}_ActivateLink</prototype>
+    <method>ActivateLink</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.ActivateLinkArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="CopyClipboard" callerClass="GtkLabel">
+    <prototype>on_{$ID}_CopyClipboard</prototype>
+    <method>CopyClipboard</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="MoveCursor" callerClass="GtkLabel">
+    <prototype>on_{$ID}_MoveCursor</prototype>
+    <method>MoveCursor</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.MoveCursorArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="PopulatePopup" callerClass="GtkLabel">
+    <prototype>on_{$ID}_PopulatePopup</prototype>
+    <method>PopulatePopup</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.PopulatePopupArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="Changed" callerClass="GtkRadioAction">
+    <prototype>on_{$ID}_Changed</prototype>
+    <method>Changed</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.ChangedArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="FormatValue" callerClass="GtkScale">
+    <prototype>on_{$ID}_FormatValue</prototype>
+    <method>FormatValue</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.FormatValueArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="ApplicationActivated" callerClass="GtkAppChooserWidget">
+    <prototype>on_{$ID}_ApplicationActivated</prototype>
+    <method>ApplicationActivated</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.ApplicationActivatedArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="ApplicationSelected" callerClass="GtkAppChooserWidget">
+    <prototype>on_{$ID}_ApplicationSelected</prototype>
+    <method>ApplicationSelected</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.ApplicationSelectedArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="PopulatePopup" callerClass="GtkAppChooserWidget">
+    <prototype>on_{$ID}_PopulatePopup</prototype>
+    <method>PopulatePopup</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.PopulatePopupArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="ColumnsChanged" callerClass="GtkTreeView">
+    <prototype>on_{$ID}_ColumnsChanged</prototype>
+    <method>ColumnsChanged</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="CursorChanged" callerClass="GtkTreeView">
+    <prototype>on_{$ID}_CursorChanged</prototype>
+    <method>CursorChanged</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="ExpandCollapseCursorRow" callerClass="GtkTreeView">
+    <prototype>on_{$ID}_ExpandCollapseCursorRow</prototype>
+    <method>ExpandCollapseCursorRow</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.ExpandCollapseCursorRowArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="MoveCursor" callerClass="GtkTreeView">
+    <prototype>on_{$ID}_MoveCursor</prototype>
+    <method>MoveCursor</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.MoveCursorArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="RowActivated" callerClass="GtkTreeView">
+    <prototype>on_{$ID}_RowActivated</prototype>
+    <method>RowActivated</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.RowActivatedArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="RowCollapsed" callerClass="GtkTreeView">
+    <prototype>on_{$ID}_RowCollapsed</prototype>
+    <method>RowCollapsed</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.RowCollapsedArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="RowExpanded" callerClass="GtkTreeView">
+    <prototype>on_{$ID}_RowExpanded</prototype>
+    <method>RowExpanded</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.RowExpandedArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="SelectAll" callerClass="GtkTreeView">
+    <prototype>on_{$ID}_SelectAll</prototype>
+    <method>SelectAll</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.SelectAllArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="SelectCursorParent" callerClass="GtkTreeView">
+    <prototype>on_{$ID}_SelectCursorParent</prototype>
+    <method>SelectCursorParent</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.SelectCursorParentArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="SelectCursorRow" callerClass="GtkTreeView">
+    <prototype>on_{$ID}_SelectCursorRow</prototype>
+    <method>SelectCursorRow</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.SelectCursorRowArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="StartInteractiveSearch" callerClass="GtkTreeView">
+    <prototype>on_{$ID}_StartInteractiveSearch</prototype>
+    <method>StartInteractiveSearch</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.StartInteractiveSearchArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="TestCollapseRow" callerClass="GtkTreeView">
+    <prototype>on_{$ID}_TestCollapseRow</prototype>
+    <method>TestCollapseRow</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.TestCollapseRowArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="TestExpandRow" callerClass="GtkTreeView">
+    <prototype>on_{$ID}_TestExpandRow</prototype>
+    <method>TestExpandRow</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.TestExpandRowArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="ToggleCursorRow" callerClass="GtkTreeView">
+    <prototype>on_{$ID}_ToggleCursorRow</prototype>
+    <method>ToggleCursorRow</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.ToggleCursorRowArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="UnselectAll" callerClass="GtkTreeView">
+    <prototype>on_{$ID}_UnselectAll</prototype>
+    <method>UnselectAll</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.UnselectAllArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="Toggled" callerClass="GtkToggleToolButton">
+    <prototype>on_{$ID}_Toggled</prototype>
+    <method>Toggled</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="ConfirmOverwrite" callerClass="GtkFileChooserButton">
+    <prototype>on_{$ID}_ConfirmOverwrite</prototype>
+    <method>ConfirmOverwrite</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.ConfirmOverwriteArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="CurrentFolderChanged" callerClass="GtkFileChooserButton">
+    <prototype>on_{$ID}_CurrentFolderChanged</prototype>
+    <method>CurrentFolderChanged</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="FileActivated" callerClass="GtkFileChooserButton">
+    <prototype>on_{$ID}_FileActivated</prototype>
+    <method>FileActivated</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="FileSet" callerClass="GtkFileChooserButton">
+    <prototype>on_{$ID}_FileSet</prototype>
+    <method>FileSet</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="SelectionChanged" callerClass="GtkFileChooserButton">
+    <prototype>on_{$ID}_SelectionChanged</prototype>
+    <method>SelectionChanged</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="UpdatePreview" callerClass="GtkFileChooserButton">
+    <prototype>on_{$ID}_UpdatePreview</prototype>
+    <method>UpdatePreview</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="RowChanged" callerClass="GtkTreeModelAdapter">
+    <prototype>on_{$ID}_RowChanged</prototype>
+    <method>RowChanged</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.RowChangedArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="RowDeleted" callerClass="GtkTreeModelAdapter">
+    <prototype>on_{$ID}_RowDeleted</prototype>
+    <method>RowDeleted</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.RowDeletedArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="RowHasChildToggled" callerClass="GtkTreeModelAdapter">
+    <prototype>on_{$ID}_RowHasChildToggled</prototype>
+    <method>RowHasChildToggled</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.RowHasChildToggledArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="RowInserted" callerClass="GtkTreeModelAdapter">
+    <prototype>on_{$ID}_RowInserted</prototype>
+    <method>RowInserted</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.RowInsertedArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="Rows_Reordered" callerClass="GtkTreeModelAdapter">
+    <prototype>on_{$ID}_Rows_Reordered</prototype>
+    <method>Rows_Reordered</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.RowsReorderedArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="" callerClass="GtkTreeNode">
+    <prototype>on_{$ID}_</prototype>
+    <method>
+    </method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="" callerClass="GtkTreeNode">
+    <prototype>on_{$ID}_</prototype>
+    <method>
+    </method>
+    <args>
+      <arg>object sender</arg>
+    </args>
+  </signal>
+  <signal eventName="" callerClass="GtkTreeNode">
+    <prototype>on_{$ID}_</prototype>
+    <method>
+    </method>
+    <args>
+      <arg>object sender</arg>
+    </args>
+  </signal>
+  <signal eventName="TagAdded" callerClass="GtkTextTagTable">
+    <prototype>on_{$ID}_TagAdded</prototype>
+    <method>TagAdded</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.TagAddedArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="TagChanged" callerClass="GtkTextTagTable">
+    <prototype>on_{$ID}_TagChanged</prototype>
+    <method>TagChanged</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.TagChangedArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="TagRemoved" callerClass="GtkTextTagTable">
+    <prototype>on_{$ID}_TagRemoved</prototype>
+    <method>TagRemoved</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.TagRemovedArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="RowChanged" callerClass="GtkTreeModelFilter">
+    <prototype>on_{$ID}_RowChanged</prototype>
+    <method>RowChanged</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.RowChangedArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="RowDeleted" callerClass="GtkTreeModelFilter">
+    <prototype>on_{$ID}_RowDeleted</prototype>
+    <method>RowDeleted</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.RowDeletedArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="RowHasChildToggled" callerClass="GtkTreeModelFilter">
+    <prototype>on_{$ID}_RowHasChildToggled</prototype>
+    <method>RowHasChildToggled</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.RowHasChildToggledArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="RowInserted" callerClass="GtkTreeModelFilter">
+    <prototype>on_{$ID}_RowInserted</prototype>
+    <method>RowInserted</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.RowInsertedArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="Rows_Reordered" callerClass="GtkTreeModelFilter">
+    <prototype>on_{$ID}_Rows_Reordered</prototype>
+    <method>Rows_Reordered</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.RowsReorderedArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="ConfirmOverwrite" callerClass="GtkFileChooserWidget">
+    <prototype>on_{$ID}_ConfirmOverwrite</prototype>
+    <method>ConfirmOverwrite</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.ConfirmOverwriteArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="CurrentFolderChanged" callerClass="GtkFileChooserWidget">
+    <prototype>on_{$ID}_CurrentFolderChanged</prototype>
+    <method>CurrentFolderChanged</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="FileActivated" callerClass="GtkFileChooserWidget">
+    <prototype>on_{$ID}_FileActivated</prototype>
+    <method>FileActivated</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="SelectionChanged" callerClass="GtkFileChooserWidget">
+    <prototype>on_{$ID}_SelectionChanged</prototype>
+    <method>SelectionChanged</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="UpdatePreview" callerClass="GtkFileChooserWidget">
+    <prototype>on_{$ID}_UpdatePreview</prototype>
+    <method>UpdatePreview</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="MoveScroll" callerClass="GtkMenu">
+    <prototype>on_{$ID}_MoveScroll</prototype>
+    <method>MoveScroll</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.MoveScrollArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="ActionsChanged" callerClass="GtkUIManager">
+    <prototype>on_{$ID}_ActionsChanged</prototype>
+    <method>ActionsChanged</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="AddWidget" callerClass="GtkUIManager">
+    <prototype>on_{$ID}_AddWidget</prototype>
+    <method>AddWidget</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.AddWidgetArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="ConnectProxy" callerClass="GtkUIManager">
+    <prototype>on_{$ID}_ConnectProxy</prototype>
+    <method>ConnectProxy</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.ConnectProxyArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="DisconnectProxy" callerClass="GtkUIManager">
+    <prototype>on_{$ID}_DisconnectProxy</prototype>
+    <method>DisconnectProxy</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.DisconnectProxyArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="PostActivate" callerClass="GtkUIManager">
+    <prototype>on_{$ID}_PostActivate</prototype>
+    <method>PostActivate</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.PostActivateArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="PreActivate" callerClass="GtkUIManager">
+    <prototype>on_{$ID}_PreActivate</prototype>
+    <method>PreActivate</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.PreActivateArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="EditingCanceled" callerClass="GtkCellRenderer">
+    <prototype>on_{$ID}_EditingCanceled</prototype>
+    <method>EditingCanceled</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="EditingStarted" callerClass="GtkCellRenderer">
+    <prototype>on_{$ID}_EditingStarted</prototype>
+    <method>EditingStarted</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.EditingStartedArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="Toggled" callerClass="GtkCellRendererToggle">
+    <prototype>on_{$ID}_Toggled</prototype>
+    <method>Toggled</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.ToggledArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="Activate" callerClass="GtkEntry">
+    <prototype>on_{$ID}_Activate</prototype>
+    <method>Activate</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="Backspace" callerClass="GtkEntry">
+    <prototype>on_{$ID}_Backspace</prototype>
+    <method>Backspace</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="Changed" callerClass="GtkEntry">
+    <prototype>on_{$ID}_Changed</prototype>
+    <method>Changed</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="CopyClipboard" callerClass="GtkEntry">
+    <prototype>on_{$ID}_CopyClipboard</prototype>
+    <method>CopyClipboard</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="CutClipboard" callerClass="GtkEntry">
+    <prototype>on_{$ID}_CutClipboard</prototype>
+    <method>CutClipboard</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="PasteClipboard" callerClass="GtkEntry">
+    <prototype>on_{$ID}_PasteClipboard</prototype>
+    <method>PasteClipboard</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="DeleteFromCursor" callerClass="GtkEntry">
+    <prototype>on_{$ID}_DeleteFromCursor</prototype>
+    <method>DeleteFromCursor</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.DeleteFromCursorArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="EditingDone" callerClass="GtkEntry">
+    <prototype>on_{$ID}_EditingDone</prototype>
+    <method>EditingDone</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="IconPress" callerClass="GtkEntry">
+    <prototype>on_{$ID}_IconPress</prototype>
+    <method>IconPress</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.IconPressArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="IconRelease" callerClass="GtkEntry">
+    <prototype>on_{$ID}_IconRelease</prototype>
+    <method>IconRelease</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.IconReleaseArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="InsertAtCursor" callerClass="GtkEntry">
+    <prototype>on_{$ID}_InsertAtCursor</prototype>
+    <method>InsertAtCursor</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.InsertAtCursorArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="MoveCursor" callerClass="GtkEntry">
+    <prototype>on_{$ID}_MoveCursor</prototype>
+    <method>MoveCursor</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.MoveCursorArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="PopulatePopup" callerClass="GtkEntry">
+    <prototype>on_{$ID}_PopulatePopup</prototype>
+    <method>PopulatePopup</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.PopulatePopupArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="PreeditChanged" callerClass="GtkEntry">
+    <prototype>on_{$ID}_PreeditChanged</prototype>
+    <method>PreeditChanged</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.PreeditChangedArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="DeleteText" callerClass="GtkEntry">
+    <prototype>on_{$ID}_DeleteText</prototype>
+    <method>DeleteText</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.TextDeletedArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="InsertText" callerClass="GtkEntry">
+    <prototype>on_{$ID}_InsertText</prototype>
+    <method>InsertText</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.TextInsertedArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="ToggleOverwrite" callerClass="GtkEntry">
+    <prototype>on_{$ID}_ToggleOverwrite</prototype>
+    <method>ToggleOverwrite</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="RemoveWidget" callerClass="GtkEntry">
+    <prototype>on_{$ID}_RemoveWidget</prototype>
+    <method>RemoveWidget</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="" callerClass="GtkITreeNode">
+    <prototype>on_{$ID}_</prototype>
+    <method>
+    </method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="" callerClass="GtkITreeNode">
+    <prototype>on_{$ID}_</prototype>
+    <method>
+    </method>
+    <args>
+      <arg>object sender</arg>
+    </args>
+  </signal>
+  <signal eventName="" callerClass="GtkITreeNode">
+    <prototype>on_{$ID}_</prototype>
+    <method>
+    </method>
+    <args>
+      <arg>object sender</arg>
+    </args>
+  </signal>
+  <signal eventName="StatusChanged" callerClass="GtkPrintJob">
+    <prototype>on_{$ID}_StatusChanged</prototype>
+    <method>StatusChanged</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="RowChanged" callerClass="GtkListStore">
+    <prototype>on_{$ID}_RowChanged</prototype>
+    <method>RowChanged</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.RowChangedArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="RowDeleted" callerClass="GtkListStore">
+    <prototype>on_{$ID}_RowDeleted</prototype>
+    <method>RowDeleted</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.RowDeletedArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="RowHasChildToggled" callerClass="GtkListStore">
+    <prototype>on_{$ID}_RowHasChildToggled</prototype>
+    <method>RowHasChildToggled</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.RowHasChildToggledArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="RowInserted" callerClass="GtkListStore">
+    <prototype>on_{$ID}_RowInserted</prototype>
+    <method>RowInserted</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.RowInsertedArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="Rows_Reordered" callerClass="GtkListStore">
+    <prototype>on_{$ID}_Rows_Reordered</prototype>
+    <method>Rows_Reordered</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.RowsReorderedArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="SortColumnChanged" callerClass="GtkListStore">
+    <prototype>on_{$ID}_SortColumnChanged</prototype>
+    <method>SortColumnChanged</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="FontSet" callerClass="GtkFontButton">
+    <prototype>on_{$ID}_FontSet</prototype>
+    <method>FontSet</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="Changed" callerClass="GtkComboBox">
+    <prototype>on_{$ID}_Changed</prototype>
+    <method>Changed</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="EditingDone" callerClass="GtkComboBox">
+    <prototype>on_{$ID}_EditingDone</prototype>
+    <method>EditingDone</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="MoveActive" callerClass="GtkComboBox">
+    <prototype>on_{$ID}_MoveActive</prototype>
+    <method>MoveActive</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.MoveActiveArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="Popdown" callerClass="GtkComboBox">
+    <prototype>on_{$ID}_Popdown</prototype>
+    <method>Popdown</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.PoppedDownArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="Popup" callerClass="GtkComboBox">
+    <prototype>on_{$ID}_Popup</prototype>
+    <method>Popup</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="RemoveWidget" callerClass="GtkComboBox">
+    <prototype>on_{$ID}_RemoveWidget</prototype>
+    <method>RemoveWidget</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="EditingDone" callerClass="GtkCellEditableAdapter">
+    <prototype>on_{$ID}_EditingDone</prototype>
+    <method>EditingDone</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="RemoveWidget" callerClass="GtkCellEditableAdapter">
+    <prototype>on_{$ID}_RemoveWidget</prototype>
+    <method>RemoveWidget</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="ActivateCursorItem" callerClass="GtkIconView">
+    <prototype>on_{$ID}_ActivateCursorItem</prototype>
+    <method>ActivateCursorItem</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.ActivateCursorItemArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="SelectAll" callerClass="GtkIconView">
+    <prototype>on_{$ID}_SelectAll</prototype>
+    <method>SelectAll</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="UnselectAll" callerClass="GtkIconView">
+    <prototype>on_{$ID}_UnselectAll</prototype>
+    <method>UnselectAll</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="ItemActivated" callerClass="GtkIconView">
+    <prototype>on_{$ID}_ItemActivated</prototype>
+    <method>ItemActivated</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.ItemActivatedArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="MoveCursor" callerClass="GtkIconView">
+    <prototype>on_{$ID}_MoveCursor</prototype>
+    <method>MoveCursor</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.MoveCursorArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="SelectCursorItem" callerClass="GtkIconView">
+    <prototype>on_{$ID}_SelectCursorItem</prototype>
+    <method>SelectCursorItem</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="SelectionChanged" callerClass="GtkIconView">
+    <prototype>on_{$ID}_SelectionChanged</prototype>
+    <method>SelectionChanged</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="ToggleCursorItem" callerClass="GtkIconView">
+    <prototype>on_{$ID}_ToggleCursorItem</prototype>
+    <method>ToggleCursorItem</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="ChildAttached" callerClass="GtkHandleBox">
+    <prototype>on_{$ID}_ChildAttached</prototype>
+    <method>ChildAttached</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.ChildAttachedArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="ChildDetached" callerClass="GtkHandleBox">
+    <prototype>on_{$ID}_ChildDetached</prototype>
+    <method>ChildDetached</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.ChildDetachedArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="ActivateCurrent" callerClass="GtkMenuShell">
+    <prototype>on_{$ID}_ActivateCurrent</prototype>
+    <method>ActivateCurrent</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.ActivateCurrentArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="Cancel" callerClass="GtkMenuShell">
+    <prototype>on_{$ID}_Cancel</prototype>
+    <method>Cancel</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="CycleFocus" callerClass="GtkMenuShell">
+    <prototype>on_{$ID}_CycleFocus</prototype>
+    <method>CycleFocus</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.CycleFocusArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="Deactivate" callerClass="GtkMenuShell">
+    <prototype>on_{$ID}_Deactivate</prototype>
+    <method>Deactivate</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="MoveCurrent" callerClass="GtkMenuShell">
+    <prototype>on_{$ID}_MoveCurrent</prototype>
+    <method>MoveCurrent</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.MoveCurrentArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="MoveSelected" callerClass="GtkMenuShell">
+    <prototype>on_{$ID}_MoveSelected</prototype>
+    <method>MoveSelected</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.MoveSelectedArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="SelectionDone" callerClass="GtkMenuShell">
+    <prototype>on_{$ID}_SelectionDone</prototype>
+    <method>SelectionDone</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="Changed" callerClass="GtkAccelMap">
+    <prototype>on_{$ID}_Changed</prototype>
+    <method>Changed</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.MapChangedArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="ColorSet" callerClass="GtkColorButton">
+    <prototype>on_{$ID}_ColorSet</prototype>
+    <method>ColorSet</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="Commit" callerClass="GtkIMContext">
+    <prototype>on_{$ID}_Commit</prototype>
+    <method>Commit</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.CommitArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="PreeditChanged" callerClass="GtkIMContext">
+    <prototype>on_{$ID}_PreeditChanged</prototype>
+    <method>PreeditChanged</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="PreeditEnd" callerClass="GtkIMContext">
+    <prototype>on_{$ID}_PreeditEnd</prototype>
+    <method>PreeditEnd</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="PreeditStart" callerClass="GtkIMContext">
+    <prototype>on_{$ID}_PreeditStart</prototype>
+    <method>PreeditStart</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="RetrieveSurrounding" callerClass="GtkIMContext">
+    <prototype>on_{$ID}_RetrieveSurrounding</prototype>
+    <method>RetrieveSurrounding</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.RetrieveSurroundingArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="DeleteSurrounding" callerClass="GtkIMContext">
+    <prototype>on_{$ID}_DeleteSurrounding</prototype>
+    <method>DeleteSurrounding</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.SurroundingDeletedArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="Edited" callerClass="GtkCellRendererText">
+    <prototype>on_{$ID}_Edited</prototype>
+    <method>Edited</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.EditedArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="Clicked" callerClass="GtkTreeViewColumn">
+    <prototype>on_{$ID}_Clicked</prototype>
+    <method>Clicked</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="Toggled" callerClass="GtkCheckMenuItem">
+    <prototype>on_{$ID}_Toggled</prototype>
+    <method>Toggled</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="Event" callerClass="GtkTextTag">
+    <prototype>on_{$ID}_Event</prototype>
+    <method>Event</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.TextEventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="Changed" callerClass="GtkModifierStyle">
+    <prototype>on_{$ID}_Changed</prototype>
+    <method>Changed</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="Changed" callerClass="GtkRecentManager">
+    <prototype>on_{$ID}_Changed</prototype>
+    <method>Changed</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="" callerClass="GtkITreeModel">
+    <prototype>on_{$ID}_</prototype>
+    <method>
+    </method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.RowChangedArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="" callerClass="GtkITreeModel">
+    <prototype>on_{$ID}_</prototype>
+    <method>
+    </method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.RowDeletedArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="" callerClass="GtkITreeModel">
+    <prototype>on_{$ID}_</prototype>
+    <method>
+    </method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.RowHasChildToggledArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="" callerClass="GtkITreeModel">
+    <prototype>on_{$ID}_</prototype>
+    <method>
+    </method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.RowInsertedArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="" callerClass="GtkITreeModel">
+    <prototype>on_{$ID}_</prototype>
+    <method>
+    </method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.RowsReorderedArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="RowChanged" callerClass="GtkTreeModelSort">
+    <prototype>on_{$ID}_RowChanged</prototype>
+    <method>RowChanged</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.RowChangedArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="RowDeleted" callerClass="GtkTreeModelSort">
+    <prototype>on_{$ID}_RowDeleted</prototype>
+    <method>RowDeleted</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.RowDeletedArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="RowHasChildToggled" callerClass="GtkTreeModelSort">
+    <prototype>on_{$ID}_RowHasChildToggled</prototype>
+    <method>RowHasChildToggled</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.RowHasChildToggledArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="RowInserted" callerClass="GtkTreeModelSort">
+    <prototype>on_{$ID}_RowInserted</prototype>
+    <method>RowInserted</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.RowInsertedArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="Rows_Reordered" callerClass="GtkTreeModelSort">
+    <prototype>on_{$ID}_Rows_Reordered</prototype>
+    <method>Rows_Reordered</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.RowsReorderedArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="SortColumnChanged" callerClass="GtkTreeModelSort">
+    <prototype>on_{$ID}_SortColumnChanged</prototype>
+    <method>SortColumnChanged</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="GroupChanged" callerClass="GtkRadioMenuItem">
+    <prototype>on_{$ID}_GroupChanged</prototype>
+    <method>GroupChanged</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="Changed" callerClass="GtkTextBuffer">
+    <prototype>on_{$ID}_Changed</prototype>
+    <method>Changed</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="InsertChildAnchor" callerClass="GtkTextBuffer">
+    <prototype>on_{$ID}_InsertChildAnchor</prototype>
+    <method>InsertChildAnchor</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.ChildAnchorInsertedArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="DeleteRange" callerClass="GtkTextBuffer">
+    <prototype>on_{$ID}_DeleteRange</prototype>
+    <method>DeleteRange</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.DeleteRangeArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="InsertText" callerClass="GtkTextBuffer">
+    <prototype>on_{$ID}_InsertText</prototype>
+    <method>InsertText</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.InsertTextArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="MarkDeleted" callerClass="GtkTextBuffer">
+    <prototype>on_{$ID}_MarkDeleted</prototype>
+    <method>MarkDeleted</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.MarkDeletedArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="MarkSet" callerClass="GtkTextBuffer">
+    <prototype>on_{$ID}_MarkSet</prototype>
+    <method>MarkSet</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.MarkSetArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="ModifiedChanged" callerClass="GtkTextBuffer">
+    <prototype>on_{$ID}_ModifiedChanged</prototype>
+    <method>ModifiedChanged</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="PasteDone" callerClass="GtkTextBuffer">
+    <prototype>on_{$ID}_PasteDone</prototype>
+    <method>PasteDone</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.PasteDoneArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="InsertPixbuf" callerClass="GtkTextBuffer">
+    <prototype>on_{$ID}_InsertPixbuf</prototype>
+    <method>InsertPixbuf</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.PixbufInsertedArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="ApplyTag" callerClass="GtkTextBuffer">
+    <prototype>on_{$ID}_ApplyTag</prototype>
+    <method>ApplyTag</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.TagAppliedArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="RemoveTag" callerClass="GtkTextBuffer">
+    <prototype>on_{$ID}_RemoveTag</prototype>
+    <method>RemoveTag</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.TagRemovedArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="BeginUserAction" callerClass="GtkTextBuffer">
+    <prototype>on_{$ID}_BeginUserAction</prototype>
+    <method>BeginUserAction</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="EndUserAction" callerClass="GtkTextBuffer">
+    <prototype>on_{$ID}_EndUserAction</prototype>
+    <method>EndUserAction</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="Apply" callerClass="GtkAssistant">
+    <prototype>on_{$ID}_Apply</prototype>
+    <method>Apply</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="Cancel" callerClass="GtkAssistant">
+    <prototype>on_{$ID}_Cancel</prototype>
+    <method>Cancel</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="Close" callerClass="GtkAssistant">
+    <prototype>on_{$ID}_Close</prototype>
+    <method>Close</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="Prepare" callerClass="GtkAssistant">
+    <prototype>on_{$ID}_Prepare</prototype>
+    <method>Prepare</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.PrepareArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="AcceptPosition" callerClass="GtkPaned">
+    <prototype>on_{$ID}_AcceptPosition</prototype>
+    <method>AcceptPosition</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.AcceptPositionArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="CancelPosition" callerClass="GtkPaned">
+    <prototype>on_{$ID}_CancelPosition</prototype>
+    <method>CancelPosition</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.CancelPositionArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="CycleChildFocus" callerClass="GtkPaned">
+    <prototype>on_{$ID}_CycleChildFocus</prototype>
+    <method>CycleChildFocus</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.CycleChildFocusArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="CycleHandleFocus" callerClass="GtkPaned">
+    <prototype>on_{$ID}_CycleHandleFocus</prototype>
+    <method>CycleHandleFocus</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.CycleHandleFocusArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="MoveHandle" callerClass="GtkPaned">
+    <prototype>on_{$ID}_MoveHandle</prototype>
+    <method>MoveHandle</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.MoveHandleArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="ToggleHandleFocus" callerClass="GtkPaned">
+    <prototype>on_{$ID}_ToggleHandleFocus</prototype>
+    <method>ToggleHandleFocus</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.ToggleHandleFocusArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="Changed" callerClass="GtkStyleContext">
+    <prototype>on_{$ID}_Changed</prototype>
+    <method>Changed</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="DetailsAcquired" callerClass="GtkPrinter">
+    <prototype>on_{$ID}_DetailsAcquired</prototype>
+    <method>DetailsAcquired</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.DetailsAcquiredArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="ConfirmOverwrite" callerClass="GtkFileChooserDialog">
+    <prototype>on_{$ID}_ConfirmOverwrite</prototype>
+    <method>ConfirmOverwrite</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.ConfirmOverwriteArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="CurrentFolderChanged" callerClass="GtkFileChooserDialog">
+    <prototype>on_{$ID}_CurrentFolderChanged</prototype>
+    <method>CurrentFolderChanged</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="FileActivated" callerClass="GtkFileChooserDialog">
+    <prototype>on_{$ID}_FileActivated</prototype>
+    <method>FileActivated</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="SelectionChanged" callerClass="GtkFileChooserDialog">
+    <prototype>on_{$ID}_SelectionChanged</prototype>
+    <method>SelectionChanged</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="UpdatePreview" callerClass="GtkFileChooserDialog">
+    <prototype>on_{$ID}_UpdatePreview</prototype>
+    <method>UpdatePreview</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="" callerClass="GtkITreeSortable">
+    <prototype>on_{$ID}_</prototype>
+    <method>
+    </method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="FocusHomeOrEnd" callerClass="GtkToolbar">
+    <prototype>on_{$ID}_FocusHomeOrEnd</prototype>
+    <method>FocusHomeOrEnd</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.FocusHomeOrEndArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="OrientationChanged" callerClass="GtkToolbar">
+    <prototype>on_{$ID}_OrientationChanged</prototype>
+    <method>OrientationChanged</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.OrientationChangedArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="PopupContextMenu" callerClass="GtkToolbar">
+    <prototype>on_{$ID}_PopupContextMenu</prototype>
+    <method>PopupContextMenu</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.PopupContextMenuArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="StyleChanged" callerClass="GtkToolbar">
+    <prototype>on_{$ID}_StyleChanged</prototype>
+    <method>StyleChanged</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.StyleChangedArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="Embedded" callerClass="GtkPlug">
+    <prototype>on_{$ID}_Embedded</prototype>
+    <method>Embedded</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="BeginPrint" callerClass="GtkPrintOperation">
+    <prototype>on_{$ID}_BeginPrint</prototype>
+    <method>BeginPrint</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.BeginPrintArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="CreateCustomWidget" callerClass="GtkPrintOperation">
+    <prototype>on_{$ID}_CreateCustomWidget</prototype>
+    <method>CreateCustomWidget</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.CreateCustomWidgetArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="CustomWidgetApply" callerClass="GtkPrintOperation">
+    <prototype>on_{$ID}_CustomWidgetApply</prototype>
+    <method>CustomWidgetApply</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.CustomWidgetApplyArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="Done" callerClass="GtkPrintOperation">
+    <prototype>on_{$ID}_Done</prototype>
+    <method>Done</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.DoneArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="DrawPage" callerClass="GtkPrintOperation">
+    <prototype>on_{$ID}_DrawPage</prototype>
+    <method>DrawPage</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.DrawPageArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="EndPrint" callerClass="GtkPrintOperation">
+    <prototype>on_{$ID}_EndPrint</prototype>
+    <method>EndPrint</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.EndPrintArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="GotPageSize" callerClass="GtkPrintOperation">
+    <prototype>on_{$ID}_GotPageSize</prototype>
+    <method>GotPageSize</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.GotPageSizeArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="Paginate" callerClass="GtkPrintOperation">
+    <prototype>on_{$ID}_Paginate</prototype>
+    <method>Paginate</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.PaginateArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="Preview" callerClass="GtkPrintOperation">
+    <prototype>on_{$ID}_Preview</prototype>
+    <method>Preview</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.PreviewArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="Ready" callerClass="GtkPrintOperation">
+    <prototype>on_{$ID}_Ready</prototype>
+    <method>Ready</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.ReadyArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="RequestPageSetup" callerClass="GtkPrintOperation">
+    <prototype>on_{$ID}_RequestPageSetup</prototype>
+    <method>RequestPageSetup</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.RequestPageSetupArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="StatusChanged" callerClass="GtkPrintOperation">
+    <prototype>on_{$ID}_StatusChanged</prototype>
+    <method>StatusChanged</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="UpdateCustomWidget" callerClass="GtkPrintOperation">
+    <prototype>on_{$ID}_UpdateCustomWidget</prototype>
+    <method>UpdateCustomWidget</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.UpdateCustomWidgetArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="ActivateLink" callerClass="GtkLinkButton">
+    <prototype>on_{$ID}_ActivateLink</prototype>
+    <method>ActivateLink</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.ActivateLinkArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="ActivateLink" callerClass="GtkAboutDialog">
+    <prototype>on_{$ID}_ActivateLink</prototype>
+    <method>ActivateLink</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.ActivateLinkArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="DaySelected" callerClass="GtkCalendar">
+    <prototype>on_{$ID}_DaySelected</prototype>
+    <method>DaySelected</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="DaySelectedDoubleClick" callerClass="GtkCalendar">
+    <prototype>on_{$ID}_DaySelectedDoubleClick</prototype>
+    <method>DaySelectedDoubleClick</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="MonthChanged" callerClass="GtkCalendar">
+    <prototype>on_{$ID}_MonthChanged</prototype>
+    <method>MonthChanged</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="NextMonth" callerClass="GtkCalendar">
+    <prototype>on_{$ID}_NextMonth</prototype>
+    <method>NextMonth</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="NextYear" callerClass="GtkCalendar">
+    <prototype>on_{$ID}_NextYear</prototype>
+    <method>NextYear</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="PrevMonth" callerClass="GtkCalendar">
+    <prototype>on_{$ID}_PrevMonth</prototype>
+    <method>PrevMonth</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="PrevYear" callerClass="GtkCalendar">
+    <prototype>on_{$ID}_PrevYear</prototype>
+    <method>PrevYear</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="AccelCleared" callerClass="GtkCellRendererAccel">
+    <prototype>on_{$ID}_AccelCleared</prototype>
+    <method>AccelCleared</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.AccelClearedArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="AccelEdited" callerClass="GtkCellRendererAccel">
+    <prototype>on_{$ID}_AccelEdited</prototype>
+    <method>AccelEdited</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.AccelEditedArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="ChangeValue" callerClass="GtkSpinButton">
+    <prototype>on_{$ID}_ChangeValue</prototype>
+    <method>ChangeValue</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.ChangeValueArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="Input" callerClass="GtkSpinButton">
+    <prototype>on_{$ID}_Input</prototype>
+    <method>Input</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.InputArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="Output" callerClass="GtkSpinButton">
+    <prototype>on_{$ID}_Output</prototype>
+    <method>Output</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.OutputArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="ValueChanged" callerClass="GtkSpinButton">
+    <prototype>on_{$ID}_ValueChanged</prototype>
+    <method>ValueChanged</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="Wrapped" callerClass="GtkSpinButton">
+    <prototype>on_{$ID}_Wrapped</prototype>
+    <method>Wrapped</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="AdjustBounds" callerClass="GtkRange">
+    <prototype>on_{$ID}_AdjustBounds</prototype>
+    <method>AdjustBounds</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.AdjustBoundsArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="ChangeValue" callerClass="GtkRange">
+    <prototype>on_{$ID}_ChangeValue</prototype>
+    <method>ChangeValue</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.ChangeValueArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="MoveSlider" callerClass="GtkRange">
+    <prototype>on_{$ID}_MoveSlider</prototype>
+    <method>MoveSlider</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.MoveSliderArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="ValueChanged" callerClass="GtkRange">
+    <prototype>on_{$ID}_ValueChanged</prototype>
+    <method>ValueChanged</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="Close" callerClass="GtkDialog">
+    <prototype>on_{$ID}_Close</prototype>
+    <method>Close</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="Response" callerClass="GtkDialog">
+    <prototype>on_{$ID}_Response</prototype>
+    <method>Response</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.ResponseArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="ColorChanged" callerClass="GtkColorSelection">
+    <prototype>on_{$ID}_ColorChanged</prototype>
+    <method>ColorChanged</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="Activate" callerClass="GtkAction">
+    <prototype>on_{$ID}_Activate</prototype>
+    <method>Activate</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="AccelActivate" callerClass="GtkAccelGroup">
+    <prototype>on_{$ID}_AccelActivate</prototype>
+    <method>AccelActivate</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.AccelActivateArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="AccelChanged" callerClass="GtkAccelGroup">
+    <prototype>on_{$ID}_AccelChanged</prototype>
+    <method>AccelChanged</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.AccelChangedArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="Activate" callerClass="GtkExpander">
+    <prototype>on_{$ID}_Activate</prototype>
+    <method>Activate</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="" callerClass="GtkIFileChooser">
+    <prototype>on_{$ID}_</prototype>
+    <method>
+    </method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.ConfirmOverwriteArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="" callerClass="GtkIFileChooser">
+    <prototype>on_{$ID}_</prototype>
+    <method>
+    </method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="" callerClass="GtkIFileChooser">
+    <prototype>on_{$ID}_</prototype>
+    <method>
+    </method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="" callerClass="GtkIFileChooser">
+    <prototype>on_{$ID}_</prototype>
+    <method>
+    </method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="" callerClass="GtkIFileChooser">
+    <prototype>on_{$ID}_</prototype>
+    <method>
+    </method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="GotPageSize" callerClass="GtkPrintOperationPreviewAdapter">
+    <prototype>on_{$ID}_GotPageSize</prototype>
+    <method>GotPageSize</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.GotPageSizeArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="Ready" callerClass="GtkPrintOperationPreviewAdapter">
+    <prototype>on_{$ID}_Ready</prototype>
+    <method>Ready</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.ReadyArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="Close" callerClass="GtkInfoBar">
+    <prototype>on_{$ID}_Close</prototype>
+    <method>Close</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="Response" callerClass="GtkInfoBar">
+    <prototype>on_{$ID}_Response</prototype>
+    <method>Response</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.RespondArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="" callerClass="GtkIPrintOperationPreview">
+    <prototype>on_{$ID}_</prototype>
+    <method>
+    </method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.GotPageSizeArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="" callerClass="GtkIPrintOperationPreview">
+    <prototype>on_{$ID}_</prototype>
+    <method>
+    </method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.ReadyArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="Toggled" callerClass="GtkToggleButton">
+    <prototype>on_{$ID}_Toggled</prototype>
+    <method>Toggled</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="RowChanged" callerClass="GtkTreeStore">
+    <prototype>on_{$ID}_RowChanged</prototype>
+    <method>RowChanged</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.RowChangedArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="RowDeleted" callerClass="GtkTreeStore">
+    <prototype>on_{$ID}_RowDeleted</prototype>
+    <method>RowDeleted</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.RowDeletedArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="RowHasChildToggled" callerClass="GtkTreeStore">
+    <prototype>on_{$ID}_RowHasChildToggled</prototype>
+    <method>RowHasChildToggled</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.RowHasChildToggledArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="RowInserted" callerClass="GtkTreeStore">
+    <prototype>on_{$ID}_RowInserted</prototype>
+    <method>RowInserted</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.RowInsertedArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="Rows_Reordered" callerClass="GtkTreeStore">
+    <prototype>on_{$ID}_Rows_Reordered</prototype>
+    <method>Rows_Reordered</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.RowsReorderedArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="SortColumnChanged" callerClass="GtkTreeStore">
+    <prototype>on_{$ID}_SortColumnChanged</prototype>
+    <method>SortColumnChanged</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="GroupChanged" callerClass="GtkRadioButton">
+    <prototype>on_{$ID}_GroupChanged</prototype>
+    <method>GroupChanged</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="Add" callerClass="GtkContainer">
+    <prototype>on_{$ID}_Add</prototype>
+    <method>Add</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.AddedArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="SetFocusChild" callerClass="GtkContainer">
+    <prototype>on_{$ID}_SetFocusChild</prototype>
+    <method>SetFocusChild</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.FocusChildSetArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="Remove" callerClass="GtkContainer">
+    <prototype>on_{$ID}_Remove</prototype>
+    <method>Remove</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.RemovedArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="CheckResize" callerClass="GtkContainer">
+    <prototype>on_{$ID}_CheckResize</prototype>
+    <method>CheckResize</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="" callerClass="GtkICellEditable">
+    <prototype>on_{$ID}_</prototype>
+    <method>
+    </method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="" callerClass="GtkICellEditable">
+    <prototype>on_{$ID}_</prototype>
+    <method>
+    </method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="MenuActivate" callerClass="GtkTreeMenu">
+    <prototype>on_{$ID}_MenuActivate</prototype>
+    <method>MenuActivate</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.MenuActivateArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="Changed" callerClass="GtkHSV">
+    <prototype>on_{$ID}_Changed</prototype>
+    <method>Changed</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="Move" callerClass="GtkHSV">
+    <prototype>on_{$ID}_Move</prototype>
+    <method>Move</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.MoveArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="Clicked" callerClass="GtkToolButton">
+    <prototype>on_{$ID}_Clicked</prototype>
+    <method>Clicked</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="PlugAdded" callerClass="GtkSocket">
+    <prototype>on_{$ID}_PlugAdded</prototype>
+    <method>PlugAdded</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="PlugRemoved" callerClass="GtkSocket">
+    <prototype>on_{$ID}_PlugRemoved</prototype>
+    <method>PlugRemoved</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.PlugRemovedArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="" callerClass="GtkIEditable">
+    <prototype>on_{$ID}_</prototype>
+    <method>
+    </method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="" callerClass="GtkIEditable">
+    <prototype>on_{$ID}_</prototype>
+    <method>
+    </method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.TextDeletedArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="" callerClass="GtkIEditable">
+    <prototype>on_{$ID}_</prototype>
+    <method>
+    </method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.TextInsertedArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="Backspace" callerClass="GtkTextView">
+    <prototype>on_{$ID}_Backspace</prototype>
+    <method>Backspace</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="CopyClipboard" callerClass="GtkTextView">
+    <prototype>on_{$ID}_CopyClipboard</prototype>
+    <method>CopyClipboard</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="CutClipboard" callerClass="GtkTextView">
+    <prototype>on_{$ID}_CutClipboard</prototype>
+    <method>CutClipboard</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="DeleteFromCursor" callerClass="GtkTextView">
+    <prototype>on_{$ID}_DeleteFromCursor</prototype>
+    <method>DeleteFromCursor</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.DeleteFromCursorArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="InsertAtCursor" callerClass="GtkTextView">
+    <prototype>on_{$ID}_InsertAtCursor</prototype>
+    <method>InsertAtCursor</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.InsertAtCursorArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="MoveCursor" callerClass="GtkTextView">
+    <prototype>on_{$ID}_MoveCursor</prototype>
+    <method>MoveCursor</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.MoveCursorArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="MoveViewport" callerClass="GtkTextView">
+    <prototype>on_{$ID}_MoveViewport</prototype>
+    <method>MoveViewport</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.MoveViewportArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="PasteClipboard" callerClass="GtkTextView">
+    <prototype>on_{$ID}_PasteClipboard</prototype>
+    <method>PasteClipboard</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="PopulatePopup" callerClass="GtkTextView">
+    <prototype>on_{$ID}_PopulatePopup</prototype>
+    <method>PopulatePopup</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.PopulatePopupArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="PreeditChanged" callerClass="GtkTextView">
+    <prototype>on_{$ID}_PreeditChanged</prototype>
+    <method>PreeditChanged</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.PreeditChangedArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="SelectAll" callerClass="GtkTextView">
+    <prototype>on_{$ID}_SelectAll</prototype>
+    <method>SelectAll</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.SelectAllArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="SetAnchor" callerClass="GtkTextView">
+    <prototype>on_{$ID}_SetAnchor</prototype>
+    <method>SetAnchor</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="ToggleCursorVisible" callerClass="GtkTextView">
+    <prototype>on_{$ID}_ToggleCursorVisible</prototype>
+    <method>ToggleCursorVisible</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="ToggleOverwrite" callerClass="GtkTextView">
+    <prototype>on_{$ID}_ToggleOverwrite</prototype>
+    <method>ToggleOverwrite</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="ConfirmOverwrite" callerClass="GtkFileChooserAdapter">
+    <prototype>on_{$ID}_ConfirmOverwrite</prototype>
+    <method>ConfirmOverwrite</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.ConfirmOverwriteArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="CurrentFolderChanged" callerClass="GtkFileChooserAdapter">
+    <prototype>on_{$ID}_CurrentFolderChanged</prototype>
+    <method>CurrentFolderChanged</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="FileActivated" callerClass="GtkFileChooserAdapter">
+    <prototype>on_{$ID}_FileActivated</prototype>
+    <method>FileActivated</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="SelectionChanged" callerClass="GtkFileChooserAdapter">
+    <prototype>on_{$ID}_SelectionChanged</prototype>
+    <method>SelectionChanged</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="UpdatePreview" callerClass="GtkFileChooserAdapter">
+    <prototype>on_{$ID}_UpdatePreview</prototype>
+    <method>UpdatePreview</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="Realize" callerClass="GtkStyle">
+    <prototype>on_{$ID}_Realize</prototype>
+    <method>Realize</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="Unrealize" callerClass="GtkStyle">
+    <prototype>on_{$ID}_Unrealize</prototype>
+    <method>Unrealize</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="Changed" callerClass="GtkCellRendererCombo">
+    <prototype>on_{$ID}_Changed</prototype>
+    <method>Changed</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.ChangedArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="" callerClass="GtkNodeSelection">
+    <prototype>on_{$ID}_</prototype>
+    <method>
+    </method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="OwnerChange" callerClass="GtkClipboard">
+    <prototype>on_{$ID}_OwnerChange</prototype>
+    <method>OwnerChange</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.OwnerChangeArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="CanActivateAccel" callerClass="GtkWidget">
+    <prototype>on_{$ID}_CanActivateAccel</prototype>
+    <method>CanActivateAccel</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.AccelCanActivateArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="AccelClosuresChanged" callerClass="GtkWidget">
+    <prototype>on_{$ID}_AccelClosuresChanged</prototype>
+    <method>AccelClosuresChanged</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="ButtonPressEvent" callerClass="GtkWidget">
+    <prototype>on_{$ID}_ButtonPressEvent</prototype>
+    <method>ButtonPressEvent</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.ButtonPressEventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="ButtonReleaseEvent" callerClass="GtkWidget">
+    <prototype>on_{$ID}_ButtonReleaseEvent</prototype>
+    <method>ButtonReleaseEvent</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.ButtonReleaseEventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="ChildNotify" callerClass="GtkWidget">
+    <prototype>on_{$ID}_ChildNotify</prototype>
+    <method>ChildNotify</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.ChildNotifiedArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="CompositedChanged" callerClass="GtkWidget">
+    <prototype>on_{$ID}_CompositedChanged</prototype>
+    <method>CompositedChanged</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="ConfigureEvent" callerClass="GtkWidget">
+    <prototype>on_{$ID}_ConfigureEvent</prototype>
+    <method>ConfigureEvent</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.ConfigureEventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="DamageEvent" callerClass="GtkWidget">
+    <prototype>on_{$ID}_DamageEvent</prototype>
+    <method>DamageEvent</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.DamageEventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="DeleteEvent" callerClass="GtkWidget">
+    <prototype>on_{$ID}_DeleteEvent</prototype>
+    <method>DeleteEvent</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.DeleteEventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="Destroy" callerClass="GtkWidget">
+    <prototype>on_{$ID}_Destroy</prototype>
+    <method>Destroy</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="DestroyEvent" callerClass="GtkWidget">
+    <prototype>on_{$ID}_DestroyEvent</prototype>
+    <method>DestroyEvent</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.DestroyEventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="DirectionChanged" callerClass="GtkWidget">
+    <prototype>on_{$ID}_DirectionChanged</prototype>
+    <method>DirectionChanged</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.DirectionChangedArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="DragBegin" callerClass="GtkWidget">
+    <prototype>on_{$ID}_DragBegin</prototype>
+    <method>DragBegin</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.DragBeginArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="DragDataDelete" callerClass="GtkWidget">
+    <prototype>on_{$ID}_DragDataDelete</prototype>
+    <method>DragDataDelete</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.DragDataDeleteArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="DragDataGet" callerClass="GtkWidget">
+    <prototype>on_{$ID}_DragDataGet</prototype>
+    <method>DragDataGet</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.DragDataGetArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="DragDataReceived" callerClass="GtkWidget">
+    <prototype>on_{$ID}_DragDataReceived</prototype>
+    <method>DragDataReceived</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.DragDataReceivedArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="DragDrop" callerClass="GtkWidget">
+    <prototype>on_{$ID}_DragDrop</prototype>
+    <method>DragDrop</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.DragDropArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="DragEnd" callerClass="GtkWidget">
+    <prototype>on_{$ID}_DragEnd</prototype>
+    <method>DragEnd</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.DragEndArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="DragFailed" callerClass="GtkWidget">
+    <prototype>on_{$ID}_DragFailed</prototype>
+    <method>DragFailed</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.DragFailedArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="DragLeave" callerClass="GtkWidget">
+    <prototype>on_{$ID}_DragLeave</prototype>
+    <method>DragLeave</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.DragLeaveArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="DragMotion" callerClass="GtkWidget">
+    <prototype>on_{$ID}_DragMotion</prototype>
+    <method>DragMotion</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.DragMotionArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="Draw" callerClass="GtkWidget">
+    <prototype>on_{$ID}_Draw</prototype>
+    <method>Draw</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.DrawnArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="EnterNotifyEvent" callerClass="GtkWidget">
+    <prototype>on_{$ID}_EnterNotifyEvent</prototype>
+    <method>EnterNotifyEvent</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.EnterNotifyEventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="Focus" callerClass="GtkWidget">
+    <prototype>on_{$ID}_Focus</prototype>
+    <method>Focus</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.FocusedArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="GrabFocus" callerClass="GtkWidget">
+    <prototype>on_{$ID}_GrabFocus</prototype>
+    <method>GrabFocus</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="FocusInEvent" callerClass="GtkWidget">
+    <prototype>on_{$ID}_FocusInEvent</prototype>
+    <method>FocusInEvent</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.FocusInEventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="FocusOutEvent" callerClass="GtkWidget">
+    <prototype>on_{$ID}_FocusOutEvent</prototype>
+    <method>FocusOutEvent</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.FocusOutEventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="GrabBrokenEvent" callerClass="GtkWidget">
+    <prototype>on_{$ID}_GrabBrokenEvent</prototype>
+    <method>GrabBrokenEvent</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.GrabBrokenEventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="GrabNotify" callerClass="GtkWidget">
+    <prototype>on_{$ID}_GrabNotify</prototype>
+    <method>GrabNotify</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.GrabNotifyArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="ShowHelp" callerClass="GtkWidget">
+    <prototype>on_{$ID}_ShowHelp</prototype>
+    <method>ShowHelp</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.HelpShownArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="Hide" callerClass="GtkWidget">
+    <prototype>on_{$ID}_Hide</prototype>
+    <method>Hide</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="HierarchyChanged" callerClass="GtkWidget">
+    <prototype>on_{$ID}_HierarchyChanged</prototype>
+    <method>HierarchyChanged</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.HierarchyChangedArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="KeyPressEvent" callerClass="GtkWidget">
+    <prototype>on_{$ID}_KeyPressEvent</prototype>
+    <method>KeyPressEvent</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.KeyPressEventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="KeyReleaseEvent" callerClass="GtkWidget">
+    <prototype>on_{$ID}_KeyReleaseEvent</prototype>
+    <method>KeyReleaseEvent</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.KeyReleaseEventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="LeaveNotifyEvent" callerClass="GtkWidget">
+    <prototype>on_{$ID}_LeaveNotifyEvent</prototype>
+    <method>LeaveNotifyEvent</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.LeaveNotifyEventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="MapEvent" callerClass="GtkWidget">
+    <prototype>on_{$ID}_MapEvent</prototype>
+    <method>MapEvent</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.MapEventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="Map" callerClass="GtkWidget">
+    <prototype>on_{$ID}_Map</prototype>
+    <method>Map</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="MnemonicActivate" callerClass="GtkWidget">
+    <prototype>on_{$ID}_MnemonicActivate</prototype>
+    <method>MnemonicActivate</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.MnemonicActivatedArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="MotionNotifyEvent" callerClass="GtkWidget">
+    <prototype>on_{$ID}_MotionNotifyEvent</prototype>
+    <method>MotionNotifyEvent</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.MotionNotifyEventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="MoveFocus" callerClass="GtkWidget">
+    <prototype>on_{$ID}_MoveFocus</prototype>
+    <method>MoveFocus</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.MoveFocusArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="ParentSet" callerClass="GtkWidget">
+    <prototype>on_{$ID}_ParentSet</prototype>
+    <method>ParentSet</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.ParentSetArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="PopupMenu" callerClass="GtkWidget">
+    <prototype>on_{$ID}_PopupMenu</prototype>
+    <method>PopupMenu</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.PopupMenuArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="PropertyNotifyEvent" callerClass="GtkWidget">
+    <prototype>on_{$ID}_PropertyNotifyEvent</prototype>
+    <method>PropertyNotifyEvent</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.PropertyNotifyEventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="ProximityInEvent" callerClass="GtkWidget">
+    <prototype>on_{$ID}_ProximityInEvent</prototype>
+    <method>ProximityInEvent</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.ProximityInEventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="ProximityOutEvent" callerClass="GtkWidget">
+    <prototype>on_{$ID}_ProximityOutEvent</prototype>
+    <method>ProximityOutEvent</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.ProximityOutEventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="QueryTooltip" callerClass="GtkWidget">
+    <prototype>on_{$ID}_QueryTooltip</prototype>
+    <method>QueryTooltip</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.QueryTooltipArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="Realize" callerClass="GtkWidget">
+    <prototype>on_{$ID}_Realize</prototype>
+    <method>Realize</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="ScreenChanged" callerClass="GtkWidget">
+    <prototype>on_{$ID}_ScreenChanged</prototype>
+    <method>ScreenChanged</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.ScreenChangedArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="ScrollEvent" callerClass="GtkWidget">
+    <prototype>on_{$ID}_ScrollEvent</prototype>
+    <method>ScrollEvent</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.ScrollEventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="SelectionClearEvent" callerClass="GtkWidget">
+    <prototype>on_{$ID}_SelectionClearEvent</prototype>
+    <method>SelectionClearEvent</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.SelectionClearEventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="SelectionGet" callerClass="GtkWidget">
+    <prototype>on_{$ID}_SelectionGet</prototype>
+    <method>SelectionGet</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.SelectionGetArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="SelectionNotifyEvent" callerClass="GtkWidget">
+    <prototype>on_{$ID}_SelectionNotifyEvent</prototype>
+    <method>SelectionNotifyEvent</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.SelectionNotifyEventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="SelectionReceived" callerClass="GtkWidget">
+    <prototype>on_{$ID}_SelectionReceived</prototype>
+    <method>SelectionReceived</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.SelectionReceivedArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="SelectionRequestEvent" callerClass="GtkWidget">
+    <prototype>on_{$ID}_SelectionRequestEvent</prototype>
+    <method>SelectionRequestEvent</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.SelectionRequestEventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="Show" callerClass="GtkWidget">
+    <prototype>on_{$ID}_Show</prototype>
+    <method>Show</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="SizeAllocate" callerClass="GtkWidget">
+    <prototype>on_{$ID}_SizeAllocate</prototype>
+    <method>SizeAllocate</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.SizeAllocatedArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="StateChanged" callerClass="GtkWidget">
+    <prototype>on_{$ID}_StateChanged</prototype>
+    <method>StateChanged</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.StateChangedArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="StateFlagsChanged" callerClass="GtkWidget">
+    <prototype>on_{$ID}_StateFlagsChanged</prototype>
+    <method>StateFlagsChanged</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.StateFlagsChangedArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="StyleSet" callerClass="GtkWidget">
+    <prototype>on_{$ID}_StyleSet</prototype>
+    <method>StyleSet</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.StyleSetArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="StyleUpdated" callerClass="GtkWidget">
+    <prototype>on_{$ID}_StyleUpdated</prototype>
+    <method>StyleUpdated</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="UnmapEvent" callerClass="GtkWidget">
+    <prototype>on_{$ID}_UnmapEvent</prototype>
+    <method>UnmapEvent</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.UnmapEventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="Unmap" callerClass="GtkWidget">
+    <prototype>on_{$ID}_Unmap</prototype>
+    <method>Unmap</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="Unrealize" callerClass="GtkWidget">
+    <prototype>on_{$ID}_Unrealize</prototype>
+    <method>Unrealize</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>EventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="VisibilityNotifyEvent" callerClass="GtkWidget">
+    <prototype>on_{$ID}_VisibilityNotifyEvent</prototype>
+    <method>VisibilityNotifyEvent</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.VisibilityNotifyEventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="Event" callerClass="GtkWidget">
+    <prototype>on_{$ID}_Event</prototype>
+    <method>Event</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.WidgetEventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="EventAfter" callerClass="GtkWidget">
+    <prototype>on_{$ID}_EventAfter</prototype>
+    <method>EventAfter</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.WidgetEventAfterArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="WindowStateEvent" callerClass="GtkWidget">
+    <prototype>on_{$ID}_WindowStateEvent</prototype>
+    <method>WindowStateEvent</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.WindowStateEventArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="MoveFocusOut" callerClass="GtkScrolledWindow">
+    <prototype>on_{$ID}_MoveFocusOut</prototype>
+    <method>MoveFocusOut</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.MoveFocusOutArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="ScrollChild" callerClass="GtkScrolledWindow">
+    <prototype>on_{$ID}_ScrollChild</prototype>
+    <method>ScrollChild</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.ScrollChildArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="CustomItemActivated" callerClass="GtkAppChooserButton">
+    <prototype>on_{$ID}_CustomItemActivated</prototype>
+    <method>CustomItemActivated</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.CustomItemActivatedArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="TextPopped" callerClass="GtkStatusbar">
+    <prototype>on_{$ID}_TextPopped</prototype>
+    <method>TextPopped</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.TextPoppedArgs e</arg>
+    </args>
+  </signal>
+  <signal eventName="TextPushed" callerClass="GtkStatusbar">
+    <prototype>on_{$ID}_TextPushed</prototype>
+    <method>TextPushed</method>
+    <args>
+      <arg>object sender</arg>
+      <arg>Gtk.TextPushedArgs e</arg>
+    </args>
+  </signal>
+</signals>
