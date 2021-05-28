@@ -29,3 +29,5 @@ $ gladeGenerator -projectName $SolutionName$ -projectDir $SolutionDir$
 ```
 
 For detailed instructions, please read the readMe text in the program file.
+
+We also accept deliveries with custom functions 
