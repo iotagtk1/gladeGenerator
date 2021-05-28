@@ -3,7 +3,7 @@
 ### Environment
 .net5
 
-Rider 2021 or Terminal
+Rider 2021 or Terminal or VisualSutdio
 
 
 ### Rider Setting
@@ -12,6 +12,7 @@ ExploerPanel - right click - edit execution configuration - external tools
 ![alt text](./readMe/1.png)
 
 Set up external tools. Set the arguments
+
 ![alt text](./readMe/3.png)
 
 execution
