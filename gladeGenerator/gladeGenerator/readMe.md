@@ -1,12 +1,12 @@
-###Introduction
+### Introduction
 
-###Environment
+### Environment
 .net5
 
 Rider 2021 or Terminal
 
 
-###Rider Setting
+### Rider Setting
 ExploerPanel - right click - edit execution configuration - external tools
 
 ![alt text](./readMe/1.png)
@@ -20,7 +20,7 @@ TopMenu - Tool - ExternalTool
 Right-click on the Exploer bar
 You can run it from an external tool
 
-###Arguments Macro Required
+### Arguments Macro Required
 
 Set the path of the program
 You must specify a macro
@@ -30,13 +30,13 @@ copy perst
 -projectName $SolutionName$ -projectDir $SolutionDir$
 ```
 
-###ConfigSetting.xml
+### ConfigSetting.xml
 ```
 <Setting SaveFolder="" />
 ```
 SaveFolder Add a folder to save.
 
-###GladFileClassMap.xml
+### GladFileClassMap.xml
 Overrides the name of the class to be written out
 
 ```
@@ -47,7 +47,7 @@ Overrides the name of the class to be written out
 targetFileName　Write the glade file name. Include extension
 reNameClassName　Write the class name to be rewritten
 
-####NoImportGladeFileSetting.xml
+#### NoImportGladeFileSetting.xml
 You can prevent the specified grade file from being loaded.
 
 ```
@@ -55,7 +55,7 @@ You can prevent the specified grade file from being loaded.
   <gladFile targetFileName="" />
 </NoImportGladeFile>
 ```
-####template.txt
+#### template.txt
 The contents of the exported class can be changed
 
 
