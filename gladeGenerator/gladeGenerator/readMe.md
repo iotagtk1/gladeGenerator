@@ -103,9 +103,3 @@ namespace testGtkApplication
     }
 }
 ````
-
-Translated with www.DeepL.com/Translator (free version)
-
-
-
-
