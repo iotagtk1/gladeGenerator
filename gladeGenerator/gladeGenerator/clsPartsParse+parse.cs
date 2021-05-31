@@ -12,7 +12,9 @@ namespace gladeGenerator
     {
         private List<string> NoClassNameArray = new List<string>() {"Window", "Widget", "Dialog"};
 
-        private void _getTopPart_idMethod(XmlNode topObjectNodes , ref List<TopLevelPart> topLevelPartArray){
+        private void _getTopPart_idMethod(
+            XmlNode topObjectNodes , 
+            ref List<TopLevelPart> topLevelPartArray){
 
             if (topObjectNodes.Attributes["class"] != null && topObjectNodes.Attributes["id"] != null)
             {
@@ -36,7 +38,7 @@ namespace gladeGenerator
                     topLevelPart1.PartId + " = null;";
 
                 object TopLevelPart1_obj = topLevelPart1;
-                _getSignals(topObjectNodes, ref TopLevelPart1_obj);
+                _getSignals(topLevelPart1,topObjectNodes, ref TopLevelPart1_obj);
                 topLevelPart1 = (TopLevelPart)TopLevelPart1_obj;
 
                 XmlNodeList childLevelPartNodesList = topObjectNodes.SelectNodes(".//object");
@@ -45,7 +47,7 @@ namespace gladeGenerator
                     return;
                 }
               
-                _getChildPart_idMethod(childLevelPartNodesList, ref topLevelPart1.ChildLevelPartsArray);
+                _getChildPart_idMethod(topLevelPart1,childLevelPartNodesList, ref topLevelPart1.ChildLevelPartsArray);
                 
                 topLevelPartArray.Add(topLevelPart1);
   
@@ -58,6 +60,7 @@ namespace gladeGenerator
         }
         
         private void _getChildPart_idMethod(
+            TopLevelPart TopLevelPart1,
             XmlNodeList childObjectNodes2 ,
             ref List<ChildLevelPart> childLevelPartArray ) {
 
@@ -85,7 +88,7 @@ namespace gladeGenerator
                 
                 object childLevelPart2_obj = childLevelPart2;
         
-                _getSignals(childObjectNode,ref childLevelPart2_obj);
+                _getSignals(TopLevelPart1,childObjectNode,ref childLevelPart2_obj);
         
                 childLevelPartArray.Add(childLevelPart2);
                 
@@ -93,7 +96,7 @@ namespace gladeGenerator
         
         }
 
-        private void _getSignals(XmlNode objectPartsNodes , ref object BaseLevelPart_a){
+        private void _getSignals(TopLevelPart topLevelPart1, XmlNode objectPartsNodes , ref object BaseLevelPart_a){
             try
             {
                 BaseClass BaseLevelPart = (BaseClass)BaseLevelPart_a;
@@ -157,7 +160,13 @@ namespace gladeGenerator
                         signal.IsSwapped = Boolean.Parse(signalNodes.Attributes["swapped"].Value); 
                     }
 
-                    signal.OutPutMethodStr = signalTemplateData1.ProtoTypeStr._replaceReplaceStr("{$ID}",classId);
+                    string topWinName = "";
+                    if (clsArgsConfig.Instance().isWinNameHandlerInclude)
+                    {
+                        topWinName = topLevelPart1.PartId + "_";
+                    }
+
+                    signal.OutPutMethodStr = signalTemplateData1.ProtoTypeStr._replaceReplaceStr("{$ID}",topWinName + classId);
 
                     //gladeファイルのhandlerもリネームする
                     signalNodes._setAttributesValue("handler",signal.OutPutMethodStr,gladeXmlDoc);

@@ -15,6 +15,10 @@ Set up external tools. Set the arguments
 
 ![alt text](./readMe/3.png)
 
+Uncheck Run after file sync.
+
+![alt text](./readMe/5.png)
+
 execution
 TopMenu - Tool - ExternalTool
 
@@ -33,9 +37,12 @@ copy perst
 
 ### ConfigSetting.xml
 ```
-<Setting SaveFolder="" />
+<Setting SaveFolder="" isWinNameHandlerInclude="true" />
 ```
 SaveFolder Add a folder to save.
+
+isWinNameHandlerInclude　Whether or not to enter the parent ID name in the signal name
+true or false
 
 ### GladFileClassMap.xml
 Overrides the name of the class to be written out

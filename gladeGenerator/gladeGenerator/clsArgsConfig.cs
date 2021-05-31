@@ -12,6 +12,7 @@ namespace gladeGenerator
         public string ProjectFolder = "";     
         public string ProjectName = "";
         public string SaveFolder = "";
+        public Boolean isWinNameHandlerInclude = false;
         public List<string> NoGaldeFileArray = new List<string>();
         public Dictionary<string,string> GladeFileClassMapDic = new Dictionary<string,string>();
         
@@ -42,6 +43,8 @@ namespace gladeGenerator
                             //isOverRideGladeEventHandler = node.Attributes._getValue("isOverRideGladeEventHandler")
                             //    .ToString()._boolValue();
                             SaveFolder = node.Attributes._getValue("SaveFolder");  
+                            
+                            isWinNameHandlerInclude = Convert.ToBoolean(node.Attributes._getValue("isWinNameHandlerInclude").ToString());  
                             
                         }
                     }
