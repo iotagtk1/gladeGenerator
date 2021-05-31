@@ -1,12 +1,12 @@
-###Introduction
+### Introduction
 
-###Environment
+### Environment
 .net5
 
 Rider 2021 or Terminal
 
 
-###Rider Setting
+### Rider Setting
 ExploerPanel - right click - edit execution configuration - external tools
 
 ![alt text](./readMe/1.png)
@@ -20,7 +20,7 @@ TopMenu - Tool - ExternalTool
 Right-click on the Exploer bar
 You can run it from an external tool
 
-###Arguments Macro Required
+### Arguments Macro Required
 
 Set the path of the program
 You must specify a macro
@@ -30,13 +30,13 @@ copy perst
 -projectName $SolutionName$ -projectDir $SolutionDir$
 ```
 
-###ConfigSetting.xml
+### ConfigSetting.xml
 ```
 <Setting SaveFolder="" />
 ```
 SaveFolder Add a folder to save.
 
-###GladFileClassMap.xml
+### GladFileClassMap.xml
 Overrides the name of the class to be written out
 
 ```
@@ -47,7 +47,7 @@ Overrides the name of the class to be written out
 targetFileName　Write the glade file name. Include extension
 reNameClassName　Write the class name to be rewritten
 
-####NoImportGladeFileSetting.xml
+#### NoImportGladeFileSetting.xml
 You can prevent the specified grade file from being loaded.
 
 ```
@@ -55,9 +55,48 @@ You can prevent the specified grade file from being loaded.
   <gladFile targetFileName="" />
 </NoImportGladeFile>
 ```
-####template.txt
+#### template.txt
 The contents of the exported class can be changed
 
+#### Automatic generation of declarations
+Every time you add a control to the Glade file, a declaration statement is added
+
+````
+using System;
+using Gtk;
+Using UI = Gtk.Builder.ObjectAttribute;
+namespace testGtkApplication
+{
+    partial class MainWindow
+    {    
+		//[UI] private readonly Gtk.Window MainWindow = null;
+		[UI] private readonly Gtk.Box sdfsdfsd111 = null;
+		[UI] private readonly Gtk.Button _button1 = null;		
+    }
+}
+````
+
+### Auto-generated content
+
+#### Automatic generation of event handlers
+Every time you add a signal to the control, an event handler statement is added.
+
+```
+using System;
+using Gtk;
+Using UI = Gtk.Builder.ObjectAttribute;
+namespace testGtkApplication
+{
+    partial class MainWindow
+    {
+	    private void on__button1_Clicked(object sender , EventArgs e){
+			
+		}	    
+    }
+}
+````
+
+Translated with www.DeepL.com/Translator (free version)
 
 
 
