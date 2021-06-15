@@ -105,3 +105,10 @@ namespace testGtkApplication
     }
 }
 ````
+
+````
+partial class MainWindow
+````
+
+
+Add "partial" before "class" in the class file you want to use
