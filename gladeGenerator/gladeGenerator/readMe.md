@@ -35,6 +35,8 @@ copy perst
 -projectName $SolutionName$ -projectDir $SolutionDir$
 ```
 
+The working directory can be empty.
+
 ### ConfigSetting.xml
 ```
 <Setting SaveFolder="" isWinNameHandlerInclude="true" />
