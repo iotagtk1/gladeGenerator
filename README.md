@@ -4,7 +4,7 @@
 Place Window, Dialog and Gadget controls at the top of the grade file and name them.
 Add a signal and a name to the control, and an event handler will be generated automatically.
 
-<a href="https://github.com/iotagtk/archive">Binary Program Only</a>
+<a href="https://github.com/iotagtk/gladeGenerator/releases/tag/gladeGenerator">Release</a>
 
 #### How to use
 1. Design a form in the Grade Designer.
