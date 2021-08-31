@@ -166,10 +166,11 @@ namespace gladeGenerator
                         topWinName = topLevelPart1.PartId + "_";
                     }
 
-                    signal.OutPutMethodStr = signalTemplateData1.ProtoTypeStr._replaceReplaceStr("{$ID}",topWinName + classId);
+                    signal.OutPutMethodStr = signal.HandlerName;
 
+                    //signal.OutPutMethodStr = signalTemplateData1.ProtoTypeStr._replaceReplaceStr("{$ID}",topWinName + classId);
                     //gladeファイルのhandlerもリネームする
-                    signalNodes._setAttributesValue("handler",signal.OutPutMethodStr,gladeXmlDoc);
+                    //signalNodes._setAttributesValue("handler",signal.OutPutMethodStr,gladeXmlDoc);
 
                     if (signalTemplateData1.ArgsArray.Count > 0)
                     {
