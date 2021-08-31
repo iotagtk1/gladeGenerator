@@ -168,10 +168,6 @@ namespace gladeGenerator
 
                     signal.OutPutMethodStr = signal.HandlerName;
 
-                    //signal.OutPutMethodStr = signalTemplateData1.ProtoTypeStr._replaceReplaceStr("{$ID}",topWinName + classId);
-                    //gladeファイルのhandlerもリネームする
-                    //signalNodes._setAttributesValue("handler",signal.OutPutMethodStr,gladeXmlDoc);
-
                     if (signalTemplateData1.ArgsArray.Count > 0)
                     {
                         foreach (var argStr in signalTemplateData1.ArgsArray)

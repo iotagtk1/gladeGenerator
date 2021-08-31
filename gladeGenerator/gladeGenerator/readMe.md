@@ -110,5 +110,9 @@ namespace testGtkApplication
 partial class MainWindow
 ````
 
-
 Add "partial" before "class" in the class file you want to use
+
+````
+Use the IntelliSense feature in the name field of the handler of the grade
+````
+Enter 'On' in the Name field of the grade handler. IntelliSense will work.
