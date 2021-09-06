@@ -37,11 +37,11 @@ copy perst
 
 The working directory can be empty.
 
-#### 説明
+#### Description
 
-projectName　書き出したプログラムの名前空間に利用します
-fileDir Riderのエクスプローラーで選択されたファイルかフォルダになります
-saveDir　保存するディレクトリになります。デフォルトではプロジェクトフォルダに設定しています
+projectName Used for the namespace of the exported program.
+fileDir The file or folder selected in Rider's explorer.
+saveDir The directory to be saved. The default setting is the project folder.
 
 ### ConfigSetting.xml
 ```
