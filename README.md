@@ -25,7 +25,7 @@ Generate ID declaration file and Signal statement under the project path
 
 ##### Run from Rider macro can be used
 ```
-$ gladeGenerator -projectName $SolutionName$ -projectDir $SolutionDir$
+$ gladeGenerator -projectName $SolutionName$ -fileDir $FilePath$ -saveDir $SolutionDir$
 ```
 
 ### Arguments Macro Required
@@ -35,7 +35,7 @@ You must specify a macro
 copy perst
 
 ```Rider arguments macro require
--projectName $SolutionName$ -projectDir $SolutionDir$
+-projectName $SolutionName$ -projectDir $SolutionDir$ -fileDir $FilePath$
 ```
 
 ### ConfigSetting.xml
