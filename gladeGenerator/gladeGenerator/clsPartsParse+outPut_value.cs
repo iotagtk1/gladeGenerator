@@ -13,6 +13,7 @@ namespace gladeGenerator
         public void _saveTopLabelPart_value(GladeData GladeData1)
         {
 
+            int i = 0;
             foreach (TopLevelPart topLevelPart1 in GladeData1.TopLevelPartArray)
             {
                 var fileContent = "";
@@ -46,9 +47,18 @@ namespace gladeGenerator
                     }
                 }
 
+                if (i == GladeData1.TopLevelPartArray.Count - 1)
+                {
+                    fileContent = _kakoFix(fileContent);
+                }
+
+                i++;
                 Console.WriteLine("{0}に保存しました。",topLevelPart1.OutPutSaveFilePath_value);
                 clsFile._saveFilePath(fileContent,topLevelPart1.OutPutSaveFilePath_value);
             }
+            
+            
+            
         }
     }
 }

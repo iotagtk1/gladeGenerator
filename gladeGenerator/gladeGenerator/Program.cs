@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace gladeGenerator
 {
@@ -32,7 +33,7 @@ namespace gladeGenerator
 
                 clsPartsParse clsPartsParse1 = new clsPartsParse();
 
-                clsPartsParse1._parsePrjectFolder(clsArgsConfig.Instance().ProjectFolder);
+                clsPartsParse1._parsePrjectFolder(clsArgsConfig.Instance().FileDirPath);
             }
             catch (Exception e)
             {

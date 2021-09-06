@@ -1,3 +1,3 @@
 <ConfigSetting>
-    <Setting SaveFolder="" isWinNameHandlerInclude = "true" />
+    <Setting AddSaveFolder="" isWinNameHandlerInclude = "true" />
 </ConfigSetting>

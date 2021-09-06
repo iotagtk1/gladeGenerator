@@ -141,7 +141,7 @@ namespace gladeGenerator
                         signal.EventName);
 
                     if (signalTemplateData1 == null ){
-                        Console.WriteLine("Signal {0}のEventがテンプレートデータにない。テンプレートデータを確認するか、テンプレートデータ(signal)プロジェクトを開いて更新してください",signal.ParentNodeClassName);
+                        Console.WriteLine("Signal {0}のEventがテンプレートデータ(signals.xml)にない。テンプレートデータ(signals.xml)を確認するか、テンプレートデータ(signal)プロジェクトを開いて更新してください",signal.ParentNodeClassName);
                         continue;
                     }
                     

@@ -11,16 +11,32 @@ namespace gladeGenerator
 
         List<GladeData> gladeDataArray = null;
 
-        public void _parsePrjectFolder(string folderPath)
+        public void _parsePrjectFolder(string fileFolderPath)
         {
 
-            ArrayList filesArray = clsFile._getFileList(folderPath, ".glade",null,isAllDir:true);
+            ArrayList filesArray = new ArrayList();
             
+            if (clsFile._isFile(fileFolderPath) && fileFolderPath._indexOf(".glade") != -1)
+            {
+                filesArray.Add(fileFolderPath);
+ 
+            }else if (clsFolder._isFolder(fileFolderPath))
+            {
+                filesArray = clsFile._getFileList(fileFolderPath, ".glade", null, isAllDir: true);
+            }
+
             if (filesArray.Count == 0)
             {
-                Console.WriteLine("フォルダ:{0} 書き出すGladeファイルがありません" , folderPath);
+                Console.WriteLine("フォルダ:{0} 書き出すGladeファイルがありません", fileFolderPath);
                 return;
             }
+
+            _parsePrjectFolder_do(filesArray);
+
+        }
+
+        public void _parsePrjectFolder_do(ArrayList filesArray)
+        {
 
             gladeDataArray = new List<GladeData>();
 
@@ -36,13 +52,6 @@ namespace gladeGenerator
                         gladeDataArray.Add(gladeDataPart1);
                     }
                 }
-
-            }
-
-            if (gladeDataArray.Count == 0)
-            {
-                Console.WriteLine("フォルダ:{0} 書き出すGladeファイルがありません" , folderPath);
-                return;
             }
 
             foreach (var gladeDataPart1 in gladeDataArray)
@@ -53,8 +62,6 @@ namespace gladeGenerator
                 _saveTopLabelPart_function(gladeDataPart1);   
             }
 
-            Console.WriteLine("Signalを追加、変更した場合はGladeファイルを読みなしてください。EventHandlerが更新されています" , folderPath);
-            
         }
 
         private XmlDocument gladeXmlDoc;
@@ -93,8 +100,6 @@ namespace gladeGenerator
 
                 }
 
-                gladeXmlDoc.Save(filePath);
-         
             }
 
             return gladeDataPart1;
@@ -122,8 +127,8 @@ namespace gladeGenerator
                 topLevelPart1.OutPutFileName_function = gladeDataPart1.OutPutGladeName + "+" + OutPutPartsIdName + ".cs";
                 topLevelPart1.OutPutFileName_value = gladeDataPart1.OutPutGladeName + "+"　+ OutPutPartsIdName  + "_id" + ".cs"; 
 
-                topLevelPart1.OutPutSaveFilePath_function = clsArgsConfig.Instance().ProjectFolder._trimEnd("/") + "/" + clsArgsConfig.Instance().SaveFolder.Trim('/') + "/" + topLevelPart1.OutPutFileName_function;
-                topLevelPart1.OutPutSaveFilePath_value = clsArgsConfig.Instance().ProjectFolder._trimEnd("/") + "/" + clsArgsConfig.Instance().SaveFolder.Trim('/') + "/" + topLevelPart1.OutPutFileName_value;   
+                topLevelPart1.OutPutSaveFilePath_function = clsArgsConfig.Instance().SaveDir._trimEnd("/") + "/" + clsArgsConfig.Instance().AddSaveFolder.Trim('/') + "/" + topLevelPart1.OutPutFileName_function;
+                topLevelPart1.OutPutSaveFilePath_value = clsArgsConfig.Instance().SaveDir._trimEnd("/") + "/" + clsArgsConfig.Instance().AddSaveFolder.Trim('/') + "/" + topLevelPart1.OutPutFileName_value;   
             }
           
         }

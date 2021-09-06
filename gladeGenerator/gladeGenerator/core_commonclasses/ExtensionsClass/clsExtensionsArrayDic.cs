@@ -214,7 +214,7 @@ public static partial class ArrayDicExtensions {
         }
 
     /// <summary>
-    /// コピーる
+    /// コピー
     /// </summary>
     public static ArrayList _copy(this ArrayList a) {            
             return (ArrayList)a.Clone();
@@ -247,9 +247,32 @@ public static partial class ArrayDicExtensions {
             ArrayList list1 = new ArrayList(h.Keys);
             return list1;
         }
-                          
+        
+        /// <summary>
+        /// 配列を分割する
+        /// </summary>
+        public static List<string[]> _splitArray(this ArrayList array2 , int splitNum)
+        {
+            string[] array = (string[])array2.ToArray(typeof(string));
+            
+            if (splitNum < array.Length-1 && splitNum > 0)
+            {
+                string[] firstarray, secondarray; 
+                firstarray = new string[splitNum];
+                secondarray = new string[array.Length - splitNum];
+                Array.Copy(array, 0, firstarray, 0, splitNum);
+                Array.Copy(array, splitNum, secondarray, 0, secondarray.Length);
+
+                List<string[]> array_split = new List<string[]>();
+                array_split.Add(firstarray);
+                array_split.Add(secondarray);
+                return array_split;
+            }
+            
+            return null;
+        }
 
 
-    }
+}
 
 

@@ -1,4 +1,4 @@
-### Introduction
+********### Introduction
 
 ### Environment
 .net5
@@ -32,16 +32,22 @@ You must specify a macro
 copy perst
 
 ```Rider arguments macro require
--projectName $SolutionName$ -projectDir $SolutionDir$
+-projectName $SolutionName$ -fileDir $FilePath$ -saveDir $SolutionDir$
 ```
 
 The working directory can be empty.
 
+#### 説明
+
+projectName　書き出したプログラムの名前空間に利用します
+fileDir Riderのエクスプローラーで選択されたファイルかフォルダになります
+saveDir　保存するディレクトリになります。デフォルトではプロジェクトフォルダに設定しています
+
 ### ConfigSetting.xml
 ```
-<Setting SaveFolder="" isWinNameHandlerInclude="true" />
+<Setting AddSaveFolder="" isWinNameHandlerInclude="true" />
 ```
-SaveFolder Add a folder to save.
+AddSaveFolder Add a folder to save.
 
 isWinNameHandlerInclude　Whether or not to enter the parent ID name in the signal name
 true or false

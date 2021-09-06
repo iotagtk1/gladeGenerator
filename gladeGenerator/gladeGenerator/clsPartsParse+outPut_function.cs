@@ -41,8 +41,8 @@ namespace gladeGenerator
                     {
                         fileContent = resultStr;
                     }
-                }   
-                
+                }
+
                 foreach (ChildLevelPart childLevelPart1 in TopLevelPart1.ChildLevelPartsArray)
                 {
                     foreach (Signal signal1 in childLevelPart1.SignalArray)
@@ -54,6 +54,8 @@ namespace gladeGenerator
                         }
                     }
                 }
+
+                //  fileContent = _kakkoFix(fileContent);
 
                 Console.WriteLine("{0}に保存しました。",TopLevelPart1.OutPutSaveFilePath_function);
                 clsFile._saveFilePath(fileContent,TopLevelPart1.OutPutSaveFilePath_function);

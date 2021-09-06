@@ -34,7 +34,7 @@ namespace gladeGenerator
             splitData2.IsTotalCenter = true;
 
             clsClassValueSpit._splitStr(splitData1.CenterStr, ref splitData2);
-
+            
             if (splitData2.CenterStr._indexOf(addValueStr) == -1)
             { 
                 splitData2.CenterStr += Environment.NewLine + "\t\t" + addValueStr;
@@ -50,7 +50,8 @@ namespace gladeGenerator
             string frontStr = "";
             string centerStr = "";           
             string backStr = "";
-            
+
+            int i = 0;
             foreach (SplitData splitData1  in splitDataArray)
             {
                 if (splitData1.IsTotalCenter)

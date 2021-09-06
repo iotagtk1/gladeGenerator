@@ -60,15 +60,20 @@ namespace gladeGenerator
             string frontStr = "";
             string centerStr = "";           
             string backStr = "";
-            
+
+            int i = 0;
             foreach (SplitData splitData1  in splitDataArray)
             {
                 if (splitData1.IsTotalCenter)
                 {
                     centerStr += splitData1.CenterStr;
                 }
+                
                 frontStr = frontStr + splitData1.FrontStr;
+                
                 backStr = splitData1.BackStr + backStr;
+               
+                i++;
             }
             
             var sumStr = frontStr + centerStr + backStr;
@@ -76,7 +81,7 @@ namespace gladeGenerator
             return sumStr;
         }
         
-        static SplitData _splitStr(string str ,ref SplitData splitData1)
+        static SplitData _splitStr(string str ,ref SplitData splitData1 )
         {
             Regex reg = new Regex(splitData1.FrontKey, RegexOptions.Singleline);
             Match match = reg.Match(str);
@@ -92,6 +97,7 @@ namespace gladeGenerator
                 if (match2.Index != -1 && match2.Value != "")
                 {
                     var str2_ReReverse = new string(match2.Value.Reverse().ToArray());
+
                     splitData1.BackStr = str2_ReReverse;
 
                     string str2_ReReverse_2 = reg2.Replace(str2_reverse, splitData1.BackNokosuKey);

@@ -9,9 +9,10 @@ namespace gladeGenerator
     {
         private static clsArgsConfig _singleInstance = null;
 
-        public string ProjectFolder = "";     
+        public string SaveDir = "";     
         public string ProjectName = "";
-        public string SaveFolder = "";
+        public string FileDirPath = "";
+        public string AddSaveFolder = "";
         public Boolean isWinNameHandlerInclude = false;
         public List<string> NoGaldeFileArray = new List<string>();
         public Dictionary<string,string> GladeFileClassMapDic = new Dictionary<string,string>();
@@ -39,10 +40,10 @@ namespace gladeGenerator
                         if (node.Name == "Setting" && node.Attributes != null 
                         )
                         {
-                            // <Setting isOverRideGladeEventHandler="0" SaveFolder="" />
+                            // <Setting isOverRideGladeEventHandler="0" AddSaveFolder="" />
                             //isOverRideGladeEventHandler = node.Attributes._getValue("isOverRideGladeEventHandler")
                             //    .ToString()._boolValue();
-                            SaveFolder = node.Attributes._getValue("SaveFolder");  
+                            AddSaveFolder = node.Attributes._getValue("AddSaveFolder");  
                             
                             isWinNameHandlerInclude = Convert.ToBoolean(node.Attributes._getValue("isWinNameHandlerInclude").ToString());  
                             
@@ -100,10 +101,10 @@ namespace gladeGenerator
         }
 
         private List<string> commndKeyArray = new List<string> {
-            "-projectName","-projectDir"};
+            "-projectName","-projectDir","-saveDir"};
         public Boolean _validateCommandKey()
         {
-            if (ProjectFolder == "" )
+            if (SaveDir == "" )
             {
                 Console.WriteLine("projectFolderが指定されていない");
                 return false;
@@ -113,21 +114,40 @@ namespace gladeGenerator
                 Console.WriteLine("ProjectNameが指定されていない");
                 return false;
             }
+            if (FileDirPath == "")
+            {
+                Console.WriteLine("FileDirが指定されていない");
+                return false;
+            }
 
             return true;
         }
         public void _setArgs(string[] args)
         {
 
+            //-projectName $SolutionName$ -fileDir $FilePath$ -saveDir $SolutionDir$
+            
             int i = 0;
             foreach (var commandKey in args)
             {
-                if (commandKey._indexOf("-projectDir") != -1)
+                
+                if (commandKey._indexOf("-fileDir") != -1)
                 {
                     if (args._safeIndexOf(i + 1) && 
                         commndKeyArray.IndexOf(args[i+1]) == -1 && 
                         args[i+1] != ""){
-                        ProjectFolder = args[i + 1];
+                        FileDirPath = args[i + 1];
+                    }
+                    i++;
+                    continue;
+                } 
+                
+                if (commandKey._indexOf("-saveDir") != -1)
+                {
+                    if (args._safeIndexOf(i + 1) && 
+                        commndKeyArray.IndexOf(args[i+1]) == -1 && 
+                        args[i+1] != ""){
+                        SaveDir = args[i + 1];
                     }
                     i++;
                     continue;
