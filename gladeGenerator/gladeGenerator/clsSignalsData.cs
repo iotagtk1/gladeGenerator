@@ -28,27 +28,91 @@ namespace gladeGenerator
             xmlDoc.LoadXml(xmlStr);
         }
 
+        /// <summary>
+        /// Signal.xmlを検索する。callerClassNameからSignalを紐付ける
+        /// </summary>
+        /// <param name="callerClassName"></param>
+        /// <param name="eventName"></param>
+        /// <returns></returns>
+        
         public SignalTemplateData _searchSignalTemplateData(string callerClassName , string eventName)
         {
-            string selectStr = "//signals/signal[@eventName='" + eventName + "' and @callerClass='" + callerClassName +
+            string selectStr = "//root/types[@callerClass='" + callerClassName + "']/signal[@eventName='" + eventName + "' and @callerClass='" + callerClassName +
                                "']";
             
-            XmlNodeList signalNodes = xmlDoc.SelectNodes(selectStr);
+            XmlNodeList signalTemplateNodes = xmlDoc.SelectNodes(selectStr);
 
-            if (signalNodes == null || signalNodes.Count == 0)
+            if (signalTemplateNodes == null || signalTemplateNodes.Count == 0)
             {
                 return null;
             }
 
             SignalTemplateData signalTemplateData1 = new SignalTemplateData();
 
-            foreach (XmlNode node in signalNodes[0].ChildNodes)
+            foreach (XmlNode node in signalTemplateNodes[0].ChildNodes)
             {
 
-                if (node.Name == "prototype")
+                if (node.Name == "method")
                 {
-                    signalTemplateData1.ProtoTypeStr = node.InnerText;
-                }else if (node.Name == "method")
+                    signalTemplateData1.Method = node.InnerText;
+                }else if (node.Name == "args")
+                {
+                    foreach (XmlNode argsNode in node.ChildNodes)
+                    {
+                        signalTemplateData1.ArgsArray.Add(argsNode.InnerText);
+                    }
+                }
+            }
+
+            return signalTemplateData1;
+        }
+
+        /// <summary>
+        /// Signal.xmlをbaseclass検索する
+        /// </summary>
+        /// <param name="baseClassName"></param>
+        /// <param name="eventName"></param>
+        /// <returns></returns>
+        public SignalTemplateData _searchBaseClassSignalTemplateData(string callerClass , string eventName , 
+            ref string errorMes, ref Boolean isReSearch , ref string researchWord)
+        {
+ 
+            string selectStr = "//root/types[@callerClass='" + callerClass + "']";
+            XmlNodeList typesTemplateNodes = xmlDoc.SelectNodes(selectStr); 
+            
+            if (typesTemplateNodes == null || typesTemplateNodes.Count == 0)
+            {
+                isReSearch = false;
+                researchWord = "";
+                errorMes = string.Format("signals.xmlに{0}がない",callerClass);
+                return null;
+            }
+            
+            if (typesTemplateNodes.Count > 0)
+            {
+                string baseClass = typesTemplateNodes[0].Attributes["baseClass"].Value;
+                string selectStr2 = "//root/types[@callerClass='" + baseClass + "']/signal[@eventName='" + eventName + "' and @callerClass='" + baseClass +
+                                    "']";
+                typesTemplateNodes = xmlDoc.SelectNodes(selectStr2);
+                
+                if (typesTemplateNodes == null || typesTemplateNodes.Count == 0)
+                {
+                    errorMes = string.Format("signals.xmlに{0}がない",callerClass);
+                    isReSearch = true;
+                    researchWord = baseClass;
+                    return null;
+                }
+            }
+
+            isReSearch = false;
+            researchWord = "";
+            errorMes = "";
+            
+            SignalTemplateData signalTemplateData1 = new SignalTemplateData();
+
+            foreach (XmlNode node in typesTemplateNodes[0].ChildNodes)
+            {
+                if (node.Name == "method")
                 {
                     signalTemplateData1.Method = node.InnerText;
                 }else if (node.Name == "args")

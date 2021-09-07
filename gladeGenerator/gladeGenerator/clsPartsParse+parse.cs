@@ -77,7 +77,7 @@ namespace gladeGenerator
                 }
                 
                 ChildLevelPart childLevelPart2 = new ChildLevelPart();
-
+                
                 childLevelPart2.PartId = childObjectNode.Attributes["id"] != null ? childObjectNode.Attributes["id"].Value : "";
                 childLevelPart2.ClassName =
                     childObjectNode.Attributes["class"] != null ? childObjectNode.Attributes["class"].Value : "";
@@ -122,42 +122,64 @@ namespace gladeGenerator
                     }
                     var classId = objectPartsNodes.Attributes["id"] != null ? objectPartsNodes.Attributes["id"].Value : "";
 
-                    Signal signal = new Signal();
+                    Signal signalModel1 = new Signal();
 
-                    signal.ParentNodeClassName = objectPartsNodes.Attributes["class"] != null ? objectPartsNodes.Attributes["class"].Value : "";
-                    signal.EventName = signalNodes.Attributes["name"] != null ? signalNodes.Attributes["name"].Value : "";
-
+                    signalModel1.ParentNodeClassName = objectPartsNodes.Attributes["class"] != null ? objectPartsNodes.Attributes["class"].Value : "";
+                    signalModel1.EventName = signalNodes.Attributes["name"] != null ? signalNodes.Attributes["name"].Value : "";
+  
                     if (classId == "")
                     {
-                        Console.WriteLine("Signal {0}はIDがないため書き出せません。IDを記入してください",signal.ParentNodeClassName);
+                        Console.WriteLine("{0}の IDがありません。IDを追加してください" +
+                                          "テンプレートデータ(signals.xml)を確認してください 2",signalModel1.ParentNodeClassName);
                         continue;
-                    }
+                    }  
                     
                     //EventNameをsignals.xmlの形式に合わせる
-                    signal.EventName = _convertEventName(signal.EventName);
+                    signalModel1.EventName = _convertEventName(signalModel1.EventName);
 
                     SignalTemplateData　signalTemplateData1 = clsSignalsData.Instance()._searchSignalTemplateData(
-                        signal.ParentNodeClassName, 
-                        signal.EventName);
+                        signalModel1.ParentNodeClassName, 
+                        signalModel1.EventName);
 
                     if (signalTemplateData1 == null ){
-                        Console.WriteLine("Signal {0}のEventがテンプレートデータ(signals.xml)にない。テンプレートデータ(signals.xml)を確認するか、テンプレートデータ(signal)プロジェクトを開いて更新してください",signal.ParentNodeClassName);
-                        continue;
+
+                        Boolean isReSearch = true;
+                        string errorMes = "";
+                        string reSearchClassName = signalModel1.ParentNodeClassName;
+
+                        for (int i = 0; i < 10; i++)
+                        {
+                            if (isReSearch && reSearchClassName != "")
+                            {
+                                signalTemplateData1 = clsSignalsData.Instance()._searchBaseClassSignalTemplateData(
+                                    reSearchClassName, 
+                                    signalModel1.EventName , ref errorMes, ref  isReSearch,
+                                    ref reSearchClassName);
+                            }
+                        }
+
+                        if (signalTemplateData1 == null)
+                        {
+                            Console.WriteLine("{0}の Signal {1} Eventがテンプレートデータ(signals.xml)にない。" +
+                                              "テンプレートデータ(signals.xml)を確認してください1", signalModel1.ParentNodeClassName,
+                                signalModel1.EventName);
+                            continue;
+                        }
                     }
-                    
-                    signal.HandlerName = signalNodes.Attributes["handler"] != null ? signalNodes.Attributes["handler"].Value : "";                 
-                    signal.TargetObject = signalNodes.Attributes["object"] != null ? signalNodes.Attributes["object"].Value : "";
+
+                    signalModel1.HandlerName = signalNodes.Attributes["handler"] != null ? signalNodes.Attributes["handler"].Value : "";                 
+                    signalModel1.TargetObject = signalNodes.Attributes["object"] != null ? signalNodes.Attributes["object"].Value : "";
 
                     if (signalNodes.Attributes["after"] != null)
                     {
                         signalNodes.Attributes["after"].Value = signalNodes.Attributes["after"].Value == "yes" ? "true" : "false";
-                        signal.IsAfter = Boolean.Parse(signalNodes.Attributes["after"].Value);     
+                        signalModel1.IsAfter = Boolean.Parse(signalNodes.Attributes["after"].Value);     
                     }
 
                     if (signalNodes.Attributes["swapped"] != null)
                     {
                         signalNodes.Attributes["swapped"].Value = signalNodes.Attributes["swapped"].Value == "yes" ? "true" : "false";
-                        signal.IsSwapped = Boolean.Parse(signalNodes.Attributes["swapped"].Value); 
+                        signalModel1.IsSwapped = Boolean.Parse(signalNodes.Attributes["swapped"].Value); 
                     }
 
                     string topWinName = "";
@@ -166,20 +188,20 @@ namespace gladeGenerator
                         topWinName = topLevelPart1.PartId + "_";
                     }
 
-                    signal.OutPutMethodStr = signal.HandlerName;
+                    signalModel1.OutPutMethodStr = signalModel1.HandlerName;
 
                     if (signalTemplateData1.ArgsArray.Count > 0)
                     {
                         foreach (var argStr in signalTemplateData1.ArgsArray)
                         {
-                            signal.ArgsStr += argStr + " , ";
+                            signalModel1.ArgsStr += argStr + " , ";
                         }
-                        signal.ArgsStr = signal.ArgsStr._trimEnd(" , ");
+                        signalModel1.ArgsStr = signalModel1.ArgsStr._trimEnd(" , ");
                     }
                     
-                    signal.OutPutMethod_ArgsStr = "private void " + signal.OutPutMethodStr + "("+ signal.ArgsStr + "){";
+                    signalModel1.OutPutMethod_ArgsStr = "private void " + signalModel1.OutPutMethodStr + "("+ signalModel1.ArgsStr + "){";
 
-                    ((BaseClass)BaseLevelPart).SignalArray.Add(signal);
+                    ((BaseClass)BaseLevelPart).SignalArray.Add(signalModel1);
                 }
             }
             catch (Exception e)

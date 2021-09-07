@@ -6,13 +6,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <None Include="..\..\..\..\..\App\hatenaApp\RssLimit+RssLimit.cs">
-        <Link>RssLimit+RssLimit.cs</Link>
-      </None>
       <None Remove="ConfigSetting.xml" />
-      <None Include="..\..\..\..\..\App\hatenaApp\hatenaApp\RssLimit.glade">
-        <Link>RssLimit.glade</Link>
-      </None>
       <Content Include="ConfigSetting.xml">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </Content>
@@ -20,14 +14,13 @@
       <Content Include="GladeFileClassMap.xml">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </Content>
-      <None Remove="signals.xml" />
-      <Content Include="signals.xml">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </Content>
       <Compile Update="core_commonclasses\XML\clsXml.cs">
         <Link>core_commonclasses\XML\clsXml.cs</Link>
       </Compile>
       <Compile Remove="core_commonclasses\clsString.cs" />
+      <None Update="signals.xml">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
     </ItemGroup>
 
     <ItemGroup>

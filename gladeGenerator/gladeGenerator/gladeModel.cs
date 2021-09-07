@@ -36,6 +36,7 @@ namespace gladeGenerator
     public class Signal
     {
         public string ParentNodeClassName;
+        public string BaseClass; 
         public string EventName;
         public string HandlerName;
         public string TargetObject;
@@ -48,7 +49,7 @@ namespace gladeGenerator
 
     public class SignalTemplateData
     {
-        public string ProtoTypeStr;  
+       // public string ProtoTypeStr;  
         public string Method;
         public List<string> ArgsArray = new List<string>();
     }

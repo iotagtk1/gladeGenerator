@@ -15,7 +15,6 @@ namespace signalGenerator
             // https://github.com/mono/gtk-sharp/tree/main/doc
             
             // set absolute Path until Gtk and en
-            
             clsGtkXmlParse.Instance().GtkFolderPath = "../../../doc/en/Gtk/";
             clsGtkXmlParse.Instance().GtkEnFolderPath = "../../../doc/en/";
 
@@ -24,6 +23,10 @@ namespace signalGenerator
             )
             {
                 clsGtkXmlParse.Instance()._parse();
+            }
+            else
+            {
+                Console.Write("ディレクトリがない");
             }
 
         }
