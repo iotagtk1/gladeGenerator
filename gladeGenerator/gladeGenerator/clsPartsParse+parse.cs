@@ -180,13 +180,7 @@ namespace gladeGenerator
                     {
                         signalNodes.Attributes["swapped"].Value = signalNodes.Attributes["swapped"].Value == "yes" ? "true" : "false";
                         signalModel1.IsSwapped = Boolean.Parse(signalNodes.Attributes["swapped"].Value); 
-                    }
-
-                    string topWinName = "";
-                    if (clsArgsConfig.Instance().isWinNameHandlerInclude)
-                    {
-                        topWinName = topLevelPart1.PartId + "_";
-                    }
+                    }       
 
                     signalModel1.OutPutMethodStr = signalModel1.HandlerName;
 

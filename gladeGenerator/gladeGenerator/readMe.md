@@ -45,12 +45,8 @@ saveDir The directory to be saved. The default setting is the project folder.
 
 ### ConfigSetting.xml
 ```
-<Setting AddSaveFolder="" isWinNameHandlerInclude="true" />
+<Setting AddSaveFolder="" />
 ```
-AddSaveFolder Add a folder to save.
-
-isWinNameHandlerInclude　Whether or not to enter the parent ID name in the signal name
-true or false
 
 ### GladFileClassMap.xml
 Overrides the name of the class to be written out
