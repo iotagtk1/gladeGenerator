@@ -44,11 +44,13 @@ namespace gladeGenerator
                 XmlNodeList childLevelPartNodesList = topObjectNodes.SelectNodes(".//object");
                 if (childLevelPartNodesList == null || childLevelPartNodesList.Count == 0)
                 {
-                    return;
+                   
                 }
-              
-                _getChildPart_idMethod(topLevelPart1,childLevelPartNodesList, ref topLevelPart1.ChildLevelPartsArray);
-                
+                else
+                {
+                    _getChildPart_idMethod(topLevelPart1,childLevelPartNodesList, ref topLevelPart1.ChildLevelPartsArray);
+                }
+
                 topLevelPartArray.Add(topLevelPart1);
   
             }
@@ -73,6 +75,7 @@ namespace gladeGenerator
 
                 if (_isNoClassName(childObjectNode))
                 {
+                    Console.WriteLine("ng class hit" + childObjectNode.Attributes["class"]);
                     continue;
                 }
                 
