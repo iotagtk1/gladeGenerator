@@ -6,7 +6,82 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <Content Include="templateData\template.txt">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+      <None Include="..\..\..\..\TreeViewGenerator\MainWindow+liststore1.cs">
+        <Link>MainWindow+liststore1.cs</Link>
+      </None>
+      <None Include="..\..\..\..\TreeViewGenerator\MainWindow+liststore1_id.cs">
+        <Link>MainWindow+liststore1_id.cs</Link>
+      </None>
+      <None Include="..\..\..\..\TreeViewGenerator\MainWindow+MainWindow.cs">
+        <Link>MainWindow+MainWindow.cs</Link>
+      </None>
+      <None Include="..\..\..\..\TreeViewGenerator\MainWindow+MainWindow_id.cs">
+        <Link>MainWindow+MainWindow_id.cs</Link>
+      </None>
       <None Remove="ConfigSetting.xml" />
+      <None Include="..\..\..\..\TreeViewGenerator\TreeViewGenerator\MainWindow.glade">
+        <Link>MainWindow.glade</Link>
+      </None>
+      <None Include="codeHint\GtkButton_Clicked.txt">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+      <None Include="codeHint\GtkComboBox_Changed.txt">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+      <None Include="codeHint\GtkEditable_Changed.txt">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+      <None Include="codeHint\GtkRadioButton_Group-changed.txt">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+      <None Include="codeHint\GtkToggleButton_Toggled.txt">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+      <None Include="codeHint\GtkTreeSelection_Changed.txt">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+      <None Include="codeHint\GtkButton_Clicked.txt">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Include="codeHint\GtkComboBox_Changed.txt">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Include="codeHint\GtkEditable_Changed.txt">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Include="codeHint\GtkRadioButton_Group-changed.txt">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Include="codeHint\GtkToggleButton_Toggled.txt">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Include="codeHint\GtkTreeSelection_Changed.txt">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Include="codeHint\GtkButton_Clicked.txt">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <Content Include="codeHint\GtkButton_Clicked.txt">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+      <Content Include="codeHint\GtkComboBox_Changed.txt">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+      <Content Include="codeHint\GtkEditable_Changed.txt">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+      <Content Include="codeHint\GtkRadioButton_Group-changed.txt">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+      <Content Include="codeHint\GtkToggleButton_Toggled.txt">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+      <Content Include="codeHint\GtkTreeSelection_Changed.txt">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
       <Content Include="ConfigSetting.xml">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </Content>
@@ -21,13 +96,19 @@
       <None Update="signals.xml">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </None>
+      <None Update="codeHint\UICodeHint.xml">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Remove="codeHint\GtkButton_clicked.txt" />
+      <None Remove="codeHint\GtkEditable_changed.txt" />
+      <None Remove="codeHint\GtkRadioButton_group-changed.txt" />
+      <None Remove="codeHint\GtkToggleButton_toggled.txt" />
+      <None Remove="codeHint\GtkTreeSelection_changed.txt" />
+      <None Remove="codeHint\GtkComboBox_changed.txt" />
     </ItemGroup>
 
     <ItemGroup>
       <None Remove="template.txt" />
-      <Content Include="template.txt">
-        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      </Content>
       <None Remove="backUP_signals.xml" />
       <None Remove="GladFileClassMap.xml" />
       <None Remove="NgGladeFileSetting.xml" />

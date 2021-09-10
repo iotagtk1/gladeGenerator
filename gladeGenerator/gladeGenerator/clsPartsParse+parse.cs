@@ -38,7 +38,9 @@ namespace gladeGenerator
                     topLevelPart1.PartId + " = null;";
 
                 object TopLevelPart1_obj = topLevelPart1;
+                
                 _getSignals(topLevelPart1,topObjectNodes, ref TopLevelPart1_obj);
+                
                 topLevelPart1 = (TopLevelPart)TopLevelPart1_obj;
 
                 XmlNodeList childLevelPartNodesList = topObjectNodes.SelectNodes(".//object");
@@ -75,7 +77,6 @@ namespace gladeGenerator
 
                 if (_isNoClassName(childObjectNode))
                 {
-                    Console.WriteLine("ng class hit" + childObjectNode.Attributes["class"]);
                     continue;
                 }
                 
@@ -99,6 +100,12 @@ namespace gladeGenerator
         
         }
 
+        /// <summary>
+        /// Signalを検索し、取得する
+        /// </summary>
+        /// <param name="topLevelPart1"></param>
+        /// <param name="objectPartsNodes"></param>
+        /// <param name="BaseLevelPart_a"></param>
         private void _getSignals(TopLevelPart topLevelPart1, XmlNode objectPartsNodes , ref object BaseLevelPart_a){
             try
             {
@@ -140,11 +147,13 @@ namespace gladeGenerator
                     //EventNameをsignals.xmlの形式に合わせる
                     signalModel1.EventName = _convertEventName(signalModel1.EventName);
 
-                    SignalTemplateData　signalTemplateData1 = clsSignalsData.Instance()._searchSignalTemplateData(
+                    SignalTemplateData　TemplateData_signal = clsSignalsData.Instance()._searchSignalTemplateData(
                         signalModel1.ParentNodeClassName, 
                         signalModel1.EventName);
 
-                    if (signalTemplateData1 == null ){
+                    signalModel1.CodeHint = clsCodeHint.Instance()._searchUIHintCode(signalModel1.ParentNodeClassName, signalModel1.EventName);
+
+                    if (TemplateData_signal == null ){
 
                         Boolean isReSearch = true;
                         string errorMes = "";
@@ -154,14 +163,17 @@ namespace gladeGenerator
                         {
                             if (isReSearch && reSearchClassName != "")
                             {
-                                signalTemplateData1 = clsSignalsData.Instance()._searchBaseClassSignalTemplateData(
+
+                                signalModel1.CodeHint = clsCodeHint.Instance()._searchUIHintCode(reSearchClassName, signalModel1.EventName);
+                                TemplateData_signal = clsSignalsData.Instance()._searchBaseClassSignalTemplateData(
                                     reSearchClassName, 
                                     signalModel1.EventName , ref errorMes, ref  isReSearch,
                                     ref reSearchClassName);
+
                             }
                         }
 
-                        if (signalTemplateData1 == null)
+                        if (TemplateData_signal == null)
                         {
                             Console.WriteLine("{0}の Signal {1} Eventがテンプレートデータ(signals.xml)にない。" +
                                               "テンプレートデータ(signals.xml)を確認してください1", signalModel1.ParentNodeClassName,
@@ -184,19 +196,23 @@ namespace gladeGenerator
                         signalNodes.Attributes["swapped"].Value = signalNodes.Attributes["swapped"].Value == "yes" ? "true" : "false";
                         signalModel1.IsSwapped = Boolean.Parse(signalNodes.Attributes["swapped"].Value); 
                     }       
-
-                    signalModel1.OutPutMethodStr = signalModel1.HandlerName;
-
-                    if (signalTemplateData1.ArgsArray.Count > 0)
+            
+                    if (TemplateData_signal.ArgsArray.Count > 0)
                     {
-                        foreach (var argStr in signalTemplateData1.ArgsArray)
+                        foreach (var argStr in TemplateData_signal.ArgsArray)
                         {
                             signalModel1.ArgsStr += argStr + " , ";
                         }
                         signalModel1.ArgsStr = signalModel1.ArgsStr._trimEnd(" , ");
                     }
                     
-                    signalModel1.OutPutMethod_ArgsStr = "private void " + signalModel1.OutPutMethodStr + "("+ signalModel1.ArgsStr + "){";
+                    signalModel1.OutPutMethod_ArgsStr = "private void " + signalModel1.HandlerName + "("+ signalModel1.ArgsStr + "){";
+
+                    if (signalModel1.CodeHint != "")
+                    {
+                        signalModel1.OutPutMethod_ArgsStr = signalModel1.OutPutMethod_ArgsStr + Environment.NewLine +
+                                                            signalModel1.CodeHint + Environment.NewLine;
+                    }
 
                     ((BaseClass)BaseLevelPart).SignalArray.Add(signalModel1);
                 }

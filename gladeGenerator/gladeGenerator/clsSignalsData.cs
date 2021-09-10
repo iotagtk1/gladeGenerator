@@ -22,10 +22,18 @@ namespace gladeGenerator
 
         private clsSignalsData()
         {
-            string filePath = clsFile._getExePath_replace("signals.xml");
-            string xmlStr = clsFile._load_static(filePath);
-            xmlDoc = new XmlDocument();
-            xmlDoc.LoadXml(xmlStr);
+            try
+            {            
+                string filePath = clsFile._getExePath_replace("signals.xml");
+                string xmlStr = clsFile._load_static(filePath);
+                xmlDoc = new XmlDocument();
+                xmlDoc.LoadXml(xmlStr);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
         }
 
         /// <summary>
@@ -62,6 +70,7 @@ namespace gladeGenerator
                         signalTemplateData1.ArgsArray.Add(argsNode.InnerText);
                     }
                 }
+
             }
 
             return signalTemplateData1;
@@ -110,14 +119,15 @@ namespace gladeGenerator
             
             SignalTemplateData signalTemplateData1 = new SignalTemplateData();
 
-            foreach (XmlNode node in typesTemplateNodes[0].ChildNodes)
+            foreach (XmlNode signalNode in typesTemplateNodes[0].ChildNodes)
             {
-                if (node.Name == "method")
+                if (signalNode.Name == "method")
                 {
-                    signalTemplateData1.Method = node.InnerText;
-                }else if (node.Name == "args")
+                    signalTemplateData1.Method = signalNode.InnerText;
+                    
+                }else if (signalNode.Name == "args")
                 {
-                    foreach (XmlNode argsNode in node.ChildNodes)
+                    foreach (XmlNode argsNode in signalNode.ChildNodes)
                     {
                         signalTemplateData1.ArgsArray.Add(argsNode.InnerText);
                     }

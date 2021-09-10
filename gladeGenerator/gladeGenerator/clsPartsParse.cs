@@ -10,7 +10,11 @@ namespace gladeGenerator
     {
 
         List<GladeData> gladeDataArray = null;
-
+        public clsPartsParse()
+        {
+            clsSignalsData.Instance();
+            clsCodeHint.Instance();
+        }
         public void _parsePrjectFolder(string fileFolderPath)
         {
 
@@ -65,9 +69,12 @@ namespace gladeGenerator
         }
 
         private XmlDocument gladeXmlDoc;
-       /*
-        * gladeを走査する
-        */
+
+        /// <summary>
+        /// Gladeを捜査する Topレベルのパーツを取得する
+        /// </summary>
+        /// <param name="filePath"></param>
+        /// <returns></returns>
         private GladeData _parseGladeFile(string filePath)
         {
             GladeData gladeDataPart1 = null;

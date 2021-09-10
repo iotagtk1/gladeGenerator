@@ -22,13 +22,13 @@ namespace gladeGenerator
                     fileContent = clsFile._load_static(TopLevelPart1.OutPutSaveFilePath_function);
                     if (fileContent == "")
                     {
-                        fileContent = clsFile._load_static(clsFile._getExePath_replace("template.txt"));
+                        fileContent = clsFile._load_static(clsFile._getExePath_replace("templateData/template.txt"));
                         fileContent = fileContent._replaceReplaceStr("{$value}", "");   
                         fileContent = fileContent._replaceReplaceStr("{$className}", TopLevelPart1.OutPutClassName);
                         fileContent = fileContent._replaceReplaceStr("{$nameSpace}", clsArgsConfig.Instance().ProjectName);      
                     }
                 }else{
-                    fileContent = clsFile._load_static(clsFile._getExePath_replace("template.txt"));
+                    fileContent = clsFile._load_static(clsFile._getExePath_replace("templateData/template.txt"));
                     fileContent = fileContent._replaceReplaceStr("{$value}", "");   
                     fileContent = fileContent._replaceReplaceStr("{$className}", TopLevelPart1.OutPutClassName);
                     fileContent = fileContent._replaceReplaceStr("{$nameSpace}", clsArgsConfig.Instance().ProjectName);    
@@ -54,8 +54,6 @@ namespace gladeGenerator
                         }
                     }
                 }
-
-                //  fileContent = _kakkoFix(fileContent);
 
                 Console.WriteLine("{0}に保存しました。",TopLevelPart1.OutPutSaveFilePath_function);
                 clsFile._saveFilePath(fileContent,TopLevelPart1.OutPutSaveFilePath_function);

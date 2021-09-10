@@ -21,12 +21,12 @@ namespace gladeGenerator
                     fileContent = clsFile._load_static(topLevelPart1.OutPutSaveFilePath_value);
                     if (fileContent == "")
                     {
-                        fileContent = clsFile._load_static(clsFile._getExePath_replace("template.txt"));
+                        fileContent = clsFile._load_static(clsFile._getExePath_replace("templateData/template.txt"));
                         fileContent = fileContent._replaceReplaceStr("{$className}", topLevelPart1.OutPutClassName);
                         fileContent = fileContent._replaceReplaceStr("{$nameSpace}", clsArgsConfig.Instance().ProjectName);      
                     }
                 }else{
-                    fileContent = clsFile._load_static(clsFile._getExePath_replace("template.txt"));
+                    fileContent = clsFile._load_static(clsFile._getExePath_replace("templateData/template.txt"));
                     fileContent = fileContent._replaceReplaceStr("{$className}", topLevelPart1.OutPutClassName);
                     fileContent = fileContent._replaceReplaceStr("{$nameSpace}", clsArgsConfig.Instance().ProjectName);    
                 }

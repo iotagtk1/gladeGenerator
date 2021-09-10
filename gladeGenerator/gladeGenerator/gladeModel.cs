@@ -42,9 +42,10 @@ namespace gladeGenerator
         public string TargetObject;
         public Boolean IsAfter = false;
         public Boolean IsSwapped = false;
-        public string OutPutMethodStr;
+        //public string OutPutMethodStr;
         public string ArgsStr;
-        public string OutPutMethod_ArgsStr;  
+        public string OutPutMethod_ArgsStr;
+        public string CodeHint;
     }
 
     public class SignalTemplateData

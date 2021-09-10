@@ -28,9 +28,6 @@ namespace gladeGenerator
 
             try
             {
-                //引数
-                clsSignalsData.Instance();
-
                 clsPartsParse clsPartsParse1 = new clsPartsParse();
 
                 clsPartsParse1._parsePrjectFolder(clsArgsConfig.Instance().FileDirPath);

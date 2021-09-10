@@ -13,6 +13,8 @@ namespace gladeGenerator
         public string ProjectName = "";
         public string FileDirPath = "";
         public string AddSaveFolder = "";
+        public Boolean isCodeHint = false;
+        public string codeHitFolder = "";
         public List<string> NoGaldeFileArray = new List<string>();
         public Dictionary<string,string> GladeFileClassMapDic = new Dictionary<string,string>();
         
@@ -39,11 +41,9 @@ namespace gladeGenerator
                         if (node.Name == "Setting" && node.Attributes != null 
                         )
                         {
-                            // <Setting isOverRideGladeEventHandler="0" AddSaveFolder="" />
-                            //isOverRideGladeEventHandler = node.Attributes._getValue("isOverRideGladeEventHandler")
-                            //    .ToString()._boolValue();
-                            AddSaveFolder = node.Attributes._getValue("AddSaveFolder");                              
-                            
+                            AddSaveFolder = node.Attributes._getValue("AddSaveFolder");
+                            isCodeHint = node.Attributes._getValue("isCodeHint")._boolValue();
+                            codeHitFolder = node.Attributes._getValue("codeHitFolder");
                         }
                     }
                 }
@@ -99,6 +99,11 @@ namespace gladeGenerator
 
         private List<string> commndKeyArray = new List<string> {
             "-projectName","-projectDir","-saveDir"};
+        
+        /// <summary>
+        /// 引数が取得できているか
+        /// </summary>
+        /// <returns></returns>
         public Boolean _validateCommandKey()
         {
             if (SaveDir == "" )
@@ -119,6 +124,10 @@ namespace gladeGenerator
 
             return true;
         }
+        /// <summary>
+        /// 引数をセットする
+        /// </summary>
+        /// <param name="args"></param>
         public void _setArgs(string[] args)
         {
             
