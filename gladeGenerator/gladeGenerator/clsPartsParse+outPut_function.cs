@@ -36,7 +36,7 @@ namespace gladeGenerator
                 
                 foreach (Signal signal1 in TopLevelPart1.SignalArray)
                 {
-                    string resultStr = clsClassFucntionSpit._save_addMethod(signal1.OutPutMethod_ArgsStr, fileContent);
+                    string resultStr = clsClassFucntionSpit._save_addMethod(signal1.HandlerName, signal1.OutPutMethod_ArgsStr, fileContent);
                     if (resultStr != "")
                     {
                         fileContent = resultStr;
@@ -47,7 +47,7 @@ namespace gladeGenerator
                 {
                     foreach (Signal signal1 in childLevelPart1.SignalArray)
                     {
-                        string resultStr = clsClassFucntionSpit._save_addMethod(signal1.OutPutMethod_ArgsStr, fileContent);
+                        string resultStr = clsClassFucntionSpit._save_addMethod(signal1.HandlerName,signal1.OutPutMethod_ArgsStr, fileContent);
                         if (resultStr != "")
                         {
                             fileContent = resultStr;

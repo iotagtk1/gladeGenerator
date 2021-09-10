@@ -20,7 +20,7 @@ namespace gladeGenerator
     public class clsClassFucntionSpit
     {
         public clsClassFucntionSpit(){}
-        static public string _save_addMethod(string addMethodStr,string splitStr)
+        static public string _save_addMethod(string methonOnly, string addMethodStr,string splitStr)
         {
 
             if (splitStr == "")
