@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq.Expressions;
 using System.Xml;
 using gladeGenerator;
 
@@ -210,8 +211,10 @@ namespace gladeGenerator
 
                     if (signalModel1.CodeHint != "")
                     {
+                        signalModel1.CodeHint = signalModel1.CodeHint._replaceReplaceStr("{num}", topLevelPart1.PartId);
+                        
                         signalModel1.OutPutMethod_ArgsStr = signalModel1.OutPutMethod_ArgsStr + Environment.NewLine +
-                                                            signalModel1.CodeHint + Environment.NewLine;
+                                                            signalModel1.CodeHint;
                     }
 
                     ((BaseClass)BaseLevelPart).SignalArray.Add(signalModel1);

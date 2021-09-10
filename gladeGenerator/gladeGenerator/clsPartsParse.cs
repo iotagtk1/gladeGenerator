@@ -118,7 +118,6 @@ namespace gladeGenerator
         {
 
             string OutPutPartsIdName = topObjectNode.Attributes["id"] != null ? topObjectNode.Attributes["id"].Value : "" ;
-
             string GladeFileNameNoExtension = clsPath._getFileNameNoExtension(filePath);
             string GladeFileName = clsPath._getFileName(filePath);
 

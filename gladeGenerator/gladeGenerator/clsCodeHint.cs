@@ -48,6 +48,12 @@ namespace gladeGenerator
             }
             
             string selecterStr = "//uiCodeHint/codeHint[@uiName = '" + uiName + "' and @eventName= '" + eventName + "']";
+
+            if (uiName == "GtkListStore")
+            {
+                //Console.WriteLine("GtkListStore");
+            }
+            
             XmlNode xmlNode1 = CodeHintXmlDoc.SelectSingleNode(selecterStr);
             if (xmlNode1 != null)
             {
@@ -59,7 +65,14 @@ namespace gladeGenerator
                         string filePath2 = clsArgsConfig.Instance().codeHitFolder + "/" + filePath;
                         string uiCodeHintPath = clsFile._getExePath_replace(filePath2);
                         string condeHint = clsFile._load_static(uiCodeHintPath);
-                        return condeHint;
+                        
+                        string lineNew = "";
+                        foreach (string str in  condeHint._split(Environment.NewLine))
+                        {
+                            lineNew += "\t\t\t" + str + Environment.NewLine;
+                        }
+
+                        return lineNew;
                     }
                 }
             }

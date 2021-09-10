@@ -1,1 +1,3 @@
-3
+/*
+var a = ((Gtk.Entry)sender).Text;
+*/

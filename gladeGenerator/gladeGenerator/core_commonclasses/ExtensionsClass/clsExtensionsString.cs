@@ -368,6 +368,10 @@ using System.Globalization;
                 newArray.Add(str);
             }
         }
+        else {
+            newArray.Add(test);
+        }
+        
         return newArray;
     }
 

@@ -45,8 +45,13 @@ saveDir The directory to be saved. The default setting is the project folder.
 
 ### ConfigSetting.xml
 ```
-<Setting AddSaveFolder="" />
+<Setting AddSaveFolder="" isCodeHint ="true" codeHitFolder="codeHint" />
 ```
+
+isCodeHint    We will also export a sample of the code when we export it.
+codeHitFolder Name of the folder with the code samples
+
+CodeHint can be customized
 
 ### GladFileClassMap.xml
 Overrides the name of the class to be written out

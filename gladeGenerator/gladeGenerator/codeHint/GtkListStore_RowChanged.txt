@@ -1,0 +1,7 @@
+/*
+TreeIter iter;
+if (listStore_{num}.GetIterFromString(out iter, args.Path))
+{
+    (type_{num}) modelObj = (type_{num})listStore_{num}.GetValue(iter, 0);
+}
+*/

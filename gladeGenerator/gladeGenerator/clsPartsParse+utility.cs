@@ -28,6 +28,9 @@ namespace gladeGenerator
         /// <returns></returns>
         public string _convertEventName(string eventName)
         {
+            
+            
+            
             if (eventName._indexOf("-") != -1)
             {
                 ArrayList array = eventName._split("-");

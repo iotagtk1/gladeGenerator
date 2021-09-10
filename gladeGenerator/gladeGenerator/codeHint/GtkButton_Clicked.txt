@@ -1,1 +1,8 @@
-1
+/*
+ListStore_{num}.Foreach (delegate (ITreeModel model, TreePath path, TreeIter iter)  {
+
+    type_{num} modelObj = model.GetValue(iter, 0) as type_{0};
+    
+    return false;
+});
+*/
