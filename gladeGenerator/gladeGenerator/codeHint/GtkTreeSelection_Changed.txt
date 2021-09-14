@@ -1,10 +1,10 @@
-/*
-ITreeModel model0;	
-if (((Gtk.TreeSelection)sender).GetSelectedRows(out model0) != null)
+ITreeModel model;	
+if (((Gtk.TreeSelection)sender).GetSelectedRows(out model) != null)
 {
-    Console.WriteLine(model0);    
+    // ((type_{num})model)    
 }
 
+/*
 TreeIter iter;
 ITreeModel model;
 if (((Gtk.TreeSelection)sender).GetSelected(out model,out iter))

@@ -45,7 +45,7 @@ namespace gladeGenerator
 
             clsClassFucntionSpit._splitStr(splitData1.CenterStr, ref splitData2);
 
-            if (splitData2.CenterStr._indexOf(addMethodStr) == -1)
+            if (splitData2.CenterStr._indexOf(methonOnly) == -1)
             { 
                 splitData2.CenterStr += Environment.NewLine + "\t\t" + addMethodStr + Environment.NewLine + "\t\t\t" + Environment.NewLine + "\t\t}" ;
             }
