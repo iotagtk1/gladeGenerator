@@ -15,6 +15,6 @@ Add a signal and a name to the control, and an event handler will be generated a
 
 ```Rider arguments macro require
 -projectPath $FilePath$ -projectName $SolutionName$ -fileDir $FilePath$ -saveDir $SolutionDir$
-```****
+```
 
 For detailed instructions, please read the readMe text in the program file.

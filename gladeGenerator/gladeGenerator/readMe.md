@@ -31,9 +31,10 @@ Set the path of the program
 You must specify a macro
 copy perst****
 
-```Rider arguments macro require
+``` Rider arguments macro require
 -projectPath $FilePath$ -projectName $SolutionName$ -fileDir $FilePath$ -saveDir $SolutionDir$
-```****
+```
+****
 
 The working directory can be empty.
 
