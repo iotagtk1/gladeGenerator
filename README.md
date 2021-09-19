@@ -14,7 +14,8 @@ Add a signal and a name to the control, and an event handler will be generated a
 1. The event handler file will be automatically generated in the same project
 
 ```Rider arguments macro require
--projectPath $FilePath$ -projectName $SolutionName$ -fileDir $FilePath$ -saveDir $SolutionDir$
+$  gladeGenerator
+ -projectPath $FilePath$ -projectName $SolutionName$ -fileDir $FilePath$ -saveDir $SolutionDir$
 ```
 
 For detailed instructions, please read the readMe text in the program file.
