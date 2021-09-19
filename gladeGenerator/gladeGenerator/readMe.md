@@ -29,17 +29,18 @@ You can run it from an external tool
 
 Set the path of the program
 You must specify a macro
-copy perst
+copy perst****
 
 ```Rider arguments macro require
--projectName $SolutionName$ -fileDir $FilePath$ -saveDir $SolutionDir$
-```
+-projectPath $FilePath$ -projectName $SolutionName$ -fileDir $FilePath$ -saveDir $SolutionDir$
+```****
 
 The working directory can be empty.
 
 #### Description
 
-projectName Used for the namespace of the exported program.
+projectName Used for the namespace of the exported program. Rider doesn't have a macro for namespaces, so we need to fill in ProjetctPath
+projectPath　Required to get accurate namespace
 fileDir The file or folder selected in Rider's explorer.
 saveDir The directory to be saved. The default setting is the project folder.
 

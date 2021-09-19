@@ -133,8 +133,8 @@ namespace gladeGenerator
                 topLevelPart1.OutPutFileName_function = gladeDataPart1.OutPutGladeName + "+" + OutPutPartsIdName + ".cs";
                 topLevelPart1.OutPutFileName_value = gladeDataPart1.OutPutGladeName + "+"　+ OutPutPartsIdName  + "_id" + ".cs"; 
 
-                topLevelPart1.OutPutSaveFilePath_function = clsArgsConfig.Instance().SaveDir._trimEnd("/") + "/" + clsArgsConfig.Instance().AddSaveFolder.Trim('/') + "/" + topLevelPart1.OutPutFileName_function;
-                topLevelPart1.OutPutSaveFilePath_value = clsArgsConfig.Instance().SaveDir._trimEnd("/") + "/" + clsArgsConfig.Instance().AddSaveFolder.Trim('/') + "/" + topLevelPart1.OutPutFileName_value;   
+                topLevelPart1.OutPutSaveFilePath_function = clsArgsConfig.Instance().SaveDir._trimEnd("/") + "/" + clsArgsConfig.Instance().ProjectName._trimEnd("/") + "/" + clsArgsConfig.Instance().AddSaveFolder.Trim('/') + "/" + topLevelPart1.OutPutFileName_function;
+                topLevelPart1.OutPutSaveFilePath_value = clsArgsConfig.Instance().SaveDir._trimEnd("/") + "/" + clsArgsConfig.Instance().ProjectName._trimEnd("/") + "/" + clsArgsConfig.Instance().AddSaveFolder.Trim('/') + "/" + topLevelPart1.OutPutFileName_value;   
             }
           
         }

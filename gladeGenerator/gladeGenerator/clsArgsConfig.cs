@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Xml;
@@ -12,6 +13,7 @@ namespace gladeGenerator
 
         public string SaveDir = "";     
         public string ProjectName = "";
+        public string ProjectPath = "";
         public string FileDirPath = "";
         public string AddSaveFolder = "";
         public Boolean isCodeHint = false;
@@ -99,14 +101,19 @@ namespace gladeGenerator
         }
 
         private List<string> commndKeyArray = new List<string> {
-            "-projectName","-projectDir","-saveDir"};
-        
+            "-projectPath","-projectName","-projectDir","-saveDir"};
+
         /// <summary>
         /// 引数が取得できているか
         /// </summary>
         /// <returns></returns>
         public Boolean _validateCommandKey()
         {
+            if (ProjectPath != "")
+            {
+                ProjectName = _getProjectName(ProjectPath);
+            }
+            
             if (SaveDir == "" )
             {
                 Console.WriteLine("projectFolderが指定されていない");
@@ -115,6 +122,11 @@ namespace gladeGenerator
             if (ProjectName == "")
             {
                 Console.WriteLine("ProjectNameが指定されていない");
+                return false;
+            }
+            if (ProjectPath == "")
+            {
+                Console.WriteLine("projectPathが指定されていない");
                 return false;
             }
             if (FileDirPath == "")
@@ -169,9 +181,48 @@ namespace gladeGenerator
                     i++;
                     continue;
                 }
+                
+                if (commandKey._indexOf("-projectPath") != -1)
+                {
+                    
+                    if (args._safeIndexOf(i + 1) && 
+                        commndKeyArray.IndexOf(args[i+1]) == -1 && 
+                        args[i+1] != ""){
+                        ProjectPath = args[i + 1];              
+                    }
+                    i++;
+                    continue;
+                }
              
                 i++;
             }
+        }
+
+        /// <summary>
+        /// プロジェクトパスを取得する
+        /// </summary>
+        /// <param name="path"></param>
+        /// <returns></returns>
+        private string _getProjectName(string path){
+            
+            path = path.TrimEnd(Path.DirectorySeparatorChar);
+
+            var separator = Path.DirectorySeparatorChar;
+            string[] pathArray = path.Split(separator);
+
+            for (int i = pathArray.Length ; i > 0; i--)
+            {
+                var pathArray1 = pathArray[0..i];
+                string stCsvData = string.Join("/", pathArray1);
+                string csprojPath = stCsvData + "/" + pathArray[i-1] + ".csproj";
+                if (File.Exists(csprojPath))
+                {
+                    return pathArray[i-1];
+                    break;
+                }
+            }
+
+            return "";
         }
         
   
