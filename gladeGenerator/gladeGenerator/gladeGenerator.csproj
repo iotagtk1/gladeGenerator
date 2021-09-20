@@ -55,12 +55,6 @@
       <Content Include="codeHint\GtkComboBox_Changed.txt">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </Content>
-      <Content Include="codeHint\GtkEditable_Changed.txt">
-        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      </Content>
-      <Content Include="codeHint\GtkToggleButton_Toggled.txt">
-        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      </Content>
       <Content Include="codeHint\GtkTreeSelection_Changed.txt">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </Content>
@@ -88,12 +82,18 @@
       <None Remove="codeHint\GtkTreeSelection_changed.txt" />
       <None Remove="codeHint\GtkComboBox_changed.txt" />
       <None Update="codeHint\GtkListStore_RowChanged.txt">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </None>
       <None Remove="codeHint\GtkRadioButton_GroupChanged.txt" />
       <Content Include="codeHint\GtkRadioButton_GroupChanged.txt">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </Content>
+      <None Update="codeHint\GtkEntry_Changed.txt">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Update="codeHint\GtkCheckButton_Toggled.txt">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
     </ItemGroup>
 
     <ItemGroup>
