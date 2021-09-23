@@ -1,14 +1,6 @@
-ITreeModel model;	
-if (((Gtk.TreeSelection)sender).GetSelectedRows(out model) != null)
-{
-    // ((type_{num})model)    
-}
-
-/*
 TreeIter iter;
 ITreeModel model;
 if (((Gtk.TreeSelection)sender).GetSelected(out model,out iter))
 {
     type_{num} modelData = (type_{num})ListStore_{num}.GetValue(iter, 0);
 }
-*/
