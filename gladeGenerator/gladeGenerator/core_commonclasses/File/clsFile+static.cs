@@ -10,6 +10,7 @@ using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Collections.Specialized;
 using System.Resources;
+using System.Text.Json;
 
 public partial class clsFile {
 
@@ -420,7 +421,38 @@ public partial class clsFile {
             Environment.SpecialFolder.UserProfile);
     }
 
+    /// <summary>
+    /// DataModelを保存する
+    /// </summary>
+    /// <param name="dataFilePath"></param>
+    /// <param name="dataDic"></param>
+    public static void _saveJsonData<T>(string dataFilePath , dynamic dataDic)
+    {
+        string jsonString = JsonSerializer.Serialize<T>(dataDic);
+            
+        _saveFilePath(jsonString,dataFilePath);
 
+    }
+        
+    /// <summary>
+    /// DataModelを取り出す
+    /// </summary>
+    /// <param name="dataFilePath"></param>
+    /// <returns></returns>
+    public static dynamic _getJsonData<T>(string dataFilePath)
+    {
+
+        if (_isFile(dataFilePath))
+        {
+            string jsonContent = _load_static(dataFilePath);
+            
+            var modelData = JsonSerializer.Deserialize<T>(jsonContent);
+            
+            return modelData;
+        }
+		    
+        return null;
+    }
 
 }
 

@@ -28,7 +28,7 @@ BindingFlags.DeclaredOnly);     *
 pi.GetGetMethod();
 * */
 
-public static class objectExtensions {
+public static partial class objectExtensions {
 
     /// <summary>
     /// com用のプロパティを取得し　型の判定に使う
@@ -215,18 +215,26 @@ public static class objectExtensions {
         /// プロパティをgetする　実行する
         /// </summary>
         public static object _performSelector_Property(this object obj, string propertyName) {
-            
-            Type magicType = obj.GetType();
-            PropertyInfo pi = magicType.GetProperty(propertyName,
-            BindingFlags.Public | BindingFlags.NonPublic |
-            BindingFlags.Instance | BindingFlags.Static |
-            BindingFlags.DeclaredOnly);
 
-            MethodInfo getMethod = pi.GetGetMethod();
-            object result = getMethod.Invoke(obj, null);
+            try
+            {
+                Type magicType = obj.GetType();
+                PropertyInfo pi = magicType.GetProperty(propertyName,
+                    BindingFlags.Public | BindingFlags.NonPublic |
+                    BindingFlags.Instance | BindingFlags.Static |
+                    BindingFlags.DeclaredOnly);
 
+                MethodInfo getMethod = pi.GetGetMethod();
+                object result = getMethod.Invoke(obj, null);
 
-            return result;
+                return result;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+
+            return null;
         }
 
 
@@ -235,15 +243,22 @@ public static class objectExtensions {
         /// </summary>
         public static void _setSelector_Property(this object obj1, string propertyName ,dynamic value) {
 
-            Type t = obj1.GetType();
-            PropertyInfo pi = t.GetProperty(propertyName,
-            BindingFlags.Public  
-            | BindingFlags.NonPublic |
-            BindingFlags.Instance | BindingFlags.Static |
-            BindingFlags.DeclaredOnly); 
+            try
+            {
+                Type t = obj1.GetType();
+                PropertyInfo pi = t.GetProperty(propertyName,
+                    BindingFlags.Public  
+                    | BindingFlags.NonPublic |
+                    BindingFlags.Instance | BindingFlags.Static |
+                    BindingFlags.DeclaredOnly); 
 
-            MethodInfo setMethod = pi.GetSetMethod();
-            setMethod.Invoke(obj1, new Object[1] { value });
+                MethodInfo setMethod = pi.GetSetMethod();
+                setMethod.Invoke(obj1, new Object[1] { value });
+
+            }catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
 
         }
 
@@ -275,26 +290,34 @@ public static class objectExtensions {
             BindingFlags.Instance | BindingFlags.Static |
             BindingFlags.DeclaredOnly);
             object result = mi.Invoke(method,null);
-
-		return result;
+            return result;
         }
-    
-    
+
         /// <summary>
         /// メソッドを実行する
         /// </summary>
         public static object _performSelector_Method(this object obj, string method,dynamic objct1) {
-    
-            Type magicType = obj.GetType();
 
-            MethodInfo mi = magicType.GetMethod(method,
-                BindingFlags.Public | BindingFlags.NonPublic |
-                BindingFlags.Instance | BindingFlags.Static |
-                BindingFlags.DeclaredOnly);
+            try
+            {
+                Type magicType = obj.GetType();
 
-            object result = mi.Invoke(method , new Object[1] { objct1 });
+                MethodInfo mi = magicType.GetMethod(method,
+                    BindingFlags.Public | BindingFlags.NonPublic |
+                    BindingFlags.Instance | BindingFlags.Static |
+                    BindingFlags.DeclaredOnly);
 
-            return result;
+                object result = mi.Invoke(method , new Object[1] { objct1 });
+
+                return result;
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+
+            return null;
         }
 
         /// <summary>
@@ -324,8 +347,23 @@ public static class objectExtensions {
             return false;
         }
 
+        /// <summary>
+        /// 型を取得する
+        /// </summary>
+        public static Type _getKata(this object obj , String propertyName) {
 
+            PropertyInfo[] props = obj.GetType().GetProperties();
+            foreach (PropertyInfo prop in props)
+            {
+                if (prop.Name == propertyName)
+                {
+                    return prop.PropertyType;
+                }
+            }
 
+            return null;
+        }
+        
         public static Boolean _isEqual(this object obj, object a) {
             if (obj == a) {
                 return true;

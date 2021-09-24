@@ -3,6 +3,8 @@
 ### Environment
 .net5
 
+GtkSharp
+
 Rider 2021 or Terminal or VisualSutdio
 
 

@@ -17,7 +17,7 @@ using System.Globalization;
     /// </summary>
     static public string _get_path_spltRightNum(this string path, int rightNum) {
 
-        if (path._indexOf(@"\") != -1) {
+        if (path.IndexOf(@"\") != -1) {
             ArrayList array = path._split(@"\");
             if (array._safeIndexOf(array.Count - (rightNum+1))) {
                 ArrayList newArray = array.GetRange(0, array.Count - (rightNum + 1));
@@ -49,7 +49,7 @@ using System.Globalization;
 
         int i = 1;
         foreach (string str2 in splitArray) {
-            if (str2._indexOf(searchWord) != -1) {
+            if (str2.IndexOf(searchWord) != -1) {
                 return i;
             }
             i++;
@@ -63,7 +63,7 @@ using System.Globalization;
     /// </summary>
     static public string _getFileNameNoExtension(this string str) {
 
-        if (str._indexOf(".") != -1) {
+        if (str.IndexOf(".") != -1) {
             return str._split(".")[0].ToString();
         }
 
@@ -131,7 +131,15 @@ using System.Globalization;
 
         return targetPath;
     }
- 
+        
+    /// <summary>
+    /// stream to string
+    /// </summary>
+    static public string _xmlToStream(this Stream stream) {
+        StreamReader reader = new StreamReader(stream);
+        string text = reader.ReadToEnd();
+        return text;
+    }
 
     /// <summary>
     /// string to stream
@@ -280,7 +288,7 @@ using System.Globalization;
         if (str_t == "" || str_t == null) {
             return 0;
         }
-        if (str_t._indexOf(".") != -1) {
+        if (str_t.IndexOf(".") != -1) {
             ArrayList strArray = str._split(".");
             str_t = strArray[0].ToString();
         }       
@@ -422,7 +430,44 @@ using System.Globalization;
         }
         return System.Globalization.CultureInfo.CurrentCulture.TextInfo.ToTitleCase(str);
     }
+    
+    
+    /// <summary>
+    /// mk5にする
+    /// </summary>
+    static public string _md5(this string srcStr) {
+        System.Security.Cryptography.MD5 md5 = System.Security.Cryptography.MD5.Create();
 
+        Encoding enc = new System.Text.UTF8Encoding(true, true);
+
+        // md5ハッシュ値を求める
+        byte[] srcBytes = enc.GetBytes(srcStr);
+        byte[] destBytes = md5.ComputeHash(srcBytes);
+
+        // 求めたmd5値を文字列に変換する
+        System.Text.StringBuilder destStrBuilder;
+        destStrBuilder = new System.Text.StringBuilder();
+        foreach (byte curByte in destBytes) {
+            destStrBuilder.Append(curByte.ToString("x2"));
+        }
+
+        // 変換後の文字列を返す
+        return destStrBuilder.ToString();
+    }
+
+    //HTMLエンコード
+    static public string _htmlEncode(this string html) {
+        html = System.Web.HttpUtility.HtmlEncode(html);
+        return html;
+    }
+
+    //HTMLデコード
+    static public string _htmlDecode(this string html) {
+        html = System.Web.HttpUtility.HtmlDecode(html);
+        return html;
+    }
+
+    
 
 }
 

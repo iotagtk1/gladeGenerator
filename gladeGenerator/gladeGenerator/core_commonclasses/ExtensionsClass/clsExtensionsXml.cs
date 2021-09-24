@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Reflection;
 using System.Xml;
+using System.Xml.Linq;
 
 
     public static partial class xmlExtensions {
@@ -302,9 +303,40 @@ using System.Xml;
                 }
 
                 return sb.ToString();
-        }                    
+        }
 
-    }
+        public static XElement _toXElement(this XmlDocument doc)
+        {
+            XElement root = XElement.Parse(doc.OuterXml);
+            return root;
+        }
+
+        public static string _getAttribute(this XElement e ,string name)
+        {
+            var attr = e.Attribute(name).ToString();
+            return attr;
+        } 
+        
+        public static string _getValu(this XElement e)
+        {
+            var val = e.Value.ToString();
+            return val;
+        } 
+        
+        public static T _getAttribute<T>(this XElement e, string name)
+        {
+            var attr = e.Attribute(name);
+            if (attr == null)
+                return default(T);
+            else
+                return (T)Convert.ChangeType(attr.Value, typeof(T));
+        }
+
+
+}
+
+
+
 
 
 
