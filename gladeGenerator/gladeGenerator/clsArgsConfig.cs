@@ -222,6 +222,11 @@ namespace gladeGenerator
                 }
             }
 
+            if (pathArray.Length == 0)
+            {
+                return path;
+            }
+
             return "";
         }
         
