@@ -11,9 +11,6 @@ namespace gladeGenerator
             try
             {
                 clsArgsConfig.Instance();
-           
-            
-
 
                 clsArgsConfig.Instance()._setArgs(args);
 
