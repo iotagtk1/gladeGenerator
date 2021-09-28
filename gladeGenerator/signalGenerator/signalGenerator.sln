@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "signalGenerator", "signalGenerator\signalGenerator.csproj", "{04B42BD0-D0C8-4CAF-9878-FE244FA85E5B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "signalGeneratro2", "signalGeneratro2\signalGeneratro2.csproj", "{E8550586-ACAF-4E2C-B882-E77E38EF27DF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{04B42BD0-D0C8-4CAF-9878-FE244FA85E5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{04B42BD0-D0C8-4CAF-9878-FE244FA85E5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{04B42BD0-D0C8-4CAF-9878-FE244FA85E5B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8550586-ACAF-4E2C-B882-E77E38EF27DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8550586-ACAF-4E2C-B882-E77E38EF27DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8550586-ACAF-4E2C-B882-E77E38EF27DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8550586-ACAF-4E2C-B882-E77E38EF27DF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

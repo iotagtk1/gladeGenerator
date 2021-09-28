@@ -5,7 +5,9 @@
 
 GtkSharp
 
-Rider 2021 or Terminal or VisualSutdio
+Rider or Terminal or VisualSutdio
+
+
 
 
 ### Rider Setting
