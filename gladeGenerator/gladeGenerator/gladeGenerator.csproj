@@ -8,7 +8,7 @@
     <ItemGroup>
       <None Include="..\signalGenerator\signalGeneratro2\bin\Debug\net5.0\signalGtk.xml">
         <Link>signalGtk.xml</Link>
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </None>
       <Content Include="templateData\template.txt">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>

@@ -102,6 +102,8 @@ namespace signalGenerator2
                 string csContent = clsFile._load_static(filePath);
               
                 string fileName = clsPath._getFileName(filePath);
+                
+                Console.WriteLine(fileName);
 
                // public class Button : Bin, IActionable, IWrapper, IActivatable
 
@@ -163,18 +165,18 @@ namespace signalGenerator2
                     string argsStr = addSignalArray[1].ToString();
 
                     List<string> Args = new List<string>();
-                    if (argsStr._indexOf("typeof") != -1)
+                    if (signalStr._indexOf("typeof") != -1)
                     {
                         // base.AddSignalHandler("format-entry-text", value, typeof(FormatEntryTextArgs));
-                        string patarn3 = @"typeof\((.*?)\)\;";
-                        ArrayList typeOfArray = clsUtility._patarnMatch(argsStr, patarn3, 1, -1,RegexOptions.Singleline);
+                        string patarn3 = @"typeof\((.*?)\)\)\;";
+                        ArrayList typeOfArray = clsUtility._patarnMatch(signalStr, patarn3, 1, -1,RegexOptions.Singleline);
                         if (typeOfArray.Count != 1)
                         {
-                            Console.WriteLine("typeOfArray　例外 {0} {1}",argsStr , typeOfArray.Count);
+                            Console.WriteLine("typeOfArray　例外 {0} {1}",signalStr , typeOfArray.Count);
                             continue;
                         }
                         Args.Add("object sender");
-                        string args_new = prefix + typeOfArray[0].ToString().TrimEnd().TrimStart() + " e";
+                        string args_new = prefix + "." + typeOfArray[0].ToString().TrimEnd().TrimStart() + " e";
                         Args.Add(args_new);
                     } else
                     {
@@ -186,10 +188,34 @@ namespace signalGenerator2
                     signalModelArray.Add(signalModel1);
                 }
 
-                TypeModel1.SignalModels = signalModelArray;
-                
-                TypeModelArray.Add(TypeModel1);
+                string patarn5 = @"\[DefaultSignalHandler.*?ConnectionMethod(.*?)" + Environment.NewLine;
+                ArrayList signalArray2 = clsUtility._patarnMatch(csContent, patarn5, 1, -1,RegexOptions.Singleline);
+ 
+                foreach (string signalStr in signalArray2)
+                {
+                    // ConnectionMethod = "OverrideIconPress")]
+       
+                    string patarn6 = @"\""(.*?)\""" ;
+                    ArrayList signalArray3 = clsUtility._patarnMatch(signalStr, patarn6, 1, -1,RegexOptions.Singleline);
 
+                    foreach (string signalStr2 in signalArray3)
+                    {
+                        signalModel signalModel1 = new signalModel();
+                        signalModel1.BaseClass = BaseClass;
+                        signalModel1.UIClassName_caller = callerClassName;
+
+                        signalModel1.AttributeEventName = _convertEventName(signalStr2.ToString());
+
+                        List<string> Args = new List<string>();
+                        Args.Add("object sender");
+                        Args.Add("EventArgs e");
+                        signalModel1.Args = Args;
+                        signalModelArray.Add(signalModel1);
+                    }
+                }       
+
+                TypeModel1.SignalModels = signalModelArray;
+                TypeModelArray.Add(TypeModel1);
             }
         }
 
