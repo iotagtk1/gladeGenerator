@@ -10,6 +10,8 @@ namespace gladeGenerator
     {
         private static clsSignalsData _singleInstance = null;
 
+        private string signalFileName = "signalGtk.xml";
+
         public static clsSignalsData Instance()
         {
             if (_singleInstance == null) {
@@ -24,7 +26,7 @@ namespace gladeGenerator
         {
             try
             {            
-                string filePath = clsFile._getExePath_replace("signals.xml");
+                string filePath = clsFile._getExePath_replace(signalFileName);
                 string xmlStr = clsFile._load_static(filePath);
                 xmlDoc = new XmlDocument();
                 xmlDoc.LoadXml(xmlStr);

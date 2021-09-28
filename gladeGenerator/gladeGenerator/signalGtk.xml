@@ -1,0 +1,3909 @@
+<root>
+  <types baseClass="CellRenderer" callerClass="CellRendererProgress" />
+  <types baseClass="Opaque" callerClass="CellAreaBoxContext" />
+  <types baseClass="ScrolledWindow" callerClass="PlacesSidebar">
+    <signal eventName="DragActionAsk" callerClass="PlacesSidebar" baseClass="ScrolledWindow">
+      <method>DragActionAsk</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="Mount" callerClass="PlacesSidebar" baseClass="ScrolledWindow">
+      <method>Mount</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="ShowConnectToServer" callerClass="PlacesSidebar" baseClass="ScrolledWindow">
+      <method>ShowConnectToServer</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="Unmount" callerClass="PlacesSidebar" baseClass="ScrolledWindow">
+      <method>Unmount</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="ShowErrorMessage" callerClass="PlacesSidebar" baseClass="ScrolledWindow">
+      <method>ShowErrorMessage</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="OpenLocation" callerClass="PlacesSidebar" baseClass="ScrolledWindow">
+      <method>OpenLocation</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="DragActionRequested" callerClass="PlacesSidebar" baseClass="ScrolledWindow">
+      <method>DragActionRequested</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="PopulatePopup" callerClass="PlacesSidebar" baseClass="ScrolledWindow">
+      <method>PopulatePopup</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="ShowOtherLocationsWithFlags" callerClass="PlacesSidebar" baseClass="ScrolledWindow">
+      <method>ShowOtherLocationsWithFlags</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="ShowEnterLocation" callerClass="PlacesSidebar" baseClass="ScrolledWindow">
+      <method>ShowEnterLocation</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="ShowOtherLocations" callerClass="PlacesSidebar" baseClass="ScrolledWindow">
+      <method>ShowOtherLocations</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="DragPerformDrop" callerClass="PlacesSidebar" baseClass="ScrolledWindow">
+      <method>DragPerformDrop</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+  </types>
+  <types baseClass="Button" callerClass="ColorButton">
+    <signal eventName="ColorSet" callerClass="ColorButton" baseClass="Button">
+      <method>ColorSet</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="ColorActivated" callerClass="ColorButton" baseClass="Button">
+      <method>ColorActivated</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+  </types>
+  <types baseClass="Opaque" callerClass="CssWidgetNode" />
+  <types baseClass="Opaque" callerClass="CssImageFallbackClass" />
+  <types baseClass="Box" callerClass="RecentChooserWidget" />
+  <types baseClass="Opaque" callerClass="CssMatcherSuperset" />
+  <types baseClass="Dialog" callerClass="PageSetupUnixDialog" />
+  <types baseClass="Box" callerClass="ShortcutsShortcut" />
+  <types baseClass="Opaque" callerClass="IconViewItem" />
+  <types baseClass="Widget" callerClass="Entry">
+    <signal eventName="IconPress" callerClass="Entry" baseClass="Widget">
+      <method>IconPress</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="Backspace" callerClass="Entry" baseClass="Widget">
+      <method>Backspace</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="CutClipboard" callerClass="Entry" baseClass="Widget">
+      <method>CutClipboard</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="IconRelease" callerClass="Entry" baseClass="Widget">
+      <method>IconRelease</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="PasteClipboard" callerClass="Entry" baseClass="Widget">
+      <method>PasteClipboard</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="Activate" callerClass="Entry" baseClass="Widget">
+      <method>Activate</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="DeleteFromCursor" callerClass="Entry" baseClass="Widget">
+      <method>DeleteFromCursor</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="MoveCursor" callerClass="Entry" baseClass="Widget">
+      <method>MoveCursor</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="CopyClipboard" callerClass="Entry" baseClass="Widget">
+      <method>CopyClipboard</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="PreeditChanged" callerClass="Entry" baseClass="Widget">
+      <method>PreeditChanged</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="ToggleOverwrite" callerClass="Entry" baseClass="Widget">
+      <method>ToggleOverwrite</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="InsertAtCursor" callerClass="Entry" baseClass="Widget">
+      <method>InsertAtCursor</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="PopulatePopup" callerClass="Entry" baseClass="Widget">
+      <method>PopulatePopup</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="InsertText" callerClass="Entry" baseClass="Widget">
+      <method>InsertText</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="DeleteText" callerClass="Entry" baseClass="Widget">
+      <method>DeleteText</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="Changed" callerClass="Entry" baseClass="Widget">
+      <method>Changed</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="EditingDone" callerClass="Entry" baseClass="Widget">
+      <method>EditingDone</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="RemoveWidget" callerClass="Entry" baseClass="Widget">
+      <method>RemoveWidget</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+  </types>
+  <types baseClass="GInterfaceAdapter" callerClass="ColorChooserAdapter" />
+  <types baseClass="Object" callerClass="ModifierStyle" />
+  <types baseClass="Opaque" callerClass="CssImageRadial" />
+  <types baseClass="Application" callerClass="Application">
+    <signal eventName="WindowAdded" callerClass="Application" baseClass="Application">
+      <method>WindowAdded</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="WindowRemoved" callerClass="Application" baseClass="Application">
+      <method>WindowRemoved</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+  </types>
+  <types baseClass="Object" callerClass="IconFactory" />
+  <types baseClass="Container" callerClass="Table" />
+  <types baseClass="Opaque" callerClass="ImageDefinitionGIcon" />
+  <types baseClass="Opaque" callerClass="CssGadgetClass" />
+  <types baseClass="Opaque" callerClass="CompareInfo" />
+  <types baseClass="Entry" callerClass="SpinButton">
+    <signal eventName="ValueChanged" callerClass="SpinButton" baseClass="Entry">
+      <method>ValueChanged</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="Wrapped" callerClass="SpinButton" baseClass="Entry">
+      <method>Wrapped</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="Input" callerClass="SpinButton" baseClass="Entry">
+      <method>Input</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="ChangeValue" callerClass="SpinButton" baseClass="Entry">
+      <method>ChangeValue</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="Output" callerClass="SpinButton" baseClass="Entry">
+      <method>Output</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+  </types>
+  <types baseClass="Object" callerClass="Style">
+    <signal eventName="Unrealize" callerClass="Style" baseClass="Object">
+      <method>Unrealize</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="Realize" callerClass="Style" baseClass="Object">
+      <method>Realize</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+  </types>
+  <types baseClass="Object" callerClass="PrintOperation">
+    <signal eventName="Done" callerClass="PrintOperation" baseClass="Object">
+      <method>Done</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="RequestPageSetup" callerClass="PrintOperation" baseClass="Object">
+      <method>RequestPageSetup</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="EndPrint" callerClass="PrintOperation" baseClass="Object">
+      <method>EndPrint</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="Preview" callerClass="PrintOperation" baseClass="Object">
+      <method>Preview</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="CustomWidgetApply" callerClass="PrintOperation" baseClass="Object">
+      <method>CustomWidgetApply</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="BeginPrint" callerClass="PrintOperation" baseClass="Object">
+      <method>BeginPrint</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="Paginate" callerClass="PrintOperation" baseClass="Object">
+      <method>Paginate</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="DrawPage" callerClass="PrintOperation" baseClass="Object">
+      <method>DrawPage</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="StatusChanged" callerClass="PrintOperation" baseClass="Object">
+      <method>StatusChanged</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="CreateCustomWidget" callerClass="PrintOperation" baseClass="Object">
+      <method>CreateCustomWidget</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="UpdateCustomWidget" callerClass="PrintOperation" baseClass="Object">
+      <method>UpdateCustomWidget</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="GotPageSize" callerClass="PrintOperation" baseClass="Object">
+      <method>GotPageSize</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="Ready" callerClass="PrintOperation" baseClass="Object">
+      <method>Ready</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+  </types>
+  <types baseClass="Box" callerClass="AppChooserWidget">
+    <signal eventName="ApplicationSelected" callerClass="AppChooserWidget" baseClass="Box">
+      <method>ApplicationSelected</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="PopulatePopup" callerClass="AppChooserWidget" baseClass="Box">
+      <method>PopulatePopup</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="ApplicationActivated" callerClass="AppChooserWidget" baseClass="Box">
+      <method>ApplicationActivated</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+  </types>
+  <types baseClass="Object" callerClass="ActionGroup">
+    <signal eventName="ConnectProxy" callerClass="ActionGroup" baseClass="Object">
+      <method>ConnectProxy</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="PreActivate" callerClass="ActionGroup" baseClass="Object">
+      <method>PreActivate</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="PostActivate" callerClass="ActionGroup" baseClass="Object">
+      <method>PostActivate</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="DisconnectProxy" callerClass="ActionGroup" baseClass="Object">
+      <method>DisconnectProxy</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+  </types>
+  <types baseClass="Opaque" callerClass="StackChildInfo" />
+  <types baseClass="Opaque" callerClass="CssCustomGadgetClass" />
+  <types baseClass="ComboBox" callerClass="AppChooserButton">
+    <signal eventName="CustomItemActivated" callerClass="AppChooserButton" baseClass="ComboBox">
+      <method>CustomItemActivated</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+  </types>
+  <types baseClass="CellArea" callerClass="CellAreaBox" />
+  <types baseClass="IMContext" callerClass="IMContextSimple" />
+  <types baseClass="Bin" callerClass="ComboBox">
+    <signal eventName="Popdown" callerClass="ComboBox" baseClass="Bin">
+      <method>Popdown</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="Popup" callerClass="ComboBox" baseClass="Bin">
+      <method>Popup</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="MoveActive" callerClass="ComboBox" baseClass="Bin">
+      <method>MoveActive</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="FormatEntryText" callerClass="ComboBox" baseClass="Bin">
+      <method>FormatEntryText</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="Changed" callerClass="ComboBox" baseClass="Bin">
+      <method>Changed</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="EditingDone" callerClass="ComboBox" baseClass="Bin">
+      <method>EditingDone</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="RemoveWidget" callerClass="ComboBox" baseClass="Bin">
+      <method>RemoveWidget</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+  </types>
+  <types baseClass="Opaque" callerClass="CssTransientNode" />
+  <types baseClass="ToolButton" callerClass="ToggleToolButton">
+    <signal eventName="Toggled" callerClass="ToggleToolButton" baseClass="ToolButton">
+      <method>Toggled</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+  </types>
+  <types baseClass="Widget" callerClass="Separator" />
+  <types baseClass="EventController" callerClass="PadController" />
+  <types baseClass="Opaque" callerClass="ProgressTracker" />
+  <types baseClass="Object" callerClass="TreeSelection">
+    <signal eventName="Changed" callerClass="TreeSelection" baseClass="Object">
+      <method>Changed</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+  </types>
+  <types baseClass="Opaque" callerClass="TextLine" />
+  <types baseClass="Opaque" callerClass="AppChooserIface" />
+  <types baseClass="Opaque" callerClass="CssImageLinearColorStop" />
+  <types baseClass="Opaque" callerClass="TextRenderer" />
+  <types baseClass="Object" callerClass="PrintContext" />
+  <types baseClass="Misc" callerClass="Arrow" />
+  <types baseClass="Object" callerClass="Printer">
+    <signal eventName="DetailsAcquired" callerClass="Printer" baseClass="Object">
+      <method>DetailsAcquired</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+  </types>
+  <types baseClass="Button" callerClass="ModelButton" />
+  <types baseClass="Opaque" callerClass="CssNodeStyleCache" />
+  <types baseClass="Opaque" callerClass="TextAppearance" />
+  <types baseClass="Bin" callerClass="Alignment" />
+  <types baseClass="Object" callerClass="IconTheme">
+    <signal eventName="Changed" callerClass="IconTheme" baseClass="Object">
+      <method>Changed</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+  </types>
+  <types baseClass="CellRendererText" callerClass="CellRendererSpin" />
+  <types baseClass="Opaque" callerClass="CssImageUrlClass" />
+  <types baseClass="Object" callerClass="TrashMonitor">
+    <signal eventName="TrashStateChanged" callerClass="TrashMonitor" baseClass="Object">
+      <method>TrashStateChanged</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+  </types>
+  <types baseClass="Opaque" callerClass="CellEditableEventBox" />
+  <types baseClass="Opaque" callerClass="Region" />
+  <types baseClass="Opaque" callerClass="HandleWindow" />
+  <types baseClass="Opaque" callerClass="PrinterFinder" />
+  <types baseClass="Frame" callerClass="AspectFrame" />
+  <types baseClass="Dialog" callerClass="ColorChooserDialog">
+    <signal eventName="ColorActivated" callerClass="ColorChooserDialog" baseClass="Dialog">
+      <method>ColorActivated</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+  </types>
+  <types baseClass="Opaque" callerClass="TextWindow" />
+  <types baseClass="Opaque" callerClass="GridLine" />
+  <types baseClass="Entry" callerClass="SearchEntry">
+    <signal eventName="NextMatch" callerClass="SearchEntry" baseClass="Entry">
+      <method>NextMatch</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="PreviousMatch" callerClass="SearchEntry" baseClass="Entry">
+      <method>PreviousMatch</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="SearchChanged" callerClass="SearchEntry" baseClass="Entry">
+      <method>SearchChanged</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="StopSearch" callerClass="SearchEntry" baseClass="Entry">
+      <method>StopSearch</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+  </types>
+  <types baseClass="Opaque" callerClass="TextHandleClass" />
+  <types baseClass="Opaque" callerClass="EventData" />
+  <types baseClass="Range" callerClass="Scale">
+    <signal eventName="FormatValue" callerClass="Scale" baseClass="Range">
+      <method>FormatValue</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+  </types>
+  <types baseClass="Bin" callerClass="MenuItem">
+    <signal eventName="ToggleSizeAllocate" callerClass="MenuItem" baseClass="Bin">
+      <method>ToggleSizeAllocate</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="Deselect" callerClass="MenuItem" baseClass="Bin">
+      <method>Deselect</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="Select" callerClass="MenuItem" baseClass="Bin">
+      <method>Select</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="ToggleSizeRequest" callerClass="MenuItem" baseClass="Bin">
+      <method>ToggleSizeRequest</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="ActivateItem" callerClass="MenuItem" baseClass="Bin">
+      <method>ActivateItem</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="Activate" callerClass="MenuItem" baseClass="Bin">
+      <method>Activate</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+  </types>
+  <types baseClass="Opaque" callerClass="HSLA" />
+  <types baseClass="GInterfaceAdapter" callerClass="ActivatableAdapter" />
+  <types baseClass="Opaque" callerClass="Child" />
+  <types baseClass="Opaque" callerClass="CssWidgetNodeClass" />
+  <types baseClass="Opaque" callerClass="ColorPlaneClass" />
+  <types baseClass="Opaque" callerClass="ValueData" />
+  <types baseClass="Opaque" callerClass="TextPendingScroll" />
+  <types baseClass="Opaque" callerClass="PropertyValue" />
+  <types baseClass="Opaque" callerClass="PathElement" />
+  <types baseClass="Opaque" callerClass="GridRowProperties" />
+  <types baseClass="Widget" callerClass="GLArea">
+    <signal eventName="CreateContext" callerClass="GLArea" baseClass="Widget">
+      <method>CreateContext</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="Resize" callerClass="GLArea" baseClass="Widget">
+      <method>Resize</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="Render" callerClass="GLArea" baseClass="Widget">
+      <method>Render</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+  </types>
+  <types baseClass="Opaque" callerClass="CssStyle" />
+  <types baseClass="Opaque" callerClass="PrintBackendModuleClass" />
+  <types baseClass="Scale" callerClass="VScale" />
+  <types baseClass="Opaque" callerClass="Node" />
+  <types baseClass="Object" callerClass="Builder" />
+  <types baseClass="Bin" callerClass="StackSidebar" />
+  <types baseClass="GInterfaceAdapter" callerClass="CellEditableAdapter" />
+  <types baseClass="Paned" callerClass="VPaned" />
+  <types baseClass="Opaque" callerClass="CssImageRecolorClass" />
+  <types baseClass="NativeDialog" callerClass="FileChooserNative" />
+  <types baseClass="Dialog" callerClass="FontSelectionDialog" />
+  <types baseClass="Opaque" callerClass="CssImageRadialColorStop" />
+  <types baseClass="Box" callerClass="InfoBar">
+    <signal eventName="Response" callerClass="InfoBar" baseClass="Box">
+      <method>Response</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="Close" callerClass="InfoBar" baseClass="Box">
+      <method>Close</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+  </types>
+  <types baseClass="Button" callerClass="ToggleButton">
+    <signal eventName="Toggled" callerClass="ToggleButton" baseClass="Button">
+      <method>Toggled</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+  </types>
+  <types baseClass="Object" callerClass="TextMark" />
+  <types baseClass="Opaque" callerClass="ResponseData" />
+  <types baseClass="Window" callerClass="Plug">
+    <signal eventName="Embedded" callerClass="Plug" baseClass="Window">
+      <method>Embedded</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+  </types>
+  <types baseClass="Opaque" callerClass="CssTransitionClass" />
+  <types baseClass="MenuItem" callerClass="SeparatorMenuItem" />
+  <types baseClass="Opaque" callerClass="OverlayChild" />
+  <types baseClass="Opaque" callerClass="ColorStop" />
+  <types baseClass="Button" callerClass="ScaleButton">
+    <signal eventName="ValueChanged" callerClass="ScaleButton" baseClass="Button">
+      <method>ValueChanged</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="Popdown" callerClass="ScaleButton" baseClass="Button">
+      <method>Popdown</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="Popup" callerClass="ScaleButton" baseClass="Button">
+      <method>Popup</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+  </types>
+  <types baseClass="Opaque" callerClass="TextAttributes" />
+  <types baseClass="Object" callerClass="TextTag">
+    <signal eventName="Event" callerClass="TextTag" baseClass="Object">
+      <method>Event</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+  </types>
+  <types baseClass="EventController" callerClass="Gesture">
+    <signal eventName="End" callerClass="Gesture" baseClass="EventController">
+      <method>End</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="Update" callerClass="Gesture" baseClass="EventController">
+      <method>Update</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="SequenceStateChanged" callerClass="Gesture" baseClass="EventController">
+      <method>SequenceStateChanged</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="Begin" callerClass="Gesture" baseClass="EventController">
+      <method>Begin</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="Cancel" callerClass="Gesture" baseClass="EventController">
+      <method>Cancel</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+  </types>
+  <types baseClass="GInterfaceAdapter" callerClass="ToolShellAdapter" />
+  <types baseClass="Container" callerClass="Socket">
+    <signal eventName="PlugRemoved" callerClass="Socket" baseClass="Container">
+      <method>PlugRemoved</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="PlugAdded" callerClass="Socket" baseClass="Container">
+      <method>PlugAdded</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+  </types>
+  <types baseClass="ToolItem" callerClass="SeparatorToolItem" />
+  <types baseClass="Opaque" callerClass="CssSelectorClass" />
+  <types baseClass="CellRenderer" callerClass="CellRendererPixbuf" />
+  <types baseClass="GestureSingle" callerClass="GestureSwipe">
+    <signal eventName="Swipe" callerClass="GestureSwipe" baseClass="GestureSingle">
+      <method>Swipe</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+  </types>
+  <types baseClass="CellRenderer" callerClass="CellRendererToggle">
+    <signal eventName="Toggled" callerClass="CellRendererToggle" baseClass="CellRenderer">
+      <method>Toggled</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+  </types>
+  <types baseClass="Opaque" callerClass="CssNodeDeclaration" />
+  <types baseClass="MountOperation" callerClass="MountOperation" />
+  <types baseClass="Container" callerClass="Fixed" />
+  <types baseClass="Opaque" callerClass="SelectionInfo" />
+  <types baseClass="Object" callerClass="IconInfo" />
+  <types baseClass="Opaque" callerClass="GridChild" />
+  <types baseClass="Object" callerClass="UIManager">
+    <signal eventName="AddWidget" callerClass="UIManager" baseClass="Object">
+      <method>AddWidget</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="DisconnectProxy" callerClass="UIManager" baseClass="Object">
+      <method>DisconnectProxy</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="PostActivate" callerClass="UIManager" baseClass="Object">
+      <method>PostActivate</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="ConnectProxy" callerClass="UIManager" baseClass="Object">
+      <method>ConnectProxy</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="ActionsChanged" callerClass="UIManager" baseClass="Object">
+      <method>ActionsChanged</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="PreActivate" callerClass="UIManager" baseClass="Object">
+      <method>PreActivate</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+  </types>
+  <types baseClass="Opaque" callerClass="IMModuleClass" />
+  <types baseClass="Bin" callerClass="ToolItem">
+    <signal eventName="CreateMenuProxy" callerClass="ToolItem" baseClass="Bin">
+      <method>CreateMenuProxy</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="ToolbarReconfigured" callerClass="ToolItem" baseClass="Bin">
+      <method>ToolbarReconfigured</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+  </types>
+  <types baseClass="Object" callerClass="PrintSettings" />
+  <types baseClass="Opaque" callerClass="FilterLevel" />
+  <types baseClass="InitiallyUnowned" callerClass="CellRenderer">
+    <signal eventName="EditingStarted" callerClass="CellRenderer" baseClass="InitiallyUnowned">
+      <method>EditingStarted</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="EditingCanceled" callerClass="CellRenderer" baseClass="InitiallyUnowned">
+      <method>EditingCanceled</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+  </types>
+  <types baseClass="CheckMenuItem" callerClass="RadioMenuItem">
+    <signal eventName="GroupChanged" callerClass="RadioMenuItem" baseClass="CheckMenuItem">
+      <method>GroupChanged</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+  </types>
+  <types baseClass="Opaque" callerClass="CssStylePropertyClass" />
+  <types baseClass="Opaque" callerClass="CssImageCrossFadeClass" />
+  <types baseClass="Object" callerClass="Tooltip" />
+  <types baseClass="0x06002AC7 RID: 10951 RVA: 0x00074999 File Offset: 0x00072B99" callerClass="Selection&#xD;&#xA;	{&#xD;&#xA;		// Token" />
+  <types baseClass="Opaque" callerClass="RetrievalInfo" />
+  <types baseClass="Opaque" callerClass="CssAnimation" />
+  <types baseClass="Opaque" callerClass="DragFindData" />
+  <types baseClass="Box" callerClass="HBox" />
+  <types baseClass="Opaque" callerClass="ColorScale" />
+  <types baseClass="Container" callerClass="Bin" />
+  <types baseClass="Opaque" callerClass="KeySnooperData" />
+  <types baseClass="Opaque" callerClass="ToolbarContent" />
+  <types baseClass="Opaque" callerClass="ThemingModuleClass" />
+  <types baseClass="Opaque" callerClass="PrintBackend" />
+  <types baseClass="Opaque" callerClass="IconHelper" />
+  <types baseClass="Container" callerClass="Box" />
+  <types baseClass="Opaque" callerClass="GridLines" />
+  <types baseClass="IDisposable" callerClass="ThreadNotify" />
+  <types baseClass="GInterfaceAdapter" callerClass="PrintOperationPreviewAdapter" />
+  <types baseClass="Action" callerClass="ToggleAction">
+    <signal eventName="Toggled" callerClass="ToggleAction" baseClass="Action">
+      <method>Toggled</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+  </types>
+  <types baseClass="Opaque" callerClass="CssStyleClass" />
+  <types baseClass="Opaque" callerClass="RequestTargetsInfo" />
+  <types baseClass="Opaque" callerClass="CssSelectorTreeBuilder" />
+  <types baseClass="Window" callerClass="OffscreenWindow" />
+  <types baseClass="MenuItem" callerClass="TearoffMenuItem" />
+  <types baseClass="Opaque" callerClass="TextRendererClass" />
+  <types baseClass="Opaque" callerClass="CssImageGradientClass" />
+  <types baseClass="CellRendererText" callerClass="CellRendererCombo">
+    <signal eventName="Changed" callerClass="CellRendererCombo" baseClass="CellRendererText">
+      <method>Changed</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+  </types>
+  <types baseClass="Opaque" callerClass="StockTranslateFunc" />
+  <types baseClass="Container" callerClass="Toolbar">
+    <signal eventName="StyleChanged" callerClass="Toolbar" baseClass="Container">
+      <method>StyleChanged</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="OrientationChanged" callerClass="Toolbar" baseClass="Container">
+      <method>OrientationChanged</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="PopupContextMenu" callerClass="Toolbar" baseClass="Container">
+      <method>PopupContextMenu</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="FocusHomeOrEnd" callerClass="Toolbar" baseClass="Container">
+      <method>FocusHomeOrEnd</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+  </types>
+  <types baseClass="Opaque" callerClass="SortElt" />
+  <types baseClass="Object" callerClass="ActionHelper" />
+  <types baseClass="Opaque" callerClass="CssImageRadialClass" />
+  <types baseClass="ToggleButton" callerClass="CheckButton" />
+  <types baseClass="Widget" callerClass="Spinner" />
+  <types baseClass="Opaque" callerClass="CssCustomGadget" />
+  <types baseClass="Opaque" callerClass="CssTransition" />
+  <types baseClass="Opaque" callerClass="WidgetPath" />
+  <types baseClass="Opaque" callerClass="WindowKeyEntry" />
+  <types baseClass="Opaque" callerClass="DragSourceInfo" />
+  <types baseClass="Object" callerClass="PrintJob">
+    <signal eventName="StatusChanged" callerClass="PrintJob" baseClass="Object">
+      <method>StatusChanged</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+  </types>
+  <types baseClass="Box" callerClass="FontChooserWidget">
+    <signal eventName="FontActivated" callerClass="FontChooserWidget" baseClass="Box">
+      <method>FontActivated</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+  </types>
+  <types baseClass="Bin" callerClass="Popover">
+    <signal eventName="Closed" callerClass="Popover" baseClass="Bin">
+      <method>Closed</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+  </types>
+  <types baseClass="Opaque" callerClass="TextLineDisplay" />
+  <types baseClass="Opaque" callerClass="CssAnimationClass" />
+  <types baseClass="Bin" callerClass="ScrolledWindow">
+    <signal eventName="ScrollChild" callerClass="ScrolledWindow" baseClass="Bin">
+      <method>ScrollChild</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="EdgeOvershot" callerClass="ScrolledWindow" baseClass="Bin">
+      <method>EdgeOvershot</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="MoveFocusOut" callerClass="ScrolledWindow" baseClass="Bin">
+      <method>MoveFocusOut</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="EdgeReached" callerClass="ScrolledWindow" baseClass="Bin">
+      <method>EdgeReached</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+  </types>
+  <types baseClass="Dialog" callerClass="FontChooserDialog">
+    <signal eventName="FontActivated" callerClass="FontChooserDialog" baseClass="Dialog">
+      <method>FontActivated</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+  </types>
+  <types baseClass="Opaque" callerClass="EntryIconInfo" />
+  <types baseClass="GInterfaceAdapter" callerClass="TreeModelAdapter" />
+  <types baseClass="Opaque" callerClass="CssTransientNodeClass" />
+  <types baseClass="Opaque" callerClass="Icon" />
+  <types baseClass="Separator" callerClass="VSeparator" />
+  <types baseClass="Container" callerClass="TreeView">
+    <signal eventName="RowExpanded" callerClass="TreeView" baseClass="Container">
+      <method>RowExpanded</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="RowActivated" callerClass="TreeView" baseClass="Container">
+      <method>RowActivated</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="SelectAll" callerClass="TreeView" baseClass="Container">
+      <method>SelectAll</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="SelectCursorParent" callerClass="TreeView" baseClass="Container">
+      <method>SelectCursorParent</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="RowCollapsed" callerClass="TreeView" baseClass="Container">
+      <method>RowCollapsed</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="ColumnsChanged" callerClass="TreeView" baseClass="Container">
+      <method>ColumnsChanged</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="ToggleCursorRow" callerClass="TreeView" baseClass="Container">
+      <method>ToggleCursorRow</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="StartInteractiveSearch" callerClass="TreeView" baseClass="Container">
+      <method>StartInteractiveSearch</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="MoveCursor" callerClass="TreeView" baseClass="Container">
+      <method>MoveCursor</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="UnselectAll" callerClass="TreeView" baseClass="Container">
+      <method>UnselectAll</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="TestExpandRow" callerClass="TreeView" baseClass="Container">
+      <method>TestExpandRow</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="CursorChanged" callerClass="TreeView" baseClass="Container">
+      <method>CursorChanged</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="ExpandCollapseCursorRow" callerClass="TreeView" baseClass="Container">
+      <method>ExpandCollapseCursorRow</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="SelectCursorRow" callerClass="TreeView" baseClass="Container">
+      <method>SelectCursorRow</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="TestCollapseRow" callerClass="TreeView" baseClass="Container">
+      <method>TestCollapseRow</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+  </types>
+  <types baseClass="ScaleButton" callerClass="VolumeButton" />
+  <types baseClass="MenuShell" callerClass="Menu">
+    <signal eventName="PoppedUp" callerClass="Menu" baseClass="MenuShell">
+      <method>PoppedUp</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="MoveScroll" callerClass="Menu" baseClass="MenuShell">
+      <method>MoveScroll</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+  </types>
+  <types baseClass="Opaque" callerClass="StatusbarMsg" />
+  <types baseClass="Opaque" callerClass="PaperSize" />
+  <types baseClass="0x0600300D RID: 12301 RVA: 0x000836B0 File Offset: 0x000818B0" callerClass="Target&#xD;&#xA;	{&#xD;&#xA;		// Token" />
+  <types baseClass="Opaque" callerClass="CssShorthandProperty" />
+  <types baseClass="0x060003B5 RID: 949 RVA: 0x00008DE8 File Offset: 0x00006FE8" callerClass="Accel&#xD;&#xA;	{&#xD;&#xA;		// Token" />
+  <types baseClass="Opaque" callerClass="StyleProperty" />
+  <types baseClass="GestureSingle" callerClass="GestureMultiPress">
+    <signal eventName="Pressed" callerClass="GestureMultiPress" baseClass="GestureSingle">
+      <method>Pressed</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="Stopped" callerClass="GestureMultiPress" baseClass="GestureSingle">
+      <method>Stopped</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="Released" callerClass="GestureMultiPress" baseClass="GestureSingle">
+      <method>Released</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+  </types>
+  <types baseClass="0x060035F5 RID: 13813 RVA: 0x0009707C File Offset: 0x0009527C" callerClass="Tree&#xD;&#xA;	{&#xD;&#xA;		// Token" />
+  <types baseClass="Container" callerClass="IconView">
+    <signal eventName="UnselectAll" callerClass="IconView" baseClass="Container">
+      <method>UnselectAll</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="ItemActivated" callerClass="IconView" baseClass="Container">
+      <method>ItemActivated</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="MoveCursor" callerClass="IconView" baseClass="Container">
+      <method>MoveCursor</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="ToggleCursorItem" callerClass="IconView" baseClass="Container">
+      <method>ToggleCursorItem</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="SelectAll" callerClass="IconView" baseClass="Container">
+      <method>SelectAll</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="SelectCursorItem" callerClass="IconView" baseClass="Container">
+      <method>SelectCursorItem</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="ActivateCursorItem" callerClass="IconView" baseClass="Container">
+      <method>ActivateCursorItem</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="SelectionChanged" callerClass="IconView" baseClass="Container">
+      <method>SelectionChanged</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+  </types>
+  <types baseClass="Opaque" callerClass="DeviceGrabInfo" />
+  <types baseClass="Opaque" callerClass="ScaleMark" />
+  <types baseClass="Box" callerClass="FileChooserWidget">
+    <signal eventName="DownFolder" callerClass="FileChooserWidget" baseClass="Box">
+      <method>DownFolder</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="QuickBookmark" callerClass="FileChooserWidget" baseClass="Box">
+      <method>QuickBookmark</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="UpFolder" callerClass="FileChooserWidget" baseClass="Box">
+      <method>UpFolder</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="LocationPopup" callerClass="FileChooserWidget" baseClass="Box">
+      <method>LocationPopup</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="SearchShortcut" callerClass="FileChooserWidget" baseClass="Box">
+      <method>SearchShortcut</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="LocationPopupOnPaste" callerClass="FileChooserWidget" baseClass="Box">
+      <method>LocationPopupOnPaste</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="PlacesShortcut" callerClass="FileChooserWidget" baseClass="Box">
+      <method>PlacesShortcut</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="HomeFolder" callerClass="FileChooserWidget" baseClass="Box">
+      <method>HomeFolder</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="RecentShortcut" callerClass="FileChooserWidget" baseClass="Box">
+      <method>RecentShortcut</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="DesktopFolder" callerClass="FileChooserWidget" baseClass="Box">
+      <method>DesktopFolder</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="ShowHidden" callerClass="FileChooserWidget" baseClass="Box">
+      <method>ShowHidden</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="LocationTogglePopup" callerClass="FileChooserWidget" baseClass="Box">
+      <method>LocationTogglePopup</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="UpdatePreview" callerClass="FileChooserWidget" baseClass="Box">
+      <method>UpdatePreview</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="SelectionChanged" callerClass="FileChooserWidget" baseClass="Box">
+      <method>SelectionChanged</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="ConfirmOverwrite" callerClass="FileChooserWidget" baseClass="Box">
+      <method>ConfirmOverwrite</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="FileActivated" callerClass="FileChooserWidget" baseClass="Box">
+      <method>FileActivated</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="CurrentFolderChanged" callerClass="FileChooserWidget" baseClass="Box">
+      <method>CurrentFolderChanged</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+  </types>
+  <types baseClass="Object" callerClass="StyleContext">
+    <signal eventName="Changed" callerClass="StyleContext" baseClass="Object">
+      <method>Changed</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+  </types>
+  <types baseClass="Opaque" callerClass="BoxGadgetClass" />
+  <types baseClass="Widget" callerClass="Range">
+    <signal eventName="ValueChanged" callerClass="Range" baseClass="Widget">
+      <method>ValueChanged</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="ChangeValue" callerClass="Range" baseClass="Widget">
+      <method>ChangeValue</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="MoveSlider" callerClass="Range" baseClass="Widget">
+      <method>MoveSlider</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="AdjustBounds" callerClass="Range" baseClass="Widget">
+      <method>AdjustBounds</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+  </types>
+  <types baseClass="Scale" callerClass="HScale" />
+  <types baseClass="0x0600249D RID: 9373 RVA: 0x000626F8 File Offset: 0x000608F8" callerClass="Print&#xD;&#xA;	{&#xD;&#xA;		// Token" />
+  <types baseClass="Opaque" callerClass="CssImageIconThemeClass" />
+  <types baseClass="GInterfaceAdapter" callerClass="FontChooserAdapter" />
+  <types baseClass="Opaque" callerClass="IMModule" />
+  <types baseClass="Opaque" callerClass="TextLineData" />
+  <types baseClass="0x1700024D RID: 589" callerClass="Accelerator&#xD;&#xA;	{&#xD;&#xA;		// Token" />
+  <types baseClass="Opaque" callerClass="DragDestInfo" />
+  <types baseClass="Gesture" callerClass="GestureZoom">
+    <signal eventName="ScaleChanged" callerClass="GestureZoom" baseClass="Gesture">
+      <method>ScaleChanged</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+  </types>
+  <types baseClass="Object" callerClass="TreeModelFilter">
+    <signal eventName="RowDeleted" callerClass="TreeModelFilter" baseClass="Object">
+      <method>RowDeleted</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="RowInserted" callerClass="TreeModelFilter" baseClass="Object">
+      <method>RowInserted</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="RowChanged" callerClass="TreeModelFilter" baseClass="Object">
+      <method>RowChanged</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="RowHasChildToggled" callerClass="TreeModelFilter" baseClass="Object">
+      <method>RowHasChildToggled</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="Rows_Reordered" callerClass="TreeModelFilter" baseClass="Object">
+      <method>Rows_Reordered</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+  </types>
+  <types baseClass="Widget" callerClass="Switch">
+    <signal eventName="StateSet" callerClass="Switch" baseClass="Widget">
+      <method>StateSet</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="Activate" callerClass="Switch" baseClass="Widget">
+      <method>Activate</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+  </types>
+  <types baseClass="Container" callerClass="HeaderBar" />
+  <types baseClass="Object" callerClass="WindowGroup" />
+  <types baseClass="Box" callerClass="ColorChooserWidget">
+    <signal eventName="ColorActivated" callerClass="ColorChooserWidget" baseClass="Box">
+      <method>ColorActivated</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+  </types>
+  <types baseClass="Opaque" callerClass="CssValue" />
+  <types baseClass="Box" callerClass="RecentChooserDefault" />
+  <types baseClass="Opaque" callerClass="StyleCascadeIter" />
+  <types baseClass="Opaque" callerClass="CssValueClass" />
+  <types baseClass="Scrollbar" callerClass="VScrollbar" />
+  <types baseClass="Window" callerClass="Win32EmbedWidget" />
+  <types baseClass="Object" callerClass="MenuTrackerItem" />
+  <types baseClass="Label" callerClass="AccelLabel" />
+  <types baseClass="GestureSingle" callerClass="GestureDrag">
+    <signal eventName="DragBegin" callerClass="GestureDrag" baseClass="GestureSingle">
+      <method>DragBegin</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="DragUpdate" callerClass="GestureDrag" baseClass="GestureSingle">
+      <method>DragUpdate</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="DragEnd" callerClass="GestureDrag" baseClass="GestureSingle">
+      <method>DragEnd</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+  </types>
+  <types baseClass="Opaque" callerClass="ImageDefinitionEmpty" />
+  <types baseClass="Box" callerClass="ShortcutLabel" />
+  <types baseClass="Opaque" callerClass="DelayedFontDescription" />
+  <types baseClass="GInterfaceAdapter" callerClass="ActionObserverAdapter" />
+  <types baseClass="Opaque" callerClass="StyleProviderData" />
+  <types baseClass="ButtonBox" callerClass="VButtonBox" />
+  <types baseClass="GInterfaceAdapter" callerClass="OrientableAdapter" />
+  <types baseClass="Opaque" callerClass="IncrConversion" />
+  <types baseClass="GInterfaceAdapter" callerClass="RecentChooserAdapter" />
+  <types baseClass="Container" callerClass="ListBox">
+    <signal eventName="SelectedRowsChanged" callerClass="ListBox" baseClass="Container">
+      <method>SelectedRowsChanged</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="MoveCursor" callerClass="ListBox" baseClass="Container">
+      <method>MoveCursor</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="ActivateCursorRow" callerClass="ListBox" baseClass="Container">
+      <method>ActivateCursorRow</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="RowSelected" callerClass="ListBox" baseClass="Container">
+      <method>RowSelected</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="RowActivated" callerClass="ListBox" baseClass="Container">
+      <method>RowActivated</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="SelectAll" callerClass="ListBox" baseClass="Container">
+      <method>SelectAll</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="ToggleCursorRow" callerClass="ListBox" baseClass="Container">
+      <method>ToggleCursorRow</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="UnselectAll" callerClass="ListBox" baseClass="Container">
+      <method>UnselectAll</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+  </types>
+  <types baseClass="0x06001294 RID: 4756 RVA: 0x00035339 File Offset: 0x00033539" callerClass="Device&#xD;&#xA;	{&#xD;&#xA;		// Token" />
+  <types baseClass="Opaque" callerClass="LayoutChild" />
+  <types baseClass="Opaque" callerClass="IconAlias" />
+  <types baseClass="ButtonBox" callerClass="HButtonBox" />
+  <types baseClass="Opaque" callerClass="CssImageLinear" />
+  <types baseClass="Opaque" callerClass="CssImageGradient" />
+  <types baseClass="Atk.Object" callerClass="Accessible" />
+  <types baseClass="Container" callerClass="Grid" />
+  <types baseClass="Opaque" callerClass="CssImageRecolor" />
+  <types baseClass="Object" callerClass="ThemingEngine" />
+  <types baseClass="Object" callerClass="NativeDialog" />
+  <types baseClass="GestureSingle" callerClass="GestureLongPress">
+    <signal eventName="Cancelled" callerClass="GestureLongPress" baseClass="GestureSingle">
+      <method>Cancelled</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="Pressed" callerClass="GestureLongPress" baseClass="GestureSingle">
+      <method>Pressed</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+  </types>
+  <types baseClass="Opaque" callerClass="DragSourceSite" />
+  <types baseClass="CellRendererText" callerClass="CellRendererAccel">
+    <signal eventName="AccelCleared" callerClass="CellRendererAccel" baseClass="CellRendererText">
+      <method>AccelCleared</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="AccelEdited" callerClass="CellRendererAccel" baseClass="CellRendererText">
+      <method>AccelEdited</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+  </types>
+  <types baseClass="Opaque" callerClass="CssSelectorTree" />
+  <types baseClass="Opaque" callerClass="PrintPagesData" />
+  <types baseClass="Separator" callerClass="HSeparator" />
+  <types baseClass="Opaque" callerClass="TextHandle" />
+  <types baseClass="Opaque" callerClass="EntryCapslockFeedback" />
+  <types baseClass="ToggleAction" callerClass="RadioAction">
+    <signal eventName="Changed" callerClass="RadioAction" baseClass="ToggleAction">
+      <method>Changed</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+  </types>
+  <types baseClass="Opaque" callerClass="MenuTrackerSection" />
+  <types baseClass="InitiallyUnowned" callerClass="TreeViewColumn">
+    <signal eventName="Clicked" callerClass="TreeViewColumn" baseClass="InitiallyUnowned">
+      <method>Clicked</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+  </types>
+  <types baseClass="Object" callerClass="RecentManager">
+    <signal eventName="Changed" callerClass="RecentManager" baseClass="Object">
+      <method>Changed</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+  </types>
+  <types baseClass="Opaque" callerClass="TreeViewDragInfo" />
+  <types baseClass="Container" callerClass="MenuShell">
+    <signal eventName="MoveSelected" callerClass="MenuShell" baseClass="Container">
+      <method>MoveSelected</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="Deactivate" callerClass="MenuShell" baseClass="Container">
+      <method>Deactivate</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="MoveCurrent" callerClass="MenuShell" baseClass="Container">
+      <method>MoveCurrent</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="Insert" callerClass="MenuShell" baseClass="Container">
+      <method>Insert</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="ActivateCurrent" callerClass="MenuShell" baseClass="Container">
+      <method>ActivateCurrent</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="SelectionDone" callerClass="MenuShell" baseClass="Container">
+      <method>SelectionDone</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="Cancel" callerClass="MenuShell" baseClass="Container">
+      <method>Cancel</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="CycleFocus" callerClass="MenuShell" baseClass="Container">
+      <method>CycleFocus</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+  </types>
+  <types baseClass="Opaque" callerClass="IconClass" />
+  <types baseClass="0x06000DD9 RID: 3545 RVA: 0x00029D9E File Offset: 0x00027F9E" callerClass="Bindings&#xD;&#xA;	{&#xD;&#xA;		// Token" />
+  <types baseClass="Opaque" callerClass="DragDestSite" />
+  <types baseClass="Box" callerClass="StackSwitcher" />
+  <types baseClass="Opaque" callerClass="CssStyleProperty" />
+  <types baseClass="Opaque" callerClass="Bitmask" />
+  <types baseClass="IMContext" callerClass="IMMulticontext" />
+  <types baseClass="CheckMenuItem" callerClass="ModelMenuItem" />
+  <types baseClass="Opaque" callerClass="RecentInfo" />
+  <types baseClass="Bin" callerClass="Expander">
+    <signal eventName="Activate" callerClass="Expander" baseClass="Bin">
+      <method>Activate</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+  </types>
+  <types baseClass="Opaque" callerClass="SharedData" />
+  <types baseClass="Opaque" callerClass="Magnifier" />
+  <types baseClass="Opaque" callerClass="ColorEditor" />
+  <types baseClass="Dialog" callerClass="ColorSelectionDialog" />
+  <types baseClass="0x14000203 RID: 515" callerClass="NodeSelection&#xD;&#xA;	{&#xD;&#xA;		// Token" />
+  <types baseClass="Object" callerClass="Settings" />
+  <types baseClass="Box" callerClass="FontSelection" />
+  <types baseClass="Opaque" callerClass="TickCallbackInfo" />
+  <types baseClass="Container" callerClass="Paned">
+    <signal eventName="ToggleHandleFocus" callerClass="Paned" baseClass="Container">
+      <method>ToggleHandleFocus</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="CycleHandleFocus" callerClass="Paned" baseClass="Container">
+      <method>CycleHandleFocus</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="AcceptPosition" callerClass="Paned" baseClass="Container">
+      <method>AcceptPosition</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="MoveHandle" callerClass="Paned" baseClass="Container">
+      <method>MoveHandle</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="CancelPosition" callerClass="Paned" baseClass="Container">
+      <method>CancelPosition</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="CycleChildFocus" callerClass="Paned" baseClass="Container">
+      <method>CycleChildFocus</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+  </types>
+  <types baseClass="Opaque" callerClass="StylePropertyValue" />
+  <types baseClass="Opaque" callerClass="XEmbedMessage" />
+  <types baseClass="Object" callerClass="ActionMuxer">
+    <signal eventName="PrimaryAccelChanged" callerClass="ActionMuxer" baseClass="Object">
+      <method>PrimaryAccelChanged</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="ActionRemoved" callerClass="ActionMuxer" baseClass="Object">
+      <method>ActionRemoved</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="ActionEnabledChanged" callerClass="ActionMuxer" baseClass="Object">
+      <method>ActionEnabledChanged</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="ActionStateChanged" callerClass="ActionMuxer" baseClass="Object">
+      <method>ActionStateChanged</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="ActionAdded" callerClass="ActionMuxer" baseClass="Object">
+      <method>ActionAdded</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+  </types>
+  <types baseClass="Bin" callerClass="Overlay">
+    <signal eventName="GetChildPosition" callerClass="Overlay" baseClass="Bin">
+      <method>GetChildPosition</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+  </types>
+  <types baseClass="Opaque" callerClass="StyleCascade" />
+  <types baseClass="CheckButton" callerClass="RadioButton">
+    <signal eventName="GroupChanged" callerClass="RadioButton" baseClass="CheckButton">
+      <method>GroupChanged</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+  </types>
+  <types baseClass="Opaque" callerClass="CssImageFallback" />
+  <types baseClass="Opaque" callerClass="KeyHashEntry" />
+  <types baseClass="Bin" callerClass="EventBox" />
+  <types baseClass="ToolButton" callerClass="MenuToolButton">
+    <signal eventName="ShowMenu" callerClass="MenuToolButton" baseClass="ToolButton">
+      <method>ShowMenu</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+  </types>
+  <types baseClass="Opaque" callerClass="FillLayoutRenderer" />
+  <types baseClass="Object" callerClass="SizeGroup" />
+  <types baseClass="0x0600303B RID: 12347 RVA: 0x00083E1B File Offset: 0x0008201B" callerClass="Targets&#xD;&#xA;	{&#xD;&#xA;		// Token" />
+  <types baseClass="Misc" callerClass="Label">
+    <signal eventName="MoveCursor" callerClass="Label" baseClass="Misc">
+      <method>MoveCursor</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="ActivateLink" callerClass="Label" baseClass="Misc">
+      <method>ActivateLink</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="PopulatePopup" callerClass="Label" baseClass="Misc">
+      <method>PopulatePopup</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="CopyClipboard" callerClass="Label" baseClass="Misc">
+      <method>CopyClipboard</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="ActivateCurrentLink" callerClass="Label" baseClass="Misc">
+      <method>ActivateCurrentLink</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+  </types>
+  <types baseClass="Opaque" callerClass="MenuPopdownData" />
+  <types baseClass="Opaque" callerClass="MenuTracker" />
+  <types baseClass="0x06000E5F RID: 3679 RVA: 0x0002B0AF File Offset: 0x000292AF" callerClass="CairoHelper&#xD;&#xA;	{&#xD;&#xA;		// Token" />
+  <types baseClass="Dialog" callerClass="CustomPaperUnixDialog" />
+  <types baseClass="Opaque" callerClass="HashNode" />
+  <types baseClass="Opaque" callerClass="CssGadget" />
+  <types baseClass="Opaque" callerClass="FilterRule" />
+  <types baseClass="Opaque" callerClass="RequestTextInfo" />
+  <types baseClass="Opaque" callerClass="CssStyleChange" />
+  <types baseClass="Widget" callerClass="CellView" />
+  <types baseClass="Dialog" callerClass="AboutDialog">
+    <signal eventName="ActivateLink" callerClass="AboutDialog" baseClass="Dialog">
+      <method>ActivateLink</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+  </types>
+  <types baseClass="Object" callerClass="PageSetup" />
+  <types baseClass="0x06001F47 RID: 8007 RVA: 0x000553AA File Offset: 0x000535AA" callerClass="Main&#xD;&#xA;	{&#xD;&#xA;		// Token" />
+  <types baseClass="Object" callerClass="RcStyle" />
+  <types baseClass="Paned" callerClass="HPaned" />
+  <types baseClass="Opaque" callerClass="ToolItemGroupInfo" />
+  <types baseClass="Opaque" callerClass="GridRequest" />
+  <types baseClass="Opaque" callerClass="ThemingBackground" />
+  <types baseClass="Opaque" callerClass="CssAnimatedStyle" />
+  <types baseClass="Opaque" callerClass="StyleAnimation" />
+  <types baseClass="Opaque" callerClass="MnemonicHash" />
+  <types baseClass="GInterfaceAdapter" callerClass="ScrollableAdapter" />
+  <types baseClass="Opaque" callerClass="TextPixbuf" />
+  <types baseClass="GestureDrag" callerClass="GesturePan">
+    <signal eventName="Pan" callerClass="GesturePan" baseClass="GestureDrag">
+      <method>Pan</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+  </types>
+  <types baseClass="Opaque" callerClass="StyleProviderPrivateInterface" />
+  <types baseClass="InitiallyUnowned" callerClass="CellArea" />
+  <types baseClass="Opaque" callerClass="ModuleInfo" />
+  <types baseClass="Window" callerClass="ShortcutsWindow">
+    <signal eventName="Search" callerClass="ShortcutsWindow" baseClass="Window">
+      <method>Search</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="Close" callerClass="ShortcutsWindow" baseClass="Window">
+      <method>Close</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+  </types>
+  <types baseClass="Bin" callerClass="ListBoxRow">
+    <signal eventName="Activate" callerClass="ListBoxRow" baseClass="Bin">
+      <method>Activate</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+  </types>
+  <types baseClass="Opaque" callerClass="LinesWindow" />
+  <types baseClass="Opaque" callerClass="ImageDefinitionSurface" />
+  <types baseClass="Menu" callerClass="TreeMenu">
+    <signal eventName="MenuActivate" callerClass="TreeMenu" baseClass="Menu">
+      <method>MenuActivate</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+  </types>
+  <types baseClass="Opaque" callerClass="CssImage" />
+  <types baseClass="Opaque" callerClass="RoundedBoxCorner" />
+  <types baseClass="Opaque" callerClass="CssImageBuiltin" />
+  <types baseClass="0x06003F70 RID: 16240 RVA: 0x000B4E48 File Offset: 0x000B3048" callerClass="Key&#xD;&#xA;	{&#xD;&#xA;		// Token" />
+  <types baseClass="Opaque" callerClass="BorderImage" />
+  <types baseClass="0x0600272D RID: 10029 RVA: 0x0006A768 File Offset: 0x00068968" callerClass="Rc&#xD;&#xA;	{&#xD;&#xA;		// Token" />
+  <types baseClass="Opaque" callerClass="ThemeEngine" />
+  <types baseClass="Opaque" callerClass="SelectionData" />
+  <types baseClass="Object" callerClass="TextChildAnchor" />
+  <types baseClass="Opaque" callerClass="CssAnimatedStyleClass" />
+  <types baseClass="Opaque" callerClass="CacheEntry" />
+  <types baseClass="Opaque" callerClass="IncrInfo" />
+  <types baseClass="Opaque" callerClass="CssShorthandPropertyClass" />
+  <types baseClass="0x06001828 RID: 6184 RVA: 0x00043AED File Offset: 0x00041CED" callerClass="Global&#xD;&#xA;	{&#xD;&#xA;		// Token" />
+  <types baseClass="Button" callerClass="LinkButton">
+    <signal eventName="ActivateLink" callerClass="LinkButton" baseClass="Button">
+      <method>ActivateLink</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+  </types>
+  <types baseClass="Opaque" callerClass="TextAttrAppearance" />
+  <types baseClass="0x06003FC2 RID: 16322 RVA: 0x000B56FD File Offset: 0x000B38FD" callerClass="StockManager&#xD;&#xA;	{&#xD;&#xA;		// Token" />
+  <types baseClass="Opaque" callerClass="ImageDefinitionStock" />
+  <types baseClass="Bin" callerClass="Revealer" />
+  <types baseClass="Box" callerClass="Statusbar">
+    <signal eventName="TextPopped" callerClass="Statusbar" baseClass="Box">
+      <method>TextPopped</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="TextPushed" callerClass="Statusbar" baseClass="Box">
+      <method>TextPushed</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+  </types>
+  <types baseClass="Action" callerClass="RecentAction" />
+  <types baseClass="Opaque" callerClass="BoxGadgetChild" />
+  <types baseClass="Opaque" callerClass="CssImageSurface" />
+  <types baseClass="Button" callerClass="FontButton">
+    <signal eventName="FontSet" callerClass="FontButton" baseClass="Button">
+      <method>FontSet</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="FontActivated" callerClass="FontButton" baseClass="Button">
+      <method>FontActivated</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+  </types>
+  <types baseClass="Object" callerClass="TreeStore">
+    <signal eventName="RowDeleted" callerClass="TreeStore" baseClass="Object">
+      <method>RowDeleted</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="RowInserted" callerClass="TreeStore" baseClass="Object">
+      <method>RowInserted</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="RowChanged" callerClass="TreeStore" baseClass="Object">
+      <method>RowChanged</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="RowHasChildToggled" callerClass="TreeStore" baseClass="Object">
+      <method>RowHasChildToggled</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="SortColumnChanged" callerClass="TreeStore" baseClass="Object">
+      <method>SortColumnChanged</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="Rows_Reordered" callerClass="TreeStore" baseClass="Object">
+      <method>Rows_Reordered</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+  </types>
+  <types baseClass="ToolItem" callerClass="ToolButton">
+    <signal eventName="Clicked" callerClass="ToolButton" baseClass="ToolItem">
+      <method>Clicked</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+  </types>
+  <types baseClass="Opaque" callerClass="MenuAttachData" />
+  <types baseClass="Container" callerClass="FlowBox">
+    <signal eventName="SelectAll" callerClass="FlowBox" baseClass="Container">
+      <method>SelectAll</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="MoveCursor" callerClass="FlowBox" baseClass="Container">
+      <method>MoveCursor</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="ActivateCursorChild" callerClass="FlowBox" baseClass="Container">
+      <method>ActivateCursorChild</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="ChildActivated" callerClass="FlowBox" baseClass="Container">
+      <method>ChildActivated</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="SelectedChildrenChanged" callerClass="FlowBox" baseClass="Container">
+      <method>SelectedChildrenChanged</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="UnselectAll" callerClass="FlowBox" baseClass="Container">
+      <method>UnselectAll</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="ToggleCursorChild" callerClass="FlowBox" baseClass="Container">
+      <method>ToggleCursorChild</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+  </types>
+  <types baseClass="Opaque" callerClass="PropertyData" />
+  <types baseClass="Bin" callerClass="Window">
+    <signal eventName="EnableDebugging" callerClass="Window" baseClass="Bin">
+      <method>EnableDebugging</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="ActivateDefault" callerClass="Window" baseClass="Bin">
+      <method>ActivateDefault</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="SetFocus" callerClass="Window" baseClass="Bin">
+      <method>SetFocus</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="ActivateFocus" callerClass="Window" baseClass="Bin">
+      <method>ActivateFocus</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="KeysChanged" callerClass="Window" baseClass="Bin">
+      <method>KeysChanged</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+  </types>
+  <types baseClass="Dialog" callerClass="FileChooserDialog">
+    <signal eventName="UpdatePreview" callerClass="FileChooserDialog" baseClass="Dialog">
+      <method>UpdatePreview</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="SelectionChanged" callerClass="FileChooserDialog" baseClass="Dialog">
+      <method>SelectionChanged</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="ConfirmOverwrite" callerClass="FileChooserDialog" baseClass="Dialog">
+      <method>ConfirmOverwrite</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="FileActivated" callerClass="FileChooserDialog" baseClass="Dialog">
+      <method>FileActivated</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="CurrentFolderChanged" callerClass="FileChooserDialog" baseClass="Dialog">
+      <method>CurrentFolderChanged</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+  </types>
+  <types baseClass="GInterfaceAdapter" callerClass="EditableAdapter" />
+  <types baseClass="Opaque" callerClass="CssImageScaled" />
+  <types baseClass="Opaque" callerClass="ImageDefinitionAnimation" />
+  <types baseClass="Widget" callerClass="Container">
+    <signal eventName="SetFocusChild" callerClass="Container" baseClass="Widget">
+      <method>SetFocusChild</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="CheckResize" callerClass="Container" baseClass="Widget">
+      <method>CheckResize</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="Remove" callerClass="Container" baseClass="Widget">
+      <method>Remove</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="Add" callerClass="Container" baseClass="Widget">
+      <method>Add</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+  </types>
+  <types baseClass="GInterfaceAdapter" callerClass="CellLayoutAdapter" />
+  <types baseClass="Opaque" callerClass="SortLevel" />
+  <types baseClass="Opaque" callerClass="SelectionTargetList" />
+  <types baseClass="Opaque" callerClass="TreeViewChild" />
+  <types baseClass="Object" callerClass="NodeStore" />
+  <types baseClass="Opaque" callerClass="TextLayout" />
+  <types baseClass="Container" callerClass="ToolPalette" />
+  <types baseClass="Object" callerClass="CssProvider">
+    <signal eventName="ParsingError" callerClass="CssProvider" baseClass="Object">
+      <method>ParsingError</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+  </types>
+  <types baseClass="Opaque" callerClass="PixelCache" />
+  <types baseClass="ComboBox" callerClass="ComboBoxText" />
+  <types baseClass="Opaque" callerClass="TreeViewColumnReorder" />
+  <types baseClass="Widget" callerClass="HSV">
+    <signal eventName="Changed" callerClass="HSV" baseClass="Widget">
+      <method>Changed</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="Move" callerClass="HSV" baseClass="Widget">
+      <method>Move</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+  </types>
+  <types baseClass="Opaque" callerClass="BorderImageSliceSize" />
+  <types baseClass="Dialog" callerClass="RecentChooserDialog" />
+  <types baseClass="Opaque" callerClass="FillLayoutRendererClass" />
+  <types baseClass="GInterfaceAdapter" callerClass="StyleProviderAdapter" />
+  <types baseClass="Opaque" callerClass="TargetList" />
+  <types baseClass="Bin" callerClass="ActionBar" />
+  <types baseClass="Opaque" callerClass="CssNodeClass" />
+  <types baseClass="Widget" callerClass="Calendar">
+    <signal eventName="MonthChanged" callerClass="Calendar" baseClass="Widget">
+      <method>MonthChanged</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="NextMonth" callerClass="Calendar" baseClass="Widget">
+      <method>NextMonth</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="NextYear" callerClass="Calendar" baseClass="Widget">
+      <method>NextYear</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="DaySelected" callerClass="Calendar" baseClass="Widget">
+      <method>DaySelected</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="PrevMonth" callerClass="Calendar" baseClass="Widget">
+      <method>PrevMonth</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="DaySelectedDoubleClick" callerClass="Calendar" baseClass="Widget">
+      <method>DaySelectedDoubleClick</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="PrevYear" callerClass="Calendar" baseClass="Widget">
+      <method>PrevYear</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+  </types>
+  <types baseClass="Opaque" callerClass="CssImageIconTheme" />
+  <types baseClass="Object" callerClass="AccelGroup">
+    <signal eventName="AccelActivate" callerClass="AccelGroup" baseClass="Object">
+      <method>AccelActivate</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="AccelChanged" callerClass="AccelGroup" baseClass="Object">
+      <method>AccelChanged</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+  </types>
+  <types baseClass="Opaque" callerClass="GridLineData" />
+  <types baseClass="Opaque" callerClass="TextRealIter" />
+  <types baseClass="GInterfaceAdapter" callerClass="TreeSortableAdapter" />
+  <types baseClass="Opaque" callerClass="ImageDefinitionIconSet" />
+  <types baseClass="Dialog" callerClass="PrintUnixDialog" />
+  <types baseClass="Opaque" callerClass="ImageDefinitionPixbuf" />
+  <types baseClass="Opaque" callerClass="CssCustomProperty" />
+  <types baseClass="Dialog" callerClass="AppChooserDialog" />
+  <types baseClass="Opaque" callerClass="SymbolicPixbufCache" />
+  <types baseClass="Bin" callerClass="FlowBoxChild">
+    <signal eventName="Activate" callerClass="FlowBoxChild" baseClass="Bin">
+      <method>Activate</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+  </types>
+  <types baseClass="Opaque" callerClass="PlacesViewClass" />
+  <types baseClass="Opaque" callerClass="CssNode" />
+  <types baseClass="Opaque" callerClass="BuiltinIconClass" />
+  <types baseClass="Opaque" callerClass="TreeRowData" />
+  <types baseClass="0x06000848 RID: 2120 RVA: 0x0001947A File Offset: 0x0001767A" callerClass="Drag&#xD;&#xA;	{&#xD;&#xA;		// Token" />
+  <types baseClass="Opaque" callerClass="MountOperationLookupContext" />
+  <types baseClass="Opaque" callerClass="CssImageCrossFade" />
+  <types baseClass="CellRenderer" callerClass="CellRendererText">
+    <signal eventName="Edited" callerClass="CellRendererText" baseClass="CellRenderer">
+      <method>Edited</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+  </types>
+  <types baseClass="Opaque" callerClass="CssStaticStyle" />
+  <types baseClass="Opaque" callerClass="TreePath" />
+  <types baseClass="CellRenderer" callerClass="CellRendererSpinner" />
+  <types baseClass="Object" callerClass="CellAreaContext" />
+  <types baseClass="Box" callerClass="VBox" />
+  <types baseClass="0x06001C5E RID: 7262 RVA: 0x0004ECF4 File Offset: 0x0004CEF4" callerClass="Init&#xD;&#xA;	{&#xD;&#xA;		// Token" />
+  <types baseClass="Opaque" callerClass="DecomposedMatrix" />
+  <types baseClass="Box" callerClass="FileChooserButton">
+    <signal eventName="FileSet" callerClass="FileChooserButton" baseClass="Box">
+      <method>FileSet</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="UpdatePreview" callerClass="FileChooserButton" baseClass="Box">
+      <method>UpdatePreview</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="SelectionChanged" callerClass="FileChooserButton" baseClass="Box">
+      <method>SelectionChanged</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="ConfirmOverwrite" callerClass="FileChooserButton" baseClass="Box">
+      <method>ConfirmOverwrite</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="FileActivated" callerClass="FileChooserButton" baseClass="Box">
+      <method>FileActivated</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="CurrentFolderChanged" callerClass="FileChooserButton" baseClass="Box">
+      <method>CurrentFolderChanged</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+  </types>
+  <types baseClass="Window" callerClass="Dialog">
+    <signal eventName="Response" callerClass="Dialog" baseClass="Window">
+      <method>Response</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="Close" callerClass="Dialog" baseClass="Window">
+      <method>Close</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+  </types>
+  <types baseClass="EmblemedIcon" callerClass="NumerableIcon" />
+  <types baseClass="Opaque" callerClass="CssStaticStyleClass" />
+  <types baseClass="Opaque" callerClass="IconSet" />
+  <types baseClass="Opaque" callerClass="CssImageWin32" />
+  <types baseClass="Container" callerClass="Layout" />
+  <types baseClass="Box" callerClass="MenuSectionBox" />
+  <types baseClass="Opaque" callerClass="CssRuleset" />
+  <types baseClass="Opaque" callerClass="StyleCascadeClass" />
+  <types baseClass="Opaque" callerClass="ColorSwatch" />
+  <types baseClass="Opaque" callerClass="TextBTreeNode" />
+  <types baseClass="Opaque" callerClass="IconSource" />
+  <types baseClass="Opaque" callerClass="KineticScrolling" />
+  <types baseClass="Opaque" callerClass="ThemingModule" />
+  <types baseClass="InitiallyUnowned" callerClass="RecentFilter" />
+  <types baseClass="Opaque" callerClass="CssCustomPropertyClass" />
+  <types baseClass="GInterfaceAdapter" callerClass="ActionableAdapter" />
+  <types baseClass="Widget" callerClass="DrawingArea" />
+  <types baseClass="Opaque" callerClass="SymbolicColor" />
+  <types baseClass="Opaque" callerClass="CssImageBuiltinClass" />
+  <types baseClass="0x17000CD0 RID: 3280" callerClass="Stock&#xD;&#xA;	{&#xD;&#xA;		// Token" />
+  <types baseClass="Opaque" callerClass="CssPathNodeClass" />
+  <types baseClass="Opaque" callerClass="StylePropertyClass" />
+  <types baseClass="Opaque" callerClass="StyleAnimationClass" />
+  <types baseClass="Scrollbar" callerClass="HScrollbar" />
+  <types baseClass="Opaque" callerClass="ColorSwatchClass" />
+  <types baseClass="Opaque" callerClass="BoxGadget" />
+  <types baseClass="Popover" callerClass="PopoverMenu" />
+  <types baseClass="InitiallyUnowned" callerClass="Adjustment">
+    <signal eventName="Changed" callerClass="Adjustment" baseClass="InitiallyUnowned">
+      <method>Changed</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="ValueChanged" callerClass="Adjustment" baseClass="InitiallyUnowned">
+      <method>ValueChanged</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+  </types>
+  <types baseClass="Opaque" callerClass="CountingData" />
+  <types baseClass="Bin" callerClass="HandleBox">
+    <signal eventName="ChildAttached" callerClass="HandleBox" baseClass="Bin">
+      <method>ChildAttached</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="ChildDetached" callerClass="HandleBox" baseClass="Bin">
+      <method>ChildDetached</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+  </types>
+  <types baseClass="Opaque" callerClass="PrintBackendModule" />
+  <types baseClass="Opaque" callerClass="RequestContentsInfo" />
+  <types baseClass="Container" callerClass="ToolItemGroup" />
+  <types baseClass="MenuItem" callerClass="CheckMenuItem">
+    <signal eventName="Toggled" callerClass="CheckMenuItem" baseClass="MenuItem">
+      <method>Toggled</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+  </types>
+  <types baseClass="Gesture" callerClass="GestureSingle" />
+  <types baseClass="Opaque" callerClass="CssKeyframes" />
+  <types baseClass="Widget" callerClass="LevelBar">
+    <signal eventName="OffsetChanged" callerClass="LevelBar" baseClass="Widget">
+      <method>OffsetChanged</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+  </types>
+  <types baseClass="Opaque" callerClass="CssImageLinearClass" />
+  <types baseClass="Object" callerClass="EntryBuffer">
+    <signal eventName="InsertedText" callerClass="EntryBuffer" baseClass="Object">
+      <method>InsertedText</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="DeletedText" callerClass="EntryBuffer" baseClass="Object">
+      <method>DeletedText</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+  </types>
+  <types baseClass="Opaque" callerClass="MagnifierClass" />
+  <types baseClass="Widget" callerClass="Invisible" />
+  <types baseClass="Box" callerClass="ColorSelection">
+    <signal eventName="ColorChanged" callerClass="ColorSelection" baseClass="Box">
+      <method>ColorChanged</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+  </types>
+  <types baseClass="Opaque" callerClass="ToolPaletteDragData" />
+  <types baseClass="Opaque" callerClass="CssMatcherClass" />
+  <types baseClass="ToggleToolButton" callerClass="RadioToolButton" />
+  <types baseClass="Object" callerClass="AccelMap">
+    <signal eventName="Changed" callerClass="AccelMap" baseClass="Object">
+      <method>Changed</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+  </types>
+  <types baseClass="Container" callerClass="TextView">
+    <signal eventName="CopyClipboard" callerClass="TextView" baseClass="Container">
+      <method>CopyClipboard</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="Backspace" callerClass="TextView" baseClass="Container">
+      <method>Backspace</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="SelectAll" callerClass="TextView" baseClass="Container">
+      <method>SelectAll</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="PasteClipboard" callerClass="TextView" baseClass="Container">
+      <method>PasteClipboard</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="DeleteFromCursor" callerClass="TextView" baseClass="Container">
+      <method>DeleteFromCursor</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="MoveCursor" callerClass="TextView" baseClass="Container">
+      <method>MoveCursor</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="SetAnchor" callerClass="TextView" baseClass="Container">
+      <method>SetAnchor</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="PreeditChanged" callerClass="TextView" baseClass="Container">
+      <method>PreeditChanged</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="CutClipboard" callerClass="TextView" baseClass="Container">
+      <method>CutClipboard</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="ToggleOverwrite" callerClass="TextView" baseClass="Container">
+      <method>ToggleOverwrite</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="ToggleCursorVisible" callerClass="TextView" baseClass="Container">
+      <method>ToggleCursorVisible</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="MoveViewport" callerClass="TextView" baseClass="Container">
+      <method>MoveViewport</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="InsertAtCursor" callerClass="TextView" baseClass="Container">
+      <method>InsertAtCursor</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="PopulatePopup" callerClass="TextView" baseClass="Container">
+      <method>PopulatePopup</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="ExtendSelection" callerClass="TextView" baseClass="Container">
+      <method>ExtendSelection</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+  </types>
+  <types baseClass="Misc" callerClass="Image" />
+  <types baseClass="Opaque" callerClass="SidebarRowClass" />
+  <types baseClass="GInterfaceAdapter" callerClass="ActionObservableAdapter" />
+  <types baseClass="GInterfaceAdapter" callerClass="TreeDragSourceAdapter" />
+  <types baseClass="Bin" callerClass="Frame" />
+  <types baseClass="Opaque" callerClass="IconHelperClass" />
+  <types baseClass="Opaque" callerClass="SettingsPropertyValue" />
+  <types baseClass="Opaque" callerClass="ToolItemGroupChild" />
+  <types baseClass="InitiallyUnowned" callerClass="FileFilter" />
+  <types baseClass="Object" callerClass="IMContext">
+    <signal eventName="DeleteSurrounding" callerClass="IMContext" baseClass="Object">
+      <method>DeleteSurrounding</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="PreeditChanged" callerClass="IMContext" baseClass="Object">
+      <method>PreeditChanged</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="PreeditStart" callerClass="IMContext" baseClass="Object">
+      <method>PreeditStart</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="PreeditEnd" callerClass="IMContext" baseClass="Object">
+      <method>PreeditEnd</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="Commit" callerClass="IMContext" baseClass="Object">
+      <method>Commit</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="RetrieveSurrounding" callerClass="IMContext" baseClass="Object">
+      <method>RetrieveSurrounding</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+  </types>
+  <types baseClass="Opaque" callerClass="RoundedBox" />
+  <types baseClass="Opaque" callerClass="CssSection" />
+  <types baseClass="Menu" callerClass="RecentChooserMenu" />
+  <types baseClass="Opaque" callerClass="Win32ThemePart" />
+  <types baseClass="Window" callerClass="Assistant">
+    <signal eventName="Prepare" callerClass="Assistant" baseClass="Window">
+      <method>Prepare</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="Apply" callerClass="Assistant" baseClass="Window">
+      <method>Apply</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="Escape" callerClass="Assistant" baseClass="Window">
+      <method>Escape</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="Cancel" callerClass="Assistant" baseClass="Window">
+      <method>Cancel</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="Close" callerClass="Assistant" baseClass="Window">
+      <method>Close</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+  </types>
+  <types baseClass="MenuShell" callerClass="MenuBar" />
+  <types baseClass="Opaque" callerClass="TextLayoutClass" />
+  <types baseClass="Opaque" callerClass="ColorScaleClass" />
+  <types baseClass="Opaque" callerClass="CssScanner" />
+  <types baseClass="Bin" callerClass="Viewport" />
+  <types baseClass="Opaque" callerClass="TextChildBody" />
+  <types baseClass="Opaque" callerClass="Win32Theme" />
+  <types baseClass="Opaque" callerClass="ClipboardRequest" />
+  <types baseClass="GInterfaceAdapter" callerClass="FileChooserAdapter" />
+  <types baseClass="Window" callerClass="ApplicationWindow">
+    <signal eventName="ActionRemoved" callerClass="ApplicationWindow" baseClass="Window">
+      <method>ActionRemoved</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="ActionEnabledChanged" callerClass="ApplicationWindow" baseClass="Window">
+      <method>ActionEnabledChanged</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="ActionStateChanged" callerClass="ApplicationWindow" baseClass="Window">
+      <method>ActionStateChanged</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="ActionAdded" callerClass="ApplicationWindow" baseClass="Window">
+      <method>ActionAdded</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+  </types>
+  <types baseClass="Box" callerClass="ShortcutsSection">
+    <signal eventName="ChangeCurrentPage" callerClass="ShortcutsSection" baseClass="Box">
+      <method>ChangeCurrentPage</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+  </types>
+  <types baseClass="Object" callerClass="EntryCompletion">
+    <signal eventName="MatchSelected" callerClass="EntryCompletion" baseClass="Object">
+      <method>MatchSelected</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="InsertPrefix" callerClass="EntryCompletion" baseClass="Object">
+      <method>InsertPrefix</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="ActionActivated" callerClass="EntryCompletion" baseClass="Object">
+      <method>ActionActivated</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="NoMatches" callerClass="EntryCompletion" baseClass="Object">
+      <method>NoMatches</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="CursorOnMatch" callerClass="EntryCompletion" baseClass="Object">
+      <method>CursorOnMatch</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+  </types>
+  <types baseClass="Opaque" callerClass="ImageDefinitionIconName" />
+  <types baseClass="Object" callerClass="ListStore">
+    <signal eventName="RowDeleted" callerClass="ListStore" baseClass="Object">
+      <method>RowDeleted</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="RowInserted" callerClass="ListStore" baseClass="Object">
+      <method>RowInserted</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="RowChanged" callerClass="ListStore" baseClass="Object">
+      <method>RowChanged</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="RowHasChildToggled" callerClass="ListStore" baseClass="Object">
+      <method>RowHasChildToggled</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="SortColumnChanged" callerClass="ListStore" baseClass="Object">
+      <method>SortColumnChanged</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="Rows_Reordered" callerClass="ListStore" baseClass="Object">
+      <method>Rows_Reordered</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+  </types>
+  <types baseClass="Opaque" callerClass="TextViewChild" />
+  <types baseClass="Widget" callerClass="ProgressBar" />
+  <types baseClass="Opaque" callerClass="EntryPasswordHint" />
+  <types baseClass="Opaque" callerClass="CssMatcherNode" />
+  <types baseClass="Object" callerClass="TextBuffer">
+    <signal eventName="InsertPixbuf" callerClass="TextBuffer" baseClass="Object">
+      <method>InsertPixbuf</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="BeginUserAction" callerClass="TextBuffer" baseClass="Object">
+      <method>BeginUserAction</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="MarkDeleted" callerClass="TextBuffer" baseClass="Object">
+      <method>MarkDeleted</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="InsertText" callerClass="TextBuffer" baseClass="Object">
+      <method>InsertText</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="ModifiedChanged" callerClass="TextBuffer" baseClass="Object">
+      <method>ModifiedChanged</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="EndUserAction" callerClass="TextBuffer" baseClass="Object">
+      <method>EndUserAction</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="DeleteRange" callerClass="TextBuffer" baseClass="Object">
+      <method>DeleteRange</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="MarkSet" callerClass="TextBuffer" baseClass="Object">
+      <method>MarkSet</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="PasteDone" callerClass="TextBuffer" baseClass="Object">
+      <method>PasteDone</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="Changed" callerClass="TextBuffer" baseClass="Object">
+      <method>Changed</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="RemoveTag" callerClass="TextBuffer" baseClass="Object">
+      <method>RemoveTag</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="ApplyTag" callerClass="TextBuffer" baseClass="Object">
+      <method>ApplyTag</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="InsertChildAnchor" callerClass="TextBuffer" baseClass="Object">
+      <method>InsertChildAnchor</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+  </types>
+  <types baseClass="Plug" callerClass="TrayIcon" />
+  <types baseClass="Opaque" callerClass="ColorEditorClass" />
+  <types baseClass="Opaque" callerClass="RequestImageInfo" />
+  <types baseClass="Box" callerClass="ButtonBox" />
+  <types baseClass="Opaque" callerClass="RequestURIInfo" />
+  <types baseClass="Opaque" callerClass="FilterElt" />
+  <types baseClass="Object" callerClass="Action">
+    <signal eventName="Activate" callerClass="Action" baseClass="Object">
+      <method>Activate</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+  </types>
+  <types baseClass="Container" callerClass="Notebook">
+    <signal eventName="ReorderTab" callerClass="Notebook" baseClass="Container">
+      <method>ReorderTab</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="ChangeCurrentPage" callerClass="Notebook" baseClass="Container">
+      <method>ChangeCurrentPage</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="SelectPage" callerClass="Notebook" baseClass="Container">
+      <method>SelectPage</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="SwitchPage" callerClass="Notebook" baseClass="Container">
+      <method>SwitchPage</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="FocusTab" callerClass="Notebook" baseClass="Container">
+      <method>FocusTab</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="MoveFocusOut" callerClass="Notebook" baseClass="Container">
+      <method>MoveFocusOut</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="PageAdded" callerClass="Notebook" baseClass="Container">
+      <method>PageAdded</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="PageReordered" callerClass="Notebook" baseClass="Container">
+      <method>PageReordered</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="CreateWindow" callerClass="Notebook" baseClass="Container">
+      <method>CreateWindow</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="PageRemoved" callerClass="Notebook" baseClass="Container">
+      <method>PageRemoved</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+  </types>
+  <types baseClass="Opaque" callerClass="NotebookPage" />
+  <types baseClass="Opaque" callerClass="CssImageScaledClass" />
+  <types baseClass="Opaque" callerClass="CssImageUrl" />
+  <types baseClass="0x0600184E RID: 6222 RVA: 0x0004413C File Offset: 0x0004233C" callerClass="Grab&#xD;&#xA;	{&#xD;&#xA;		// Token" />
+  <types baseClass="Opaque" callerClass="GridChildAttach" />
+  <types baseClass="Opaque" callerClass="SidebarRow" />
+  <types baseClass="Opaque" callerClass="CssImageWin32Class" />
+  <types baseClass="Opaque" callerClass="CssParser" />
+  <types baseClass="Opaque" callerClass="PlacesView" />
+  <types baseClass="Opaque" callerClass="WidgetPropertyValue" />
+  <types baseClass="Opaque" callerClass="CssLookup" />
+  <types baseClass="Object" callerClass="TextTagTable">
+    <signal eventName="TagAdded" callerClass="TextTagTable" baseClass="Object">
+      <method>TagAdded</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="TagRemoved" callerClass="TextTagTable" baseClass="Object">
+      <method>TagRemoved</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="TagChanged" callerClass="TextTagTable" baseClass="Object">
+      <method>TagChanged</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+  </types>
+  <types baseClass="Container" callerClass="Stack" />
+  <types baseClass="Box" callerClass="ShortcutsGroup" />
+  <types baseClass="Opaque" callerClass="NodeUIReference" />
+  <types baseClass="Opaque" callerClass="CssPathNode" />
+  <types baseClass="Opaque" callerClass="TransitionInfo" />
+  <types baseClass="Object" callerClass="TreeModelSort">
+    <signal eventName="RowDeleted" callerClass="TreeModelSort" baseClass="Object">
+      <method>RowDeleted</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="RowInserted" callerClass="TreeModelSort" baseClass="Object">
+      <method>RowInserted</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="RowChanged" callerClass="TreeModelSort" baseClass="Object">
+      <method>RowChanged</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="RowHasChildToggled" callerClass="TreeModelSort" baseClass="Object">
+      <method>RowHasChildToggled</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="SortColumnChanged" callerClass="TreeModelSort" baseClass="Object">
+      <method>SortColumnChanged</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="Rows_Reordered" callerClass="TreeModelSort" baseClass="Object">
+      <method>Rows_Reordered</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+  </types>
+  <types baseClass="Object" callerClass="StatusIcon">
+    <signal eventName="Button_Release_Event" callerClass="StatusIcon" baseClass="Object">
+      <method>Button_Release_Event</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="PopupMenu" callerClass="StatusIcon" baseClass="Object">
+      <method>PopupMenu</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="Scroll_Event" callerClass="StatusIcon" baseClass="Object">
+      <method>Scroll_Event</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="Activate" callerClass="StatusIcon" baseClass="Object">
+      <method>Activate</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="SizeChanged" callerClass="StatusIcon" baseClass="Object">
+      <method>SizeChanged</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="Button_Press_Event" callerClass="StatusIcon" baseClass="Object">
+      <method>Button_Press_Event</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="Query_Tooltip" callerClass="StatusIcon" baseClass="Object">
+      <method>Query_Tooltip</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+  </types>
+  <types baseClass="Widget" callerClass="Misc" />
+  <types baseClass="Bin" callerClass="SearchBar" />
+  <types baseClass="TreeView" callerClass="NodeView" />
+  <types baseClass="Opaque" callerClass="CellAreaBoxContextClass" />
+  <types baseClass="Object" callerClass="Clipboard">
+    <signal eventName="OwnerChange" callerClass="Clipboard" baseClass="Object">
+      <method>OwnerChange</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+  </types>
+  <types baseClass="Opaque" callerClass="BuiltinIcon" />
+  <types baseClass="GInterfaceAdapter" callerClass="TreeDragDestAdapter" />
+  <types baseClass="Opaque" callerClass="RequestRichTextInfo" />
+  <types baseClass="Opaque" callerClass="IconViewChild" />
+  <types baseClass="Opaque" callerClass="CssMatcherWidgetPath" />
+  <types baseClass="Opaque" callerClass="CssImageClass" />
+  <types baseClass="Dialog" callerClass="MessageDialog" />
+  <types baseClass="Bin" callerClass="Button">
+    <signal eventName="Pressed" callerClass="Button" baseClass="Bin">
+      <method>Pressed</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="Activate" callerClass="Button" baseClass="Bin">
+      <method>Activate</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="Released" callerClass="Button" baseClass="Bin">
+      <method>Released</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="Enter" callerClass="Button" baseClass="Bin">
+      <method>Enter</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="Leave" callerClass="Button" baseClass="Bin">
+      <method>Leave</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="Clicked" callerClass="Button" baseClass="Bin">
+      <method>Clicked</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+  </types>
+  <types baseClass="Opaque" callerClass="AssistantPage" />
+  <types baseClass="Opaque" callerClass="ParseContext" />
+  <types baseClass="Object" callerClass="EventController" />
+  <types baseClass="Object" callerClass="StyleProperties" />
+  <types baseClass="Opaque" callerClass="PointData" />
+  <types baseClass="Opaque" callerClass="Gradient" />
+  <types baseClass="Gesture" callerClass="GestureRotate">
+    <signal eventName="AngleChanged" callerClass="GestureRotate" baseClass="Gesture">
+      <method>AngleChanged</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+  </types>
+  <types baseClass="Opaque" callerClass="CssImageSurfaceClass" />
+  <types baseClass="Range" callerClass="Scrollbar" />
+  <types baseClass="Opaque" callerClass="ColorPlane" />
+  <types baseClass="Opaque" callerClass="CssNumberValueClass" />
+  <types baseClass="GInterfaceAdapter" callerClass="AppChooserAdapter" />
+  <types baseClass="MenuItem" callerClass="ImageMenuItem" />
+  <types baseClass="Opaque" callerClass="SortData" />
+  <types baseClass="Opaque" callerClass="TreeRowReference" />
+  <types baseClass="ToggleButton" callerClass="MenuButton" />
+  <types baseClass="Opaque" callerClass="WindowPopover" />
+  <types baseClass="InitiallyUnowned" callerClass="Widget">
+    <signal eventName="DamageEvent" callerClass="Widget" baseClass="InitiallyUnowned">
+      <method>DamageEvent</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="Map" callerClass="Widget" baseClass="InitiallyUnowned">
+      <method>Map</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="SizeAllocate" callerClass="Widget" baseClass="InitiallyUnowned">
+      <method>SizeAllocate</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="ProximityOutEvent" callerClass="Widget" baseClass="InitiallyUnowned">
+      <method>ProximityOutEvent</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="Unmap" callerClass="Widget" baseClass="InitiallyUnowned">
+      <method>Unmap</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="DeleteEvent" callerClass="Widget" baseClass="InitiallyUnowned">
+      <method>DeleteEvent</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="DragMotion" callerClass="Widget" baseClass="InitiallyUnowned">
+      <method>DragMotion</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="GrabFocus" callerClass="Widget" baseClass="InitiallyUnowned">
+      <method>GrabFocus</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="StateFlagsChanged" callerClass="Widget" baseClass="InitiallyUnowned">
+      <method>StateFlagsChanged</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="GrabNotify" callerClass="Widget" baseClass="InitiallyUnowned">
+      <method>GrabNotify</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="ConfigureEvent" callerClass="Widget" baseClass="InitiallyUnowned">
+      <method>ConfigureEvent</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="ButtonPressEvent" callerClass="Widget" baseClass="InitiallyUnowned">
+      <method>ButtonPressEvent</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="FocusOutEvent" callerClass="Widget" baseClass="InitiallyUnowned">
+      <method>FocusOutEvent</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="Unrealize" callerClass="Widget" baseClass="InitiallyUnowned">
+      <method>Unrealize</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="UnmapEvent" callerClass="Widget" baseClass="InitiallyUnowned">
+      <method>UnmapEvent</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="ShowHelp" callerClass="Widget" baseClass="InitiallyUnowned">
+      <method>ShowHelp</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="MoveFocus" callerClass="Widget" baseClass="InitiallyUnowned">
+      <method>MoveFocus</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="ScrollEvent" callerClass="Widget" baseClass="InitiallyUnowned">
+      <method>ScrollEvent</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="SelectionReceived" callerClass="Widget" baseClass="InitiallyUnowned">
+      <method>SelectionReceived</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="DirectionChanged" callerClass="Widget" baseClass="InitiallyUnowned">
+      <method>DirectionChanged</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="PropertyNotifyEvent" callerClass="Widget" baseClass="InitiallyUnowned">
+      <method>PropertyNotifyEvent</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="DragDrop" callerClass="Widget" baseClass="InitiallyUnowned">
+      <method>DragDrop</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="StyleSet" callerClass="Widget" baseClass="InitiallyUnowned">
+      <method>StyleSet</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="ParentSet" callerClass="Widget" baseClass="InitiallyUnowned">
+      <method>ParentSet</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="AccelClosuresChanged" callerClass="Widget" baseClass="InitiallyUnowned">
+      <method>AccelClosuresChanged</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="DragDataReceived" callerClass="Widget" baseClass="InitiallyUnowned">
+      <method>DragDataReceived</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="TouchEvent" callerClass="Widget" baseClass="InitiallyUnowned">
+      <method>TouchEvent</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="Draw" callerClass="Widget" baseClass="InitiallyUnowned">
+      <method>Draw</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="SelectionRequestEvent" callerClass="Widget" baseClass="InitiallyUnowned">
+      <method>SelectionRequestEvent</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="EnterNotifyEvent" callerClass="Widget" baseClass="InitiallyUnowned">
+      <method>EnterNotifyEvent</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="DragDataDelete" callerClass="Widget" baseClass="InitiallyUnowned">
+      <method>DragDataDelete</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="ScreenChanged" callerClass="Widget" baseClass="InitiallyUnowned">
+      <method>ScreenChanged</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="Event" callerClass="Widget" baseClass="InitiallyUnowned">
+      <method>Event</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="SelectionClearEvent" callerClass="Widget" baseClass="InitiallyUnowned">
+      <method>SelectionClearEvent</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="ChildNotify" callerClass="Widget" baseClass="InitiallyUnowned">
+      <method>ChildNotify</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="WindowStateEvent" callerClass="Widget" baseClass="InitiallyUnowned">
+      <method>WindowStateEvent</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="DestroyEvent" callerClass="Widget" baseClass="InitiallyUnowned">
+      <method>DestroyEvent</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="StyleUpdated" callerClass="Widget" baseClass="InitiallyUnowned">
+      <method>StyleUpdated</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="Hide" callerClass="Widget" baseClass="InitiallyUnowned">
+      <method>Hide</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="SelectionGet" callerClass="Widget" baseClass="InitiallyUnowned">
+      <method>SelectionGet</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="GrabBrokenEvent" callerClass="Widget" baseClass="InitiallyUnowned">
+      <method>GrabBrokenEvent</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="DragLeave" callerClass="Widget" baseClass="InitiallyUnowned">
+      <method>DragLeave</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="VisibilityNotifyEvent" callerClass="Widget" baseClass="InitiallyUnowned">
+      <method>VisibilityNotifyEvent</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="Realize" callerClass="Widget" baseClass="InitiallyUnowned">
+      <method>Realize</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="CompositedChanged" callerClass="Widget" baseClass="InitiallyUnowned">
+      <method>CompositedChanged</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="MotionNotifyEvent" callerClass="Widget" baseClass="InitiallyUnowned">
+      <method>MotionNotifyEvent</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="Show" callerClass="Widget" baseClass="InitiallyUnowned">
+      <method>Show</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="KeyReleaseEvent" callerClass="Widget" baseClass="InitiallyUnowned">
+      <method>KeyReleaseEvent</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="QueryTooltip" callerClass="Widget" baseClass="InitiallyUnowned">
+      <method>QueryTooltip</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="MapEvent" callerClass="Widget" baseClass="InitiallyUnowned">
+      <method>MapEvent</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="FocusInEvent" callerClass="Widget" baseClass="InitiallyUnowned">
+      <method>FocusInEvent</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="HierarchyChanged" callerClass="Widget" baseClass="InitiallyUnowned">
+      <method>HierarchyChanged</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="StateChanged" callerClass="Widget" baseClass="InitiallyUnowned">
+      <method>StateChanged</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="DragDataGet" callerClass="Widget" baseClass="InitiallyUnowned">
+      <method>DragDataGet</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="PopupMenu" callerClass="Widget" baseClass="InitiallyUnowned">
+      <method>PopupMenu</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="CanActivateAccel" callerClass="Widget" baseClass="InitiallyUnowned">
+      <method>CanActivateAccel</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="DragEnd" callerClass="Widget" baseClass="InitiallyUnowned">
+      <method>DragEnd</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="LeaveNotifyEvent" callerClass="Widget" baseClass="InitiallyUnowned">
+      <method>LeaveNotifyEvent</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="MnemonicActivate" callerClass="Widget" baseClass="InitiallyUnowned">
+      <method>MnemonicActivate</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="KeyPressEvent" callerClass="Widget" baseClass="InitiallyUnowned">
+      <method>KeyPressEvent</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="DragBegin" callerClass="Widget" baseClass="InitiallyUnowned">
+      <method>DragBegin</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="EventAfter" callerClass="Widget" baseClass="InitiallyUnowned">
+      <method>EventAfter</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="ProximityInEvent" callerClass="Widget" baseClass="InitiallyUnowned">
+      <method>ProximityInEvent</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="ButtonReleaseEvent" callerClass="Widget" baseClass="InitiallyUnowned">
+      <method>ButtonReleaseEvent</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="DragFailed" callerClass="Widget" baseClass="InitiallyUnowned">
+      <method>DragFailed</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="SelectionNotifyEvent" callerClass="Widget" baseClass="InitiallyUnowned">
+      <method>SelectionNotifyEvent</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="Focus" callerClass="Widget" baseClass="InitiallyUnowned">
+      <method>Focus</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+    <signal eventName="Destroy" callerClass="Widget" baseClass="InitiallyUnowned">
+      <method>Destroy</method>
+      <args>
+        <arg>object sender</arg>
+        <arg>EventArgs e</arg>
+      </args>
+    </signal>
+  </types>
+</root>
