@@ -7,39 +7,6 @@
 
     <ItemGroup>
       <Compile Remove="Gtk\AboutDialog.cs" />
-      <Compile Include="..\..\..\..\..\..\core_commonclasses\clsString.cs">
-        <Link>core_commonclasses\clsString.cs</Link>
-      </Compile>
-      <Compile Include="..\..\..\..\..\..\core_commonclasses\ExtensionsClass\clsExtensionsArrayDic.cs">
-        <Link>core_commonclasses\ExtensionsClass\clsExtensionsArrayDic.cs</Link>
-      </Compile>
-      <Compile Include="..\..\..\..\..\..\core_commonclasses\ExtensionsClass\clsExtensionsObject.cs">
-        <Link>core_commonclasses\ExtensionsClass\clsExtensionsObject.cs</Link>
-      </Compile>
-      <Compile Include="..\..\..\..\..\..\core_commonclasses\ExtensionsClass\clsExtensionsString.cs">
-        <Link>core_commonclasses\ExtensionsClass\clsExtensionsString.cs</Link>
-      </Compile>
-      <Compile Include="..\..\..\..\..\..\core_commonclasses\ExtensionsClass\clsExtensionsXml.cs">
-        <Link>core_commonclasses\ExtensionsClass\clsExtensionsXml.cs</Link>
-      </Compile>
-      <Compile Include="..\..\..\..\..\..\core_commonclasses\File\clsFile+static.cs">
-        <Link>core_commonclasses\File\clsFile+static.cs</Link>
-      </Compile>
-      <Compile Include="..\..\..\..\..\..\core_commonclasses\File\clsFolder+static.cs">
-        <Link>core_commonclasses\File\clsFolder+static.cs</Link>
-      </Compile>
-      <Compile Include="..\..\..\..\..\..\core_commonclasses\File\clsJson.cs">
-        <Link>core_commonclasses\File\clsJson.cs</Link>
-      </Compile>
-      <Compile Include="..\..\..\..\..\..\core_commonclasses\File\clsPath.cs">
-        <Link>core_commonclasses\File\clsPath.cs</Link>
-      </Compile>
-      <Compile Include="..\..\..\..\..\..\core_commonclasses\Utility\clsUtility.cs">
-        <Link>core_commonclasses\Utility\clsUtility.cs</Link>
-      </Compile>
-      <Compile Include="..\..\..\..\..\..\core_commonclasses\XML\clsXml.cs">
-        <Link>core_commonclasses\XML\clsXml.cs</Link>
-      </Compile>
       <None Include="Gtk\AboutDialog.cs" />
       <Compile Remove="Gtk\Accel.cs" />
       <None Include="Gtk\Accel.cs" />
@@ -1028,6 +995,39 @@
       <None Remove="Gdk\**" />
       <Compile Remove="Gtk\**" />
       <None Remove="Gtk\**" />
+      <Compile Update="commonClasses2\ExtensionsClass\clsExtensionsArrayDic.cs">
+        <Link>core_commonclasses\ExtensionsClass\clsExtensionsArrayDic.cs</Link>
+      </Compile>
+      <Compile Update="commonClasses2\ExtensionsClass\clsExtensionsObject.cs">
+        <Link>core_commonclasses\ExtensionsClass\clsExtensionsObject.cs</Link>
+      </Compile>
+      <Compile Update="commonClasses2\ExtensionsClass\clsExtensionsString.cs">
+        <Link>core_commonclasses\ExtensionsClass\clsExtensionsString.cs</Link>
+      </Compile>
+      <Compile Update="commonClasses2\ExtensionsClass\clsExtensionsXml.cs">
+        <Link>core_commonclasses\ExtensionsClass\clsExtensionsXml.cs</Link>
+      </Compile>
+      <Compile Update="commonClasses2\File\clsFile+static.cs">
+        <Link>core_commonclasses\File\clsFile+static.cs</Link>
+      </Compile>
+      <Compile Update="commonClasses2\File\clsFolder+static.cs">
+        <Link>core_commonclasses\File\clsFolder+static.cs</Link>
+      </Compile>
+      <Compile Update="commonClasses2\File\clsJson.cs">
+        <Link>core_commonclasses\File\clsJson.cs</Link>
+      </Compile>
+      <Compile Update="commonClasses2\File\clsPath.cs">
+        <Link>core_commonclasses\File\clsPath.cs</Link>
+      </Compile>
+      <Compile Update="commonClasses2\Utility\clsUtility.cs">
+        <Link>core_commonclasses\Utility\clsUtility.cs</Link>
+      </Compile>
+      <Compile Update="commonClasses2\XML\clsXml.cs">
+        <Link>core_commonclasses\XML\clsXml.cs</Link>
+      </Compile>
+      <Compile Update="commonClasses2\clsString.cs">
+        <Link>core_commonclasses\clsString.cs</Link>
+      </Compile>
     </ItemGroup>
 
     <ItemGroup>

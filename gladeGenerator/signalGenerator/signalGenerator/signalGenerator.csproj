@@ -6,10 +6,6 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Compile Remove="doc\**" />
-    </ItemGroup>
-
-    <ItemGroup>
       <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
       <PackageReference Include="System.Drawing.Common" Version="5.0.2" />
     </ItemGroup>
@@ -17,6 +13,10 @@
     <ItemGroup>
       <Content Include="bin\Debug\net5.0\signals.xml" />
       <Content Include="bin\Debug\net5.0\singls.xml" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Remove="doc\**" />
     </ItemGroup>
 
     <ItemGroup>
