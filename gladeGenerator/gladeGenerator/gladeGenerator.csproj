@@ -6,6 +6,10 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <None Include="..\signalGenerator\signalGeneratro2\bin\Debug\net5.0\signalGtk.xml">
+        <Link>signalGtk.xml</Link>
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
       <Content Include="templateData\template.txt">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </Content>
@@ -93,9 +97,6 @@
       </None>
       <None Update="codeHint\GtkCheckButton_Toggled.txt">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      </None>
-      <None Update="signalGtk.xml">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </None>
     </ItemGroup>
 
