@@ -19,7 +19,7 @@ namespace signalGenerator2
                 clsFolder._isFolder(clsPath._convertAbsolutFilePath(clsGtkCsParse.Instance().GdkFolder))
             ){
                 clsGtkCsParse.Instance()._parseGtk();
-               // clsGtkCsParse.Instance()._parseGdk();      
+                clsGtkCsParse.Instance()._parseGdk();      
             }
             else
             {

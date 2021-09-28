@@ -97,21 +97,28 @@ namespace signalGenerator2
             {
 
                 string csContent = clsFile._load_static(filePath);
-                
-                // public class Button : Bin, IActionable, IWrapper, IActivatable
+              
+               string fileName = clsPath._getFileName(filePath);
 
-                string patarn0 = @"public class(.*?)\:(.*?)\{";
+               // public class Button : Bin, IActionable, IWrapper, IActivatable
+
+                string patarn0 = @"public class(.*?)\:(.*?)" + Environment.NewLine;
                 ArrayList classArray = clsUtility._patarnMatch(csContent, patarn0, 
                     1, 2,RegexOptions.Singleline);
 
-                if (classArray.Count != 2)
+                if (classArray.Count < 2)
                 {
-                    Console.WriteLine("public class　例外 {0} {1}", clsPath._getFileName(filePath) , classArray.Count);
+                    Console.WriteLine("public class　例外 {0} {1}", fileName , classArray.Count);
+                    if (csContent._indexOf("[Signal(") != -1)
+                    {
+                        Console.WriteLine("Signalあり　例外 {0} ", fileName);
+                    }
                     continue;
                 }
 
                 string callerClassName = classArray[0].ToString().TrimStart().TrimEnd();
-                string BaseClass = classArray[1].ToString().TrimStart().TrimEnd();
+                string BaseClass = classArray[1].ToString();
+    
                 if (BaseClass._indexOf(",") != -1)
                 {
                     ArrayList splitArray = BaseClass._split(",");
@@ -119,21 +126,30 @@ namespace signalGenerator2
                     {
                         BaseClass = splitArray[0].ToString();
                     }
-                } 
+                }
+
+                BaseClass = BaseClass.TrimStart().TrimEnd();
+                
+                if(fileName == "Container.cs")
+                {
+                    //Console.WriteLine("  Container ");
+                }
+
                 TypeModel TypeModel1 = new TypeModel();
 
                 TypeModel1.BaseClass = BaseClass;
                 TypeModel1.UIClassName_caller = callerClassName;
-                
-                if (callerClassName == "Button")
-                {
-                    Console.WriteLine("button");
-                }
 
-                string patarn = @"\[Signal\(\"".*?add.*?base.AddSignalHandler\((.*?)\;";
-                ArrayList signalArray = clsUtility._patarnMatch(csContent, patarn, 1, -1,RegexOptions.Singleline);
+                string patarn = @"\[Signal\(\"".*?add.*?base.AddSignalHandler\((.*?)"+ Environment.NewLine;
+                ArrayList signalArray = clsUtility._patarnMatch(csContent, patarn, 1, 
+                    -1,RegexOptions.Singleline);
                
                 List<signalModel> signalModelArray = new List<signalModel>();
+                
+                if(fileName == "Container.cs")
+                {
+                  //  Console.WriteLine("  Container ");
+                }
                
                 foreach (string signalStr in signalArray)
                 {
@@ -152,8 +168,6 @@ namespace signalGenerator2
 
                     signalModel1.AttributeEventName = _convertEventName(addSignalArray[0].ToString());
                     string argsStr = addSignalArray[1].ToString();
-
- 
 
                     List<string> Args = new List<string>();
                     if (argsStr._indexOf("typeof") != -1)
