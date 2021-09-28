@@ -129,11 +129,6 @@ namespace signalGenerator2
                 }
 
                 BaseClass = BaseClass.TrimStart().TrimEnd();
-                
-                if(fileName == "Container.cs")
-                {
-                    //Console.WriteLine("  Container ");
-                }
 
                 TypeModel TypeModel1 = new TypeModel();
 
@@ -145,12 +140,7 @@ namespace signalGenerator2
                     -1,RegexOptions.Singleline);
                
                 List<signalModel> signalModelArray = new List<signalModel>();
-                
-                if(fileName == "Container.cs")
-                {
-                  //  Console.WriteLine("  Container ");
-                }
-               
+
                 foreach (string signalStr in signalArray)
                 {
                     signalModel signalModel1 = new signalModel();
