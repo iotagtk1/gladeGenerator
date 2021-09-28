@@ -31,6 +31,9 @@ namespace signalGenerator2
         public string GdkFolder = "../../../Gdk/";
         private string GtkSignalName = "signalGtk.xml";
         private string GdkSignalName = "signalGdk.xml";
+        
+        private string GtkPrefixName = "Gtk";   
+        private string GdkPrefixName = "Gdk";
 
         public static clsGtkCsParse Instance()
         {
@@ -42,7 +45,7 @@ namespace signalGenerator2
 
         public void _parseGtk()
         {
-            _loadCs(GtkSignalName);
+            _loadCs(GtkPrefixName);
 
             string saveFilePath = clsFile._getExePath_replace(GtkSignalName);
 
@@ -51,7 +54,7 @@ namespace signalGenerator2
         
         public void _parseGdk()
         {
-            _loadCs(GdkSignalName);
+            _loadCs(GdkPrefixName);
 
             string saveFilePath = clsFile._getExePath_replace(GdkSignalName);
 
@@ -98,7 +101,7 @@ namespace signalGenerator2
 
                 string csContent = clsFile._load_static(filePath);
               
-               string fileName = clsPath._getFileName(filePath);
+                string fileName = clsPath._getFileName(filePath);
 
                // public class Button : Bin, IActionable, IWrapper, IActivatable
 
@@ -116,7 +119,7 @@ namespace signalGenerator2
                     continue;
                 }
 
-                string callerClassName = classArray[0].ToString().TrimStart().TrimEnd();
+                string callerClassName = prefix + classArray[0].ToString().TrimStart().TrimEnd();
                 string BaseClass = classArray[1].ToString();
     
                 if (BaseClass._indexOf(",") != -1)
@@ -128,7 +131,7 @@ namespace signalGenerator2
                     }
                 }
 
-                BaseClass = BaseClass.TrimStart().TrimEnd();
+                BaseClass = prefix + BaseClass.TrimStart().TrimEnd();
 
                 TypeModel TypeModel1 = new TypeModel();
 

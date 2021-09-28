@@ -116,22 +116,22 @@ namespace gladeGenerator
             
             if (SaveDir == "" )
             {
-                Console.WriteLine("projectFolderが指定されていない");
+                Console.WriteLine("-projectPathが指定されていない");
                 return false;
             }
             if (ProjectName == "")
             {
-                Console.WriteLine("ProjectNameが指定されていない");
+                Console.WriteLine("-ProjectNameが指定されていない");
                 return false;
             }
             if (ProjectPath == "")
             {
-                Console.WriteLine("projectPathが指定されていない");
+                Console.WriteLine("-projectPathが指定されていない");
                 return false;
             }
             if (FileDirPath == "")
             {
-                Console.WriteLine("FileDirが指定されていない");
+                Console.WriteLine("-FileDirが指定されていない");
                 return false;
             }
 

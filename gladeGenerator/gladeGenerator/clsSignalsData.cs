@@ -10,7 +10,7 @@ namespace gladeGenerator
     {
         private static clsSignalsData _singleInstance = null;
 
-        private string signalFileName = "signalGtk.xml";
+        public string signalFileName = "signalGtk.xml";
 
         public static clsSignalsData Instance()
         {
@@ -95,7 +95,7 @@ namespace gladeGenerator
             {
                 isReSearch = false;
                 researchWord = "";
-                errorMes = string.Format("signals.xmlに{0}がない",callerClass);
+                errorMes = string.Format(signalFileName +"に{0}がない",callerClass);
                 return null;
             }
             
@@ -108,7 +108,7 @@ namespace gladeGenerator
                 
                 if (typesTemplateNodes == null || typesTemplateNodes.Count == 0)
                 {
-                    errorMes = string.Format("signals.xmlに{0}がない",callerClass);
+                    errorMes = string.Format(signalFileName+"に{0}がない",callerClass);
                     isReSearch = true;
                     researchWord = baseClass;
                     return null;

@@ -141,7 +141,7 @@ namespace gladeGenerator
                     if (classId == "")
                     {
                         Console.WriteLine("{0}の IDがありません。IDを追加してください" +
-                                          "テンプレートデータ(signals.xml)を確認してください 2",signalModel1.ParentNodeClassName);
+                                          "テンプレートデータ({1})を確認してください 2",signalModel1.ParentNodeClassName,clsSignalsData.Instance().signalFileName);
                         continue;
                     }  
                     
@@ -176,9 +176,9 @@ namespace gladeGenerator
 
                         if (TemplateData_signal == null)
                         {
-                            Console.WriteLine("{0}の Signal {1} Eventがテンプレートデータ(signals.xml)にない。" +
-                                              "テンプレートデータ(signals.xml)を確認してください1", signalModel1.ParentNodeClassName,
-                                signalModel1.EventName);
+                            Console.WriteLine("{0}の Signal {1} Eventがテンプレートデータ({2})にない。" +
+                                              "テンプレートデータ({3})を確認してください1", signalModel1.ParentNodeClassName,
+                                signalModel1.EventName,clsSignalsData.Instance().signalFileName,clsSignalsData.Instance().signalFileName);
                             continue;
                         }
                     }
