@@ -117,20 +117,17 @@ namespace GladeGeneratorGUI
             string GladeFileNameNoExtension = clsPath._getFileNameNoExtension(filePath);
             string GladeFileName = clsPath._getFileName(filePath);
 
-            topLevelPart1.OutPutClassName =  clsArgsConfig.Instance().GladeFileClassMapDic.ContainsKey(GladeFileName) ? clsArgsConfig.Instance().GladeFileClassMapDic[GladeFileName]
-                : GladeFileNameNoExtension;
+            topLevelPart1.OutPutClassName =  GladeFileNameNoExtension;
 
-            gladeDataPart1.OutPutGladeName =  clsArgsConfig.Instance().GladeFileClassMapDic.ContainsKey(GladeFileName)
-                ? clsArgsConfig.Instance().GladeFileClassMapDic[GladeFileName]
-                : GladeFileNameNoExtension;
+            gladeDataPart1.OutPutGladeName = GladeFileNameNoExtension;
 
             if (OutPutPartsIdName != "")
             {
                 topLevelPart1.OutPutFileName_function = gladeDataPart1.OutPutGladeName + "+" + OutPutPartsIdName + ".cs";
                 topLevelPart1.OutPutFileName_value = gladeDataPart1.OutPutGladeName + "+"　+ OutPutPartsIdName  + "_id" + ".cs"; 
 
-                topLevelPart1.OutPutSaveFilePath_function = clsArgsConfig.Instance().SaveDir._trimEnd("/") + "/" + clsArgsConfig.Instance().ProjectName._trimEnd("/") + "/" + clsArgsConfig.Instance().AddSaveFolder.Trim('/') + "/" + topLevelPart1.OutPutFileName_function;
-                topLevelPart1.OutPutSaveFilePath_value = clsArgsConfig.Instance().SaveDir._trimEnd("/") + "/" + clsArgsConfig.Instance().ProjectName._trimEnd("/") + "/" + clsArgsConfig.Instance().AddSaveFolder.Trim('/') + "/" + topLevelPart1.OutPutFileName_value;   
+                topLevelPart1.OutPutSaveFilePath_function = clsArgsConfig.Instance().SaveDir._trimEnd("/") + "/" + clsArgsConfig.Instance().ProjectName._trimEnd("/") + "/" +  topLevelPart1.OutPutFileName_function;
+                topLevelPart1.OutPutSaveFilePath_value = clsArgsConfig.Instance().SaveDir._trimEnd("/") + "/" + clsArgsConfig.Instance().ProjectName._trimEnd("/") + "/" +  topLevelPart1.OutPutFileName_value;   
             }
           
         }

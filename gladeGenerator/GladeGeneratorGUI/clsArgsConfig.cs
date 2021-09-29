@@ -15,11 +15,9 @@ namespace GladeGeneratorGUI
         public string ProjectName = "";
         public string ProjectPath = "";
         public string FileDirPath = "";
-        public string AddSaveFolder = "";
         public Boolean isCodeHint = false;
         public string codeHitFolder = "";
 
-        public Dictionary<string,string> GladeFileClassMapDic = new Dictionary<string,string>();
         
         public static clsArgsConfig Instance()
         {
@@ -44,34 +42,12 @@ namespace GladeGeneratorGUI
                         if (node.Name == "Setting" && node.Attributes != null 
                         )
                         {
-                            AddSaveFolder = node.Attributes._getValue("AddSaveFolder");
                             isCodeHint = node.Attributes._getValue("isCodeHint")._boolValue();
                             codeHitFolder = node.Attributes._getValue("codeHitFolder");
                         }
                     }
                 }
-                
-                string GladeFileClassMapPath = clsFile._getExePath_replace("GladeFileClassMap.xml");
-
-                XmlDocument gladeXmlDoc = new XmlDocument();
-                gladeXmlDoc.Load(GladeFileClassMapPath);
-                if (gladeXmlDoc != null)
-                {
-                    foreach (XmlNode node in gladeXmlDoc.FirstChild.ChildNodes)
-                    {
-                        if (node.Name == "gladFile" && node.Attributes != null 
-                            )
-                        {
-                            //<gladFile targetFileName="" reNameClassName="" />
-                            var key = node.Attributes._getValue("targetFileName");
-                            var value = node.Attributes._getValue("reNameClassName");
-                            if (key != "" && value != "")
-                            {                                
-                                GladeFileClassMapDic.Add(key,value);
-                            }
-                        }
-                    }
-                }
+                                
 
             }
             catch (Exception e)

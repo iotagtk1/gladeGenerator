@@ -1,3 +1,0 @@
-TreeIter tree;
-((Gtk.ComboBox)sender).GetActiveIter(out tree);
-type_{num} modelObj = (type_{num})DataStore_{num}.GetValue (tree, 0);

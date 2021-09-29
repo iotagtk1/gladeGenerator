@@ -1,0 +1,40 @@
+
+gladeごとにメソッドを表示
+再書き出しボタンを付ける　チェックを押して再書き出しをするかしないか
+
+{$nameSpace}
+{$className}
+listStore_{num}
+model名
+を変更できるようにうする
+txtでよい
+
+最初は読み込みから取って
+あとでgladeごとに替えられるようにする
+
+glade一覧はいらない
+
+メソッド名のみあと effective
+jsonでほぞんして　読み出せるようにする
+
+書き出しボタンを用意
+保存先をGUIで決められるようにする
+
+<Setting isCodeHint ="true" codeHitFolder="codeHint" />
+
+``` Rider arguments macro require
+-projectPath $FilePath$ -projectName $SolutionName$ -fileDir $FilePath$ -saveDir $SolutionDir$
+```
+
+-projectPath $FilePath$ 名前空間用 出力後　後で変更できる
+-projectName $SolutionName$　出力後　後で変更できる
+保存先は自分で必須　で　指定するようにする
+-fileDir $FilePath$　これも必須
+
+AddSaveFolderは廃止
+codeHitFolderは設定画面からチェックで変更できるようにする
+
+
+
+
+
