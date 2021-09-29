@@ -21,6 +21,26 @@ namespace gladeGenerator
 
             return isNoclass;
         }
+        
+        /// <summary>
+        /// コメントアウトするクラス
+        /// </summary>
+        /// <param name="topObjectNodes"></param>
+        /// <returns></returns>
+        public Boolean _isCommentOutClassName(XmlNode topObjectNodes)
+        {
+            Boolean isNoclass = false;
+            foreach (string noClassName in CommentOutClassArray)
+            {
+                if (topObjectNodes.Attributes["class"].Value._indexOf(noClassName) != -1)
+                {
+                    isNoclass = true;
+                }
+            }
+
+            return isNoclass;
+        }
+
         /// <summary>
         /// イベント名を修正する
         /// </summary>

@@ -12,6 +12,7 @@ namespace gladeGenerator
     public partial class clsPartsParse
     {
         private List<string> NoClassNameArray = new List<string>() {"Window", "Widget", "Dialog"};
+        private List<string> CommentOutClassArray = new List<string>() {"Window"};
 
         private void _getTopPart_idMethod(
             XmlNode topObjectNodes , 
@@ -27,7 +28,7 @@ namespace gladeGenerator
                 topLevelPart1.ClassName =
                     topObjectNodes.Attributes["class"] != null ? topObjectNodes.Attributes["class"].Value : "";
 
-                Boolean isNoClass = _isNoClassName(topObjectNodes);
+                Boolean isNoClass = _isCommentOutClassName(topObjectNodes);
                 string addComment = "";
                 if (isNoClass)
                 {
