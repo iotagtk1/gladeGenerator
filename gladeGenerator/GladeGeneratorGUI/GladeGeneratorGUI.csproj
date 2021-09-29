@@ -1,0 +1,95 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>WinExe</OutputType>
+        <TargetFramework>net5.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <None Remove="**\*.glade" />
+        <EmbeddedResource Include="**\*.glade">
+            <LogicalName>%(Filename)%(Extension)</LogicalName>
+        </EmbeddedResource>
+        <None Include="..\signalGenerator\signalGeneratro2\bin\Debug\net5.0\signalGtk.xml">
+          <Link>signalGtk.xml</Link>
+          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="GtkSharp" Version="3.24.24.*" />
+        <PackageReference Include="ini-parser" Version="2.5.2" />
+        <PackageReference Include="System.CodeDom" Version="5.0.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Include="..\..\..\..\..\core_commonclasses\clsString.cs">
+        <Link>clsString.cs</Link>
+      </Compile>
+      <Compile Include="..\..\..\..\..\core_commonclasses\ExtensionsClass\clsExtensionsArrayDic.cs">
+        <Link>ExtensionsClass\clsExtensionsArrayDic.cs</Link>
+      </Compile>
+      <Compile Include="..\..\..\..\..\core_commonclasses\ExtensionsClass\clsExtensionsObject.cs">
+        <Link>ExtensionsClass\clsExtensionsObject.cs</Link>
+      </Compile>
+      <Compile Include="..\..\..\..\..\core_commonclasses\ExtensionsClass\clsExtensionsSetting.cs">
+        <Link>ExtensionsClass\clsExtensionsSetting.cs</Link>
+      </Compile>
+      <Compile Include="..\..\..\..\..\core_commonclasses\ExtensionsClass\clsExtensionsString.cs">
+        <Link>ExtensionsClass\clsExtensionsString.cs</Link>
+      </Compile>
+      <Compile Include="..\..\..\..\..\core_commonclasses\ExtensionsClass\clsExtensionsXml.cs">
+        <Link>ExtensionsClass\clsExtensionsXml.cs</Link>
+      </Compile>
+      <Compile Include="..\..\..\..\..\core_commonclasses\File\clsFile+static.cs">
+        <Link>File\clsFile+static.cs</Link>
+      </Compile>
+      <Compile Include="..\..\..\..\..\core_commonclasses\File\clsFolder+static.cs">
+        <Link>File\clsFolder+static.cs</Link>
+      </Compile>
+      <Compile Include="..\..\..\..\..\core_commonclasses\File\clsIniFile.cs">
+        <Link>File\clsIniFile.cs</Link>
+      </Compile>
+      <Compile Include="..\..\..\..\..\core_commonclasses\File\clsJson.cs">
+        <Link>File\clsJson.cs</Link>
+      </Compile>
+      <Compile Include="..\..\..\..\..\core_commonclasses\File\clsPath.cs">
+        <Link>File\clsPath.cs</Link>
+      </Compile>
+      <Compile Include="..\..\..\..\..\core_commonclasses\UI\clsDialog+Utility.cs">
+        <Link>UI\clsDialog+Utility.cs</Link>
+      </Compile>
+      <Compile Include="..\..\..\..\..\core_commonclasses\UI\clsDialog.cs">
+        <Link>UI\clsDialog.cs</Link>
+      </Compile>
+      <Compile Include="..\..\..\..\..\core_commonclasses\UI\ComboBoxEx.cs">
+        <Link>UI\ComboBoxEx.cs</Link>
+      </Compile>
+      <Compile Include="..\..\..\..\..\core_commonclasses\UI\RenderCell.cs">
+        <Link>UI\RenderCell.cs</Link>
+      </Compile>
+      <Compile Include="..\..\..\..\..\core_commonclasses\UI\TreeViewColumnEx.cs">
+        <Link>UI\TreeViewColumnEx.cs</Link>
+      </Compile>
+      <Compile Include="..\..\..\..\..\core_commonclasses\UI\treeViewEx.cs">
+        <Link>UI\treeViewEx.cs</Link>
+      </Compile>
+      <Compile Include="..\..\..\..\..\core_commonclasses\Utility\clsClipboard.cs">
+        <Link>Utility\clsClipboard.cs</Link>
+      </Compile>
+      <Compile Include="..\..\..\..\..\core_commonclasses\Utility\clsDiagnosticsProcess.cs">
+        <Link>Utility\clsDiagnosticsProcess.cs</Link>
+      </Compile>
+      <Compile Include="..\..\..\..\..\core_commonclasses\Utility\clsUtility.cs">
+        <Link>Utility\clsUtility.cs</Link>
+      </Compile>
+      <Compile Include="..\..\..\..\..\core_commonclasses\XML\clsXml.cs">
+        <Link>XML\clsXml.cs</Link>
+      </Compile>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="commonClasses" />
+    </ItemGroup>
+
+</Project>

@@ -1,0 +1,35 @@
+  List<string> a = new List<string>();
+a.Add("-projectName");
+a.Add("hatenaApp");
+a.Add("-saveDir");
+a.Add("/ /App//");
+a.Add("-fileDir");
+a.Add("///testTest.glade");
+args = a.ToArray();
+                
+List<string> a = new List<string>();
+    a.Add("-projectName");
+    a.Add("TreeViewGenerator");
+    a.Add("-saveDir");
+    a.Add("/home/ita/C#/App_GitHub/TreeViewGenerator");
+    a.Add("-fileDir");
+    a.Add("/home/ita/C#/App_GitHub/TreeViewGenerator/TreeViewGenerator/MainWindow.glade");
+    args = a.ToArray();
+    
+    
+    
+    
+             
+                List<string> a = new List<string>();
+                
+                a.Add("-projectPath");
+                a.Add("/home/ita/C#/samplecC#_core/menuGtkApp/menuGtkApp/");
+                
+                a.Add("-projectName");
+                a.Add("menuGtkApp");
+                a.Add("-saveDir");
+                a.Add("/home/ita/C#/samplecC#_core/menuGtkApp/menuGtkApp");
+                a.Add("-fileDir");
+                a.Add("/home/ita/C#/samplecC#_core/menuGtkApp/menuGtkApp/MainWindow.glade");
+                args = a.ToArray();
+    
