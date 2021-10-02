@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated with glade 3.22.1 -->
+<interface>
+  <requires lib="gtk+" version="3.18"/>
+  <object class="GtkWindow" id="MainWindow">
+    <property name="can_focus">False</property>
+    <property name="title" translatable="yes">Example Window</property>
+    <property name="default_width">520</property>
+    <property name="default_height">250</property>
+    <child>
+      <placeholder/>
+    </child>
+    <child>
+      <object class="GtkLayout">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <child>
+          <object class="GtkTreeView" id="TopLevelPartTreeView">
+            <property name="width_request">147</property>
+            <property name="height_request">202</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <child internal-child="selection">
+              <object class="GtkTreeSelection" id="TopLevelPartTreeViewSection">
+                <signal name="changed" handler="on_TopLevelPartTreeViewSection_changed" swapped="no"/>
+              </object>
+            </child>
+          </object>
+          <packing>
+            <property name="x">8</property>
+            <property name="y">8</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="TreeViewEntry">
+            <property name="width_request">166</property>
+            <property name="height_request">35</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="text" translatable="yes">TreeView1</property>
+            <signal name="changed" handler="on_TreeViewEntry_changed" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">474</property>
+            <property name="y">133</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="ListStoreEntry">
+            <property name="width_request">166</property>
+            <property name="height_request">35</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="text" translatable="yes">ListStore1</property>
+            <signal name="changed" handler="on_ListStoreEntry_changed" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">472</property>
+            <property name="y">172</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="ModelViewEntry">
+            <property name="width_request">166</property>
+            <property name="height_request">35</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="text" translatable="yes">Model1</property>
+            <signal name="changed" handler="on_ModelViewEntry_changed" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">642</property>
+            <property name="y">132</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="defualtSetBtn">
+            <property name="label" translatable="yes">DefaultValue</property>
+            <property name="width_request">102</property>
+            <property name="height_request">29</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <signal name="clicked" handler="on_defualtSetBtn_clicked" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">477</property>
+            <property name="y">101</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="SubNameSpaceEntry">
+            <property name="width_request">166</property>
+            <property name="height_request">35</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="text" translatable="yes">SubNameSpace1</property>
+            <signal name="changed" handler="on_SubNameSpaceEntry_changed" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">642</property>
+            <property name="y">171</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="ComboViewEntry">
+            <property name="width_request">166</property>
+            <property name="height_request">35</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="text" translatable="yes">ComboView1</property>
+          </object>
+          <packing>
+            <property name="x">641</property>
+            <property name="y">94</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="closeBtn">
+            <property name="label" translatable="yes">Close</property>
+            <property name="width_request">63</property>
+            <property name="height_request">39</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <signal name="clicked" handler="on_closeBtn_clicked" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">690</property>
+            <property name="y">6</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="outPutBtn">
+            <property name="label" translatable="yes">OutPut</property>
+            <property name="width_request">96</property>
+            <property name="height_request">38</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <signal name="clicked" handler="on_outPutBtn_clicked" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">656</property>
+            <property name="y">56</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkTreeView" id="ChildLevelPartTreeView">
+            <property name="width_request">147</property>
+            <property name="height_request">202</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <child internal-child="selection">
+              <object class="GtkTreeSelection" id="ChildLevelPartTreeViewSection">
+                <signal name="changed" handler="on_ChildLevelPartTreeViewSection_changed" swapped="no"/>
+              </object>
+            </child>
+          </object>
+          <packing>
+            <property name="x">162</property>
+            <property name="y">9</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkTreeView" id="SignalTreeView">
+            <property name="width_request">147</property>
+            <property name="height_request">202</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <child internal-child="selection">
+              <object class="GtkTreeSelection" id="SignalTreeViewSection">
+                <signal name="changed" handler="on_SignalTreeViewSection_changed" swapped="no"/>
+              </object>
+            </child>
+          </object>
+          <packing>
+            <property name="x">316</property>
+            <property name="y">9</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>

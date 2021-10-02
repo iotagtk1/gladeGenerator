@@ -11,17 +11,20 @@ namespace GladeGeneratorGUI
 
         public static clsCodeHint Instance()
         {
-            if (_singleInstance == null) {
+            if (_singleInstance == null)
+            {
                 _singleInstance = new clsCodeHint();
             }
+
             return _singleInstance;
         }
 
         private XmlDocument CodeHintXmlDoc = null;
+
         private clsCodeHint()
         {
             try
-            {            
+            {
                 string UICodeHintPath = clsFile._getExePath_replace("codeHint/UICodeHint.xml");
                 CodeHintXmlDoc = new XmlDocument();
                 CodeHintXmlDoc.Load(UICodeHintPath);
@@ -39,21 +42,21 @@ namespace GladeGeneratorGUI
         /// <param name="uiName"></param>
         /// <param name="eventName"></param>
         /// <returns></returns>
-        public string _searchUIHintCode(string uiName , string eventName)
+        public string _searchUIHintCode(string uiName, string eventName)
         {
-
             if (!clsArgsConfig.Instance().isCodeHint)
             {
                 return "";
             }
-            
-            string selecterStr = "//uiCodeHint/codeHint[@uiName = '" + uiName + "' and @eventName= '" + eventName + "']";
+
+            string selecterStr =
+                "//uiCodeHint/codeHint[@uiName = '" + uiName + "' and @eventName= '" + eventName + "']";
 
             if (uiName == "GtkListStore")
             {
                 //Console.WriteLine("GtkListStore");
             }
-            
+
             XmlNode xmlNode1 = CodeHintXmlDoc.SelectSingleNode(selecterStr);
             if (xmlNode1 != null)
             {
@@ -65,9 +68,9 @@ namespace GladeGeneratorGUI
                         string filePath2 = clsArgsConfig.Instance().codeHitFolder + "/" + filePath;
                         string uiCodeHintPath = clsFile._getExePath_replace(filePath2);
                         string condeHint = clsFile._load_static(uiCodeHintPath);
-                        
+
                         string lineNew = "";
-                        foreach (string str in  condeHint._split(Environment.NewLine))
+                        foreach (string str in condeHint._split(Environment.NewLine))
                         {
                             lineNew += "\t\t\t" + str + Environment.NewLine;
                         }
@@ -76,8 +79,8 @@ namespace GladeGeneratorGUI
                     }
                 }
             }
+
             return "";
         }
-
     }
 }

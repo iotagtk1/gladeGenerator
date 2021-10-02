@@ -42,10 +42,10 @@ namespace GladeGeneratorGUI
         public string TargetObject;
         public Boolean IsAfter = false;
         public Boolean IsSwapped = false;
-        //public string OutPutMethodStr;
         public string ArgsStr;
         public string OutPutMethod_ArgsStr;
         public string CodeHint;
+        public Boolean isReOutPut = true; 
     }
 
     public class SignalTemplateData
@@ -54,5 +54,5 @@ namespace GladeGeneratorGUI
         public string Method;
         public List<string> ArgsArray = new List<string>();
     }
-
+    
 }

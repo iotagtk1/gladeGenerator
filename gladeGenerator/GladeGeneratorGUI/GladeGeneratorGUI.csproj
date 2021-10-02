@@ -14,6 +14,9 @@
           <Link>signalGtk.xml</Link>
           <CopyToOutputDirectory>Always</CopyToOutputDirectory>
         </None>
+        <None Update="gladeModel.db3">
+          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
     </ItemGroup>
 
     <ItemGroup>
@@ -93,32 +96,32 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Content Include="..\gladeGenerator\codeHint\GtkButton_Clicked.txt">
-        <Link>codeHint\GtkButton_Clicked.txt</Link>
-      </Content>
-      <Content Include="..\gladeGenerator\codeHint\GtkCheckButton_Toggled.txt">
-        <Link>codeHint\GtkCheckButton_Toggled.txt</Link>
-      </Content>
-      <Content Include="..\gladeGenerator\codeHint\GtkComboBox_Changed.txt">
-        <Link>codeHint\GtkComboBox_Changed.txt</Link>
-      </Content>
-      <Content Include="..\gladeGenerator\codeHint\GtkEntry_Changed.txt">
-        <Link>codeHint\GtkEntry_Changed.txt</Link>
-      </Content>
-      <Content Include="..\gladeGenerator\codeHint\GtkListStore_RowChanged.txt">
-        <Link>codeHint\GtkListStore_RowChanged.txt</Link>
-      </Content>
-      <Content Include="..\gladeGenerator\codeHint\GtkRadioButton_GroupChanged.txt">
-        <Link>codeHint\GtkRadioButton_GroupChanged.txt</Link>
-      </Content>
-      <Content Include="..\gladeGenerator\codeHint\GtkTreeSelection_Changed.txt">
-        <Link>codeHint\GtkTreeSelection_Changed.txt</Link>
-      </Content>
-      <Content Include="..\gladeGenerator\codeHint\UICodeHint.xml">
-        <Link>codeHint\UICodeHint.xml</Link>
-      </Content>
       <Content Include="..\gladeGenerator\templateData\template.txt">
         <Link>templateData\template.txt</Link>
+      </Content>
+      <Content Include="codeHint\GtkButton_Clicked.txt">
+        <Link>codeHint\GtkButton_Clicked.txt</Link>
+      </Content>
+      <Content Include="codeHint\GtkCheckButton_Toggled.txt">
+        <Link>codeHint\GtkCheckButton_Toggled.txt</Link>
+      </Content>
+      <Content Include="codeHint\GtkComboBox_Changed.txt">
+        <Link>codeHint\GtkComboBox_Changed.txt</Link>
+      </Content>
+      <Content Include="codeHint\GtkEntry_Changed.txt">
+        <Link>codeHint\GtkEntry_Changed.txt</Link>
+      </Content>
+      <Content Include="codeHint\GtkListStore_RowChanged.txt">
+        <Link>codeHint\GtkListStore_RowChanged.txt</Link>
+      </Content>
+      <Content Include="codeHint\GtkRadioButton_GroupChanged.txt">
+        <Link>codeHint\GtkRadioButton_GroupChanged.txt</Link>
+      </Content>
+      <Content Include="codeHint\GtkTreeSelection_Changed.txt">
+        <Link>codeHint\GtkTreeSelection_Changed.txt</Link>
+      </Content>
+      <Content Include="codeHint\UICodeHint.xml">
+        <Link>codeHint\UICodeHint.xml</Link>
       </Content>
     </ItemGroup>
 

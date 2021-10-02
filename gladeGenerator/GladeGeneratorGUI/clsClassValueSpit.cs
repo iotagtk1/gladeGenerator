@@ -8,11 +8,12 @@ namespace GladeGeneratorGUI
 {
     public class clsClassValueSpit
     {
-        public clsClassValueSpit(){}
-
-        static public string _save_addMethod(string addValueStr,string splitStr)
+        public clsClassValueSpit()
         {
+        }
 
+        static public string _save_addMethod(string addValueStr, string splitStr)
+        {
             if (splitStr == "")
             {
                 return "";
@@ -20,27 +21,27 @@ namespace GladeGeneratorGUI
 
             SplitData splitData1 = new SplitData();
             splitData1.FrontKey = @"(^.*?namespace.*?\{)(.*?)";
-            splitData1.FrontNkosuKey = @"$2";   
-            splitData1.BackKey = @"(^.*?\})(.*?)";   
-            splitData1.BackNokosuKey= @"$2";  
-            
+            splitData1.FrontNkosuKey = @"$2";
+            splitData1.BackKey = @"(^.*?\})(.*?)";
+            splitData1.BackNokosuKey = @"$2";
+
             clsClassValueSpit._splitStr(splitStr, ref splitData1);
-            
+
             SplitData splitData2 = new SplitData();
             splitData2.FrontKey = @"(^.*?class.*?\{)(.*?)";
             splitData2.FrontNkosuKey = @"$2";
             splitData2.BackKey = @"(^.*?\})(.*?)";
-            splitData2.BackNokosuKey= @"$2";
+            splitData2.BackNokosuKey = @"$2";
             splitData2.IsTotalCenter = true;
 
             clsClassValueSpit._splitStr(splitData1.CenterStr, ref splitData2);
-            
+
             if (splitData2.CenterStr._indexOf(addValueStr) == -1)
-            { 
+            {
                 splitData2.CenterStr += Environment.NewLine + "\t\t" + addValueStr;
             }
 
-            string sumTotalStr = clsClassValueSpit._margeStr(new List<SplitData>() {splitData1,splitData2});
+            string sumTotalStr = clsClassValueSpit._margeStr(new List<SplitData>() { splitData1, splitData2 });
 
             return sumTotalStr;
         }
@@ -48,26 +49,27 @@ namespace GladeGeneratorGUI
         static string _margeStr(List<SplitData> splitDataArray)
         {
             string frontStr = "";
-            string centerStr = "";           
+            string centerStr = "";
             string backStr = "";
 
             int i = 0;
-            foreach (SplitData splitData1  in splitDataArray)
+            foreach (SplitData splitData1 in splitDataArray)
             {
                 if (splitData1.IsTotalCenter)
                 {
-                    centerStr += splitData1.CenterStr ;
+                    centerStr += splitData1.CenterStr;
                 }
+
                 frontStr = frontStr + splitData1.FrontStr;
                 backStr = splitData1.BackStr + backStr;
             }
-            
+
             var sumStr = frontStr + centerStr + backStr;
-            
+
             return sumStr;
         }
-        
-        static SplitData _splitStr(string str ,ref SplitData splitData1)
+
+        static SplitData _splitStr(string str, ref SplitData splitData1)
         {
             Regex reg = new Regex(splitData1.FrontKey, RegexOptions.Singleline);
             Match match = reg.Match(str);
@@ -91,8 +93,8 @@ namespace GladeGeneratorGUI
                     return splitData1;
                 }
             }
+
             return null;
         }
-
     }
 }

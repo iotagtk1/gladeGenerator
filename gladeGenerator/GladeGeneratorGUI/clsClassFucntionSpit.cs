@@ -9,20 +9,23 @@ namespace GladeGeneratorGUI
     public class SplitData
     {
         public string FrontKey = "";
-        public string FrontNkosuKey = "";    
+        public string FrontNkosuKey = "";
         public string FrontStr = "";
-        public string BackKey = ""; 
-        public string BackNokosuKey = "";      
+        public string BackKey = "";
+        public string BackNokosuKey = "";
         public string BackStr = "";
         public string CenterStr = "";
         public Boolean IsTotalCenter = false;
     }
+
     public class clsClassFucntionSpit
     {
-        public clsClassFucntionSpit(){}
-        static public string _save_addMethod(string methonOnly, string addMethodStr,string splitStr)
+        public clsClassFucntionSpit()
         {
+        }
 
+        static public string _save_addMethod(string methonOnly, string addMethodStr, string splitStr)
+        {
             if (splitStr == "")
             {
                 return "";
@@ -30,58 +33,59 @@ namespace GladeGeneratorGUI
 
             SplitData splitData1 = new SplitData();
             splitData1.FrontKey = @"(^.*?namespace.*?\{)(.*?)";
-            splitData1.FrontNkosuKey = @"$2";   
-            splitData1.BackKey = @"(^.*?\})(.*?)";   
-            splitData1.BackNokosuKey= @"$2";  
-            
+            splitData1.FrontNkosuKey = @"$2";
+            splitData1.BackKey = @"(^.*?\})(.*?)";
+            splitData1.BackNokosuKey = @"$2";
+
             clsClassFucntionSpit._splitStr(splitStr, ref splitData1);
-            
+
             SplitData splitData2 = new SplitData();
             splitData2.FrontKey = @"(^.*?class.*?\{)(.*?)";
-            splitData2.FrontNkosuKey = @"$2";   
+            splitData2.FrontNkosuKey = @"$2";
             splitData2.BackKey = @"(^.*?\})(.*?)";
-            splitData2.BackNokosuKey= @"$2";
+            splitData2.BackNokosuKey = @"$2";
             splitData2.IsTotalCenter = true;
 
             clsClassFucntionSpit._splitStr(splitData1.CenterStr, ref splitData2);
 
             if (splitData2.CenterStr._indexOf(methonOnly) == -1)
-            { 
-                splitData2.CenterStr += Environment.NewLine + "\t\t" + addMethodStr + Environment.NewLine + "\t\t\t" + Environment.NewLine + "\t\t}" ;
+            {
+                splitData2.CenterStr += Environment.NewLine + "\t\t" + addMethodStr + Environment.NewLine + "\t\t\t" +
+                                        Environment.NewLine + "\t\t}";
             }
 
-            string sumTotalStr = clsClassFucntionSpit._margeStr(new List<SplitData>() {splitData1,splitData2});
+            string sumTotalStr = clsClassFucntionSpit._margeStr(new List<SplitData>() { splitData1, splitData2 });
 
             return sumTotalStr;
         }
-        
+
         static string _margeStr(List<SplitData> splitDataArray)
         {
             string frontStr = "";
-            string centerStr = "";           
+            string centerStr = "";
             string backStr = "";
 
             int i = 0;
-            foreach (SplitData splitData1  in splitDataArray)
+            foreach (SplitData splitData1 in splitDataArray)
             {
                 if (splitData1.IsTotalCenter)
                 {
                     centerStr += splitData1.CenterStr;
                 }
-                
+
                 frontStr = frontStr + splitData1.FrontStr;
-                
+
                 backStr = splitData1.BackStr + backStr;
-               
+
                 i++;
             }
-            
+
             var sumStr = frontStr + centerStr + backStr;
-            
+
             return sumStr;
         }
-        
-        static SplitData _splitStr(string str ,ref SplitData splitData1 )
+
+        static SplitData _splitStr(string str, ref SplitData splitData1)
         {
             Regex reg = new Regex(splitData1.FrontKey, RegexOptions.Singleline);
             Match match = reg.Match(str);
@@ -106,8 +110,8 @@ namespace GladeGeneratorGUI
                     return splitData1;
                 }
             }
+
             return null;
         }
-
     }
 }

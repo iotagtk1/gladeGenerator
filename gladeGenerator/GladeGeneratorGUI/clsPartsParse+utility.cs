@@ -20,7 +20,7 @@ namespace GladeGeneratorGUI
 
             return isNoclass;
         }
-        
+
         /// <summary>
         /// コメントアウトするクラス
         /// </summary>
@@ -47,9 +47,6 @@ namespace GladeGeneratorGUI
         /// <returns></returns>
         public string _convertEventName(string eventName)
         {
-            
-            
-            
             if (eventName._indexOf("-") != -1)
             {
                 ArrayList array = eventName._split("-");
@@ -57,8 +54,9 @@ namespace GladeGeneratorGUI
                 {
                     array[i] = array[i].ToString()._oomojiFirst();
                 }
+
                 eventName = array._join("");
-                
+
                 return eventName;
             }
             else
@@ -68,7 +66,7 @@ namespace GladeGeneratorGUI
 
             return eventName;
         }
-        
+
         /// <summary>
         /// }}の二重を修正する
         /// </summary>
@@ -76,26 +74,27 @@ namespace GladeGeneratorGUI
         /// <returns></returns>
         public string _kakoFix(string fileContent)
         {
-
             ArrayList array = fileContent._split(Environment.NewLine);
             if (array.Count == 0)
             {
                 return fileContent;
             }
+
             List<string[]> array2 = array._splitArray(array.Count - 5);
-            if (array2 == null || array2.Count < 2 )
+            if (array2 == null || array2.Count < 2)
             {
                 return fileContent;
             }
 
             string firstStr = string.Join(Environment.NewLine, array2[0]);
-            string secondStr =string.Join(Environment.NewLine, array2[1]);
+            string secondStr = string.Join(Environment.NewLine, array2[1]);
 
             if (secondStr._indexOf("}}") != -1)
             {
                 string replaceStr = "}" + Environment.NewLine + "\t}";
                 secondStr = secondStr._replaceReplaceStr("}}", replaceStr);
             }
+
             if (secondStr._indexOf(";}") != -1)
             {
                 string replaceStr = ";" + Environment.NewLine + "\t}";
@@ -104,6 +103,5 @@ namespace GladeGeneratorGUI
 
             return firstStr + Environment.NewLine + secondStr;
         }
-
     }
 }

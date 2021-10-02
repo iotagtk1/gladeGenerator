@@ -14,9 +14,11 @@ namespace GladeGeneratorGUI
 
         public static clsSignalsData Instance()
         {
-            if (_singleInstance == null) {
+            if (_singleInstance == null)
+            {
                 _singleInstance = new clsSignalsData();
             }
+
             return _singleInstance;
         }
 
@@ -25,7 +27,7 @@ namespace GladeGeneratorGUI
         private clsSignalsData()
         {
             try
-            {            
+            {
                 string filePath = clsFile._getExePath_replace(signalFileName);
                 string xmlStr = clsFile._load_static(filePath);
                 xmlDoc = new XmlDocument();
@@ -44,12 +46,12 @@ namespace GladeGeneratorGUI
         /// <param name="callerClassName"></param>
         /// <param name="eventName"></param>
         /// <returns></returns>
-        
-        public SignalTemplateData _searchSignalTemplateData(string callerClassName , string eventName)
+        public SignalTemplateData _searchSignalTemplateData(string callerClassName, string eventName)
         {
-            string selectStr = "//root/types[@callerClass='" + callerClassName + "']/signal[@eventName='" + eventName + "' and @callerClass='" + callerClassName +
+            string selectStr = "//root/types[@callerClass='" + callerClassName + "']/signal[@eventName='" + eventName +
+                               "' and @callerClass='" + callerClassName +
                                "']";
-            
+
             XmlNodeList signalTemplateNodes = xmlDoc.SelectNodes(selectStr);
 
             if (signalTemplateNodes == null || signalTemplateNodes.Count == 0)
@@ -61,18 +63,17 @@ namespace GladeGeneratorGUI
 
             foreach (XmlNode node in signalTemplateNodes[0].ChildNodes)
             {
-
                 if (node.Name == "method")
                 {
                     signalTemplateData1.Method = node.InnerText;
-                }else if (node.Name == "args")
+                }
+                else if (node.Name == "args")
                 {
                     foreach (XmlNode argsNode in node.ChildNodes)
                     {
                         signalTemplateData1.ArgsArray.Add(argsNode.InnerText);
                     }
                 }
-
             }
 
             return signalTemplateData1;
@@ -84,31 +85,31 @@ namespace GladeGeneratorGUI
         /// <param name="baseClassName"></param>
         /// <param name="eventName"></param>
         /// <returns></returns>
-        public SignalTemplateData _searchBaseClassSignalTemplateData(string callerClass , string eventName , 
-            ref string errorMes, ref Boolean isReSearch , ref string researchWord)
+        public SignalTemplateData _searchBaseClassSignalTemplateData(string callerClass, string eventName,
+            ref string errorMes, ref Boolean isReSearch, ref string researchWord)
         {
- 
             string selectStr = "//root/types[@callerClass='" + callerClass + "']";
-            XmlNodeList typesTemplateNodes = xmlDoc.SelectNodes(selectStr); 
-            
+            XmlNodeList typesTemplateNodes = xmlDoc.SelectNodes(selectStr);
+
             if (typesTemplateNodes == null || typesTemplateNodes.Count == 0)
             {
                 isReSearch = false;
                 researchWord = "";
-                errorMes = string.Format(signalFileName +"に{0}がない",callerClass);
+                errorMes = string.Format(signalFileName + "に{0}がない", callerClass);
                 return null;
             }
-            
+
             if (typesTemplateNodes.Count > 0)
             {
                 string baseClass = typesTemplateNodes[0].Attributes["baseClass"].Value;
-                string selectStr2 = "//root/types[@callerClass='" + baseClass + "']/signal[@eventName='" + eventName + "' and @callerClass='" + baseClass +
+                string selectStr2 = "//root/types[@callerClass='" + baseClass + "']/signal[@eventName='" + eventName +
+                                    "' and @callerClass='" + baseClass +
                                     "']";
                 typesTemplateNodes = xmlDoc.SelectNodes(selectStr2);
-                
+
                 if (typesTemplateNodes == null || typesTemplateNodes.Count == 0)
                 {
-                    errorMes = string.Format(signalFileName+"に{0}がない",callerClass);
+                    errorMes = string.Format(signalFileName + "に{0}がない", callerClass);
                     isReSearch = true;
                     researchWord = baseClass;
                     return null;
@@ -118,7 +119,7 @@ namespace GladeGeneratorGUI
             isReSearch = false;
             researchWord = "";
             errorMes = "";
-            
+
             SignalTemplateData signalTemplateData1 = new SignalTemplateData();
 
             foreach (XmlNode signalNode in typesTemplateNodes[0].ChildNodes)
@@ -126,8 +127,8 @@ namespace GladeGeneratorGUI
                 if (signalNode.Name == "method")
                 {
                     signalTemplateData1.Method = signalNode.InnerText;
-                    
-                }else if (signalNode.Name == "args")
+                }
+                else if (signalNode.Name == "args")
                 {
                     foreach (XmlNode argsNode in signalNode.ChildNodes)
                     {
@@ -138,7 +139,5 @@ namespace GladeGeneratorGUI
 
             return signalTemplateData1;
         }
-        
-        
     }
 }
