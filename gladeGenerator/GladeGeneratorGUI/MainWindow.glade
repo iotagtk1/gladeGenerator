@@ -5,8 +5,8 @@
   <object class="GtkWindow" id="MainWindow">
     <property name="can_focus">False</property>
     <property name="title" translatable="yes">Example Window</property>
-    <property name="default_width">822</property>
-    <property name="default_height">258</property>
+    <property name="default_width">1000</property>
+    <property name="default_height">350</property>
     <child>
       <placeholder/>
     </child>
@@ -24,8 +24,8 @@
             <signal name="changed" handler="on_TreeViewEntry_changed" swapped="no"/>
           </object>
           <packing>
-            <property name="x">476</property>
-            <property name="y">173</property>
+            <property name="x">750</property>
+            <property name="y">208</property>
           </packing>
         </child>
         <child>
@@ -38,8 +38,8 @@
             <signal name="changed" handler="on_ListStoreEntry_changed" swapped="no"/>
           </object>
           <packing>
-            <property name="x">476</property>
-            <property name="y">213</property>
+            <property name="x">750</property>
+            <property name="y">96</property>
           </packing>
         </child>
         <child>
@@ -52,8 +52,8 @@
             <signal name="changed" handler="on_ModelViewEntry_changed" swapped="no"/>
           </object>
           <packing>
-            <property name="x">647</property>
-            <property name="y">173</property>
+            <property name="x">750</property>
+            <property name="y">170</property>
           </packing>
         </child>
         <child>
@@ -67,22 +67,8 @@
             <signal name="clicked" handler="on_defualtSetBtn_clicked" swapped="no"/>
           </object>
           <packing>
-            <property name="x">476</property>
-            <property name="y">92</property>
-          </packing>
-        </child>
-        <child>
-          <object class="GtkEntry" id="SubNameSpaceEntry">
-            <property name="width_request">166</property>
-            <property name="height_request">35</property>
-            <property name="visible">True</property>
-            <property name="can_focus">True</property>
-            <property name="text" translatable="yes">SubNameSpace1</property>
-            <signal name="changed" handler="on_SubNameSpaceEntry_changed" swapped="no"/>
-          </object>
-          <packing>
-            <property name="x">647</property>
-            <property name="y">213</property>
+            <property name="x">878</property>
+            <property name="y">73</property>
           </packing>
         </child>
         <child>
@@ -94,8 +80,8 @@
             <property name="text" translatable="yes">ComboView1</property>
           </object>
           <packing>
-            <property name="x">647</property>
-            <property name="y">134</property>
+            <property name="x">751</property>
+            <property name="y">133</property>
           </packing>
         </child>
         <child>
@@ -109,8 +95,8 @@
             <signal name="clicked" handler="on_closeBtn_clicked" swapped="no"/>
           </object>
           <packing>
-            <property name="x">749</property>
-            <property name="y">45</property>
+            <property name="x">850</property>
+            <property name="y">43</property>
           </packing>
         </child>
         <child>
@@ -124,8 +110,8 @@
             <signal name="clicked" handler="on_outPutBtn_clicked" swapped="no"/>
           </object>
           <packing>
-            <property name="x">476</property>
-            <property name="y">46</property>
+            <property name="x">751</property>
+            <property name="y">48</property>
           </packing>
         </child>
         <child>
@@ -156,8 +142,8 @@
         </child>
         <child>
           <object class="GtkScrolledWindow">
-            <property name="width_request">148</property>
-            <property name="height_request">203</property>
+            <property name="width_request">180</property>
+            <property name="height_request">300</property>
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="shadow_type">in</property>
@@ -182,7 +168,7 @@
         </child>
         <child>
           <object class="GtkScrolledWindow">
-            <property name="width_request">148</property>
+            <property name="width_request">350</property>
             <property name="height_request">203</property>
             <property name="visible">True</property>
             <property name="can_focus">True</property>
@@ -202,7 +188,7 @@
             </child>
           </object>
           <packing>
-            <property name="x">316</property>
+            <property name="x">349</property>
             <property name="y">45</property>
           </packing>
         </child>

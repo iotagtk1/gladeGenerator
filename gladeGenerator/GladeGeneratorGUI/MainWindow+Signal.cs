@@ -12,7 +12,7 @@ namespace GladeGeneratorGUI
         private void _mkTreeView_Signal()
         {
             Gtk.TreeViewColumnEx HandlerNameColumn = new Gtk.TreeViewColumnEx();
-            HandlerNameColumn.Title = "name";
+            HandlerNameColumn.Title = "Signal";
             HandlerNameColumn._mkCellRendererText(SignalTreeView, "", 100);
             HandlerNameColumn.bindingPropertyName = "HandlerName";
 

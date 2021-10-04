@@ -12,7 +12,7 @@ namespace GladeGeneratorGUI
         private void _mkTreeView_ChildLevelPart()
         {
             Gtk.TreeViewColumnEx ClassNameColumn = new Gtk.TreeViewColumnEx();
-            ClassNameColumn.Title = "ClassName";
+            ClassNameColumn.Title = "Child";
             ClassNameColumn._mkCellRendererText(ChildLevelPartTreeView, "", 100);
             ClassNameColumn.bindingPropertyName = "PartId";
 
