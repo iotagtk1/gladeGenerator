@@ -7,11 +7,11 @@ namespace GladeGeneratorGUI
     partial class MainWindow
     {
 
+        private GladeData SelectedGladeDataRow = null; 
         private TopLevelPart SelectedTopLevelPartRow = null;
         private ChildLevelPart SelectedChildLevelPartRow = null;
-        private Signal SelectedSignalRow = null;  
-        
-        private string SelectedDbTableKey;
+        private Signal SelectedSignalRow = null;
+        private string SelectedTopChildKey = "";
 
         private void on_TopLevelPartTreeViewSection_changed(object sender, EventArgs e)
         {
@@ -21,15 +21,15 @@ namespace GladeGeneratorGUI
                 TopLevelPart TopLevelPart1 = (TopLevelPart)TopLevelPartListStore.GetValue(iter, 0);
                 SelectedTopLevelPartRow = TopLevelPart1;
 
-                SelectedDbTableKey = _getTopLevelPartKey();
+                SelectedTopChildKey = _getTopLevelPartKey();
 
-                _initTextFiled(SelectedDbTableKey);
+                _initTextFiled(SelectedTopChildKey);
 
                 _mkTreeView_ChildLevelPart(TopLevelPart1.ChildLevelPartsArray);
 
-                _mkTreeView_Signal(TopLevelPart1.SignalArray,SelectedDbTableKey);
+                _mkTreeView_Signal(TopLevelPart1.SignalArray,SelectedTopChildKey);
 
-                _saveAll(SelectedDbTableKey);
+                _saveAll(SelectedTopChildKey);
 
             }
         }
@@ -43,13 +43,13 @@ namespace GladeGeneratorGUI
                 ChildLevelPart ChildLevelPart1 = (ChildLevelPart)ChildLevelPartListStore.GetValue(iter, 0);
                 SelectedChildLevelPartRow = ChildLevelPart1;
                 
-                SelectedDbTableKey = _getTopLevelPartChildPartKey();
+                SelectedTopChildKey = _getTopLevelPartChildPartKey();
                 
-                _initTextFiled(SelectedDbTableKey);
+                _initTextFiled(SelectedTopChildKey);
                 
-                _mkTreeView_Signal(ChildLevelPart1.SignalArray,SelectedDbTableKey);
+                _mkTreeView_Signal(ChildLevelPart1.SignalArray,SelectedTopChildKey);
 
-                _saveAll(SelectedDbTableKey);
+                _saveAll(SelectedTopChildKey);
 
             }
         }
@@ -63,7 +63,7 @@ namespace GladeGeneratorGUI
                 Signal Signal1 = (Signal)SignalListStore.GetValue(iter, 0);
                 SelectedSignalRow = Signal1;
                 Signal1.isReOutPut = Signal1.isReOutPut == true ? false : true;
-                _saveAll(SelectedDbTableKey);
+                _saveAll(SelectedTopChildKey);
             }
         }
 
@@ -71,9 +71,9 @@ namespace GladeGeneratorGUI
         private void on_TreeViewEntry_changed(object sender , EventArgs e){
             
             string text = ((Gtk.Entry)sender).Text;
-            if (SelectedDbTableKey != "")
+            if (SelectedTopChildKey != "")
             {
-                clsIniFile.singlton[SelectedDbTableKey,"TreeViewEntry"] = text;
+                clsIniFile.singlton[SelectedTopChildKey,"TreeViewEntry"] = text;
             }
 
         }
@@ -81,9 +81,9 @@ namespace GladeGeneratorGUI
         private void on_ListStoreEntry_changed(object sender , EventArgs e){
 
             string text = ((Gtk.Entry)sender).Text;
-            if (SelectedDbTableKey != "")
+            if (SelectedTopChildKey != "")
             {
-                clsIniFile.singlton[SelectedDbTableKey,"TreeViewEntry"] = text;
+                clsIniFile.singlton[SelectedTopChildKey,"TreeViewEntry"] = text;
             }
 
         }
@@ -91,9 +91,9 @@ namespace GladeGeneratorGUI
         private void on_ModelViewEntry_changed(object sender , EventArgs e){
             
             string text = ((Gtk.Entry)sender).Text;
-            if (SelectedDbTableKey != "")
+            if (SelectedTopChildKey != "")
             {
-                clsIniFile.singlton[SelectedDbTableKey,"TreeViewEntry"] = text;
+                clsIniFile.singlton[SelectedTopChildKey,"TreeViewEntry"] = text;
             }
             
         }
@@ -101,9 +101,9 @@ namespace GladeGeneratorGUI
         private void on_SubNameSpaceEntry_changed(object sender , EventArgs e){
             
             string text = ((Gtk.Entry)sender).Text;
-            if (SelectedDbTableKey != "")
+            if (SelectedTopChildKey != "")
             {
-                clsIniFile.singlton[SelectedDbTableKey,"TreeViewEntry"] = text;
+                clsIniFile.singlton[SelectedTopChildKey,"TreeViewEntry"] = text;
             }
 
         }

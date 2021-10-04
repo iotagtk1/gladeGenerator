@@ -15,7 +15,10 @@ namespace GladeGeneratorGUI
 
         private void _getTopPart_idMethod(
             XmlNode topObjectNodes,
-            ref List<TopLevelPart> topLevelPartArray)
+            ref List<TopLevelPart> topLevelPartArray,
+            ref int countNum
+            
+            )
         {
             if (topObjectNodes.Attributes["class"] != null && topObjectNodes.Attributes["id"] != null)
             {
@@ -28,7 +31,7 @@ namespace GladeGeneratorGUI
 
                 Boolean isNoClass = _isCommentOutClassName(topObjectNodes);
                 string addComment = "";
-                if (isNoClass)
+                if (countNum == 0 && isNoClass)
                 {
                     addComment = "//";
                 }
@@ -54,6 +57,7 @@ namespace GladeGeneratorGUI
                         ref topLevelPart1.ChildLevelPartsArray);
                 }
 
+                countNum++;
                 topLevelPartArray.Add(topLevelPart1);
             }
             else

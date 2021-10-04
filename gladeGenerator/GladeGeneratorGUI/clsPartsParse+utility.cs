@@ -21,6 +21,7 @@ namespace GladeGeneratorGUI
             return isNoclass;
         }
 
+      
         /// <summary>
         /// コメントアウトするクラス
         /// </summary>

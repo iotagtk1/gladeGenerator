@@ -15,23 +15,6 @@
         <property name="visible">True</property>
         <property name="can_focus">False</property>
         <child>
-          <object class="GtkTreeView" id="TopLevelPartTreeView">
-            <property name="width_request">147</property>
-            <property name="height_request">202</property>
-            <property name="visible">True</property>
-            <property name="can_focus">True</property>
-            <child internal-child="selection">
-              <object class="GtkTreeSelection" id="TopLevelPartTreeViewSection">
-                <signal name="changed" handler="on_TopLevelPartTreeViewSection_changed" swapped="no"/>
-              </object>
-            </child>
-          </object>
-          <packing>
-            <property name="x">8</property>
-            <property name="y">8</property>
-          </packing>
-        </child>
-        <child>
           <object class="GtkEntry" id="TreeViewEntry">
             <property name="width_request">166</property>
             <property name="height_request">35</property>
@@ -127,7 +110,7 @@
           </object>
           <packing>
             <property name="x">743</property>
-            <property name="y">6</property>
+            <property name="y">36</property>
           </packing>
         </child>
         <child>
@@ -146,38 +129,114 @@
           </packing>
         </child>
         <child>
-          <object class="GtkTreeView" id="ChildLevelPartTreeView">
-            <property name="width_request">147</property>
-            <property name="height_request">202</property>
+          <object class="GtkScrolledWindow">
+            <property name="width_request">149</property>
+            <property name="height_request">203</property>
             <property name="visible">True</property>
             <property name="can_focus">True</property>
-            <child internal-child="selection">
-              <object class="GtkTreeSelection" id="ChildLevelPartTreeViewSection">
-                <signal name="changed" handler="on_ChildLevelPartTreeViewSection_changed" swapped="no"/>
+            <property name="shadow_type">in</property>
+            <child>
+              <object class="GtkTreeView" id="TopLevelPartTreeView">
+                <property name="width_request">147</property>
+                <property name="height_request">202</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <child internal-child="selection">
+                  <object class="GtkTreeSelection" id="TopLevelPartTreeViewSection">
+                    <signal name="changed" handler="on_TopLevelPartTreeViewSection_changed" swapped="no"/>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+          <packing>
+            <property name="x">7</property>
+            <property name="y">40</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkScrolledWindow">
+            <property name="width_request">148</property>
+            <property name="height_request">203</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="shadow_type">in</property>
+            <child>
+              <object class="GtkTreeView" id="ChildLevelPartTreeView">
+                <property name="width_request">147</property>
+                <property name="height_request">202</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <child internal-child="selection">
+                  <object class="GtkTreeSelection" id="ChildLevelPartTreeViewSection">
+                    <signal name="changed" handler="on_ChildLevelPartTreeViewSection_changed" swapped="no"/>
+                  </object>
+                </child>
               </object>
             </child>
           </object>
           <packing>
             <property name="x">162</property>
-            <property name="y">9</property>
+            <property name="y">40</property>
           </packing>
         </child>
         <child>
-          <object class="GtkTreeView" id="SignalTreeView">
+          <object class="GtkScrolledWindow">
             <property name="width_request">147</property>
             <property name="height_request">202</property>
             <property name="visible">True</property>
             <property name="can_focus">True</property>
-            <child internal-child="selection">
-              <object class="GtkTreeSelection" id="SignalTreeViewSection">
-                <signal name="changed" handler="on_SignalTreeViewSection_changed" swapped="no"/>
+            <property name="shadow_type">in</property>
+            <child>
+              <object class="GtkTreeView" id="SignalTreeView">
+                <property name="width_request">147</property>
+                <property name="height_request">202</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <child internal-child="selection">
+                  <object class="GtkTreeSelection" id="SignalTreeViewSection">
+                    <signal name="changed" handler="on_SignalTreeViewSection_changed" swapped="no"/>
+                  </object>
+                </child>
               </object>
             </child>
           </object>
           <packing>
             <property name="x">316</property>
-            <property name="y">9</property>
+            <property name="y">40</property>
           </packing>
+        </child>
+        <child>
+          <object class="GtkMenuBar">
+            <property name="width_request">2000</property>
+            <property name="height_request">31</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <child>
+              <object class="GtkMenuItem">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="label" translatable="yes">ツール</property>
+                <property name="use_underline">True</property>
+                <child type="submenu">
+                  <object class="GtkMenu">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <child>
+                      <object class="GtkImageMenuItem" id="menuSettingBtn">
+                        <property name="label">gtk-preferences</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="use_underline">True</property>
+                        <property name="use_stock">True</property>
+                        <signal name="activate" handler="on_menuSettingBtn_activate" swapped="no"/>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
         </child>
       </object>
     </child>

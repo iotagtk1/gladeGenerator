@@ -9,8 +9,13 @@ namespace GladeGeneratorGUI
     {
         Gtk.ListStore TopLevelPartListStore = new Gtk.ListStore(typeof(TopLevelPart));
 
-        public void _mkTreeView_TopLevelPart(List<TopLevelPart> TopLevelPartArray)
+        public void _mkTreeView_TopLevelPart(GladeData gladeData1)
         {
+
+            SelectedGladeDataRow = gladeData1;
+
+            List<TopLevelPart> TopLevelPartArray = gladeData1.TopLevelPartArray;
+            
             Gtk.TreeViewColumnEx ClassNameColumn = new Gtk.TreeViewColumnEx();
             ClassNameColumn.Title = "ClassName";
             ClassNameColumn._mkCellRendererText(TopLevelPartTreeView, "", 100);

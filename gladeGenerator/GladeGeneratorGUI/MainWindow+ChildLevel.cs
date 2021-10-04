@@ -9,8 +9,6 @@ namespace GladeGeneratorGUI
     {
         Gtk.ListStore ChildLevelPartListStore = new Gtk.ListStore(typeof(ChildLevelPart));
 
-
-
         private void _mkTreeView_ChildLevelPart(List<ChildLevelPart> ChildLevelPartArray)
         {
             Gtk.TreeViewColumnEx ClassNameColumn = new Gtk.TreeViewColumnEx();

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Xml;
 
 using GladeGeneratorGUI;
+using GLib;
 
 namespace GladeGeneratorGUI
 {
@@ -55,7 +56,7 @@ namespace GladeGeneratorGUI
             //
             if (gladeDataArray.Count > 0)
             {
-                MainWindow1._mkTreeView_TopLevelPart(gladeDataArray[0].TopLevelPartArray);
+                MainWindow1._mkTreeView_TopLevelPart(gladeDataArray[0]);
             }
 
         }
@@ -105,9 +106,10 @@ namespace GladeGeneratorGUI
                     return null;
                 }
 
+                int countNum = 0;
                 foreach (XmlNode topObjectNode in topLevelPartNodesList)
                 {
-                    _getTopPart_idMethod(topObjectNode, ref gladeDataPart1.TopLevelPartArray);
+                    _getTopPart_idMethod(topObjectNode, ref gladeDataPart1.TopLevelPartArray,ref countNum);
 
                     TopLevelPart topLevelPart1 =
                         gladeDataPart1.TopLevelPartArray[gladeDataPart1.TopLevelPartArray.Count - 1];

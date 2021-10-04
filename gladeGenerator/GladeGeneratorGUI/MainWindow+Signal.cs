@@ -75,10 +75,10 @@ namespace GladeGeneratorGUI
         /// <summary>
         /// Columnの状態を保存する
         /// </summary>
-        private void _saveAll(string dbKeyOrTableKey)
+        private void _saveAll(string TopOrChildKey)
         {
 
-            if ( SelectedDbTableKey == null || SelectedDbTableKey == "")
+            if ( TopOrChildKey == null || TopOrChildKey == "")
             {
                 Console.WriteLine("keyがない");
                 return;
@@ -92,13 +92,13 @@ namespace GladeGeneratorGUI
                 return false;
             });
 		    
-            if (dataSignalDic.ContainsKey(dbKeyOrTableKey))
+            if (dataSignalDic.ContainsKey(TopOrChildKey))
             {
-                dataSignalDic[dbKeyOrTableKey] = SignalModelArray;
+                dataSignalDic[TopOrChildKey] = SignalModelArray;
             }
             else
             {
-                dataSignalDic.Add(dbKeyOrTableKey,SignalModelArray);
+                dataSignalDic.Add(TopOrChildKey,SignalModelArray);
             }
 
             if (dataSignalDic != null)

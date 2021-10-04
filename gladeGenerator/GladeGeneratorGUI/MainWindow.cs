@@ -32,8 +32,7 @@ namespace GladeGeneratorGUI
                 Console.WriteLine(exception);
                 throw;
             }
-
-            
+ 
         }
 
         private MainWindow(Builder builder) : base(builder.GetRawOwnedObject("MainWindow"))
