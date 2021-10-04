@@ -9,17 +9,23 @@ namespace GladeGeneratorGUI
     {
         Gtk.ListStore TopLevelPartListStore = new Gtk.ListStore(typeof(TopLevelPart));
 
-        public void _mkTreeView_TopLevelPart(GladeData gladeData1)
+        public void _mkTreeView_TopLevelPart() {
+
+            Gtk.TreeViewColumnEx ClassNameColumn = new Gtk.TreeViewColumnEx();
+            ClassNameColumn.Title = "Id";
+            ClassNameColumn._mkCellRendererText(TopLevelPartTreeView, "", 100);
+            ClassNameColumn.bindingPropertyName = "PartId";
+
+        }
+        
+        public void _mkTreeViewBinding_TopLevelPart(GladeData gladeData1)
         {
 
-            SelectedGladeDataRow = gladeData1;
-
-            List<TopLevelPart> TopLevelPartArray = gladeData1.TopLevelPartArray;
+            TopLevelPartListStore = new Gtk.ListStore(typeof(TopLevelPart));
             
-            Gtk.TreeViewColumnEx ClassNameColumn = new Gtk.TreeViewColumnEx();
-            ClassNameColumn.Title = "ClassName";
-            ClassNameColumn._mkCellRendererText(TopLevelPartTreeView, "", 100);
-            ClassNameColumn.bindingPropertyName = "ClassName";
+            SelectedGladeDataRow = gladeData1;
+            
+            List<TopLevelPart> TopLevelPartArray = gladeData1.TopLevelPartArray;
 
             foreach (TopLevelPart TopLevelPart1 in TopLevelPartArray)
             {
@@ -30,5 +36,8 @@ namespace GladeGeneratorGUI
 
             TopLevelPartTreeView._mkBinding();
         }
+        
+        
+        
     }
 }

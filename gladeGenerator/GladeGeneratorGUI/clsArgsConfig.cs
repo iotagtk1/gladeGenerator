@@ -13,7 +13,6 @@ namespace GladeGeneratorGUI
 
         public string SaveDir = "";
         public string ProjectName = "";
-        public string ProjectPath = "";
         public string FileDirPath = "";
         public Boolean isCodeHint = false;
         public string codeHitFolder = "";
@@ -33,6 +32,11 @@ namespace GladeGeneratorGUI
             try
             {
                 string ConfigSettingPath = clsFile._getExePath_replace("ConfigSetting.xml");
+
+                if (!clsFile._isFile(ConfigSettingPath))
+                {
+                    clsFile._saveFilePath("",ConfigSettingPath);
+                }
 
                 XmlDocument configXmlDoc = new XmlDocument();
                 configXmlDoc.Load(ConfigSettingPath);
@@ -58,7 +62,7 @@ namespace GladeGeneratorGUI
 
         private List<string> commndKeyArray = new List<string>
         {
-            "-projectPath", "-projectName", "-projectDir", "-saveDir"
+            "-projectPath", "-projectName", "-projectDir"
         };
 
         /// <summary>
@@ -67,32 +71,30 @@ namespace GladeGeneratorGUI
         /// <returns></returns>
         public Boolean _validateCommandKey()
         {
-            if (ProjectPath != "")
+            if (ProjectName != "")
             {
-                ProjectName = _getProjectName(ProjectPath);
-            }
-
-            if (SaveDir == "")
-            {
-                Console.WriteLine("-projectPathが指定されていない");
-                return false;
+                ProjectName = _getProjectName(ProjectName);
             }
 
             if (ProjectName == "")
             {
-                Console.WriteLine("-ProjectNameが指定されていない");
+                Console.WriteLine("-ProjectNameが指定されていません");
                 return false;
             }
 
-            if (ProjectPath == "")
+            if (clsIniFile.singlton[saveWin.saveFileText1, saveWin.saveFilePath] != "")
             {
-                Console.WriteLine("-projectPathが指定されていない");
-                return false;
+                SaveDir = clsIniFile.singlton[saveWin.saveFileText1, saveWin.saveFilePath];
             }
 
+            if (SaveDir == "")
+            {
+                Console.WriteLine("SaveDirがありません。Toolから設定してください。");
+                return false;
+            }
             if (FileDirPath == "")
             {
-                Console.WriteLine("-FileDirが指定されていない");
+                Console.WriteLine("-FileDirが指定されていません");
                 return false;
             }
 
@@ -121,19 +123,6 @@ namespace GladeGeneratorGUI
                     continue;
                 }
 
-                if (commandKey._indexOf("-saveDir") != -1)
-                {
-                    if (args._safeIndexOf(i + 1) &&
-                        commndKeyArray.IndexOf(args[i + 1]) == -1 &&
-                        args[i + 1] != "")
-                    {
-                        SaveDir = args[i + 1];
-                    }
-
-                    i++;
-                    continue;
-                }
-
                 if (commandKey._indexOf("-projectName") != -1)
                 {
                     if (args._safeIndexOf(i + 1) &&
@@ -141,19 +130,6 @@ namespace GladeGeneratorGUI
                         args[i + 1] != "")
                     {
                         ProjectName = args[i + 1];
-                    }
-
-                    i++;
-                    continue;
-                }
-
-                if (commandKey._indexOf("-projectPath") != -1)
-                {
-                    if (args._safeIndexOf(i + 1) &&
-                        commndKeyArray.IndexOf(args[i + 1]) == -1 &&
-                        args[i + 1] != "")
-                    {
-                        ProjectPath = args[i + 1];
                     }
 
                     i++;

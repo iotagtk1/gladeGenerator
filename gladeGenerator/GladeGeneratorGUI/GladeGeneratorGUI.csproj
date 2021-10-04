@@ -17,6 +17,11 @@
         <None Update="gladeModel.db3">
           <CopyToOutputDirectory>Always</CopyToOutputDirectory>
         </None>
+        <None Update="ConfigSetting.xml">
+          <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+        <EmbeddedResource Remove="DbModel\**" />
+        <None Remove="DbModel\**" />
     </ItemGroup>
 
     <ItemGroup>
@@ -89,6 +94,7 @@
       <Compile Include="..\..\..\..\..\core_commonclasses\XML\clsXml.cs">
         <Link>XML\clsXml.cs</Link>
       </Compile>
+      <Compile Remove="DbModel\**" />
     </ItemGroup>
 
     <ItemGroup>
@@ -100,28 +106,36 @@
         <Link>templateData\template.txt</Link>
       </Content>
       <Content Include="codeHint\GtkButton_Clicked.txt">
-        <Link>codeHint\GtkButton_Clicked.txt</Link>
+        <Link>codeHint/GtkButton_Clicked.txt</Link>
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </Content>
       <Content Include="codeHint\GtkCheckButton_Toggled.txt">
-        <Link>codeHint\GtkCheckButton_Toggled.txt</Link>
+        <Link>codeHint/GtkCheckButton_Toggled.txt</Link>
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </Content>
       <Content Include="codeHint\GtkComboBox_Changed.txt">
-        <Link>codeHint\GtkComboBox_Changed.txt</Link>
+        <Link>codeHint/GtkComboBox_Changed.txt</Link>
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </Content>
       <Content Include="codeHint\GtkEntry_Changed.txt">
-        <Link>codeHint\GtkEntry_Changed.txt</Link>
+        <Link>codeHint/GtkEntry_Changed.txt</Link>
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </Content>
       <Content Include="codeHint\GtkListStore_RowChanged.txt">
-        <Link>codeHint\GtkListStore_RowChanged.txt</Link>
+        <Link>codeHint/GtkListStore_RowChanged.txt</Link>
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </Content>
       <Content Include="codeHint\GtkRadioButton_GroupChanged.txt">
-        <Link>codeHint\GtkRadioButton_GroupChanged.txt</Link>
+        <Link>codeHint/GtkRadioButton_GroupChanged.txt</Link>
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </Content>
       <Content Include="codeHint\GtkTreeSelection_Changed.txt">
-        <Link>codeHint\GtkTreeSelection_Changed.txt</Link>
+        <Link>codeHint/GtkTreeSelection_Changed.txt</Link>
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </Content>
       <Content Include="codeHint\UICodeHint.xml">
-        <Link>codeHint\UICodeHint.xml</Link>
+        <Link>codeHint/UICodeHint.xml</Link>
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </Content>
     </ItemGroup>
 

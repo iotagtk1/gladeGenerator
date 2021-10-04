@@ -16,6 +16,7 @@ namespace GladeGeneratorGUI
             if (SelectedGladeDataRow == null || 
                 SelectedTopLevelPartRow == null ||
                 SelectedChildLevelPartRow == null ||
+                SelectedGladeDataRow.OutPutGladeName == null || 
                 ((TopLevelPart)SelectedTopLevelPartRow).PartId == "" || 
                 ((ChildLevelPart)SelectedChildLevelPartRow).PartId == "")
             {
@@ -23,7 +24,7 @@ namespace GladeGeneratorGUI
                 return "";
             }
 
-            string GladeName = ((GladeData)SelectedGladeDataRow).GladeName._md5(); 
+            string GladeName = ((GladeData)SelectedGladeDataRow).OutPutGladeName._md5(); 
             string topLevelPartKey = ((TopLevelPart)SelectedTopLevelPartRow).PartId._md5();
             string childLevelPartKey = ((ChildLevelPart)SelectedChildLevelPartRow).PartId._md5();
 
@@ -38,13 +39,14 @@ namespace GladeGeneratorGUI
         {
             if (SelectedGladeDataRow == null || 
                 SelectedTopLevelPartRow == null ||
+                SelectedGladeDataRow.OutPutGladeName == null ||
                 ((TopLevelPart)SelectedTopLevelPartRow).PartId == "" )
             {
                 Console.WriteLine(" 例外 TopLevelPartKeyがない ");
                 return "";
             }
 
-            string GladeName = ((GladeData)SelectedGladeDataRow).GladeName._md5(); 
+            string GladeName = ((GladeData)SelectedGladeDataRow).OutPutGladeName._md5(); 
             string topLevelPartKey = ((TopLevelPart)SelectedTopLevelPartRow).PartId._md5();
 
             return GladeName + topLevelPartKey ;

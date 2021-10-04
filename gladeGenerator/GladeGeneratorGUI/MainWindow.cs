@@ -8,7 +8,7 @@ namespace GladeGeneratorGUI
     {
         private clsPartsParse clsPartsParse1 = null;
         private string saveDataFilePath = "./data.json";
-        
+
         public MainWindow() : this(new Builder("MainWindow.glade"))
         {
             
@@ -19,8 +19,10 @@ namespace GladeGeneratorGUI
 
             saveDataFilePath = clsFile._getExePath_replace(saveDataFilePath);
 
-            _initConfigFile();
-            
+            _mkTreeView_TopLevelPart();
+            _mkTreeView_ChildLevelPart();
+            _mkTreeView_Signal();
+
             try
             {
                 clsPartsParse1 = new clsPartsParse(this);

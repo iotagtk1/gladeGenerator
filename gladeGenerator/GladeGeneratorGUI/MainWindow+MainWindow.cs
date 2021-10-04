@@ -25,9 +25,9 @@ namespace GladeGeneratorGUI
 
                 _initTextFiled(SelectedTopChildKey);
 
-                _mkTreeView_ChildLevelPart(TopLevelPart1.ChildLevelPartsArray);
+                _mkTreeViewBinding_ChildLevelPart(TopLevelPart1.ChildLevelPartsArray);
 
-                _mkTreeView_Signal(TopLevelPart1.SignalArray,SelectedTopChildKey);
+                _mkTreeViewBinding_Signal(TopLevelPart1.SignalArray,SelectedTopChildKey);
 
                 _saveAll(SelectedTopChildKey);
 
@@ -47,7 +47,7 @@ namespace GladeGeneratorGUI
                 
                 _initTextFiled(SelectedTopChildKey);
                 
-                _mkTreeView_Signal(ChildLevelPart1.SignalArray,SelectedTopChildKey);
+                _mkTreeViewBinding_Signal(ChildLevelPart1.SignalArray,SelectedTopChildKey);
 
                 _saveAll(SelectedTopChildKey);
 
@@ -131,7 +131,8 @@ namespace GladeGeneratorGUI
 		private void on_menuSettingBtn_activate(object sender , EventArgs e)
         {
 
-          
+            saveWin saveWin1 = new saveWin();
+            saveWin1.Show();
 
 
         }

@@ -56,7 +56,7 @@ namespace GladeGeneratorGUI
             //
             if (gladeDataArray.Count > 0)
             {
-                MainWindow1._mkTreeView_TopLevelPart(gladeDataArray[0]);
+                MainWindow1._mkTreeViewBinding_TopLevelPart(gladeDataArray[0]);
             }
 
         }

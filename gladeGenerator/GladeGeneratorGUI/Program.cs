@@ -12,6 +12,8 @@ namespace GladeGeneratorGUI
             
             try
             {
+                MainWindow._initConfigFile();
+
                 clsArgsConfig.Instance();
 
                 clsArgsConfig.Instance()._setArgs(args);

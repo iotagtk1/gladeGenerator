@@ -10,7 +10,7 @@ namespace GladeGeneratorGUI
 {
     partial class MainWindow
     {
-	    private void _initConfigFile()
+	    static public void _initConfigFile()
 	    {
 
 		    string configIniPath = clsFile._getExePath_replace("./config.ini");

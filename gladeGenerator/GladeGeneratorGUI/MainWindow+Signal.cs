@@ -9,20 +9,15 @@ namespace GladeGeneratorGUI
     {
         Gtk.ListStore SignalListStore = new Gtk.ListStore(typeof(Signal));
         
-        private void _mkTreeView_Signal(List<Signal> SignalArray ,string DorTKey)
+        private void _mkTreeView_Signal()
         {
-            Gtk.TreeViewColumnEx EventNameColumn = new Gtk.TreeViewColumnEx();
-            EventNameColumn.Title = "EventName";
-            EventNameColumn._mkCellRendererText(SignalTreeView, "", 100);
-            EventNameColumn.bindingPropertyName = "EventName";
-
             Gtk.TreeViewColumnEx HandlerNameColumn = new Gtk.TreeViewColumnEx();
-            HandlerNameColumn.Title = "HandlerName";
+            HandlerNameColumn.Title = "name";
             HandlerNameColumn._mkCellRendererText(SignalTreeView, "", 100);
             HandlerNameColumn.bindingPropertyName = "HandlerName";
 
             Gtk.TreeViewColumnEx isReOutPutColumn = new Gtk.TreeViewColumnEx();
-            isReOutPutColumn.Title = "isReOutPut";
+            isReOutPutColumn.Title = "ReOutPut";
             isReOutPutColumn.bindingPropertyName = "isReOutPut";
             Gtk.CellRendererToggle isReOutPutColumnToggle =
                 isReOutPutColumn._mkCellRendererToggle(SignalTreeView, "", 60);
@@ -35,6 +30,13 @@ namespace GladeGeneratorGUI
                     Signal1.isReOutPut = Signal1.isReOutPut == true ? false : true;
                 }
             };
+            
+        }
+        
+         private void _mkTreeViewBinding_Signal(List<Signal> SignalArray ,string DorTKey)
+        {
+            
+            SignalListStore = new Gtk.ListStore(typeof(Signal));
             
             dataSignalDic = clsFile._getJsonData<Dictionary<string, List<Signal>>>(saveDataFilePath);
 

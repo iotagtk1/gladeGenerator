@@ -38,7 +38,7 @@ You must specify a macro
 copy perst****
 
 ``` Rider arguments macro require
--projectPath $FilePath$ -projectName $SolutionName$ -fileDir $FilePath$ -saveDir $SolutionDir$
+-projectName $FilePath$ -fileDir $FilePath$ 
 ```
 ****
 
@@ -47,9 +47,7 @@ The working directory can be empty.
 #### Description
 
 projectName Used for the namespace of the exported program. Rider doesn't have a macro for namespaces, so we need to fill in ProjetctPath
-projectPath　Required to get accurate namespace
 fileDir The file or folder selected in Rider's explorer.
-saveDir The directory to be saved. The default setting is the project folder.
 
 ### ConfigSetting.xml
 ```

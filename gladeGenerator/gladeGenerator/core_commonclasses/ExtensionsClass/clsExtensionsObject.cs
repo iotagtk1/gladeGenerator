@@ -85,8 +85,7 @@ public static partial class objectExtensions {
             BindingFlags.Public | BindingFlags.GetProperty | BindingFlags.GetField
             | BindingFlags.SetProperty | BindingFlags.SetField
             | BindingFlags.NonPublic |
-            BindingFlags.Instance | BindingFlags.Static |
-            BindingFlags.DeclaredOnly);
+            BindingFlags.Instance | BindingFlags.Static);
 
             if (fi == null) {
                 Console.WriteLine("   fi null " + propertyName);
@@ -107,8 +106,7 @@ public static partial class objectExtensions {
 
             FieldInfo[] myPropInfo = magicType.GetFields(
                        BindingFlags.Public | BindingFlags.NonPublic |
-                       BindingFlags.Instance | BindingFlags.Static |
-                       BindingFlags.DeclaredOnly);
+                       BindingFlags.Instance | BindingFlags.Static);
 
             ArrayList filedNameArray = new ArrayList();
             foreach (FieldInfo a in myPropInfo) {
@@ -128,8 +126,7 @@ public static partial class objectExtensions {
 
             FieldInfo f2 = magicType.GetField(filed,
                        BindingFlags.Public | BindingFlags.NonPublic |
-                       BindingFlags.Instance | BindingFlags.Static |
-                       BindingFlags.DeclaredOnly);
+                       BindingFlags.Instance | BindingFlags.Static );
 
             object resobj2 = f2.GetValue(obj);
             return resobj2;
@@ -144,8 +141,7 @@ public static partial class objectExtensions {
             Type magicType = obj.GetType();
             FieldInfo mi = magicType.GetField(filed, BindingFlags.Public | 
                 BindingFlags.NonPublic |
-            BindingFlags.Instance | BindingFlags.Static |
-            BindingFlags.DeclaredOnly);
+            BindingFlags.Instance | BindingFlags.Static);
             if (mi != null) {
                 return true;
             }
@@ -181,8 +177,7 @@ public static partial class objectExtensions {
 
             PropertyInfo[] myPropInfo = magicType.GetProperties(
             BindingFlags.Public | BindingFlags.NonPublic |
-            BindingFlags.Instance | BindingFlags.Static |
-            BindingFlags.DeclaredOnly);
+            BindingFlags.Instance | BindingFlags.Static );
 
             ArrayList propertyNameArray = new ArrayList();
             foreach (PropertyInfo a in myPropInfo) {
@@ -201,8 +196,7 @@ public static partial class objectExtensions {
 
             PropertyInfo[] myPropInfo = magicType.GetProperties(
             BindingFlags.Public | BindingFlags.NonPublic |
-            BindingFlags.Instance | BindingFlags.Static |
-            BindingFlags.DeclaredOnly);
+            BindingFlags.Instance | BindingFlags.Static );
 
             ArrayList propertyNameArray = new ArrayList();
             foreach (PropertyInfo a in myPropInfo) {
@@ -221,8 +215,7 @@ public static partial class objectExtensions {
                 Type magicType = obj.GetType();
                 PropertyInfo pi = magicType.GetProperty(propertyName,
                     BindingFlags.Public | BindingFlags.NonPublic |
-                    BindingFlags.Instance | BindingFlags.Static |
-                    BindingFlags.DeclaredOnly);
+                    BindingFlags.Instance | BindingFlags.Static );
 
                 MethodInfo getMethod = pi.GetGetMethod();
                 object result = getMethod.Invoke(obj, null);
@@ -249,8 +242,7 @@ public static partial class objectExtensions {
                 PropertyInfo pi = t.GetProperty(propertyName,
                     BindingFlags.Public  
                     | BindingFlags.NonPublic |
-                    BindingFlags.Instance | BindingFlags.Static |
-                    BindingFlags.DeclaredOnly); 
+                    BindingFlags.Instance | BindingFlags.Static ); 
 
                 MethodInfo setMethod = pi.GetSetMethod();
                 setMethod.Invoke(obj1, new Object[1] { value });
@@ -271,8 +263,7 @@ public static partial class objectExtensions {
 
             PropertyInfo mi = magicType.GetProperty(property,
             BindingFlags.Public | BindingFlags.NonPublic |
-            BindingFlags.Instance | BindingFlags.Static |
-            BindingFlags.DeclaredOnly);
+            BindingFlags.Instance | BindingFlags.Static );
 
             if (mi != null) {
                 return true;
@@ -287,8 +278,7 @@ public static partial class objectExtensions {
             Type magicType = obj.GetType();
             MethodInfo mi = magicType.GetMethod(method,
             BindingFlags.Public | BindingFlags.NonPublic |
-            BindingFlags.Instance | BindingFlags.Static |
-            BindingFlags.DeclaredOnly);
+            BindingFlags.Instance | BindingFlags.Static);
             object result = mi.Invoke(method,null);
             return result;
         }
@@ -304,8 +294,7 @@ public static partial class objectExtensions {
 
                 MethodInfo mi = magicType.GetMethod(method,
                     BindingFlags.Public | BindingFlags.NonPublic |
-                    BindingFlags.Instance | BindingFlags.Static |
-                    BindingFlags.DeclaredOnly);
+                    BindingFlags.Instance | BindingFlags.Static);
 
                 object result = mi.Invoke(method , new Object[1] { objct1 });
 
@@ -328,8 +317,7 @@ public static partial class objectExtensions {
             Type magicType = obj.GetType();
             MethodInfo mi = magicType.GetMethod(method,
             BindingFlags.Public | BindingFlags.NonPublic |
-            BindingFlags.Instance | BindingFlags.Static |
-            BindingFlags.DeclaredOnly);
+            BindingFlags.Instance | BindingFlags.Static);
             if (mi != null) {
                 return true;
             }
