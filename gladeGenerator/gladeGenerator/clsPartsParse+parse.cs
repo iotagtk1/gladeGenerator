@@ -16,8 +16,7 @@ namespace gladeGenerator
 
         private void _getTopPart_idMethod(
             XmlNode topObjectNodes,
-            ref List<TopLevelPart> topLevelPartArray,
-            ref int countNum
+            ref List<TopLevelPart> topLevelPartArray
             
             )
         {
@@ -33,7 +32,7 @@ namespace gladeGenerator
 
                 Boolean isNoClass = _isCommentOutClassName(topObjectNodes);
                 string addComment = "";
-                if (countNum == 0 && isNoClass)
+                if (isNoClass)
                 {
                     addComment = "//";
                 }        

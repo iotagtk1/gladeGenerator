@@ -22,5 +22,6 @@ namespace GladeGeneratorGUI
         [UI] private readonly Gtk.TreeSelection ChildLevelPartTreeViewSection = null;
         [UI] private readonly Gtk.TreeView SignalTreeView = null;
         [UI] private readonly Gtk.TreeSelection SignalTreeViewSection = null;
-    }
+    
+		[UI] private readonly Gtk.ImageMenuItem menuSettingBtn = null;}
 }

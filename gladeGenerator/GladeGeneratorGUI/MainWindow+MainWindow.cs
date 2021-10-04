@@ -97,7 +97,6 @@ namespace GladeGeneratorGUI
             }
             
         }
-        
         private void on_SubNameSpaceEntry_changed(object sender , EventArgs e){
             
             string text = ((Gtk.Entry)sender).Text;
@@ -111,13 +110,33 @@ namespace GladeGeneratorGUI
         private void on_closeBtn_clicked(object sender, EventArgs e)
         {
             Close();
-            Environment.Exit(0);
+            clsUtility._appEnd();
         }
-
-
+        
         private void on_outPutBtn_clicked(object sender, EventArgs e)
         {
             clsPartsParse1._outPut();
         }
+    
+		private void on_defualtSetBtn_clicked(object sender , EventArgs e){
+			/*ListStore_MainWindow.Foreach (delegate (ITreeModel model, TreePath path, TreeIter iter)  {
+			
+			    type_MainWindow modelObj = model.GetValue(iter, 0) as type_MainWindow;
+			    
+			    return false;
+			});*/
+
+			
+		}
+		private void on_menuSettingBtn_activate(object sender , EventArgs e)
+        {
+
+          
+
+
+        }
+        
+        
+        
     }
 }
