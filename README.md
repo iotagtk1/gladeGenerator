@@ -1,13 +1,11 @@
-********### Introduction
+### Introduction
 
 ### Environment
 .net5
 
 GtkSharp
 
-Rider or Terminal or VisualSutdio
-
-
+Rider or Terminal or VisualSutdio Code
 
 
 ### Rider Setting
