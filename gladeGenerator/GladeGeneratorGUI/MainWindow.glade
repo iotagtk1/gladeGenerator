@@ -5,8 +5,8 @@
   <object class="GtkWindow" id="MainWindow">
     <property name="can_focus">False</property>
     <property name="title" translatable="yes">GladeGeneratorGUI</property>
-    <property name="default_width">970</property>
-    <property name="default_height">350</property>
+    <property name="default_width">960</property>
+    <property name="default_height">320</property>
     <child>
       <placeholder/>
     </child>
@@ -52,7 +52,7 @@
           </object>
           <packing>
             <property name="x">887</property>
-            <property name="y">47</property>
+            <property name="y">40</property>
           </packing>
         </child>
         <child>
@@ -67,13 +67,13 @@
           </object>
           <packing>
             <property name="x">709</property>
-            <property name="y">45</property>
+            <property name="y">40</property>
           </packing>
         </child>
         <child>
           <object class="GtkScrolledWindow">
             <property name="width_request">148</property>
-            <property name="height_request">203</property>
+            <property name="height_request">270</property>
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="shadow_type">in</property>
@@ -92,14 +92,14 @@
             </child>
           </object>
           <packing>
-            <property name="x">7</property>
-            <property name="y">45</property>
+            <property name="x">8</property>
+            <property name="y">40</property>
           </packing>
         </child>
         <child>
           <object class="GtkScrolledWindow">
             <property name="width_request">180</property>
-            <property name="height_request">300</property>
+            <property name="height_request">270</property>
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="shadow_type">in</property>
@@ -118,14 +118,14 @@
             </child>
           </object>
           <packing>
-            <property name="x">162</property>
-            <property name="y">45</property>
+            <property name="x">163</property>
+            <property name="y">40</property>
           </packing>
         </child>
         <child>
           <object class="GtkScrolledWindow">
             <property name="width_request">350</property>
-            <property name="height_request">203</property>
+            <property name="height_request">270</property>
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="shadow_type">in</property>
@@ -144,8 +144,8 @@
             </child>
           </object>
           <packing>
-            <property name="x">349</property>
-            <property name="y">45</property>
+            <property name="x">350</property>
+            <property name="y">40</property>
           </packing>
         </child>
         <child>
@@ -158,7 +158,7 @@
               <object class="GtkMenuItem">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="label" translatable="yes">ツール</property>
+                <property name="label" translatable="yes">Tool</property>
                 <property name="use_underline">True</property>
                 <child type="submenu">
                   <object class="GtkMenu">
@@ -218,7 +218,7 @@
           </object>
           <packing>
             <property name="x">872</property>
-            <property name="y">94</property>
+            <property name="y">82</property>
           </packing>
         </child>
       </object>

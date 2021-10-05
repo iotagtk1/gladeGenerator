@@ -82,13 +82,13 @@
             <signal name="clicked" handler="on_openFolderBtn_clicked" swapped="no"/>
           </object>
           <packing>
-            <property name="x">526</property>
+            <property name="x">548</property>
             <property name="y">45</property>
           </packing>
         </child>
         <child>
           <object class="GtkEntry" id="saveFileText">
-            <property name="width_request">513</property>
+            <property name="width_request">535</property>
             <property name="height_request">35</property>
             <property name="visible">True</property>
             <property name="can_focus">True</property>
@@ -104,11 +104,11 @@
             <property name="height_request">23</property>
             <property name="visible">True</property>
             <property name="can_focus">False</property>
-            <property name="label" translatable="yes">保存場所</property>
+            <property name="label" translatable="yes">Save Dir</property>
           </object>
           <packing>
             <property name="x">9</property>
-            <property name="y">14</property>
+            <property name="y">16</property>
           </packing>
         </child>
         <child>
@@ -123,7 +123,7 @@
             <signal name="clicked" handler="on_closeBtn1_clicked" swapped="no"/>
           </object>
           <packing>
-            <property name="x">526</property>
+            <property name="x">550</property>
             <property name="y">7</property>
           </packing>
         </child>

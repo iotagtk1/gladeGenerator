@@ -1,7 +1,4 @@
-### Introduction
-
-
-
+## Introduction
 
 ### Rider Setting
 ExploerPanel - right click - edit execution configuration - external tools
@@ -31,7 +28,6 @@ copy perst****
 ``` Rider arguments macro require
 -projectName $FilePath$ -fileDir $FilePath$ 
 ```
-****
 
 The working directory can be empty.
 
@@ -86,7 +82,7 @@ namespace testGtkApplication
     {
 	    private void on__button1_Clicked(object sender , EventArgs e){
 			
-		}	    
+	    }	    
     }
 }
 ````
