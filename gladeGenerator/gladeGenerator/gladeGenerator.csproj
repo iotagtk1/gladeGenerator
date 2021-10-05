@@ -10,6 +10,21 @@
         <Link>signalGtk.xml</Link>
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </None>
+      <Content Include="..\..\README.md">
+        <Link>README.md</Link>
+      </Content>
+      <Content Include="..\..\readMe\1.png">
+        <Link>readMe\1.png</Link>
+      </Content>
+      <Content Include="..\..\readMe\2.png">
+        <Link>readMe\2.png</Link>
+      </Content>
+      <Content Include="..\..\readMe\3.png">
+        <Link>readMe\3.png</Link>
+      </Content>
+      <Content Include="..\..\readMe\5.png">
+        <Link>readMe\5.png</Link>
+      </Content>
       <Content Include="templateData\template.txt">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </Content>
@@ -98,6 +113,8 @@
       <None Update="codeHint\GtkCheckButton_Toggled.txt">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </None>
+      <Compile Remove="readMe\**" />
+      <None Remove="readMe\**" />
     </ItemGroup>
 
     <ItemGroup>
@@ -123,7 +140,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="readMe" />
+      <EmbeddedResource Remove="readMe\**" />
     </ItemGroup>
 
 </Project>

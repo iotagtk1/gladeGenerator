@@ -71,15 +71,16 @@ namespace GladeGeneratorGUI
         /// <returns></returns>
         public Boolean _validateCommandKey()
         {
-            if (ProjectName != "")
-            {
-                ProjectName = _getProjectName(ProjectName);
-            }
 
             if (ProjectName == "")
             {
                 Console.WriteLine("-ProjectNameが指定されていません");
                 return false;
+            }
+            
+            if (ProjectName != "")
+            {
+                ProjectName = _getProjectName(ProjectName);
             }
 
             if (clsIniFile.singlton[saveWin.saveFileText1, saveWin.saveFilePath] != "")
@@ -151,6 +152,11 @@ namespace GladeGeneratorGUI
 
             var separator = Path.DirectorySeparatorChar;
             string[] pathArray = path.Split(separator);
+            
+            if (pathArray.Length == 0)
+            {
+                return path;
+            }   
 
             for (int i = pathArray.Length; i > 0; i--)
             {
@@ -162,11 +168,6 @@ namespace GladeGeneratorGUI
                     return pathArray[i - 1];
                     break;
                 }
-            }
-
-            if (pathArray.Length == 0)
-            {
-                return path;
             }
 
             return "";

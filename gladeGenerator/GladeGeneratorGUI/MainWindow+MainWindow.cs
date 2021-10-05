@@ -12,7 +12,8 @@ namespace GladeGeneratorGUI
         private ChildLevelPart SelectedChildLevelPartRow = null;
         private Signal SelectedSignalRow = null;
         private string SelectedTopChildKey = "";
-
+        private string SelectedTopKey = "";
+        
         private void on_TopLevelPartTreeViewSection_changed(object sender, EventArgs e)
         {
             TreeIter iter;
@@ -21,9 +22,10 @@ namespace GladeGeneratorGUI
                 TopLevelPart TopLevelPart1 = (TopLevelPart)TopLevelPartListStore.GetValue(iter, 0);
                 SelectedTopLevelPartRow = TopLevelPart1;
 
-                SelectedTopChildKey = _getTopLevelPartKey();
+                SelectedTopKey = _getTopLevelPartKey();
+                SelectedTopChildKey = _getTopLevelPartKey();      
 
-                _initTextFiled(SelectedTopChildKey);
+                _initTextFiled(SelectedTopKey);
 
                 _mkTreeViewBinding_ChildLevelPart(TopLevelPart1.ChildLevelPartsArray);
 
@@ -45,7 +47,7 @@ namespace GladeGeneratorGUI
                 
                 SelectedTopChildKey = _getTopLevelPartChildPartKey();
                 
-                _initTextFiled(SelectedTopChildKey);
+                _initTextFiled(SelectedTopKey);
                 
                 _mkTreeViewBinding_Signal(ChildLevelPart1.SignalArray,SelectedTopChildKey);
 
@@ -71,9 +73,9 @@ namespace GladeGeneratorGUI
         private void on_TreeViewEntry_changed(object sender , EventArgs e){
             
             string text = ((Gtk.Entry)sender).Text;
-            if (SelectedTopChildKey != "")
+            if (SelectedTopKey != "")
             {
-                clsIniFile.singlton[SelectedTopChildKey,"TreeViewEntry"] = text;
+                clsIniFile.singlton[SelectedTopKey,"TreeViewEntry"] = text;
             }
 
         }
@@ -81,9 +83,9 @@ namespace GladeGeneratorGUI
         private void on_ListStoreEntry_changed(object sender , EventArgs e){
 
             string text = ((Gtk.Entry)sender).Text;
-            if (SelectedTopChildKey != "")
+            if (SelectedTopKey != "")
             {
-                clsIniFile.singlton[SelectedTopChildKey,"TreeViewEntry"] = text;
+                clsIniFile.singlton[SelectedTopKey,"TreeViewEntry"] = text;
             }
 
         }
@@ -91,18 +93,18 @@ namespace GladeGeneratorGUI
         private void on_ModelViewEntry_changed(object sender , EventArgs e){
             
             string text = ((Gtk.Entry)sender).Text;
-            if (SelectedTopChildKey != "")
+            if (SelectedTopKey != "")
             {
-                clsIniFile.singlton[SelectedTopChildKey,"TreeViewEntry"] = text;
+                clsIniFile.singlton[SelectedTopKey,"TreeViewEntry"] = text;
             }
             
         }
         private void on_SubNameSpaceEntry_changed(object sender , EventArgs e){
             
             string text = ((Gtk.Entry)sender).Text;
-            if (SelectedTopChildKey != "")
+            if (SelectedTopKey != "")
             {
-                clsIniFile.singlton[SelectedTopChildKey,"TreeViewEntry"] = text;
+                clsIniFile.singlton[SelectedTopKey,"TreeViewEntry"] = text;
             }
 
         }

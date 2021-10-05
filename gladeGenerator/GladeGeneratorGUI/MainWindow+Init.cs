@@ -18,7 +18,7 @@ namespace GladeGeneratorGUI
 		    clsIniFile._sharedObject(configIniPath);
 
 	    }
-	    
+
 	    private void _initTextFiled(string dbKeyOrTableKey){
 
 		    if (clsIniFile.singlton[dbKeyOrTableKey, "TreeViewEntry"] != "")
@@ -46,61 +46,7 @@ namespace GladeGeneratorGUI
 		    }
 
 	    }
-
-	    /*
-	    private void _defaultTextFiledSet()
-	    {
-		    string ModelName = "";
-	        string TreeViewName = "";
-	        string ComboBoxName = "";
-	        string ListStoreName = "";
-	        string SubNameSpace = "";
-
-	        switch (SelectedOutPutType)
-	        {
-	            case OutPutType.TreeView:
-            		TreeViewTemplate TreeViewTemplate1 = new TreeViewTemplate();
-            		ModelName = TreeViewTemplate1.ModelName;
-            		TreeViewName = TreeViewTemplate1.TreeViewName;
-            		ComboBoxName = TreeViewTemplate1.ComboBoxName;
-            		ListStoreName = TreeViewTemplate1.ListStoreName;
-            		SubNameSpace = TreeViewTemplate1.SubNameSpace;
-            		break;
-	            case OutPutType.TreeViewEx:
-            		TreeViewTemplateEx TreeViewTemplateEx = new TreeViewTemplateEx();
-            		ModelName = TreeViewTemplateEx.ModelName;
-            		TreeViewName = TreeViewTemplateEx.TreeViewName;
-            		ComboBoxName = TreeViewTemplateEx.ComboBoxName;
-            		ListStoreName = TreeViewTemplateEx.ListStoreName;
-            		SubNameSpace = TreeViewTemplateEx.SubNameSpace;
-            		break;  
-	            case OutPutType.ComboBox:
-            		ComboBoxTemplate ComboBoxTemplate = new ComboBoxTemplate();
-            		ModelName = ComboBoxTemplate.ModelName;
-            		TreeViewName = ComboBoxTemplate.TreeViewName;
-            		ComboBoxName = ComboBoxTemplate.ComboBoxName;
-            		ListStoreName = ComboBoxTemplate.ListStoreName;
-            		SubNameSpace = ComboBoxTemplate.SubNameSpace;
-            		break;
-	            case OutPutType.ComboBoxEx:
-            		ComboBoxTemplateEx ComboBoxTemplateEx = new ComboBoxTemplateEx();
-            		ModelName = ComboBoxTemplateEx.ModelName;
-            		TreeViewName = ComboBoxTemplateEx.TreeViewName;
-            		ComboBoxName = ComboBoxTemplateEx.ComboBoxName;
-            		ListStoreName = ComboBoxTemplateEx.ListStoreName;
-            		SubNameSpace = ComboBoxTemplateEx.SubNameSpace;
-            		break;
-	        }
-
-	        TreeViewEntry.Text = TreeViewName;
-	        ComboViewEntry.Text = ComboBoxName;
-	        ListStoreEntry.Text = ListStoreName;
-	        ModelViewEntry.Text = ModelName;
-	        SubNameSpaceEntry.Text = SubNameSpace;
-
-	    }
-	    */
-	    
+	  
 		
     }
 }
