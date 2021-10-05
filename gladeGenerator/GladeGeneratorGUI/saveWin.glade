@@ -61,7 +61,7 @@
   <object class="GtkWindow" id="saveWin">
     <property name="can_focus">False</property>
     <property name="window_position">center-always</property>
-    <property name="default_width">445</property>
+    <property name="default_width">650</property>
     <property name="default_height">200</property>
     <child>
       <placeholder/>
@@ -82,13 +82,13 @@
             <signal name="clicked" handler="on_openFolderBtn_clicked" swapped="no"/>
           </object>
           <packing>
-            <property name="x">355</property>
-            <property name="y">46</property>
+            <property name="x">548</property>
+            <property name="y">45</property>
           </packing>
         </child>
         <child>
           <object class="GtkEntry" id="saveFileText">
-            <property name="width_request">336</property>
+            <property name="width_request">535</property>
             <property name="height_request">35</property>
             <property name="visible">True</property>
             <property name="can_focus">True</property>
@@ -107,14 +107,14 @@
             <property name="label" translatable="yes">保存場所</property>
           </object>
           <packing>
-            <property name="x">10</property>
+            <property name="x">9</property>
             <property name="y">14</property>
           </packing>
         </child>
         <child>
           <object class="GtkButton" id="closeBtn1">
             <property name="label">gtk-close</property>
-            <property name="width_request">77</property>
+            <property name="width_request">80</property>
             <property name="height_request">35</property>
             <property name="visible">True</property>
             <property name="can_focus">True</property>
@@ -123,8 +123,8 @@
             <signal name="clicked" handler="on_closeBtn1_clicked" swapped="no"/>
           </object>
           <packing>
-            <property name="x">357</property>
-            <property name="y">6</property>
+            <property name="x">550</property>
+            <property name="y">7</property>
           </packing>
         </child>
       </object>

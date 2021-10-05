@@ -99,6 +99,7 @@
 
     <ItemGroup>
       <Folder Include="commonClasses" />
+      <Folder Include="DBModel" />
     </ItemGroup>
 
     <ItemGroup>

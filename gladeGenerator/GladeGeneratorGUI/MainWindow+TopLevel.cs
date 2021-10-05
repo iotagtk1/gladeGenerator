@@ -22,6 +22,10 @@ namespace GladeGeneratorGUI
         {
 
             TopLevelPartListStore = new Gtk.ListStore(typeof(TopLevelPart));
+            ChildLevelPartListStore = new ListStore(typeof(ChildLevelPart));
+            SignalListStore = new ListStore(typeof(Signal));
+            ChildLevelPartTreeView.Model = null;
+            SignalTreeView.Model = null;
             
             SelectedGladeDataRow = gladeData1;
             

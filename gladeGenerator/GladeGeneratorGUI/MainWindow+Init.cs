@@ -20,29 +20,22 @@ namespace GladeGeneratorGUI
 	    }
 
 	    private void _initTextFiled(string dbKeyOrTableKey){
-
-		    if (clsIniFile.singlton[dbKeyOrTableKey, "TreeViewEntry"] != "")
+	
+		    if (clsIniFile.singlton[dbKeyOrTableKey, MainWindow.ListStoreEntryStr] != "")
 		    {
-			    TreeViewEntry.Text = clsIniFile.singlton[dbKeyOrTableKey, "TreeViewEntry"];
+			    ListStoreEntry.Text = clsIniFile.singlton[dbKeyOrTableKey, MainWindow.ListStoreEntryStr];
 		    }
-
-		    if (clsIniFile.singlton[dbKeyOrTableKey, "ComboViewEntry"] != "")
+		    else
 		    {
-			    ComboViewEntry.Text = clsIniFile.singlton[dbKeyOrTableKey, "ComboViewEntry"];
+			    ListStoreEntry.Text = "ListStore";
 		    }
-
-		    if (clsIniFile.singlton[dbKeyOrTableKey, "ListStoreEntry"] != "")
+		    
+		    if (clsIniFile.singlton[dbKeyOrTableKey, MainWindow.ModelViewEntryStr] != "")
 		    {
-			    ListStoreEntry.Text = clsIniFile.singlton[dbKeyOrTableKey, "ListStoreEntry"];
-		    }
-
-		    if (clsIniFile.singlton[dbKeyOrTableKey, "ModelViewEntry"] != "")
+			    ModelViewEntry.Text = clsIniFile.singlton[dbKeyOrTableKey, MainWindow.ModelViewEntryStr];
+		    } else
 		    {
-			    ModelViewEntry.Text = clsIniFile.singlton[dbKeyOrTableKey, "ModelViewEntry"];
-		    }
-		    if (clsIniFile.singlton[dbKeyOrTableKey, "SubNameSpaceEntry"] != "")
-		    {
-			    SubNameSpaceEntry.Text = clsIniFile.singlton[dbKeyOrTableKey, "SubNameSpaceEntry"];
+			    ListStoreEntry.Text = "ModelName";
 		    }
 
 	    }

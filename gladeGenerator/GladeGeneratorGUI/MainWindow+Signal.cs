@@ -13,7 +13,7 @@ namespace GladeGeneratorGUI
         {
             Gtk.TreeViewColumnEx HandlerNameColumn = new Gtk.TreeViewColumnEx();
             HandlerNameColumn.Title = "Signal";
-            HandlerNameColumn._mkCellRendererText(SignalTreeView, "", 100);
+            CellRendererText a = HandlerNameColumn._mkCellRendererText(SignalTreeView, "", 90,true,true,true,true);
             HandlerNameColumn.bindingPropertyName = "HandlerName";
 
             Gtk.TreeViewColumnEx isReOutPutColumn = new Gtk.TreeViewColumnEx();
@@ -28,6 +28,7 @@ namespace GladeGeneratorGUI
                 {
                     Signal Signal1 = (Signal)SignalListStore.GetValue(iter, 0);
                     Signal1.isReOutPut = Signal1.isReOutPut == true ? false : true;
+                    _saveAll(SelectedTopChildSignalKey);
                 }
             };
             
@@ -67,8 +68,8 @@ namespace GladeGeneratorGUI
                 SignalListStore.AppendValues(Signal1);
             }
 
-            SignalTreeView.Model = SignalListStore;
-
+            SignalTreeView.Model = SignalListStore;        
+            
             SignalTreeView._mkBinding();
         }
         
@@ -110,12 +111,6 @@ namespace GladeGeneratorGUI
 
         }
 
-        
-        
-        
-        
-        
-        
-        
+
     }
 }

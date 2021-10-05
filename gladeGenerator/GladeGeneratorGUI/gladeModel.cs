@@ -10,7 +10,7 @@ namespace GladeGeneratorGUI
         public string DeclareValue { get; set; }
         public string ClassName { get; set; }
         public string PartId { get; set; }
-        public List<Signal> SignalArray = new List<Signal>();
+        public List<Signal> SignalArray  = new List<Signal>();
     } 
     
     public class ChildLevelPart : BaseClass
@@ -20,9 +20,7 @@ namespace GladeGeneratorGUI
 
     public class TopLevelPart : BaseClass
     {
- 
-        
-        public List<ChildLevelPart> ChildLevelPartsArray = new List<ChildLevelPart>();
+        public List<ChildLevelPart> ChildLevelPartsArray  = new List<ChildLevelPart>();
         public string OutPutClassName { get; set; }
         public string OutPutFileName_function { get; set; }
         public string OutPutFileName_value { get; set; }  
@@ -34,7 +32,7 @@ namespace GladeGeneratorGUI
     {
         public string GladeName { get; set; }
         public string OutPutGladeName { get; set; }
-        public List<TopLevelPart> TopLevelPartArray = new List<TopLevelPart>();
+        public List<TopLevelPart> TopLevelPartArray  = new List<TopLevelPart>();
     }
     public class Signal
     {
@@ -43,12 +41,12 @@ namespace GladeGeneratorGUI
         public string EventName { get; set; }
         public string HandlerName { get; set; }
         public string TargetObject { get; set; }
-        public Boolean IsAfter = false;
-        public Boolean IsSwapped = false;
+        public Boolean IsAfter  { get; set; } = false;
+        public Boolean IsSwapped  { get; set; } = false;
         public string ArgsStr { get; set; }
         public string OutPutMethod_ArgsStr { get; set; }
         public string CodeHint { get; set; }
-        public Boolean isReOutPut = true;
+        public Boolean isReOutPut { get; set; } = true;
     }
 
     public class SignalTemplateData

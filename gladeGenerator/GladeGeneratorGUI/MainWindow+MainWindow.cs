@@ -11,8 +11,14 @@ namespace GladeGeneratorGUI
         private TopLevelPart SelectedTopLevelPartRow = null;
         private ChildLevelPart SelectedChildLevelPartRow = null;
         private Signal SelectedSignalRow = null;
-        private string SelectedTopChildKey = "";
-        private string SelectedTopKey = "";
+        private string SelectedTopChildSignalKey = "";
+        private string SelectedTopEnterTextKey = "";
+        public static string SelectedTopEnterTextKey_static = "";
+
+        public static string _getSelectedTopEnterTextKey()
+        {
+            return SelectedTopEnterTextKey_static;
+        }
         
         private void on_TopLevelPartTreeViewSection_changed(object sender, EventArgs e)
         {
@@ -22,20 +28,20 @@ namespace GladeGeneratorGUI
                 TopLevelPart TopLevelPart1 = (TopLevelPart)TopLevelPartListStore.GetValue(iter, 0);
                 SelectedTopLevelPartRow = TopLevelPart1;
 
-                SelectedTopKey = _getTopLevelPartKey();
-                SelectedTopChildKey = _getTopLevelPartKey();      
+                SelectedTopEnterTextKey = _getTopLevelPartKey();
+                SelectedTopChildSignalKey = _getTopLevelPartKey();
+                SelectedTopEnterTextKey_static = _getTopLevelPartKey();
 
-                _initTextFiled(SelectedTopKey);
+                _initTextFiled(SelectedTopEnterTextKey);
 
                 _mkTreeViewBinding_ChildLevelPart(TopLevelPart1.ChildLevelPartsArray);
 
-                _mkTreeViewBinding_Signal(TopLevelPart1.SignalArray,SelectedTopChildKey);
+                _mkTreeViewBinding_Signal(TopLevelPart1.SignalArray,SelectedTopChildSignalKey);
 
-                _saveAll(SelectedTopChildKey);
+                _saveAll(SelectedTopChildSignalKey);
 
             }
         }
-
         private void on_ChildLevelPartTreeViewSection_changed(object sender, EventArgs e)
         {
             TreeIter iter;
@@ -45,17 +51,14 @@ namespace GladeGeneratorGUI
                 ChildLevelPart ChildLevelPart1 = (ChildLevelPart)ChildLevelPartListStore.GetValue(iter, 0);
                 SelectedChildLevelPartRow = ChildLevelPart1;
                 
-                SelectedTopChildKey = _getTopLevelPartChildPartKey();
-                
-                _initTextFiled(SelectedTopKey);
-                
-                _mkTreeViewBinding_Signal(ChildLevelPart1.SignalArray,SelectedTopChildKey);
+                SelectedTopChildSignalKey = _getTopLevelPartChildPartKey();
 
-                _saveAll(SelectedTopChildKey);
+                _mkTreeViewBinding_Signal(ChildLevelPart1.SignalArray,SelectedTopChildSignalKey);
+
+                _saveAll(SelectedTopChildSignalKey);
 
             }
         }
-
         private void on_SignalTreeViewSection_changed(object sender, EventArgs e)
         {
             TreeIter iter;
@@ -65,27 +68,15 @@ namespace GladeGeneratorGUI
                 Signal Signal1 = (Signal)SignalListStore.GetValue(iter, 0);
                 SelectedSignalRow = Signal1;
                 Signal1.isReOutPut = Signal1.isReOutPut == true ? false : true;
-                _saveAll(SelectedTopChildKey);
+                _saveAll(SelectedTopChildSignalKey);
             }
         }
-
-
-        private void on_TreeViewEntry_changed(object sender , EventArgs e){
-            
-            string text = ((Gtk.Entry)sender).Text;
-            if (SelectedTopKey != "")
-            {
-                clsIniFile.singlton[SelectedTopKey,"TreeViewEntry"] = text;
-            }
-
-        }
-
-        private void on_ListStoreEntry_changed(object sender , EventArgs e){
+         private void on_ListStoreEntry_changed(object sender , EventArgs e){
 
             string text = ((Gtk.Entry)sender).Text;
-            if (SelectedTopKey != "")
+            if (SelectedTopEnterTextKey != "")
             {
-                clsIniFile.singlton[SelectedTopKey,"TreeViewEntry"] = text;
+                clsIniFile.singlton[SelectedTopEnterTextKey,MainWindow.ListStoreEntryStr] = text;
             }
 
         }
@@ -93,18 +84,9 @@ namespace GladeGeneratorGUI
         private void on_ModelViewEntry_changed(object sender , EventArgs e){
             
             string text = ((Gtk.Entry)sender).Text;
-            if (SelectedTopKey != "")
+            if (SelectedTopEnterTextKey != "")
             {
-                clsIniFile.singlton[SelectedTopKey,"TreeViewEntry"] = text;
-            }
-            
-        }
-        private void on_SubNameSpaceEntry_changed(object sender , EventArgs e){
-            
-            string text = ((Gtk.Entry)sender).Text;
-            if (SelectedTopKey != "")
-            {
-                clsIniFile.singlton[SelectedTopKey,"TreeViewEntry"] = text;
+                clsIniFile.singlton[SelectedTopEnterTextKey,MainWindow.ModelViewEntryStr] = text;
             }
 
         }
@@ -120,26 +102,19 @@ namespace GladeGeneratorGUI
             clsPartsParse1._outPut();
         }
     
-		private void on_defualtSetBtn_clicked(object sender , EventArgs e){
-			/*ListStore_MainWindow.Foreach (delegate (ITreeModel model, TreePath path, TreeIter iter)  {
-			
-			    type_MainWindow modelObj = model.GetValue(iter, 0) as type_MainWindow;
-			    
-			    return false;
-			});*/
-
-			
-		}
 		private void on_menuSettingBtn_activate(object sender , EventArgs e)
         {
 
             saveWin saveWin1 = new saveWin();
             saveWin1.Show();
-
-
+            
         }
-        
-        
+
+        private void on_reloadBtn_clicked(object sender , EventArgs e)
+        {
+            _parsePrjectFolder();
+        }
+
         
     }
 }

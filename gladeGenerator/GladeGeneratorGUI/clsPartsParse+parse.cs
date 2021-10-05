@@ -127,6 +127,7 @@ namespace GladeGeneratorGUI
 
                 foreach (XmlNode signalNodes in signalNodesList)
                 {
+
                     if (signalNodes.Attributes["handler"] == null || signalNodes.Attributes["name"] == null)
                     {
                         continue;
@@ -160,6 +161,7 @@ namespace GladeGeneratorGUI
                         signalModel1.ParentNodeClassName,
                         signalModel1.EventName);
 
+                    signalModel1.isReOutPut = true;
                     signalModel1.CodeHint = clsCodeHint.Instance()
                         ._searchUIHintCode(signalModel1.ParentNodeClassName, signalModel1.EventName);
 
@@ -228,7 +230,9 @@ namespace GladeGeneratorGUI
 
                     if (signalModel1.CodeHint != "")
                     {
-                        signalModel1.CodeHint = signalModel1.CodeHint._replaceReplaceStr("{num}", topLevelPart1.PartId);
+
+                        signalModel1.CodeHint = signalModel1.CodeHint._replaceReplaceStr("{Model}", clsIniFile.singlton[MainWindow._getSelectedTopEnterTextKey(),MainWindow.ModelViewEntryStr]);
+                        signalModel1.CodeHint = signalModel1.CodeHint._replaceReplaceStr("{ListStore}",  clsIniFile.singlton[MainWindow._getSelectedTopEnterTextKey(),MainWindow.ListStoreEntryStr]);
 
                         signalModel1.OutPutMethod_ArgsStr = signalModel1.OutPutMethod_ArgsStr + Environment.NewLine +
                                                             signalModel1.CodeHint;

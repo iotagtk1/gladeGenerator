@@ -9,6 +9,9 @@ namespace GladeGeneratorGUI
         private clsPartsParse clsPartsParse1 = null;
         private string saveDataFilePath = "./data.json";
 
+        static public string ListStoreEntryStr = "ListStoreEntry";
+        static public string ModelViewEntryStr = "ModelViewEntry";
+
         public MainWindow() : this(new Builder("MainWindow.glade"))
         {
             
@@ -27,7 +30,8 @@ namespace GladeGeneratorGUI
             {
                 clsPartsParse1 = new clsPartsParse(this);
 
-                clsPartsParse1._parsePrjectFolder(clsArgsConfig.Instance().FileDirPath);
+                _parsePrjectFolder();
+                
             }
             catch (Exception exception)
             {
@@ -43,6 +47,10 @@ namespace GladeGeneratorGUI
 
         }
 
+        public void _parsePrjectFolder()
+        {
+            clsPartsParse1._parsePrjectFolder(clsArgsConfig.Instance().FileDirPath);
+        }
 
 
     }
