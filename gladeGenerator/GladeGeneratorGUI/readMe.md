@@ -1,5 +1,9 @@
 ## Introduction
 
+###GladeGeneratorGUI
+
+![alt text](./readMe/8.png)
+
 ### Rider Setting
 ExploerPanel - right click - edit execution configuration - external tools
 
@@ -13,7 +17,9 @@ Uncheck Run after file sync.
 
 ![alt text](./readMe/5.png)
 
-execution
+
+### execution
+
 TopMenu - Tool - ExternalTool
 
 Right-click on the Exploer bar
@@ -23,7 +29,7 @@ You can run it from an external tool
 
 Set the path of the program
 You must specify a macro
-copy perst****
+copy perst
 
 ``` Rider arguments macro require
 -projectName $FilePath$ -fileDir $FilePath$ 
@@ -36,6 +42,30 @@ The working directory can be empty.
 projectName Used for the namespace of the exported program. Rider doesn't have a macro for namespaces, so we need to fill in ProjetctPath
 fileDir The file or folder selected in Rider's explorer.
 
+#### App launch
+
+![alt text](./readMe/8.png)
+
+##### App Description
+
+OutPut Button Automatically generate programs
+
+ReOutPut Button If checked, re-write.
+
+Tool Button - Opens the settings screen.
+
+#### Settings Screen
+
+Specify the location where you want to save the program
+
+![alt text](./readMe/6.png)
+
+#### Execution
+
+Specify the grade and right-click to execute.
+
+![alt text](./readMe/7.png)
+
 ### ConfigSetting.xml
 ```
 <Setting  isCodeHint ="true" codeHitFolder="codeHint" />
@@ -46,10 +76,10 @@ codeHitFolder Name of the folder with the code samples
 
 CodeHint can be customized
 
-#### template.txt
+### template.txt
 The contents of the exported class can be changed
 
-#### Automatic generation of declarations
+### Automatic generation of declarations
 Every time you add a control to the Glade file, a declaration statement is added
 
 ````
