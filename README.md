@@ -90,9 +90,9 @@ namespace testGtkApplication
 {
     partial class MainWindow
     {    
-		//[UI] private readonly Gtk.Window MainWindow = null;
-		[UI] private readonly Gtk.Box sdfsdfsd111 = null;
-		[UI] private readonly Gtk.Button _button1 = null;		
+	    //[UI] private readonly Gtk.Window MainWindow = null;
+	    [UI] private readonly Gtk.Box sdfsdfsd111 = null;
+	    [UI] private readonly Gtk.Button _button1 = null;		
     }
 }
 ````
@@ -112,7 +112,7 @@ namespace testGtkApplication
     {
 	    private void on__button1_Clicked(object sender , EventArgs e){
 			
-		}	    
+	    }	    
     }
 }
 ````
