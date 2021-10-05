@@ -22,6 +22,21 @@
         </None>
         <EmbeddedResource Remove="DbModel\**" />
         <None Remove="DbModel\**" />
+        <None Update="readMe.md">
+          <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+        <None Update="readMe\1.png">
+          <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+        <None Update="readMe\2.png">
+          <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+        <None Update="readMe\3.png">
+          <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+        <None Update="readMe\5.png">
+          <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
     </ItemGroup>
 
     <ItemGroup>
@@ -42,10 +57,10 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Content Include="..\gladeGenerator\templateData\template.txt">
+      <None Include="..\gladeGenerator\templateData\template.txt">
         <Link>templateData\template.txt</Link>
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </Content>
+      </None>
       <Content Include="codeHint\GtkButton_Clicked.txt">
         <Link>codeHint/GtkButton_Clicked.txt</Link>
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
