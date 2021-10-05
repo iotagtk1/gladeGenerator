@@ -61,7 +61,7 @@
   <object class="GtkWindow" id="saveWin">
     <property name="can_focus">False</property>
     <property name="window_position">center-always</property>
-    <property name="default_width">650</property>
+    <property name="default_width">640</property>
     <property name="default_height">200</property>
     <child>
       <placeholder/>
@@ -82,16 +82,17 @@
             <signal name="clicked" handler="on_openFolderBtn_clicked" swapped="no"/>
           </object>
           <packing>
-            <property name="x">548</property>
-            <property name="y">45</property>
+            <property name="x">466</property>
+            <property name="y">6</property>
           </packing>
         </child>
         <child>
           <object class="GtkEntry" id="saveFileText">
-            <property name="width_request">535</property>
+            <property name="width_request">621</property>
             <property name="height_request">35</property>
             <property name="visible">True</property>
             <property name="can_focus">True</property>
+            <signal name="changed" handler="on_saveFileText_changed" swapped="no"/>
           </object>
           <packing>
             <property name="x">9</property>
@@ -114,7 +115,7 @@
         <child>
           <object class="GtkButton" id="closeBtn1">
             <property name="label">gtk-close</property>
-            <property name="width_request">80</property>
+            <property name="width_request">81</property>
             <property name="height_request">35</property>
             <property name="visible">True</property>
             <property name="can_focus">True</property>
@@ -124,7 +125,7 @@
           </object>
           <packing>
             <property name="x">550</property>
-            <property name="y">7</property>
+            <property name="y">6</property>
           </packing>
         </child>
       </object>

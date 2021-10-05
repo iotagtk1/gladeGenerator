@@ -9,6 +9,7 @@ namespace GladeGeneratorGUI
 
         static  public string saveFilePath = "saveFilePath";
         static  public string saveFileText1 = "saveFileText1";
+        private Builder builder1 = null;
 
         public saveWin() : this(new Builder("saveWin.glade"))
         {
@@ -23,6 +24,9 @@ namespace GladeGeneratorGUI
         private saveWin(Builder builder) : base(builder.GetRawOwnedObject("saveWin"))
         {
             builder.Autoconnect(this);
+
+            builder1 = builder;
+
         }
 
         private void Window_DeleteEvent(object sender, DeleteEventArgs a)

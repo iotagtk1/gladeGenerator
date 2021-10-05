@@ -21,7 +21,7 @@ namespace GladeGeneratorGUI
 		    {
 			    Console.WriteLine("Folderがない");
 		    }
-		    
+
 		    fileDialog.Destroy();
 	    }
 		private void on_cancelBtn_clicked(object sender , EventArgs e)

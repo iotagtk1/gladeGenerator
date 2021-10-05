@@ -38,7 +38,7 @@ namespace gladeGenerator
                 }        
 
                 topLevelPart1.DeclareValue =
-                    addComment + "[UI] private readonly " + topLevelPart1.ClassName._replaceReplaceStr("Gtk", "Gtk.") + " " +
+                    addComment + "[UI] private " + topLevelPart1.ClassName._replaceReplaceStr("Gtk", "Gtk.") + " " +
                     topLevelPart1.PartId + " = null;";
 
                 object TopLevelPart1_obj = topLevelPart1;

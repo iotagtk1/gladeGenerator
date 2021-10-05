@@ -35,7 +35,7 @@ namespace GladeGeneratorGUI
 			    ModelViewEntry.Text = clsIniFile.singlton[dbKeyOrTableKey, MainWindow.ModelViewEntryStr];
 		    } else
 		    {
-			    ListStoreEntry.Text = "ModelName";
+			    ModelViewEntry.Text = "ModelName";
 		    }
 
 	    }

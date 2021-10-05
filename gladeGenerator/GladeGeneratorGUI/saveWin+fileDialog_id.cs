@@ -8,7 +8,7 @@ namespace GladeGeneratorGUI
     {
     
     
-		[UI] private readonly Gtk.FileChooserDialog fileDialog = null;
+		[UI] private Gtk.FileChooserDialog fileDialog = null;
 		[UI] private readonly Gtk.Button cancelBtn = null;
 		[UI] private readonly Gtk.Button okBtn = null;}
 }
