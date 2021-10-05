@@ -1,6 +1,6 @@
 ## Introduction
 
-###GladeGeneratorGUI
+### GladeGeneratorGUI
 
 ![alt text](./readMe/8.png)
 
