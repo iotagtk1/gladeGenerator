@@ -25,12 +25,6 @@ namespace GladeGeneratorGUI
                 throw;
             }
 
-            if (!clsArgsConfig.Instance()._validateCommandKey())
-            {
-                return;
-            }
-
- 
             var app = new Application("org.GladeGeneratorGUI.GladeGeneratorGUI", GLib.ApplicationFlags.None);
             app.Register(GLib.Cancellable.Current);
 
