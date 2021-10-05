@@ -46,23 +46,23 @@ fileDir The file or folder selected in Rider's explorer.
 
 ![alt text](./readMe/8.png)
 
-##### App Description
+### App Description
 
 OutPut Button Automatically generate programs
 
-ReOutPut Button 
+ReOutPut Button
 
 If checked, re-write.If you do not want to export, uncheck the box.
 
 Tool Button - Opens the settings screen.
 
-#### Settings Screen
+### Settings Screen
 
 Specify the location where you want to save the program
 
 ![alt text](./readMe/6.png)
 
-#### Execution
+### Execution
 
 Specify the grade and right-click to execute.
 
@@ -101,7 +101,7 @@ namespace testGtkApplication
 
 ### Auto-generated content
 
-#### Automatic generation of event handlers
+### Automatic generation of event handlers
 Every time you add a signal to the control, an event handler statement is added.
 
 ```
