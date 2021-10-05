@@ -50,7 +50,9 @@ fileDir The file or folder selected in Rider's explorer.
 
 OutPut Button Automatically generate programs
 
-ReOutPut Button If checked, re-write.
+ReOutPut Button 
+
+If checked, re-write.If you do not want to export, uncheck the box.
 
 Tool Button - Opens the settings screen.
 
