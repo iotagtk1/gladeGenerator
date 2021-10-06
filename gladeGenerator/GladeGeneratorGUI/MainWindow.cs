@@ -15,6 +15,12 @@ namespace GladeGeneratorGUI
         public MainWindow() : this(new Builder("MainWindow.glade"))
         {
             
+            clsPartsParse1 = new clsPartsParse(this);
+            
+            _mkTreeView_TopLevelPart();
+            _mkTreeView_ChildLevelPart();
+            _mkTreeView_Signal();
+            
             if (!clsArgsConfig.Instance()._validateCommandKey())
             {
                 return;
@@ -22,14 +28,9 @@ namespace GladeGeneratorGUI
 
             saveDataFilePath = clsFile._getExePath_replace(saveDataFilePath);
 
-            _mkTreeView_TopLevelPart();
-            _mkTreeView_ChildLevelPart();
-            _mkTreeView_Signal();
-
             try
             {
-                clsPartsParse1 = new clsPartsParse(this);
-
+                
                 _parsePrjectFolder();
                 
             }

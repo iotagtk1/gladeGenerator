@@ -17,6 +17,12 @@ namespace GladeGeneratorGUI
 
                 clsArgsConfig.Instance();
                 
+                List<string> a = new List<string>();
+                a.Add("-projectName");
+                a.Add("/home/ita/C#/samplecC#_core/testtestGtkApplication/testtestGtkApplication/MainWindow.glade");
+                a.Add("-fileDir");
+                a.Add("/home/ita/C#/samplecC#_core/testtestGtkApplication/testtestGtkApplication/MainWindow.glade");
+                args = a.ToArray();
 
                 clsArgsConfig.Instance()._setArgs(args);
 

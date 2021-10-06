@@ -17,11 +17,10 @@ namespace GladeGeneratorGUI
 			}else if (clsArgsConfig.Instance().FileDirPath != ""){
 				iniFolder = clsFolder._getFolderNamePath(clsArgsConfig.Instance().FileDirPath);
 			}
-			
-			fileDialog = (Gtk.FileChooserDialog)builder1.GetObject("fileDialog");
 
 			fileDialog.SetCurrentFolder(iniFolder);
-			fileDialog.Run();
+
+			fileDialog.Show();
 
 		}
     

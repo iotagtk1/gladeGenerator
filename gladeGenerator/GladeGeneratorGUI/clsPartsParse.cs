@@ -65,14 +65,18 @@ namespace GladeGeneratorGUI
         /// </summary>
         public void _outPut()
         {
-            //書き出す処理
-            foreach (var gladeDataPart1 in gladeDataArray)
+            if (gladeDataArray != null)
             {
-                _saveTopLabelPart_value(gladeDataPart1);
+                //書き出す処理
+                foreach (var gladeDataPart1 in gladeDataArray)
+                {
+                    _saveTopLabelPart_value(gladeDataPart1);
 
-                // output
-                _saveTopLabelPart_function(gladeDataPart1);
+                    // output
+                    _saveTopLabelPart_function(gladeDataPart1);
+                }
             }
+
         }
 
         private XmlDocument gladeXmlDoc;
@@ -141,10 +145,8 @@ namespace GladeGeneratorGUI
                     gladeDataPart1.OutPutGladeName + "+" + OutPutPartsIdName + "_id" + ".cs";
 
                 topLevelPart1.OutPutSaveFilePath_function = clsArgsConfig.Instance().SaveDir._trimEnd("/") + "/" +
-                                                            clsArgsConfig.Instance().ProjectName._trimEnd("/") + "/" +
                                                             topLevelPart1.OutPutFileName_function;
                 topLevelPart1.OutPutSaveFilePath_value = clsArgsConfig.Instance().SaveDir._trimEnd("/") + "/" +
-                                                         clsArgsConfig.Instance().ProjectName._trimEnd("/") + "/" +
                                                          topLevelPart1.OutPutFileName_value;
             }
         }
