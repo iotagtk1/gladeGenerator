@@ -45,7 +45,6 @@ namespace GladeGeneratorGUI
         private MainWindow(Builder builder) : base(builder.GetRawOwnedObject("MainWindow"))
         {
             builder.Autoconnect(this);
-
         }
 
         public void _parsePrjectFolder()

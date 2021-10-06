@@ -14,6 +14,7 @@ namespace GladeGeneratorGUI
 			if (clsIniFile.singlton[saveWin.saveFileText1, saveWin.saveFilePath] != "")
 			{
 				iniFolder = clsIniFile.singlton[saveWin.saveFileText1, saveWin.saveFilePath];
+				
 			}else if (clsArgsConfig.Instance().FileDirPath != ""){
 				iniFolder = clsFolder._getFolderNamePath(clsArgsConfig.Instance().FileDirPath);
 			}
@@ -26,12 +27,14 @@ namespace GladeGeneratorGUI
     
 		private void on_closeBtn1_clicked(object sender , EventArgs e){
 			Close();
+			_mainWindow._parsePrjectFolder();
 		}
 		
 		private void on_saveFileText_changed(object sender , EventArgs e){
 			
 			string text = ((Gtk.Entry)sender).Text;
 			clsIniFile.singlton[saveWin.saveFileText1, saveWin.saveFilePath] =　text;
+			clsArgsConfig.Instance().SaveDir =　text;
 			
 		}
 		

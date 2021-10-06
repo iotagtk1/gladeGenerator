@@ -10,10 +10,12 @@ namespace GladeGeneratorGUI
         static  public string saveFilePath = "saveFilePath";
         static  public string saveFileText1 = "saveFileText1";
         private Builder builder1 = null;
+        private MainWindow _mainWindow;
 
-        public saveWin() : this(new Builder("saveWin.glade"))
+        public saveWin(MainWindow mainWindow) : this(new Builder("saveWin.glade"))
         {
-
+            _mainWindow = mainWindow;
+            
             if (clsIniFile.singlton[saveWin.saveFileText1, saveWin.saveFilePath] != "")
             {
                 saveFileText.Text = clsIniFile.singlton[saveWin.saveFileText1, saveWin.saveFilePath];

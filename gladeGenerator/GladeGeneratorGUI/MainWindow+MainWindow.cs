@@ -105,9 +105,8 @@ namespace GladeGeneratorGUI
 		private void on_menuSettingBtn_activate(object sender , EventArgs e)
         {
 
-            saveWin saveWin1 = new saveWin();
-            saveWin1.Show();
-            
+            saveWin saveWin1 = new saveWin(this);
+            saveWin1.ShowAll();
         }
 
         private void on_reloadBtn_clicked(object sender , EventArgs e)

@@ -20,10 +20,6 @@ namespace GladeGeneratorGUI
 		private void on_cancelBtn_clicked(object sender , EventArgs e)
 		{
 
-			clsIniFile.singlton[saveWin.saveFileText1,  saveWin.saveFilePath] = fileDialog.Filename;
-
-			clsArgsConfig.Instance().SaveDir = fileDialog.Filename; 
-			
 			fileDialog.Hide();
 
 		}
