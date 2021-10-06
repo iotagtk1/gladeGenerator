@@ -62,7 +62,7 @@ namespace GladeGeneratorGUI
 
         private List<string> commndKeyArray = new List<string>
         {
-            "-projectPath", "-projectName", "-projectDir"
+           "-projectName", "-fileDir"
         };
 
         /// <summary>

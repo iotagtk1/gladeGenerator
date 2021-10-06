@@ -13,7 +13,6 @@ namespace gladeGenerator
 
         public string SaveDir = "";     
         public string ProjectName = "";
-        public string ProjectPath = "";
         public string FileDirPath = "";
         public string AddSaveFolder = "";
         public Boolean isCodeHint = false;
@@ -101,7 +100,7 @@ namespace gladeGenerator
         }
 
         private List<string> commndKeyArray = new List<string> {
-            "-projectPath","-projectName","-projectDir","-saveDir"};
+           "-projectName","-saveDir","-fileDir"};
 
         /// <summary>
         /// 引数が取得できているか
@@ -109,11 +108,10 @@ namespace gladeGenerator
         /// <returns></returns>
         public Boolean _validateCommandKey()
         {
-            if (ProjectPath != "")
+            if (ProjectName != "")
             {
-                ProjectName = _getProjectName(ProjectPath);
+                ProjectName = _getProjectName(ProjectName);
             }
-            
             if (SaveDir == "" )
             {
                 Console.WriteLine("-projectPathが指定されていない");
@@ -122,11 +120,6 @@ namespace gladeGenerator
             if (ProjectName == "")
             {
                 Console.WriteLine("-ProjectNameが指定されていない");
-                return false;
-            }
-            if (ProjectPath == "")
-            {
-                Console.WriteLine("-projectPathが指定されていない");
                 return false;
             }
             if (FileDirPath == "")
@@ -181,19 +174,7 @@ namespace gladeGenerator
                     i++;
                     continue;
                 }
-                
-                if (commandKey._indexOf("-projectPath") != -1)
-                {
-                    
-                    if (args._safeIndexOf(i + 1) && 
-                        commndKeyArray.IndexOf(args[i+1]) == -1 && 
-                        args[i+1] != ""){
-                        ProjectPath = args[i + 1];              
-                    }
-                    i++;
-                    continue;
-                }
-             
+
                 i++;
             }
         }

@@ -34,7 +34,7 @@ You must specify a macro
 copy perst****
 
 ``` Rider arguments macro require
--projectPath $FilePath$ -projectName $SolutionName$ -fileDir $FilePath$ -saveDir $SolutionDir$
+-projectName $FilePath$ -fileDir $FilePath$ -saveDir $SolutionDir$
 ```
 ****
 
