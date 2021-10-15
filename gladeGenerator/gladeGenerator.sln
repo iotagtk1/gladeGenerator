@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gladeGenerator", "gladeGene
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GladeGeneratorGUI", "GladeGeneratorGUI\GladeGeneratorGUI.csproj", "{612B2FD1-3FF6-423D-9F98-8C3FF72E2C23}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "signalGeneratro2", "signalGenerator\signalGeneratro2\signalGeneratro2.csproj", "{73C1FC76-71C4-4DCF-856B-D45F62C4D0B1}"
+EndProject
 
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,5 +25,9 @@ Global
 		{0DD9BCFB-6B6F-4A2C-946B-99410E010BA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0DD9BCFB-6B6F-4A2C-946B-99410E010BA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0DD9BCFB-6B6F-4A2C-946B-99410E010BA3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73C1FC76-71C4-4DCF-856B-D45F62C4D0B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73C1FC76-71C4-4DCF-856B-D45F62C4D0B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73C1FC76-71C4-4DCF-856B-D45F62C4D0B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73C1FC76-71C4-4DCF-856B-D45F62C4D0B1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

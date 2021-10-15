@@ -15,6 +15,8 @@ namespace GladeGeneratorGUI
         public saveWin(MainWindow mainWindow) : this(new Builder("saveWin.glade"))
         {
             _mainWindow = mainWindow;
+
+            saveWin.saveFileText1 = clsArgsConfig.Instance().ProjectName._md5();
             
             if (clsIniFile.singlton[saveWin.saveFileText1, saveWin.saveFilePath] != "")
             {

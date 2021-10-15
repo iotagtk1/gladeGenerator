@@ -99,6 +99,7 @@ namespace gladeGenerator
             }
         }
 
+        //次の値がコマンドじゃないことを確認用
         private List<string> commndKeyArray = new List<string> {
            "-projectName","-saveDir","-fileDir"};
 
