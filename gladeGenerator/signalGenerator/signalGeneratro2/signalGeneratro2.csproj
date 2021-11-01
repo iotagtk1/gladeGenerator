@@ -3,6 +3,7 @@
     <PropertyGroup>
         <OutputType>Exe</OutputType>
         <TargetFramework>net5.0</TargetFramework>
+        <PackageLicenseUrl>https://www.gnu.org/licenses/gpl-3.0.html</PackageLicenseUrl>
     </PropertyGroup>
 
     <ItemGroup>
