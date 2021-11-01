@@ -4,7 +4,7 @@
         <OutputType>WinExe</OutputType>
         <TargetFramework>net5.0</TargetFramework>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-        <PackageVersion>1.1.1</PackageVersion>
+        <PackageVersion>1.1.3</PackageVersion>
         <Title>GladeGeneratorGUI</Title>
         <Authors>iotana</Authors>
         <Description>GUI Version
@@ -34,7 +34,7 @@ The event handler of the control</Description>
         </None>
         <EmbeddedResource Remove="DbModel\**" />
         <None Remove="DbModel\**" />
-        <None Update="readMe.md">
+        <None Update="README.md">
           <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
         </None>
         <None Update="readMe\1.png">
