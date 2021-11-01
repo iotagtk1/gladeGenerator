@@ -1,4 +1,4 @@
-[GUI Version](https://github.com/iotagtk1/gladeGenerator/tree/main/gladeGenerator/GladeGeneratorGUI)
+************[GUI Version](https://github.com/iotagtk1/gladeGenerator/tree/main/gladeGenerator/GladeGeneratorGUI)
 
 ### Description
 This tool supports GUI development in GtkSharp, and automatically generates event handlers when events are added to the Glade tool's controls.
@@ -63,7 +63,7 @@ saveDir The directory to be saved. The default setting is the project folder.
 
 isCodeHint    We will also export a sample of the code when we export it.
 codeHitFolder Name of the folder with the code samples
-
+************
 CodeHint can be customized
 
 ### GladFileClassMap.xml
