@@ -1,3 +1,10 @@
+### Description
+This tool supports GUI development in GtkSharp, and automatically generates event handlers when events are added to the Glade tool's controls.
+What will be auto-generated
+Variable name of the control
+The event handler of the control
+
+
 ### Introduction
 
 ### Environment
