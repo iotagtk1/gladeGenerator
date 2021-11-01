@@ -14,7 +14,7 @@ Variable name of the control
 The event handler of the control</Description>
         <Copyright>Copyright 2021</Copyright>
         <PackageProjectUrl>https://github.com/iotagtk1/gladeGenerator</PackageProjectUrl>
-        <PackageLicenseUrl>https://github.com/iotagtk1/gladeGenerator/blob/main/LICENSE</PackageLicenseUrl>
+        <PackageLicenseUrl>https://github.com/iotagtk1/gladeGenerator/blob/main/LICENSE.txt</PackageLicenseUrl>
         <RepositoryUrl>https://github.com/iotagtk1/gladeGenerator.git</RepositoryUrl>
         <RepositoryType>HTTPS</RepositoryType>
         <PackageTags>HTTPS</PackageTags>
