@@ -4,7 +4,7 @@
         <OutputType>WinExe</OutputType>
         <TargetFramework>net5.0</TargetFramework>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-        <PackageVersion>1.1.3</PackageVersion>
+        <PackageVersion>1.1.5</PackageVersion>
         <Title>GladeGeneratorGUI</Title>
         <Authors>iotana</Authors>
         <Description>GUI Version
@@ -14,11 +14,12 @@ Variable name of the control
 The event handler of the control</Description>
         <Copyright>Copyright 2021</Copyright>
         <PackageProjectUrl>https://github.com/iotagtk1/gladeGenerator</PackageProjectUrl>
-        <PackageLicenseUrl></PackageLicenseUrl>
+        <PackageLicenseUrl>https://github.com/iotagtk1/gladeGenerator/blob/main/LICENSE.txt</PackageLicenseUrl>
         <RepositoryUrl>https://github.com/iotagtk1/gladeGenerator.git</RepositoryUrl>
         <RepositoryType>HTTPS</RepositoryType>
         <PackageTags>gtk glade C# rider</PackageTags>
         <PackageReleaseNotes>GUI Version</PackageReleaseNotes>
+        <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     </PropertyGroup>
 
     <ItemGroup>
