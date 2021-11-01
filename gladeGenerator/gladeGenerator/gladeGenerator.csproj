@@ -22,10 +22,6 @@ The event handler of the control</Description>
     </PropertyGroup>
 
     <ItemGroup>
-      <None Include="..\signalGenerator\signalGeneratro2\bin\Debug\net5.0\signalGtk.xml">
-        <Link>signalGtk.xml</Link>
-        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      </None>
       <None Include="..\..\README.md">
         <Link>README.md</Link>
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -136,6 +132,9 @@ The event handler of the control</Description>
       </None>
       <Compile Remove="readMe\**" />
       <None Remove="readMe\**" />
+      <None Update="signalGtk.xml">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
     </ItemGroup>
 
     <ItemGroup>

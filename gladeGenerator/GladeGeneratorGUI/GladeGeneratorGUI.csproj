@@ -26,10 +26,6 @@ The event handler of the control</Description>
         <EmbeddedResource Include="**\*.glade">
             <LogicalName>%(Filename)%(Extension)</LogicalName>
         </EmbeddedResource>
-        <None Include="..\signalGenerator\signalGeneratro2\bin\Debug\net5.0\signalGtk.xml">
-          <Link>signalGtk.xml</Link>
-          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-        </None>
         <None Update="gladeModel.db3">
           <CopyToOutputDirectory>Always</CopyToOutputDirectory>
         </None>
@@ -65,6 +61,13 @@ The event handler of the control</Description>
         <None Update="readMe\15.png">
           <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
         </None>
+        <None Update="templateData2\template.txt">
+          <Link>templateData\template.txt</Link>
+          <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+        <None Update="signalGtk.xml">
+          <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
     </ItemGroup>
 
     <ItemGroup>
@@ -74,9 +77,6 @@ The event handler of the control</Description>
     </ItemGroup>
 
     <ItemGroup>
-      <Compile Include="..\..\..\..\..\core_commonclasses\clsString.cs">
-        <Link>clsString.cs</Link>
-      </Compile>
       <Compile Remove="DbModel\**" />
     </ItemGroup>
 
@@ -85,10 +85,6 @@ The event handler of the control</Description>
     </ItemGroup>
 
     <ItemGroup>
-      <None Include="..\gladeGenerator\templateData\template.txt">
-        <Link>templateData\template.txt</Link>
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </None>
       <Content Include="codeHint\GtkButton_Clicked.txt">
         <Link>codeHint/GtkButton_Clicked.txt</Link>
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
