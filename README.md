@@ -1,4 +1,4 @@
-************[GUI Version](https://github.com/iotagtk1/gladeGenerator/tree/main/gladeGenerator/GladeGeneratorGUI)
+[GUI Version](https://github.com/iotagtk1/gladeGenerator/tree/main/gladeGenerator/GladeGeneratorGUI)
 
 ### Description
 This tool supports GUI development in GtkSharp, and automatically generates event handlers when events are added to the Glade tool's controls.
