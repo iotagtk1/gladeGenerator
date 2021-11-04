@@ -84,6 +84,8 @@ The contents of the exported class can be changed
 ### Automatic generation of declarations
 Every time you add a control to the Glade file, a declaration statement is added
 
+![alt text](./readMe/17.png)
+
 ````
 using System;
 using Gtk;
