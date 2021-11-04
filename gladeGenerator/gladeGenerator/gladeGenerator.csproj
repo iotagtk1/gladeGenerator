@@ -44,6 +44,7 @@ The event handler of the control</Description>
       </None>
       <Content Include="..\..\readMe\6.png">
         <Link>readMe\6.png</Link>
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </Content>
       <Content Include="templateData\template.txt">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
