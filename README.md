@@ -139,8 +139,8 @@ Use the IntelliSense feature in the name field of the handler of the grade
 ````
 Enter 'On' in the Name field of the grade handler. IntelliSense will work.
 
-#### Use Rider for free.
+#### Use Rider for Free
 
-If you are an open source developer, you can use Rider for free.
+If you are an open source developer, you can use all JetBrains products for free!
 
-https://www.jetbrains.com/opensource/
+https://www.jetbrains.com/community/opensource
