@@ -144,8 +144,8 @@ ini-parser
 System.CodeDom
 
 
-### Use Rider for free.
+### Use Rider for Free
 
-If you are an open source developer, you can use Rider for free.
+If you are an open source developer, you can use all JetBrains products for free!
 
-https://www.jetbrains.com/opensource/
+https://www.jetbrains.com/community/opensource
