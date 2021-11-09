@@ -144,7 +144,7 @@ ini-parser
 System.CodeDom
 
 
-#### Use Rider for free.
+### Use Rider for free.
 
 If you are an open source developer, you can use Rider for free.
 
