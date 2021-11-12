@@ -144,3 +144,11 @@ Enter 'On' in the Name field of the grade handler. IntelliSense will work.
 If you are an open source developer, you can use all JetBrains products for free!
 
 https://www.jetbrains.com/community/opensource
+
+#### Donation 
+
+Any token on the Stellear network can be used.
+XLM etc
+This will be used for software maintenance costs.
+
+GCZWMTY26CCFMIVCAMYZ5OOQXBAPN7VXDMQSHBZT3BFN5DFHQMXLEKEU
