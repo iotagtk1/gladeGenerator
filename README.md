@@ -145,7 +145,7 @@ If you are an open source developer, you can use all JetBrains products for free
 
 https://www.jetbrains.com/community/opensource
 
-#### Donation 
+### Donation 
 
 Any token on the Stellear network can be used.
 XLM etc
