@@ -8,7 +8,7 @@ namespace GladeGeneratorGUI
     {
 
         static  public string saveFilePath = "saveFilePath";
-        static  public string saveFileText1 = "saveFileText1";
+        static  public string saveFileText1 = clsArgsConfig.Instance().ProjectName._md5();
         private Builder builder1 = null;
         private MainWindow _mainWindow;
 

@@ -4,7 +4,7 @@
         <OutputType>WinExe</OutputType>
         <TargetFramework>net5.0</TargetFramework>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-        <PackageVersion>1.1.5</PackageVersion>
+        <PackageVersion>1.1.6</PackageVersion>
         <Title>GladeGeneratorGUI</Title>
         <Authors>iotana</Authors>
         <Description>GUI Version
@@ -23,9 +23,11 @@ The event handler of the control</Description>
     </PropertyGroup>
 
     <ItemGroup>
-        <None Remove="**\*.glade" />
-        <EmbeddedResource Include="**\*.glade">
-            <LogicalName>%(Filename)%(Extension)</LogicalName>
+        <EmbeddedResource Include="MainWindow.glade">
+          <LogicalName>MainWindow.glade</LogicalName>
+        </EmbeddedResource>
+        <EmbeddedResource Include="saveWin.glade">
+          <LogicalName>saveWin.glade</LogicalName>
         </EmbeddedResource>
         <None Update="gladeModel.db3">
           <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -71,6 +73,11 @@ The event handler of the control</Description>
         </None>
         <None Update="readMe\17.png">
           <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+        <Compile Remove="testData\MainWindow.cs" />
+        <None Include="testData\MainWindow.cs" />
+        <None Update="templateData\template.txt">
+          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
         </None>
     </ItemGroup>
 
