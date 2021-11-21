@@ -1,3 +1,4 @@
 TreeIter tree;
 ((Gtk.ComboBox)sender).GetActiveIter(out tree);
+//({Model}){ListStore}
 {Model} modelObj = ({Model}){ListStore}.GetValue (tree, 0);
