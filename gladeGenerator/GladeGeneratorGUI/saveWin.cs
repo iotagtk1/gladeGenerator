@@ -22,7 +22,7 @@ namespace GladeGeneratorGUI
             {
                 saveFileText.Text = clsIniFile.singlton[saveWin.saveFileText1, saveWin.saveFilePath];
             }
-
+            
         }
 
         private saveWin(Builder builder) : base(builder.GetRawOwnedObject("saveWin"))
@@ -31,6 +31,7 @@ namespace GladeGeneratorGUI
 
             builder1 = builder;
 
+            DeleteEvent += Window_DeleteEvent;
         }
 
         private void Window_DeleteEvent(object sender, DeleteEventArgs a)
