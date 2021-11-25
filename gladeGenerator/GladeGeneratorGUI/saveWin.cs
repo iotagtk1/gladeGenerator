@@ -31,12 +31,12 @@ namespace GladeGeneratorGUI
 
             builder1 = builder;
 
-            //DeleteEvent += Window_DeleteEvent;
+            DeleteEvent += Window_DeleteEvent;
         }
 
         private void Window_DeleteEvent(object sender, DeleteEventArgs a)
         {
-            //Application.Quit();
+            this.Destroy();
         }
 
     }
