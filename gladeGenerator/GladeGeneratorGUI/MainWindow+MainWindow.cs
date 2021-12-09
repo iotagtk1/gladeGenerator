@@ -93,7 +93,6 @@ namespace GladeGeneratorGUI
 
         private void on_closeBtn_clicked(object sender, EventArgs e)
         {
-            Close();
             clsUtility._appEnd();
         }
         
