@@ -5,8 +5,8 @@
   <object class="GtkWindow" id="MainWindow">
     <property name="can_focus">False</property>
     <property name="title" translatable="yes">GladeGeneratorGUI</property>
-    <property name="default_width">970</property>
-    <property name="default_height">350</property>
+    <property name="default_width">960</property>
+    <property name="default_height">320</property>
     <child>
       <placeholder/>
     </child>
@@ -23,7 +23,7 @@
             <signal name="changed" handler="on_ListStoreEntry_changed" swapped="no"/>
           </object>
           <packing>
-            <property name="x">709</property>
+            <property name="x">729</property>
             <property name="y">157</property>
           </packing>
         </child>
@@ -36,7 +36,7 @@
             <signal name="changed" handler="on_ModelViewEntry_changed" swapped="no"/>
           </object>
           <packing>
-            <property name="x">709</property>
+            <property name="x">729</property>
             <property name="y">214</property>
           </packing>
         </child>
@@ -66,7 +66,7 @@
             <signal name="clicked" handler="on_outPutBtn_clicked" swapped="no"/>
           </object>
           <packing>
-            <property name="x">709</property>
+            <property name="x">729</property>
             <property name="y">40</property>
           </packing>
         </child>
@@ -79,8 +79,8 @@
             <property name="shadow_type">in</property>
             <child>
               <object class="GtkTreeView" id="TopLevelPartTreeView">
-                <property name="width_request">147</property>
-                <property name="height_request">202</property>
+                <property name="width_request">148</property>
+                <property name="height_request">270</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <child internal-child="selection">
@@ -98,15 +98,15 @@
         </child>
         <child>
           <object class="GtkScrolledWindow">
-            <property name="width_request">180</property>
+            <property name="width_request">200</property>
             <property name="height_request">270</property>
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="shadow_type">in</property>
             <child>
               <object class="GtkTreeView" id="ChildLevelPartTreeView">
-                <property name="width_request">147</property>
-                <property name="height_request">200</property>
+                <property name="width_request">200</property>
+                <property name="height_request">270</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <child internal-child="selection">
@@ -131,8 +131,8 @@
             <property name="shadow_type">in</property>
             <child>
               <object class="GtkTreeView" id="SignalTreeView">
-                <property name="width_request">147</property>
-                <property name="height_request">202</property>
+                <property name="width_request">350</property>
+                <property name="height_request">270</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <child internal-child="selection">
@@ -144,7 +144,7 @@
             </child>
           </object>
           <packing>
-            <property name="x">350</property>
+            <property name="x">370</property>
             <property name="y">40</property>
           </packing>
         </child>
@@ -158,7 +158,7 @@
               <object class="GtkMenuItem">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="label" translatable="yes">ツール</property>
+                <property name="label" translatable="yes">Tool</property>
                 <property name="use_underline">True</property>
                 <child type="submenu">
                   <object class="GtkMenu">
@@ -189,7 +189,7 @@
             <property name="label" translatable="yes">ModelName</property>
           </object>
           <packing>
-            <property name="x">709</property>
+            <property name="x">729</property>
             <property name="y">195</property>
           </packing>
         </child>
@@ -202,7 +202,7 @@
             <property name="label" translatable="yes">ListStore</property>
           </object>
           <packing>
-            <property name="x">709</property>
+            <property name="x">729</property>
             <property name="y">136</property>
           </packing>
         </child>

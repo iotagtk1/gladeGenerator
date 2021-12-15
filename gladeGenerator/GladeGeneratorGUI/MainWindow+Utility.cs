@@ -11,14 +11,15 @@ namespace GladeGeneratorGUI
         /// ToplevelとChildIdのKeyを生成する
         /// </summary>
         /// <returns></returns>
-        private string _getTopLevelPartChildPartKey()
+        private string _getTopLevelPartChildPartKey(ChildLevelPart ChildLevelPart1)
         {
             if (SelectedGladeDataRow == null || 
                 SelectedTopLevelPartRow == null ||
-                SelectedChildLevelPartRow == null ||
+                ChildLevelPart1 == null ||
                 SelectedGladeDataRow.OutPutGladeName == null || 
-                ((TopLevelPart)SelectedTopLevelPartRow).PartId == "" || 
-                ((ChildLevelPart)SelectedChildLevelPartRow).PartId == "")
+                ((TopLevelPart)SelectedTopLevelPartRow).PartId == "" 
+                || ChildLevelPart1.PartId == ""
+                )
             {
                 Console.WriteLine(" 例外 TopLevelPartChildPartKeyがない ");
                 return "";
@@ -26,7 +27,7 @@ namespace GladeGeneratorGUI
 
             string GladeName = ((GladeData)SelectedGladeDataRow).OutPutGladeName._md5(); 
             string topLevelPartKey = ((TopLevelPart)SelectedTopLevelPartRow).PartId._md5();
-            string childLevelPartKey = ((ChildLevelPart)SelectedChildLevelPartRow).PartId._md5();
+            string childLevelPartKey = ((ChildLevelPart)ChildLevelPart1).PartId._md5();
 
             return GladeName + topLevelPartKey + childLevelPartKey;
         }

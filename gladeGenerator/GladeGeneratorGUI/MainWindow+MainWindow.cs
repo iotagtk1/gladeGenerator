@@ -9,7 +9,7 @@ namespace GladeGeneratorGUI
 
         private GladeData SelectedGladeDataRow = null; 
         private TopLevelPart SelectedTopLevelPartRow = null;
-        private ChildLevelPart SelectedChildLevelPartRow = null;
+       // private ChildLevelPart SelectedChildLevelPartRow = null;
         private Signal SelectedSignalRow = null;
         private string SelectedTopChildSignalKey = "";
         private string SelectedTopEnterTextKey = "";
@@ -38,6 +38,11 @@ namespace GladeGeneratorGUI
 
                 _mkTreeViewBinding_Signal(TopLevelPart1.SignalArray,SelectedTopChildSignalKey);
 
+                foreach (ChildLevelPart ChildLevelPart1 in TopLevelPart1.ChildLevelPartsArray)
+                {    var ChildSignalKey = _getTopLevelPartChildPartKey(ChildLevelPart1);
+                    _mkTreeViewBinding_Signal(ChildLevelPart1.SignalArray,ChildSignalKey);
+                }
+
                 _saveAll(SelectedTopChildSignalKey);
 
             }
@@ -49,13 +54,15 @@ namespace GladeGeneratorGUI
             if (((Gtk.TreeSelection)sender).GetSelected(out model, out iter))
             {
                 ChildLevelPart ChildLevelPart1 = (ChildLevelPart)ChildLevelPartListStore.GetValue(iter, 0);
-                SelectedChildLevelPartRow = ChildLevelPart1;
+                //SelectedChildLevelPartRow = ChildLevelPart1;
                 
-                SelectedTopChildSignalKey = _getTopLevelPartChildPartKey();
+                var childSignalKey = _getTopLevelPartChildPartKey(ChildLevelPart1);
 
-                _mkTreeViewBinding_Signal(ChildLevelPart1.SignalArray,SelectedTopChildSignalKey);
+                SelectedTopChildSignalKey = childSignalKey;
 
-                _saveAll(SelectedTopChildSignalKey);
+                _mkTreeViewBinding_Signal(ChildLevelPart1.SignalArray,childSignalKey);
+
+                _saveAll(childSignalKey);
 
             }
         }
