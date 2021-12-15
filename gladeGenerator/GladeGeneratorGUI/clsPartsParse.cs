@@ -109,7 +109,6 @@ namespace GladeGeneratorGUI
                     return null;
                 }
 
-
                 foreach (XmlNode topObjectNode in topLevelPartNodesList)
                 {
                     _getTopPart_idMethod(topObjectNode, ref gladeDataPart1.TopLevelPartArray);

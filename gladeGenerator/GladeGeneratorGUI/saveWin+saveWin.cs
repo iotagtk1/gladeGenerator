@@ -24,10 +24,11 @@ namespace GladeGeneratorGUI
 			fileDialog.Show();
 
 		}
-    
+
 		private void on_closeBtn1_clicked(object sender , EventArgs e){
-			Close();
+			
 			_mainWindow._parsePrjectFolder();
+			Close();
 		}
 		
 		private void on_saveFileText_changed(object sender , EventArgs e){

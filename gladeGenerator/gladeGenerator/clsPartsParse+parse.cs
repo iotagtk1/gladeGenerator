@@ -63,7 +63,7 @@ namespace gladeGenerator
             else
             {
                 
-                Console.WriteLine("{0}にIDがないため書き出せません",topObjectNodes.Attributes["class"].Value);
+                Console.WriteLine("Gladeをチェックしてください。{0}にIDがないため書き出せません",topObjectNodes.Attributes["class"].Value);
             }
         }
         
