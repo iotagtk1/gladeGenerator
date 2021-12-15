@@ -1,3 +1,4 @@
+/*
 TreeIter iter;
 ITreeModel model;
 if (treeView1.Selection.GetSelected(out model,out iter))
@@ -5,3 +6,4 @@ if (treeView1.Selection.GetSelected(out model,out iter))
     //({Model}){ListStore}
     {Model} modelData = ({Model}){ListStore}.GetValue(iter, 0);
 }
+*/

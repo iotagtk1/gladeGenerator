@@ -1,3 +1,4 @@
+/*
 TreeIter iter;
 if (listStore_{num}.GetIterFromString(out iter, args.Path))
 {
@@ -9,3 +10,4 @@ if (listStore_{num}.GetIter(out iter, e.Path))
     //({Model}){ListStore}
     {Model} modelObj = ({Model}){ListStore}.GetValue(iter, 0);
 }
+*/
