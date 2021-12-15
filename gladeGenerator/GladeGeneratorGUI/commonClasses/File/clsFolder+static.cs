@@ -98,8 +98,11 @@ public partial class clsFolder {
 
 
     /// <summary>
-    /// ファイル一覧取得する
+    /// ファイル一覧取得　*.ts"
     /// </summary>
+    /// <param name="dirPath"></param>
+    /// <param name="filter"></param>
+    /// <returns></returns>
     static public ArrayList _getFiles(string dirPath,string filter = "") {
         string[] files = Directory.GetFiles(dirPath, filter, System.IO.SearchOption.AllDirectories);
         ArrayList fileList =  new ArrayList(files);

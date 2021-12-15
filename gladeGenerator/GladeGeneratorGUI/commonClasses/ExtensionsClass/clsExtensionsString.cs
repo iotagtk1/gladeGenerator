@@ -8,8 +8,9 @@ using System.Reflection;
 using System.IO;
 using System.Xml;
 using System.Globalization;
+using System.Text.Json;
 
-    public static partial class StringExtensions {
+public static partial class StringExtensions {
 
 
     /// <summary>
@@ -61,6 +62,7 @@ using System.Globalization;
     /// <summary>
     /// ファイル名を取得する
     /// </summary>
+    /*
     static public string _getFileNameNoExtension(this string str) {
 
         if (str.IndexOf(".") != -1) {
@@ -69,6 +71,7 @@ using System.Globalization;
 
         return str;
     }
+    */
 
     /// <summary>
     /// 文字列を取得する
@@ -234,7 +237,7 @@ using System.Globalization;
     /// 置き換え　() に対し$1　$2  $3 
     /// </summary>
     static public string _patarnReplace_singleLine(this string str, string patarn, string replaceStr) {
-
+        
         //連続する同じ行を削除
         var str2 = Regex.Replace(str, patarn, replaceStr, RegexOptions.IgnoreCase | RegexOptions.Singleline);
         return str2;
@@ -431,7 +434,6 @@ using System.Globalization;
         return System.Globalization.CultureInfo.CurrentCulture.TextInfo.ToTitleCase(str);
     }
     
-    
     /// <summary>
     /// mk5にする
     /// </summary>
@@ -467,7 +469,41 @@ using System.Globalization;
         return html;
     }
 
-    
+    /// <summary>
+    /// StrJsonをObjectにする
+    /// </summary>
+    /// <param name="jsonStr"></param>
+    /// <typeparam name="T"></typeparam>
+    /// <returns></returns>
+    public static T _toObj_fromJsonStr<T>(this string jsonStr) {
+        var obj = JsonSerializer.Deserialize<T>(jsonStr);
+        return obj;
+    }
+
+    /// <summary>
+    /// 絶対basePath 絶対targetPathを組み合わせて相対パスを取得する
+    /// </summary>
+    /// <param name="targetPath_absolute"></param>
+    /// <param name="basePath_absolute"></param>
+    /// <returns></returns>
+    public static string _convertToRelativePath_fromAbsolutePath(
+        this string targetPath_absolute ,string basePath_absolute)
+    {
+            string targetPath_absolute_dir = "";
+            if (Directory.Exists(targetPath_absolute))
+            {
+                targetPath_absolute_dir = "/";
+            }
+            string basePath_absolute_dir = ""; 
+            if (Directory.Exists(basePath_absolute))
+            {
+                basePath_absolute_dir = "/";
+            }
+            Uri sPath2 = new Uri(targetPath_absolute + targetPath_absolute_dir);
+            Uri sPath1 = new Uri(basePath_absolute+ basePath_absolute_dir);
+            Uri sPath3 = sPath1.MakeRelativeUri(sPath2);
+            return sPath3.ToString();
+        }
 
 }
 

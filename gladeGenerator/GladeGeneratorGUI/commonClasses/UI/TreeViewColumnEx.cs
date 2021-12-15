@@ -11,7 +11,7 @@ namespace Gtk
         private Gtk.ListStore listStore1 = null;
 
         public CellRendererText _mkCellRendererText(TreeView treeView, string title = "", int width = 0,
-            bool isEditable = true, bool isExpand = false, bool isPackStart = true , bool isAutoEdit = true)
+            bool isEditable = true, bool isExpand = false, bool isPackStart = true , bool isAutoEdit = true,bool isAutoSize = false)
         {
             if (title != "")
             {
@@ -25,7 +25,7 @@ namespace Gtk
             }
 
             this.Expand = isExpand;
-            this.Sizing = TreeViewColumnSizing.Autosize;
+            this.Sizing = isAutoSize ? TreeViewColumnSizing.Autosize : TreeViewColumnSizing.Fixed;
             this.PackStart(CellRendererText1, isPackStart);
             listStore1 = (ListStore)treeView.Model;
             if (isEditable)
@@ -50,7 +50,7 @@ namespace Gtk
         }
 
         public CellRendererPixbuf _mkCellRendererPixbuf(TreeView treeView, string title = "", int width = 0,
-            bool isExpand = false, bool isPackStart = true)
+            bool isExpand = false, bool isPackStart = true,bool isAutoSize = false)
         {
             if (title != "")
             {
@@ -65,7 +65,7 @@ namespace Gtk
             }
 
             this.Expand = isExpand;
-            this.Sizing = TreeViewColumnSizing.Autosize;
+            this.Sizing = isAutoSize ? TreeViewColumnSizing.Autosize : TreeViewColumnSizing.Fixed;
             listStore1 = (ListStore)treeView.Model;
             this.PackStart(CellRendererPixbuf1, isPackStart);
             //this.AddAttribute (CellRendererPixbuf1, "pixbuf", 0);  
@@ -74,7 +74,7 @@ namespace Gtk
         }
 
         public CellRendererToggle _mkCellRendererToggle(TreeView treeView, string title = "", int width = 0,
-            bool isToggled = false, bool isExpand = false, bool isPackStart = true)
+            bool isToggled = false, bool isExpand = false, bool isPackStart = true,bool isAutoSize = false)
         {
             if (title != "")
             {
@@ -88,7 +88,7 @@ namespace Gtk
             }
 
             this.Expand = isExpand;
-            this.Sizing = TreeViewColumnSizing.Autosize;
+            this.Sizing = isAutoSize ? TreeViewColumnSizing.Autosize : TreeViewColumnSizing.Fixed;
             listStore1 = (ListStore)treeView.Model;
             if (isToggled)
             {
@@ -111,7 +111,7 @@ namespace Gtk
         }
 
         public CellRendererProgress _mkCellRendererProgress(TreeView treeView, string title = "", int width = 0,
-            bool isExpand = false, bool isPackStart = true)
+            bool isExpand = false, bool isPackStart = true,bool isAutoSize = false)
         {
             if (title != "")
             {
@@ -125,7 +125,7 @@ namespace Gtk
             }
 
             this.Expand = isExpand;
-            this.Sizing = TreeViewColumnSizing.Autosize;
+            this.Sizing = isAutoSize ? TreeViewColumnSizing.Autosize : TreeViewColumnSizing.Fixed;
             listStore1 = (ListStore)treeView.Model;
             this.PackStart(CellRendererProgress1, isPackStart);
             treeView.AppendColumn(this);

@@ -8,7 +8,7 @@ using System.Reflection;
 using System.Text.Json;
 using System.Xml.Serialization;
 
-public static partial class ArrayDicExtensions {
+public static partial class ArrayExtensions {
 
     /// <summary>
     /// 文字列か
@@ -23,27 +23,7 @@ public static partial class ArrayDicExtensions {
         return newStr;
     }
 
-    /// <summary>
-    /// シリアライズ
-    /// </summary>
-    static public string _toStr(this Hashtable obj,string splitStr = "") {
-
-        string newStr = "";
-        foreach (string key in obj.Keys) { 
-
-            if (obj[key].GetType() == typeof(String)) {
-                newStr += key + splitStr + obj[key].ToString() + splitStr;
-            } else if (obj[key].GetType() == typeof(ArrayList)) {
-                newStr += key + splitStr;
-                foreach (string str2 in ((ArrayList)obj[key])) {
-                    newStr += str2 + splitStr;
-                }
-            }
-        }
-        newStr = newStr._trimEnd(splitStr);
-        return newStr;
-    }
-
+   
     /// <summary>
     /// _toJson
     /// </summary>
@@ -81,24 +61,7 @@ public static partial class ArrayDicExtensions {
              return testArray;
         }
 
-
-        /// <summary>
-        /// _sort 数字を入れる
-        /// </summary>
-        public static ArrayList _sort(this Hashtable hash) {
-
-            ArrayList keys = new ArrayList(hash.Keys);
-            keys.Sort();
-
-            ArrayList newHashtable = new ArrayList();
-            foreach (var key in keys) {
-                newHashtable.Add(hash[key]);
-            }
-
-            return newHashtable;
-
-        }
-    
+      
         /// <summary>
         /// _indexObject
         /// </summary>
@@ -169,15 +132,8 @@ public static partial class ArrayDicExtensions {
                 return false;
             }
             return true;
-        }    
-
-        /// <summary>
-        /// シリアライズ
-        /// </summary>
-        static public string _toJson(this Hashtable obj) {
-            var json = JsonSerializer.Serialize(obj);
-            return json;
         }
+
 
         /// <summary>
         /// ユニーク
@@ -225,31 +181,7 @@ public static partial class ArrayDicExtensions {
         public static void _removeObjectForKey(this Hashtable h, string key) {
             h.Remove(key);
         }
-	/*
-        public static void _setObjectForKey(this Hashtable h, NSObject value, string key) {            
-            h.Add(key,value);
-        }
-        /// <summary>
-        /// Obj-cから用
-        /// </summary>
-        public static NSObject _objectForKey(this Hashtable h, string test) {
-            return h[test];
-        }
-	*/
-        /// <summary>　
-        /// カウント　Obj-cから用
-        /// </summary>
-        public static int _count(this Hashtable h) {            
-            return h.Count;
-        }
-        /// <summary>
-        /// キーを取得する　Obj-cから用
-        /// </summary>
-        public static ArrayList _allKeys(this Hashtable h) {
-            ArrayList list1 = new ArrayList(h.Keys);
-            return list1;
-        }
-        
+ 
         /// <summary>
         /// 配列を分割する
         /// </summary>
@@ -272,11 +204,6 @@ public static partial class ArrayDicExtensions {
             }
             return null;
         }
-        
- 
-        
-        
-        
 
     }
 

@@ -79,6 +79,7 @@ The event handler of the control</Description>
         <None Update="templateData\template.txt">
           <CopyToOutputDirectory>Always</CopyToOutputDirectory>
         </None>
+        <Compile Remove="commonClasses\ExtensionsClass\clsExtensionsSetting.cs" />
     </ItemGroup>
 
     <ItemGroup>
@@ -96,6 +97,8 @@ The event handler of the control</Description>
     </ItemGroup>
 
     <ItemGroup>
+      <Content Include="bin\Debug\net5.0\config.ini" />
+      <Content Include="bin\Debug\net5.0\data.json" />
       <Content Include="codeHint\GtkButton_Clicked.txt">
         <Link>codeHint/GtkButton_Clicked.txt</Link>
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

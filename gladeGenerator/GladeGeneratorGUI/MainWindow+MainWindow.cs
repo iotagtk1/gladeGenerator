@@ -98,7 +98,32 @@ namespace GladeGeneratorGUI
         
         private void on_outPutBtn_clicked(object sender, EventArgs e)
         {
-            clsPartsParse1._outPut();
+            TreeIter iter;
+            ITreeModel model;
+            if (TopLevelPartTreeViewSection.GetSelected(out model, out iter)){
+                TopLevelPart TopLevelPart1 = (TopLevelPart)TopLevelPartListStore.GetValue(iter, 0);
+
+                if (TopLevelPart1.ChildLevelPartsArray.Count == 0)
+                {
+                    clsDialog._mkMessageDialog_Ok(this,"確認","書き出すChildエリアがありません。",
+                        delegate(MessageDialog md, ResponseType result)
+                        {
+                            md.Destroy();				
+                        }
+                    );
+                    return;
+                }
+                clsPartsParse1._outPut();
+            }else{
+            
+                clsDialog._mkMessageDialog_Ok(this,"確認","Childエリアを表示してから出力ボタンを押してください",
+                    delegate(MessageDialog md, ResponseType result)
+                    {
+                        md.Destroy();				
+                    }
+                );
+            }
+
         }
     
 		private void on_menuSettingBtn_activate(object sender , EventArgs e)
