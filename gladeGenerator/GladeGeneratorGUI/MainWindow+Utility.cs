@@ -25,11 +25,13 @@ namespace GladeGeneratorGUI
                 return "";
             }
 
-            string GladeName = ((GladeData)SelectedGladeDataRow).OutPutGladeName._md5(); 
-            string topLevelPartKey = ((TopLevelPart)SelectedTopLevelPartRow).PartId._md5();
-            string childLevelPartKey = ((ChildLevelPart)ChildLevelPart1).PartId._md5();
+           string GladeName = ((GladeData)SelectedGladeDataRow).OutPutGladeName; 
+           string topLevelPartKey = ((TopLevelPart)SelectedTopLevelPartRow).PartId;
+           string childLevelPartKey = ((ChildLevelPart)ChildLevelPart1).PartId;
 
-            return GladeName + topLevelPartKey + childLevelPartKey;
+           string GladeNametopLevelPartKeychildLevelPartKey = GladeName + topLevelPartKey + childLevelPartKey;
+
+           return GladeNametopLevelPartKeychildLevelPartKey._md5();
         }
         
         /// <summary>
@@ -47,10 +49,12 @@ namespace GladeGeneratorGUI
                 return "";
             }
 
-            string GladeName = ((GladeData)SelectedGladeDataRow).OutPutGladeName._md5(); 
-            string topLevelPartKey = ((TopLevelPart)SelectedTopLevelPartRow).PartId._md5();
+            string GladeName = ((GladeData)SelectedGladeDataRow).OutPutGladeName; 
+            string topLevelPartKey = ((TopLevelPart)SelectedTopLevelPartRow).PartId;
 
-            return GladeName + topLevelPartKey ;
+            var GladeNameTopLevelPartKey = GladeName + topLevelPartKey;
+
+            return GladeNameTopLevelPartKey._md5() ;
         }
         
         

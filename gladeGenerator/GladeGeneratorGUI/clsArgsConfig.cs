@@ -98,7 +98,11 @@ namespace GladeGeneratorGUI
                 Console.WriteLine("-FileDirが指定されていません");
                 return false;
             }
-
+            
+            Console.WriteLine("ProjectName  " + ProjectName);
+            Console.WriteLine("FileDirPath  " + FileDirPath);        
+            Console.WriteLine("SaveDir      " + SaveDir);  
+            
             return true;
         }
 
