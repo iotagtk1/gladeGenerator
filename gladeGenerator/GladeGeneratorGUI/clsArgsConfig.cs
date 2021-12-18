@@ -102,6 +102,7 @@ namespace GladeGeneratorGUI
             Console.WriteLine("ProjectName  " + ProjectName);
             Console.WriteLine("FileDirPath  " + FileDirPath);        
             Console.WriteLine("SaveDir      " + SaveDir);  
+            Console.WriteLine("");
             
             return true;
         }
