@@ -128,6 +128,10 @@ namespace gladeGenerator
                 Console.WriteLine("-FileDirが指定されていない");
                 return false;
             }
+            
+            Console.WriteLine("ProjectName  " + ProjectName);
+            Console.WriteLine("FileDirPath  " + FileDirPath);        
+            Console.WriteLine("SaveDir      " + SaveDir);  
 
 
             return true;
