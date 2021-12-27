@@ -31,7 +31,7 @@ namespace GladeGeneratorGUI
 
             if (filesArray.Count == 0)
             {
-                Console.WriteLine("フォルダ:{0} 書き出すGladeファイルがありません", fileFolderPath);
+                Console.WriteLine("folder :{0} There is no Glade file to export", fileFolderPath);
                 return;
             }
 

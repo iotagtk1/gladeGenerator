@@ -60,7 +60,7 @@ namespace GladeGeneratorGUI
             }
             else
             {
-                Console.WriteLine("Gladeをチェックしてください。{0}にIDがないため書き出せません", topObjectNodes.Attributes["class"].Value);
+                Console.WriteLine("Check out Glade. Cannot export because there is no ID in {0} ", topObjectNodes.Attributes["class"].Value);
             }
         }
 

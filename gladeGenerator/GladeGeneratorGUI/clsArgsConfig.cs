@@ -74,7 +74,7 @@ namespace GladeGeneratorGUI
 
             if (ProjectName == "")
             {
-                Console.WriteLine("-ProjectNameが指定されていません");
+                Console.WriteLine("-ProjectName is not specified");
                 return false;
             }
             
@@ -87,15 +87,23 @@ namespace GladeGeneratorGUI
             {
                 SaveDir = clsIniFile.singlton[saveWin.saveFileText1, saveWin.saveFilePath];
             }
+            else if (clsArgsConfig.Instance().FileDirPath != "" && 
+                     clsArgsConfig.Instance().ProjectName != ""){
+                saveWin.saveFileText1 = clsArgsConfig.Instance().ProjectName._md5();  
+                saveWin.saveFilePath = clsFolder._getFolderNamePath(clsArgsConfig.Instance().FileDirPath);
+                SaveDir = clsFolder._getFolderNamePath(clsArgsConfig.Instance().FileDirPath);
+                clsIniFile.singlton[saveWin.saveFileText1, saveWin.saveFilePath] = SaveDir;
+            }
 
             if (SaveDir == "")
             {
-                Console.WriteLine("SaveDirがありません。Toolから設定してください。");
+                Console.WriteLine("There is no SaveDir, please set it from Tool.");
                 return false;
             }
+            
             if (FileDirPath == "")
             {
-                Console.WriteLine("-FileDirが指定されていません");
+                Console.WriteLine("-FileDir is not specified");
                 return false;
             }
             
