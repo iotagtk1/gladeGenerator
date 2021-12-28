@@ -100,6 +100,11 @@ namespace gladeGenerator
                 {
 
                     _getTopPart_idMethod(topObjectNode , ref gladeDataPart1.TopLevelPartArray);
+                    
+                    if (gladeDataPart1.TopLevelPartArray.Count == 0)
+                    {
+                        continue;
+                    }
 
                     TopLevelPart topLevelPart1 = gladeDataPart1.TopLevelPartArray[gladeDataPart1.TopLevelPartArray.Count - 1];
 

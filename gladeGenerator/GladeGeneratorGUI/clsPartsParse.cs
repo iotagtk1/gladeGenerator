@@ -22,20 +22,31 @@ namespace GladeGeneratorGUI
 
         public void _parsePrjectFolder(string fileFolderPath)
         {
-            ArrayList filesArray = new ArrayList();
-
-            if (clsFile._isFile(fileFolderPath) && fileFolderPath._indexOf(".glade") != -1)
+            try
             {
-                filesArray.Add(fileFolderPath);
+
+                ArrayList filesArray = new ArrayList();
+
+                if (clsFile._isFile(fileFolderPath) && fileFolderPath._indexOf(".glade") != -1)
+                {
+                    filesArray.Add(fileFolderPath);
+                }
+
+                if (filesArray.Count == 0)
+                {
+                    Console.WriteLine("folder :{0} There is no Glade file to export", fileFolderPath);
+                    return;
+                }
+
+                _parsePrjectFolder_do(filesArray);
+                
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
             }
 
-            if (filesArray.Count == 0)
-            {
-                Console.WriteLine("folder :{0} There is no Glade file to export", fileFolderPath);
-                return;
-            }
-
-            _parsePrjectFolder_do(filesArray);
         }
 
         public void _parsePrjectFolder_do(ArrayList filesArray)
@@ -113,6 +124,11 @@ namespace GladeGeneratorGUI
                 {
                     _getTopPart_idMethod(topObjectNode, ref gladeDataPart1.TopLevelPartArray);
 
+                    if (gladeDataPart1.TopLevelPartArray.Count == 0)
+                    {
+                        continue;
+                    }
+                    
                     TopLevelPart topLevelPart1 =
                         gladeDataPart1.TopLevelPartArray[gladeDataPart1.TopLevelPartArray.Count - 1];
 

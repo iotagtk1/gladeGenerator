@@ -148,8 +148,8 @@ namespace GladeGeneratorGUI
 
                     if (classId == "")
                     {
-                        Console.WriteLine("{0}の IDがありません。IDを追加してください" +
-                                          "テンプレートデータ({1})を確認してください 2", signalModel1.ParentNodeClassName,
+                        Console.WriteLine("　There is no ID　{0}, please add one" +
+                                          "Please check the template data. ({1})　", signalModel1.ParentNodeClassName,
                             clsSignalsData.Instance().signalFileName);
                         continue;
                     }
@@ -187,7 +187,7 @@ namespace GladeGeneratorGUI
                         if (TemplateData_signal == null)
                         {
                             Console.WriteLine("{0}の Signal {1} Eventがテンプレートデータ({2})にない。" +
-                                              "テンプレートデータ({3})を確認してください1", signalModel1.ParentNodeClassName,
+                                              "Please check the template data.　{3}　", signalModel1.ParentNodeClassName,
                                 signalModel1.EventName, clsSignalsData.Instance().signalFileName,
                                 clsSignalsData.Instance().signalFileName);
                             continue;

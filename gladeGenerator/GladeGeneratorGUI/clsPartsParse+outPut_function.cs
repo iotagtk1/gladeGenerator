@@ -67,7 +67,7 @@ namespace GladeGeneratorGUI
                     }
                 }
 
-                Console.WriteLine("{0}に保存しました。", TopLevelPart1.OutPutSaveFilePath_function);
+                Console.WriteLine("I saved it to　{0}", TopLevelPart1.OutPutSaveFilePath_function);
                 clsFile._saveFilePath(fileContent, TopLevelPart1.OutPutSaveFilePath_function);
             }
         }
