@@ -6,7 +6,7 @@
 
 ### Rider Setting
 ExploerPanel - right click - edit execution configuration - external tools
-
+****
 ![alt text](./readMe/1.png)
 
 Set up external tools. Set the arguments
