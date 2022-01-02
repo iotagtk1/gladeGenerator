@@ -16,9 +16,12 @@ namespace GladeGeneratorGUI
                 MainWindow._initConfigFile();
 
                 clsArgsConfig.Instance();
-                
-             
-                
+
+                if (System.Diagnostics.Debugger.IsAttached)
+                {
+
+                }
+
 
                 clsArgsConfig.Instance()._setArgs(args);
 
