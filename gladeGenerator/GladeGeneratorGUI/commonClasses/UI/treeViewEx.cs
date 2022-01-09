@@ -12,7 +12,7 @@ namespace Gtk
             {
                 if (!(column is TreeViewColumnEx))
                 {
-                    return;
+                    continue;
                 }
 
                 TreeViewColumnEx columnt1 = (column as TreeViewColumnEx);
