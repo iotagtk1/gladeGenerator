@@ -83,13 +83,14 @@ namespace GladeGeneratorGUI
                 ProjectName = _getProjectName(ProjectName);
             }
 
+            saveWin.saveFileText1 = clsArgsConfig.Instance().ProjectName._md5();
+            
             if (clsIniFile.singlton[saveWin.saveFileText1, saveWin.saveFilePath] != "")
             {
                 SaveDir = clsIniFile.singlton[saveWin.saveFileText1, saveWin.saveFilePath];
             }
             else if (clsArgsConfig.Instance().FileDirPath != "" && 
                      clsArgsConfig.Instance().ProjectName != ""){
-                saveWin.saveFileText1 = clsArgsConfig.Instance().ProjectName._md5();  
                 saveWin.saveFilePath = clsFolder._getFolderNamePath(clsArgsConfig.Instance().FileDirPath);
                 SaveDir = clsFolder._getFolderNamePath(clsArgsConfig.Instance().FileDirPath);
                 clsIniFile.singlton[saveWin.saveFileText1, saveWin.saveFilePath] = SaveDir;
