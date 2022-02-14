@@ -51,8 +51,8 @@
             <signal name="clicked" handler="on_closeBtn_clicked" swapped="no"/>
           </object>
           <packing>
-            <property name="x">952</property>
-            <property name="y">41</property>
+            <property name="x">900</property>
+            <property name="y">40</property>
           </packing>
         </child>
         <child>
@@ -79,7 +79,7 @@
             <property name="shadow_type">in</property>
             <child>
               <object class="GtkTreeView" id="TopLevelPartTreeView">
-                <property name="width_request">148</property>
+                <property name="width_request">208</property>
                 <property name="height_request">270</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
@@ -217,7 +217,7 @@
             <signal name="clicked" handler="on_reloadBtn_clicked" swapped="no"/>
           </object>
           <packing>
-            <property name="x">938</property>
+            <property name="x">900</property>
             <property name="y">80</property>
           </packing>
         </child>
