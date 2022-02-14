@@ -11,6 +11,7 @@ namespace GladeGeneratorGUI
         private TopLevelPart SelectedTopLevelPartRow = null;
        // private ChildLevelPart SelectedChildLevelPartRow = null;
         private Signal SelectedSignalRow = null;
+        private string SelectedGradeKey = "";
         private string SelectedTopChildSignalKey = "";
         private string SelectedTopEnterTextKey = "";
         public static string SelectedTopEnterTextKey_static = "";
@@ -44,7 +45,6 @@ namespace GladeGeneratorGUI
                 }
 
                 _saveAll(SelectedTopChildSignalKey);
-
             }
         }
         private void on_ChildLevelPartTreeViewSection_changed(object sender, EventArgs e)
@@ -112,7 +112,7 @@ namespace GladeGeneratorGUI
 
                 if (TopLevelPart1.ChildLevelPartsArray.Count == 0)
                 {
-                    clsDialog._mkMessageDialog_Ok(this,"確認","書き出すChildエリアがありません。",
+                    clsDialog._mkMessageDialog_Ok(this,"Confirmation","There is no Child area to write to.",
                         delegate(MessageDialog md, ResponseType result)
                         {
                             md.Destroy();				
@@ -123,7 +123,7 @@ namespace GladeGeneratorGUI
                 clsPartsParse1._outPut();
             }else{
             
-                clsDialog._mkMessageDialog_Ok(this,"確認","Childエリアを表示してから出力ボタンを押してください",
+                clsDialog._mkMessageDialog_Ok(this,"Confirmation","Display the Child area, and then press the Output button.",
                     delegate(MessageDialog md, ResponseType result)
                     {
                         md.Destroy();				

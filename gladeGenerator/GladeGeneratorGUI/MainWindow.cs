@@ -7,7 +7,8 @@ namespace GladeGeneratorGUI
     public partial class MainWindow : Window
     {
         private clsPartsParse clsPartsParse1 = null;
-        private string saveDataFilePath = "./data.json";
+        private string saveSignalDataFilePath = "./data.json";
+        private string saveGladeTopPartDataFilePath = "./gladeTopPartData.json";
 
         static public string ListStoreEntryStr = "ListStoreEntry";
         static public string ModelViewEntryStr = "ModelViewEntry";
@@ -26,7 +27,9 @@ namespace GladeGeneratorGUI
                 return;
             }
 
-            saveDataFilePath = clsFile._getExePath_replace(saveDataFilePath);
+            saveSignalDataFilePath = clsFile._getExePath_replace(saveSignalDataFilePath);
+            
+            saveGladeTopPartDataFilePath = clsFile._getExePath_replace(saveGladeTopPartDataFilePath);
 
             try
             {

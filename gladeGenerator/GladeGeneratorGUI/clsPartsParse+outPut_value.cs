@@ -14,6 +14,10 @@ namespace GladeGeneratorGUI
             int i = 0;
             foreach (TopLevelPart topLevelPart1 in GladeData1.TopLevelPartArray)
             {
+                if (topLevelPart1.isReOutPut == false)
+                {
+                    continue;
+                }
                 var fileContent = "";
                 if (clsFile._isFile(topLevelPart1.OutPutSaveFilePath_value))
                 {

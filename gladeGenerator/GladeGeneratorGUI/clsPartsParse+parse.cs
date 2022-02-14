@@ -15,9 +15,7 @@ namespace GladeGeneratorGUI
 
         private void _getTopPart_idMethod(
             XmlNode topObjectNodes,
-            ref List<TopLevelPart> topLevelPartArray
-            
-            )
+            ref List<TopLevelPart> topLevelPartArray)
         {
             if (topObjectNodes.Attributes["class"] != null && topObjectNodes.Attributes["id"] != null)
             {
@@ -52,7 +50,9 @@ namespace GladeGeneratorGUI
                 }
                 else
                 {
-                    _getChildPart_idMethod(topLevelPart1, childLevelPartNodesList,
+                    _getChildPart_idMethod(
+                        topLevelPart1, 
+                        childLevelPartNodesList,
                         ref topLevelPart1.ChildLevelPartsArray);
                 }
 

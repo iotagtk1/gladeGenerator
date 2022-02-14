@@ -17,5 +17,8 @@ namespace GladeGeneratorGUI
 			});*/
 
 			
+		}
+		private void on_autoHistgram_on_25_clicked(object sender , EventArgs e){
+			
 		}}
 }

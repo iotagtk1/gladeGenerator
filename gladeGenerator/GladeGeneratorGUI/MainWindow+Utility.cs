@@ -59,5 +59,22 @@ namespace GladeGeneratorGUI
         
         
         
+        private string _getGradeKey()
+        {
+            if (SelectedGladeDataRow == null || 
+                SelectedGladeDataRow.OutPutGladeName == null)
+            {
+                Console.WriteLine(" 例外 GradeKeyがない ");
+                return "";
+            }
+
+            var GladeNameTopLevelPartKey = ((GladeData)SelectedGladeDataRow).OutPutGladeName; 
+
+            return GladeNameTopLevelPartKey._md5() ;
+        }
+
+
+
+
     }
 }

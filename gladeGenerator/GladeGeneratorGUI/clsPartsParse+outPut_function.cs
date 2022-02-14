@@ -15,6 +15,10 @@ namespace GladeGeneratorGUI
 
             foreach (TopLevelPart TopLevelPart1 in gladeDataPart1.TopLevelPartArray)
             {
+                if (TopLevelPart1.isReOutPut == false)
+                {
+                    continue;
+                }
                 if (clsFile._isFile(TopLevelPart1.OutPutSaveFilePath_function))
                 {
                     fileContent = clsFile._load_static(TopLevelPart1.OutPutSaveFilePath_function);

@@ -39,7 +39,7 @@ namespace GladeGeneratorGUI
             
             SignalListStore = new Gtk.ListStore(typeof(Signal));
             
-            dataSignalDic = clsFile._getJsonData<Dictionary<string, List<Signal>>>(saveDataFilePath);
+            dataSignalDic = clsFile._getJsonData<Dictionary<string, List<Signal>>>(saveSignalDataFilePath);
 
             if (dataSignalDic == null)
             {
@@ -106,7 +106,7 @@ namespace GladeGeneratorGUI
 
             if (dataSignalDic != null)
             {
-                clsFile._saveJsonData<Dictionary<string, List<Signal>>>(saveDataFilePath, dataSignalDic);
+                clsFile._saveJsonData<Dictionary<string, List<Signal>>>(saveSignalDataFilePath, dataSignalDic);
             }
 
         }
