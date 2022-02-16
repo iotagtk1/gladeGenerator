@@ -56,19 +56,24 @@ namespace GladeGeneratorGUI
 
             return GladeNameTopLevelPartKey._md5() ;
         }
-        
-        
-        
+
         private string _getGradeKey()
         {
             if (SelectedGladeDataRow == null || 
-                SelectedGladeDataRow.OutPutGladeName == null)
+                SelectedGladeDataRow.OutPutGladeName == null
+               )
             {
                 Console.WriteLine(" 例外 GradeKeyがない ");
                 return "";
             }
+            
+            if (clsArgsConfig.Instance().ProjectName == null)
+            {
+                Console.WriteLine(" 例外 ProjectNameがない ");
+                return "";
+            }
 
-            var GladeNameTopLevelPartKey = ((GladeData)SelectedGladeDataRow).OutPutGladeName; 
+            var GladeNameTopLevelPartKey = clsArgsConfig.Instance().ProjectName + ((GladeData)SelectedGladeDataRow).OutPutGladeName; 
 
             return GladeNameTopLevelPartKey._md5() ;
         }
