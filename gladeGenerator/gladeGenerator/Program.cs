@@ -23,7 +23,6 @@ namespace gladeGenerator
             catch (Exception e)
             {
                 Console.WriteLine(e);
-                throw;
             }
 
             if (!clsArgsConfig.Instance()._validateCommandKey())
@@ -40,7 +39,6 @@ namespace gladeGenerator
             catch (Exception e)
             {
                 Console.WriteLine(e);
-                throw;
             }
             
         }

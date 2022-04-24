@@ -31,8 +31,7 @@ namespace GladeGeneratorGUI
             }
             catch (Exception e)
             {
-                Console.WriteLine(e);
-                throw;
+                Console.WriteLine(e);  
             }
         }
 

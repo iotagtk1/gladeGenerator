@@ -27,7 +27,6 @@ namespace GladeGeneratorGUI
             catch (Exception e)
             {
                 Console.WriteLine(e);
-                throw;
             }
 
             var app = new Application("org.GladeGeneratorGUI.GladeGeneratorGUI", GLib.ApplicationFlags.None);

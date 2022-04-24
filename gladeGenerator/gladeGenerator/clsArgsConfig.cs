@@ -95,7 +95,6 @@ namespace gladeGenerator
             catch (Exception e)
             {
                 Console.WriteLine(e);
-                throw;
             }
         }
 

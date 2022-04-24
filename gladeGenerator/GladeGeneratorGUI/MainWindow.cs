@@ -40,7 +40,6 @@ namespace GladeGeneratorGUI
             catch (Exception exception)
             {
                 Console.WriteLine(exception);
-                throw;
             }
  
         }
