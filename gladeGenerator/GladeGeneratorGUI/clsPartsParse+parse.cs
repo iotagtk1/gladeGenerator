@@ -177,6 +177,7 @@ namespace GladeGeneratorGUI
                             {
                                 signalModel1.CodeHint = clsCodeHint.Instance()
                                     ._searchUIHintCode(reSearchClassName, signalModel1.EventName);
+
                                 TemplateData_signal = clsSignalsData.Instance()._searchBaseClassSignalTemplateData(
                                     reSearchClassName,
                                     signalModel1.EventName, ref errorMes, ref isReSearch,
@@ -230,12 +231,7 @@ namespace GladeGeneratorGUI
 
                     if (signalModel1.CodeHint != "")
                     {
-
-                        signalModel1.CodeHint = signalModel1.CodeHint._replaceReplaceStr("{Model}", clsIniFile.singlton[MainWindow._getSelectedTopEnterTextKey(),MainWindow.ModelViewEntryStr]);
-                        signalModel1.CodeHint = signalModel1.CodeHint._replaceReplaceStr("{ListStore}",  clsIniFile.singlton[MainWindow._getSelectedTopEnterTextKey(),MainWindow.ListStoreEntryStr]);
-
-                        signalModel1.OutPutMethod_ArgsStr = signalModel1.OutPutMethod_ArgsStr + Environment.NewLine +
-                                                            signalModel1.CodeHint;
+                        signalModel1.OutPutMethod_ArgsStr = signalModel1.OutPutMethod_ArgsStr + Environment.NewLine + signalModel1.CodeHint;
                     }
 
                     ((BaseClass)BaseLevelPart).SignalArray.Add(signalModel1);

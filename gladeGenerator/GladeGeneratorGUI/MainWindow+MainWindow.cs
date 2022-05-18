@@ -14,9 +14,9 @@ namespace GladeGeneratorGUI
         private string SelectedGradeKey = "";
         private string SelectedTopChildSignalKey = "";
         private string SelectedTopEnterTextKey = "";
-        public static string SelectedTopEnterTextKey_static = "";
+        public string SelectedTopEnterTextKey_static = "";
 
-        public static string _getSelectedTopEnterTextKey()
+        public string _getSelectedTopEnterTextKey()
         {
             return SelectedTopEnterTextKey_static;
         }

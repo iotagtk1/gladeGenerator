@@ -9,16 +9,13 @@ namespace GladeGeneratorGUI
     
     
 		private void on__button1_clicked(object sender , EventArgs e){
-			/*.Foreach (delegate (ITreeModel model, TreePath path, TreeIter iter)  {
+			/*ListStoreName.Foreach (delegate (ITreeModel model, TreePath path, TreeIter iter)  {
 			
-			     modelObj = model.GetValue(iter, 0) as ;
+			    ModelName modelObj = model.GetValue(iter, 0) as ModelName;
 			    
 			    return false;
 			});*/
 
-			
-		}
-		private void on_autoHistgram_on_25_clicked(object sender , EventArgs e){
 			
 		}}
 }

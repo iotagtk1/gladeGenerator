@@ -36,6 +36,21 @@ namespace GladeGeneratorGUI
         }
 
         /// <summary>
+        /// listStoreNameを記入する
+        /// </summary>
+        /// <param name="codeHint"></param>
+        /// <returns></returns>
+        public string _replaceCodeHint(MainWindow MainWindow1, string codeHint)
+        {
+            codeHint = codeHint._replaceReplaceStr("{Model}",
+                clsIniFile.singlton[MainWindow1._getSelectedTopEnterTextKey(), MainWindow.ModelViewEntryStr]);
+            codeHint = codeHint._replaceReplaceStr("{ListStore}",
+                clsIniFile.singlton[MainWindow1._getSelectedTopEnterTextKey(), MainWindow.ListStoreEntryStr]);
+
+            return codeHint;
+        }
+
+        /// <summary>
         /// コードヒントを検索する
         /// </summary>
         /// <param name="uiName"></param>

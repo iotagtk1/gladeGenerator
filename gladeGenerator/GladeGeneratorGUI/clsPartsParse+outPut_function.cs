@@ -70,6 +70,8 @@ namespace GladeGeneratorGUI
                         }
                     }
                 }
+                
+                fileContent = clsCodeHint.Instance()._replaceCodeHint(MainWindow1, fileContent);
 
                 Console.WriteLine("I saved it to　{0}", TopLevelPart1.OutPutSaveFilePath_function);
                 clsFile._saveFilePath(fileContent, TopLevelPart1.OutPutSaveFilePath_function);
