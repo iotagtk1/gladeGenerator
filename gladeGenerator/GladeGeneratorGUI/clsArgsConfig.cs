@@ -163,6 +163,11 @@ namespace GladeGeneratorGUI
         {
             path = path.TrimEnd(Path.DirectorySeparatorChar);
 
+            if (path._indexOf("/") == -1)
+            {
+                return path;
+            }
+
             var separator = Path.DirectorySeparatorChar;
             string[] pathArray = path.Split(separator);
             
