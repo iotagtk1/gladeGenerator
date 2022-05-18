@@ -16,6 +16,7 @@ namespace GladeGeneratorGUI
         public clsPartsParse(MainWindow mainWindow1)
         {
             MainWindow1 = mainWindow1;
+            
             clsSignalsData.Instance();
             clsCodeHint.Instance();
         }

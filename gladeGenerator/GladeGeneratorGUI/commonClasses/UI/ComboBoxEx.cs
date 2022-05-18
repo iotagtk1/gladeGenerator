@@ -13,12 +13,12 @@ namespace Gtk
             Combox1.Clear();
         }
 
-        static public Gtk.CellRendererText _mkCellRendererText(this ComboBox Combox, string baindingName)
+        static public Gtk.CellRendererText _mkCellRendererText(this ComboBox Combox, string bindName)
         {
             _comboInit(Combox);
 
             Gtk.CellRendererTextEx CellRendererTextEx1 = new Gtk.CellRendererTextEx();
-            CellRendererTextEx1.BindingPropertyName = baindingName;
+            CellRendererTextEx1.BindingPropertyName = bindName;
 
             Combox.PackStart(CellRendererTextEx1, false);
 

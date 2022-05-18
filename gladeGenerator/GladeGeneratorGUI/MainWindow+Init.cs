@@ -27,7 +27,8 @@ namespace GladeGeneratorGUI
 		    }
 		    else
 		    {
-			    ListStoreEntry.Text = "ListStore";
+			    ListStoreEntry.Text = "ListStoreName";
+			    clsIniFile.singlton[dbKeyOrTableKey, MainWindow.ListStoreEntryStr] = ListStoreEntry.Text;
 		    }
 		    
 		    if (clsIniFile.singlton[dbKeyOrTableKey, MainWindow.ModelViewEntryStr] != "")
@@ -36,6 +37,7 @@ namespace GladeGeneratorGUI
 		    } else
 		    {
 			    ModelViewEntry.Text = "ModelName";
+			    clsIniFile.singlton[dbKeyOrTableKey, MainWindow.ModelViewEntryStr] = ModelViewEntry.Text;
 		    }
 
 	    }

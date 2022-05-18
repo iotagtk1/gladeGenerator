@@ -14,8 +14,8 @@ namespace Gtk
                 {
                     continue;
                 }
-
                 TreeViewColumnEx columnt1 = (column as TreeViewColumnEx);
+
                 columnt1._mkBinding();
             }
         }

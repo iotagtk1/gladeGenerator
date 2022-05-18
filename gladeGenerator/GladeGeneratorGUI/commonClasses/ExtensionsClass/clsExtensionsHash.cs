@@ -11,6 +11,7 @@ using System.Xml.Serialization;
 public static partial class HashExtensions {
 
 
+    
     /// <summary>
     /// シリアライズ
     /// </summary>
@@ -33,49 +34,47 @@ public static partial class HashExtensions {
     }
 
     /// <summary>
-        /// _sort 数字を入れる
-        /// </summary>
-        public static ArrayList _sort(this Hashtable hash) {
+    /// _sort 数字を入れる
+    /// </summary>
+    public static ArrayList _sort(this Hashtable hash) {
 
-            ArrayList keys = new ArrayList(hash.Keys);
-            keys.Sort();
+        ArrayList keys = new ArrayList(hash.Keys);
+        keys.Sort();
 
-            ArrayList newHashtable = new ArrayList();
-            foreach (var key in keys) {
-                newHashtable.Add(hash[key]);
-            }
-
-            return newHashtable;
-
+        ArrayList newHashtable = new ArrayList();
+        foreach (var key in keys) {
+            newHashtable.Add(hash[key]);
         }
 
-        /// <summary>
-        /// シリアライズ
-        /// </summary>
-        static public string _toJson(this Hashtable obj) {
-            var json = JsonSerializer.Serialize(obj);
-            return json;
-        }
+        return newHashtable;
 
-        public static void _removeObjectForKey(this Hashtable h, string key) {
-            h.Remove(key);
-        }
+    }
+
+    /// <summary>
+    /// シリアライズ
+    /// </summary>
+    static public string _toJson(this Hashtable obj) {
+        var json = JsonSerializer.Serialize(obj);
+        return json;
+    }
+
+    public static void _removeObjectForKey(this Hashtable h, string key) {
+        h.Remove(key);
+    }
 	
-        /// <summary>　
-        /// カウント　Obj-cから用
-        /// </summary>
-        public static int _count(this Hashtable h) {            
-            return h.Count;
-        }
-        /// <summary>
-        /// キーを取得する　Obj-cから用
-        /// </summary>
-        public static ArrayList _allKeys(this Hashtable h) {
-            ArrayList list1 = new ArrayList(h.Keys);
-            return list1;
-        }
+    /// <summary>　
+    /// カウント　Obj-cから用
+    /// </summary>
+    public static int _count(this Hashtable h) {            
+        return h.Count;
+    }
+    /// <summary>
+    /// キーを取得する　Obj-cから用
+    /// </summary>
+    public static ArrayList _allKeys(this Hashtable h) {
+        ArrayList list1 = new ArrayList(h.Keys);
+        return list1;
+    }
 
 
 }
-
-

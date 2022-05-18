@@ -17,7 +17,6 @@ namespace Gtk
             {
                 this.Title = title;
             }
-
             Gtk.CellRendererTextEx CellRendererText1 = new Gtk.CellRendererTextEx();
             if (width != 0)
             {
@@ -143,24 +142,28 @@ namespace Gtk
         private void _RenderCellDo(Gtk.TreeViewColumn column, Gtk.CellRenderer cell,
             Gtk.ITreeModel model, Gtk.TreeIter iter)
         {
-            if (!(column is TreeViewColumnEx))
+            try
             {
-                return;
+                if (!(column is TreeViewColumnEx))
+                {
+                    Console.WriteLine("_RenderCellDo");
+                    return;
+                }
+                TreeViewColumnEx column1 = (column as TreeViewColumnEx);
+                if (column1.bindingPropertyName == null || column1.bindingPropertyName == "")
+                {
+                    Console.WriteLine("PropertyNameがない");
+                    return;
+                }  
+                object modelData = (object)model.GetValue(iter, 0);
+                object value = modelData._performSelector_Property(column1.bindingPropertyName);
+                _setCellData(value, cell);
             }
-
-            TreeViewColumnEx column1 = (column as TreeViewColumnEx);
-
-            if (column1.bindingPropertyName == "" || column1.bindingPropertyName == null)
+            catch (Exception e)
             {
-                Console.WriteLine("PropertyNameがない");
-                return;
+                Console.WriteLine(e);
+                
             }
-
-            object modelData = (object)model.GetValue(iter, 0);
-
-            object value = modelData._performSelector_Property(column1.bindingPropertyName);
-
-            _setCellData(value, cell);
         }
 
         private void _setCellData(object value, Gtk.CellRenderer cell)
@@ -172,8 +175,10 @@ namespace Gtk
             else if (value != null && cell is Gtk.CellRendererText && (value is int))
             {
                 (cell as Gtk.CellRendererText).Text = ((int)value).ToString();
-            }
-            else if (value != null && cell is Gtk.CellRendererText && (value is long))
+            }else if (value != null && cell is Gtk.CellRendererText && (value is double))
+            {
+                (cell as Gtk.CellRendererText).Text = ((double)value).ToString();
+            }else if (value != null && cell is Gtk.CellRendererText && (value is long))
             {
                 (cell as Gtk.CellRendererText).Text = ((long)value).ToString();
             }

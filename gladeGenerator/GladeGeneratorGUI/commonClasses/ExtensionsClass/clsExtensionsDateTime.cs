@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Reflection;
 
-    public static class DateTimeExtensions {
+public static class DateTimeExtensions {
 
 
     /// <summary>
@@ -34,15 +34,15 @@ using System.Reflection;
         int result = -1;
         switch (time.CompareTo(nowTime)) {
             case -1:
-               // Console.WriteLine(" time は nowTime より古い -1");
+                // Console.WriteLine(" time は nowTime より古い -1");
                 result = -1;
                 break;
             case 0:
-              //  Console.WriteLine(" time と nowTime は等しい 0");
+                //  Console.WriteLine(" time と nowTime は等しい 0");
                 result = 0;
                 break;
             case 1:
-              //  Console.WriteLine(" time は nowTime より新しい 1");
+                //  Console.WriteLine(" time は nowTime より新しい 1");
                 result = 1;
                 break;
         }
@@ -54,11 +54,25 @@ using System.Reflection;
     /// <summary>
     /// タイムスタンプをDateTimeに変換する
     /// </summary>
-    public static DateTime _unixTimeStampToDateTime(this long unixTimeStamp) {
+    public static DateTime _mkUnixTimeStampToDateTime(this long unixTimeStamp) {
         // Unix timestamp is seconds past epoch
         System.DateTime dtDateTime = new DateTime(1970, 1, 1, 0, 0, 0, 0, System.DateTimeKind.Utc);
         dtDateTime = dtDateTime.AddSeconds(unixTimeStamp).ToLocalTime();
         return dtDateTime;
+    }
+    
+    /// <summary>
+    /// タイムスタンプをDateTimeに変換する
+    /// </summary>
+    public static DateTime? _mkUnixTimeStampToDateTime(this string unixTimeStampStr) {
+
+        if (long.TryParse(unixTimeStampStr , out long unixTimeStamp))
+        {
+            System.DateTime dtDateTime = new DateTime(1970, 1, 1, 0, 0, 0, 0, System.DateTimeKind.Utc);
+            dtDateTime = dtDateTime.AddSeconds(unixTimeStamp).ToLocalTime();
+            return dtDateTime;
+        }
+        return null;
     }
 
 
@@ -84,7 +98,7 @@ using System.Reflection;
     /// 何年後　+-
     /// </summary>
     public static DateTime _addYears(this DateTime date, int year) {
-       return date.AddYears(year);
+        return date.AddYears(year);
     }
 
     /// <summary>
@@ -174,8 +188,118 @@ using System.Reflection;
             System.TimeZoneInfo.ConvertTimeFromUtc(date, System.TimeZoneInfo.Local);
         return localTime;
     }
+    
+    /// <summary>
+    /// 今日のタイムスタンプ
+    /// </summary>
+    /// <param name="date"></param>
+    /// <returns></returns>
+    public static long _getTodayTimeStamp(this DateTime date)
+    {
+        DateTime copyDateTime = new DateTime(date.Year,date.Month,date.Day,0,0,0);
+        long timeStamp = copyDateTime._mkUnixTimeStamp();
+        return timeStamp;
+    }
+    
+    /// <summary>
+    /// 今日の時間のタイムスタンプ
+    /// </summary>
+    /// <param name="date"></param>
+    /// <returns></returns>
+    public static long _getTodayHourTimeStamp(this DateTime date)
+    {
+        DateTime copyDateTime = new DateTime(date.Year,date.Month,date.Day,date.Hour,0,
+            0);
+        long timeStamp = copyDateTime._mkUnixTimeStamp();
+        return timeStamp;
+    }
 
+    /// <summary>
+    /// 土日かどうか
+    /// </summary>
+    /// <param name="date"></param>
+    /// <returns></returns>
+    public static bool _isSaturdaySunday(this DateTime date)
+    {
+        DayOfWeek dow = date.DayOfWeek;
+        if (dow == DayOfWeek.Saturday || dow == DayOfWeek.Sunday)
+        {
+            return true;
+        }
+        return false;
+    }
+
+    /// <summary>
+    /// Saturday
+    /// </summary>
+    /// <param name="date"></param>
+    /// <returns></returns>
+    public static bool _isSaturday(this DateTime date)
+    {
+        DayOfWeek dow = date.DayOfWeek;
+        if (dow == DayOfWeek.Saturday)
+        {
+            return true;
+        }
+        return false;
+    }
+    
+    /// <summary>
+    /// Sunday
+    /// </summary>
+    /// <param name="date"></param>
+    /// <returns></returns>
+    public static bool _isSunday(this DateTime date)
+    {
+        DayOfWeek dow = date.DayOfWeek;
+        if (dow == DayOfWeek.Sunday)
+        {
+            return true;
+        }
+        return false;
+    }
+
+    private const long TicksPerMicrosecond = TimeSpan.TicksPerMillisecond / 1000;
+    public static DateTime _RoundUpToDay(this DateTime value) => value._RoundUpCore(TimeSpan.TicksPerDay);
+    public static DateTime _RoundUpToHour(this DateTime value) => value._RoundUpCore(TimeSpan.TicksPerHour);
+    public static DateTime _RoundUpToMinute(this DateTime value) => value._RoundUpCore(TimeSpan.TicksPerMinute);
+    public static DateTime _RoundUpToSecond(this DateTime value) => value._RoundUpCore(TimeSpan.TicksPerSecond);
+    public static DateTime _RoundUpToMillisecond(this DateTime value) => value._RoundUpCore(TimeSpan.TicksPerMillisecond);
+    public static DateTime _RoundUpToMicrosecond(this DateTime value) => value._RoundUpCore(TicksPerMicrosecond);
+    public static DateTime _RoundUp(this DateTime value, TimeSpan interval) => value._RoundUpCore(interval.Ticks);
+
+    public static DateTime _RoundDownToDay(this DateTime value) => value._RoundDownCore(TimeSpan.TicksPerDay);
+    public static DateTime _RoundDownToHour(this DateTime value) => value._RoundDownCore(TimeSpan.TicksPerHour);
+    public static DateTime _RoundDownToMinute(this DateTime value) => value._RoundDownCore(TimeSpan.TicksPerMinute);
+    public static DateTime _RoundDownToSecond(this DateTime value) => value._RoundDownCore(TimeSpan.TicksPerSecond);
+    public static DateTime _RoundDownToMillisecond(this DateTime value) => value._RoundDownCore(TimeSpan.TicksPerMillisecond);
+    public static DateTime _RoundDownToMicrosecond(this DateTime value) => value._RoundDownCore(TicksPerMicrosecond);
+    public static DateTime _RoundDown(this DateTime value, TimeSpan interval) => value._RoundDownCore(interval.Ticks);
+
+    public static DateTime _RoundAwayFromZeroToDay(this DateTime value) => value._RoundAwayFromZeroCore(TimeSpan.TicksPerDay);
+    public static DateTime _RoundAwayFromZeroToHour(this DateTime value) => value._RoundAwayFromZeroCore(TimeSpan.TicksPerHour);
+    public static DateTime _RoundAwayFromZeroToMinute(this DateTime value) => value._RoundAwayFromZeroCore(TimeSpan.TicksPerMinute);
+    public static DateTime _RoundAwayFromZeroToSecond(this DateTime value) => value._RoundAwayFromZeroCore(TimeSpan.TicksPerSecond);
+    public static DateTime _RoundAwayFromZeroToMillisecond(this DateTime value) => value._RoundAwayFromZeroCore(TimeSpan.TicksPerMillisecond);
+    public static DateTime _RoundAwayFromZeroToMicrosecond(this DateTime value) => value._RoundAwayFromZeroCore(TicksPerMicrosecond);
+    public static DateTime _RoundAwayFromZero(this DateTime value, TimeSpan interval) => value._RoundAwayFromZeroCore(interval.Ticks);
+
+    private static DateTime _RoundUpCore(this DateTime value, long interval)
+    {
+        return value.Ticks % interval is var overflow and > 0
+            ? value.AddTicks(interval - overflow)
+            : value;
+    }
+
+    private static DateTime _RoundDownCore(this DateTime value, long interval)
+    {
+        return value.AddTicks(-(value.Ticks % interval));
+    }
+
+    private static DateTime _RoundAwayFromZeroCore(this DateTime value, long interval)
+    {
+        var ticks = value.Ticks + interval >> 1;
+        return new DateTime(ticks - ticks % interval, value.Kind);
+    }
 
 }
-
-
