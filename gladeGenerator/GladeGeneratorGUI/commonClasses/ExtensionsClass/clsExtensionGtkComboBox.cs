@@ -34,7 +34,12 @@ public static class clsExtensionGtkComboBox {
     /// <returns></returns>
     static public bool _isSelected(this Gtk.ComboBox comboBox)
     {
-        return comboBox.HasEntry;
+        if (comboBox.Active == -1)
+        {
+            return false;
+        }
+        
+        return true;
     }
 
    
