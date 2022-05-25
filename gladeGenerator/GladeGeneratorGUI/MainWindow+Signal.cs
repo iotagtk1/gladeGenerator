@@ -13,14 +13,14 @@ namespace GladeGeneratorGUI
         {
             Gtk.TreeViewColumnEx HandlerNameColumn = new Gtk.TreeViewColumnEx();
             HandlerNameColumn.Title = "Signal";
-            CellRendererText a = HandlerNameColumn._mkCellRendererText(SignalTreeView, "", 80,true,true,true,true);
+            CellRendererText a = HandlerNameColumn._mkCellRendererText(SignalTreeView, "", 80,maxWidth:100, true,true,true,true);
             HandlerNameColumn.bindingPropertyName = "HandlerName";
 
             Gtk.TreeViewColumnEx isReOutPutColumn = new Gtk.TreeViewColumnEx();
             isReOutPutColumn.Title = "ReOutPut";
             isReOutPutColumn.bindingPropertyName = "isReOutPut";
             Gtk.CellRendererToggle isReOutPutColumnToggle =
-                isReOutPutColumn._mkCellRendererToggle(SignalTreeView, "", 60);
+                isReOutPutColumn._mkCellRendererToggle(SignalTreeView, "",75,maxWidth:75);
             isReOutPutColumnToggle.Toggled += delegate(object o, ToggledArgs args)
             {
                 TreeIter iter;
