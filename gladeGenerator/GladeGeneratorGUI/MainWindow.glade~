@@ -5,7 +5,7 @@
   <object class="GtkWindow" id="MainWindow">
     <property name="can_focus">False</property>
     <property name="title" translatable="yes">GladeGeneratorGUI</property>
-    <property name="default_width">1020</property>
+    <property name="default_width">1220</property>
     <property name="default_height">320</property>
     <child>
       <placeholder/>
@@ -23,7 +23,7 @@
             <signal name="changed" handler="on_ListStoreEntry_changed" swapped="no"/>
           </object>
           <packing>
-            <property name="x">789</property>
+            <property name="x">846</property>
             <property name="y">157</property>
           </packing>
         </child>
@@ -36,7 +36,7 @@
             <signal name="changed" handler="on_ModelViewEntry_changed" swapped="no"/>
           </object>
           <packing>
-            <property name="x">789</property>
+            <property name="x">846</property>
             <property name="y">214</property>
           </packing>
         </child>
@@ -51,8 +51,8 @@
             <signal name="clicked" handler="on_closeBtn_clicked" swapped="no"/>
           </object>
           <packing>
-            <property name="x">952</property>
-            <property name="y">41</property>
+            <property name="x">955</property>
+            <property name="y">40</property>
           </packing>
         </child>
         <child>
@@ -66,7 +66,7 @@
             <signal name="clicked" handler="on_outPutBtn_clicked" swapped="no"/>
           </object>
           <packing>
-            <property name="x">789</property>
+            <property name="x">846</property>
             <property name="y">40</property>
           </packing>
         </child>
@@ -79,7 +79,7 @@
             <property name="shadow_type">in</property>
             <child>
               <object class="GtkTreeView" id="TopLevelPartTreeView">
-                <property name="width_request">148</property>
+                <property name="width_request">208</property>
                 <property name="height_request">270</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
@@ -98,14 +98,14 @@
         </child>
         <child>
           <object class="GtkScrolledWindow">
-            <property name="width_request">200</property>
+            <property name="width_request">250</property>
             <property name="height_request">270</property>
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="shadow_type">in</property>
             <child>
               <object class="GtkTreeView" id="ChildLevelPartTreeView">
-                <property name="width_request">200</property>
+                <property name="width_request">250</property>
                 <property name="height_request">270</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
@@ -124,14 +124,14 @@
         </child>
         <child>
           <object class="GtkScrolledWindow">
-            <property name="width_request">350</property>
+            <property name="width_request">360</property>
             <property name="height_request">270</property>
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="shadow_type">in</property>
             <child>
               <object class="GtkTreeView" id="SignalTreeView">
-                <property name="width_request">350</property>
+                <property name="width_request">360</property>
                 <property name="height_request">270</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
@@ -144,7 +144,7 @@
             </child>
           </object>
           <packing>
-            <property name="x">430</property>
+            <property name="x">480</property>
             <property name="y">40</property>
           </packing>
         </child>
@@ -189,7 +189,7 @@
             <property name="label" translatable="yes">ModelName</property>
           </object>
           <packing>
-            <property name="x">789</property>
+            <property name="x">846</property>
             <property name="y">195</property>
           </packing>
         </child>
@@ -202,7 +202,7 @@
             <property name="label" translatable="yes">ListStore</property>
           </object>
           <packing>
-            <property name="x">789</property>
+            <property name="x">846</property>
             <property name="y">136</property>
           </packing>
         </child>
@@ -217,8 +217,8 @@
             <signal name="clicked" handler="on_reloadBtn_clicked" swapped="no"/>
           </object>
           <packing>
-            <property name="x">938</property>
-            <property name="y">80</property>
+            <property name="x">955</property>
+            <property name="y">79</property>
           </packing>
         </child>
       </object>
