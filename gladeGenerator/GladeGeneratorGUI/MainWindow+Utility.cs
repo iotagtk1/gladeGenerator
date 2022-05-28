@@ -13,7 +13,8 @@ namespace GladeGeneratorGUI
         /// <returns></returns>
         private string _getTopLevelPartChildPartKey(ChildLevelPart ChildLevelPart1)
         {
-            if (SelectedGladeDataRow == null || 
+            if (
+                SelectedGladeDataRow == null || 
                 SelectedTopLevelPartRow == null ||
                 ChildLevelPart1 == null ||
                 SelectedGladeDataRow.OutPutGladeName == null || 
@@ -21,15 +22,21 @@ namespace GladeGeneratorGUI
                 || ChildLevelPart1.PartId == ""
                 )
             {
-                Console.WriteLine(" 例外 TopLevelPartChildPartKeyがない ");
+                Console.WriteLine(" 例外 TopLevelPartChildPartKeyの元データがない ");
                 return "";
             }
 
+            if (clsArgsConfig.Instance().ProjectName == null){
+                
+                Console.WriteLine(" 例外 ProjectNameがない ");
+                return "";
+            }
+            
            string GladeName = ((GladeData)SelectedGladeDataRow).OutPutGladeName; 
            string topLevelPartKey = ((TopLevelPart)SelectedTopLevelPartRow).PartId;
            string childLevelPartKey = ((ChildLevelPart)ChildLevelPart1).PartId;
 
-           string GladeNametopLevelPartKeychildLevelPartKey = GladeName + topLevelPartKey + childLevelPartKey;
+           string GladeNametopLevelPartKeychildLevelPartKey = clsArgsConfig.Instance().ProjectName + GladeName + topLevelPartKey + childLevelPartKey;
 
            return GladeNametopLevelPartKeychildLevelPartKey._md5();
         }
@@ -40,26 +47,34 @@ namespace GladeGeneratorGUI
         /// <returns></returns>
         private string _getTopLevelPartKey()
         {
-            if (SelectedGladeDataRow == null || 
+            if ( 
+                SelectedGladeDataRow == null || 
                 SelectedTopLevelPartRow == null ||
                 SelectedGladeDataRow.OutPutGladeName == null ||
                 ((TopLevelPart)SelectedTopLevelPartRow).PartId == "" )
             {
-                Console.WriteLine(" 例外 TopLevelPartKeyがない ");
+                Console.WriteLine(" 例外 TopLevelPartKeyの元データがない ");
+                return "";
+            }
+
+            if (clsArgsConfig.Instance().ProjectName == null){
+                
+                Console.WriteLine(" 例外 ProjectNameがない ");
                 return "";
             }
 
             string GladeName = ((GladeData)SelectedGladeDataRow).OutPutGladeName; 
             string topLevelPartKey = ((TopLevelPart)SelectedTopLevelPartRow).PartId;
 
-            var GladeNameTopLevelPartKey = GladeName + topLevelPartKey;
+            var GladeNameTopLevelPartKey = clsArgsConfig.Instance().ProjectName + GladeName + topLevelPartKey;
 
             return GladeNameTopLevelPartKey._md5() ;
         }
 
         private string _getGradeKey()
         {
-            if (SelectedGladeDataRow == null || 
+            if (
+                SelectedGladeDataRow == null || 
                 SelectedGladeDataRow.OutPutGladeName == null
                )
             {
@@ -67,8 +82,8 @@ namespace GladeGeneratorGUI
                 return "";
             }
             
-            if (clsArgsConfig.Instance().ProjectName == null)
-            {
+            if (clsArgsConfig.Instance().ProjectName == null){
+                
                 Console.WriteLine(" 例外 ProjectNameがない ");
                 return "";
             }
