@@ -76,5 +76,8 @@ namespace GladeGeneratorGUI
 		[UI] private Gtk.CheckButton autoHistgram_on_25 = null;
 		[UI] private Gtk.CheckButton HistgramPlayer_on_75 = null;
 		[UI] private Gtk.CheckButton HistgramPlayer_on_25 = null;
+	
+		[UI] private Gtk.TreeView treeView = null;
+		[UI] private Gtk.TreeSelection treeVie_sellection = null;
 	}
 }

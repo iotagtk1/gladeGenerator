@@ -9,10 +9,14 @@ namespace Gtk
     {
         public String bindingPropertyName = "";
         private Gtk.ListStore listStore1 = null;
-
-        public CellRendererText _mkCellRendererText(TreeView treeView, string title = "", int minWidth = 0, int maxWidth = 0,
+        private Gtk.TreeView treeView = null;
+        
+        public CellRendererText _mkCellRendererText(TreeView treeView1, string title = "", int minWidth = 0, int maxWidth = 0,
             bool isEditable = true, bool isExpand = false, bool isPackStart = true , bool isAutoEdit = true,bool isAutoSize = false)
         {
+
+            treeView = treeView1;
+
             if (title != "")
             {
                 this.Title = title;
@@ -25,17 +29,18 @@ namespace Gtk
             if (maxWidth != 0)
             {
                 this.MaxWidth = maxWidth;
-            }      
+            }
 
             this.Expand = isExpand;
             this.Sizing = isAutoSize ? TreeViewColumnSizing.Autosize : TreeViewColumnSizing.Fixed;
             this.PackStart(CellRendererText1, isPackStart);
-            listStore1 = (ListStore)treeView.Model;
+           
             if (isEditable)
             {
                 CellRendererText1.Editable = isAutoEdit;
                 CellRendererText1.Edited += delegate(object o, EditedArgs args)
                 {
+                    listStore1 = (ListStore)treeView.Model;
                     Gtk.CellRendererTextEx o1 = (Gtk.CellRendererTextEx)o;
                     TreePath treePath1 = new TreePath(args.Path);
                     TreeIter iter;
@@ -80,9 +85,11 @@ namespace Gtk
             return CellRendererPixbuf1;
         }
 
-        public CellRendererToggle _mkCellRendererToggle(TreeView treeView, string title = "", int minWidth = 0,int maxWidth = 0,
+        public CellRendererToggle _mkCellRendererToggle(TreeView treeView1, string title = "", int minWidth = 0,int maxWidth = 0,
             bool isToggled = false, bool isExpand = false, bool isPackStart = true,bool isAutoSize = false)
         {
+            treeView = treeView1;
+            
             if (title != "")
             {
                 this.Title = title;
@@ -99,11 +106,12 @@ namespace Gtk
             }
             this.Expand = isExpand;
             this.Sizing = isAutoSize ? TreeViewColumnSizing.Autosize : TreeViewColumnSizing.Fixed;
-            listStore1 = (ListStore)treeView.Model;
+            
             if (isToggled)
             {
                 CellRendererToggle1.Toggled += delegate(object o, ToggledArgs args)
                 {
+                    listStore1 = (ListStore)treeView.Model;
                     TreeIter iter;
                     if (listStore1.GetIterFromString(out iter, args.Path))
                     {
@@ -172,6 +180,7 @@ namespace Gtk
                 }  
                 object modelData = (object)model.GetValue(iter, 0);
                 object value = modelData._performSelector_Property(column1.bindingPropertyName);
+                
                 _setCellData(value, cell);
             }
             catch (Exception e)
@@ -196,6 +205,9 @@ namespace Gtk
             }else if (value != null && cell is Gtk.CellRendererText && (value is long))
             {
                 (cell as Gtk.CellRendererText).Text = ((long)value).ToString();
+            }else if (value != null && cell is Gtk.CellRendererText && (value is decimal))
+            {
+                (cell as Gtk.CellRendererText).Text = ((decimal)value).ToString();
             }
             else if (value != null && cell is Gtk.CellRendererText && (value is DateTime))
             {
@@ -226,10 +238,15 @@ namespace Gtk
                 (cell as Gtk.CellRendererProgress).Value = (int)value;
             }
         }
-
         private void _setModelData(object modelData1, String bindingPropertyName1, String value)
         {
             Type t = modelData1._getKata(bindingPropertyName1);
+
+            if (t.ToString().IndexOf("System.Nullable") != -1)
+            {
+                t = Nullable.GetUnderlyingType(t);
+            }
+
             if (value != null && t.Equals(typeof(String)))
             {
                 modelData1._setSelector_Property(bindingPropertyName1, Convert.ToString(value));

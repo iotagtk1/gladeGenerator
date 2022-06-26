@@ -17,5 +17,19 @@ namespace GladeGeneratorGUI
 			});*/
 
 			
+		}
+		private void on_treeVie_sellection_changed(object sender , EventArgs e){
+			/*
+			TreeIter iter;
+			ITreeModel model;
+			if (treeView1.Selection.GetSelected(out model,out iter))
+			{
+			    //()
+			     modelData = ().GetValue(iter, 0);
+			}
+			*/
+			
+
+			
 		}}
 }

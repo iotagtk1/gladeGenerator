@@ -4,7 +4,7 @@
         <OutputType>WinExe</OutputType>
         <TargetFramework>net5.0</TargetFramework>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-        <PackageVersion>1.2.9</PackageVersion>
+        <PackageVersion>1.2.10</PackageVersion>
         <Title>GladeGeneratorGUI</Title>
         <Authors>iotana</Authors>
         <Description>GUI Version
