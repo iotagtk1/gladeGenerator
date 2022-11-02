@@ -40,7 +40,7 @@ The working directory can be empty.
 #### Description
 
 projectName Used for the namespace of the exported program. Rider doesn't have a macro for namespaces, so we need to fill in ProjetctPath
-fileDir The file or folder selected in Rider's explorer.
+fileDir Specify the glade file from the Rider explorer
 
 #### App launch
 
