@@ -17,12 +17,12 @@ namespace GladeGeneratorGUI
 
                 clsArgsConfig.Instance();
 
-               if (System.Diagnostics.Debugger.IsAttached)
-                {
-               
-                }
+                #if DEBUG                                
+              
+                
+                #endif
 
-               clsArgsConfig.Instance()._setArgs(args);
+                clsArgsConfig.Instance()._setArgs(args);
             }
             catch (Exception e)
             {

@@ -88,7 +88,7 @@ namespace GladeGeneratorGUI
                     : "";
                 childLevelPart2.ClassName =
                     childObjectNode.Attributes["class"] != null ? childObjectNode.Attributes["class"].Value : "";
-
+                
                 childLevelPart2.DeclareValue =
                     "[UI] private " + childLevelPart2.ClassName._replaceReplaceStr("Gtk", "Gtk.") + " " +
                     childLevelPart2.PartId + " = null;";

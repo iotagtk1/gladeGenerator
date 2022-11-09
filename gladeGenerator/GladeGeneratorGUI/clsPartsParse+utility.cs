@@ -12,7 +12,7 @@ namespace GladeGeneratorGUI
             Boolean isNoclass = false;
             foreach (string noClassName in NoClassNameArray)
             {
-                if (topObjectNodes.Attributes["class"].Value._indexOf(noClassName) != -1)
+                if (topObjectNodes.Attributes["class"].Value == noClassName)
                 {
                     isNoclass = true;
                 }

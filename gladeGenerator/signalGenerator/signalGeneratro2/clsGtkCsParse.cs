@@ -132,6 +132,24 @@ namespace signalGenerator2
                         BaseClass = splitArray[0].ToString();
                     }
                 }
+                
+                if (BaseClass._indexOf(":") > 1)
+                {
+                    ArrayList splitArray = BaseClass._split(":");
+                    if (splitArray.Count > 0)
+                    {
+                        BaseClass = splitArray[0].ToString();
+                    }
+                }
+                
+                if (callerClassName._indexOf("{") > 0)
+                {
+                    ArrayList splitArray = callerClassName._split("{");
+                    if (splitArray.Count > 0)
+                    {
+                        callerClassName = splitArray[0].ToString().TrimEnd();
+                    }
+                }   
 
                 BaseClass = prefix + BaseClass.TrimStart().TrimEnd();
 
