@@ -14,6 +14,11 @@ namespace signalGenerator2
 
              Use the decompiler dnSpy to output the Dll to a Cs file
              */
+            
+            #if DEBUG                                
+                          
+                            
+            #endif
 
             if (clsFolder._isFolder(clsPath._convertAbsolutFilePath(clsGtkCsParse.Instance().GtkFolder)) && 
                 clsFolder._isFolder(clsPath._convertAbsolutFilePath(clsGtkCsParse.Instance().GdkFolder))
