@@ -12,11 +12,13 @@ namespace gladeGenerator
             {
                 clsArgsConfig.Instance();
                 
-                if (System.Diagnostics.Debugger.IsAttached)
-                {
 
-                }
-
+                #if DEBUG                                
+                              
+                                
+                #endif
+                
+                
                 clsArgsConfig.Instance()._setArgs(args);
 
             }
@@ -25,6 +27,7 @@ namespace gladeGenerator
                 Console.WriteLine(e);
             }
 
+            //引数の検証
             if (!clsArgsConfig.Instance()._validateCommandKey())
             {
                 return;

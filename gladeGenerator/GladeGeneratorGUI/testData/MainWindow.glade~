@@ -21,6 +21,7 @@
             <property name="visible">True</property>
             <property name="can_focus">False</property>
             <property name="label" translatable="yes">label</property>
+            <signal name="activate-current-link" handler="on_label1_activate_current_link" swapped="no"/>
           </object>
           <packing>
             <property name="x">31</property>

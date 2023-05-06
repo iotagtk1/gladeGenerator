@@ -2,7 +2,6 @@
 
     <PropertyGroup>
         <OutputType>WinExe</OutputType>
-        <TargetFramework>net5.0</TargetFramework>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <PackageVersion>1.2.10</PackageVersion>
         <Title>GladeGeneratorGUI</Title>
@@ -20,6 +19,7 @@ The event handler of the control</Description>
         <PackageTags>gtk glade C# rider</PackageTags>
         <PackageReleaseNotes>GUI Version</PackageReleaseNotes>
         <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+        <TargetFrameworks>net5.0;net6.0</TargetFrameworks>
     </PropertyGroup>
 
     <ItemGroup>

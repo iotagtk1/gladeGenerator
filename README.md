@@ -10,7 +10,7 @@ The event handler of the control
 ### Introduction
 
 ### Environment
-.net5
+.net6
 
 GtkSharp
 

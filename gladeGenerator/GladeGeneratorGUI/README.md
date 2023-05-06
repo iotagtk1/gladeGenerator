@@ -133,11 +133,13 @@ Use the IntelliSense feature in the name field of the handler of the grade
 Enter 'On' in the Name field of the grade handler. IntelliSense will work.
 
 ### Environment
-.net5
+.net6
 
 GtkSharp
 
 Rider
+
+Nuget 
 
 ini-parser
 
